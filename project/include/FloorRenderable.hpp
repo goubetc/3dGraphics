@@ -1,15 +1,15 @@
-#ifndef CYLINDER_RENDERABLE_HPP
-#define CYLINDER_RENDERABLE_HPP
+#ifndef FLOOR_RENDERABLE_HPP
+#define FLOOR_RENDERABLE_HPP
 
 #include "HierarchicalRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 
-class CylinderRenderable : public HierarchicalRenderable
+class FloorRenderable : public HierarchicalRenderable
 {
 public:
-    ~CylinderRenderable();
-    CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
+    ~FloorRenderable();
+    FloorRenderable( ShaderProgramPtr program, float width, float height, float depth);
 
 private:
     void do_draw();
@@ -22,6 +22,6 @@ private:
     unsigned int m_cBuffer;
 };
 
-typedef std::shared_ptr<CylinderRenderable> CylinderRenderablePtr;
+typedef std::shared_ptr<FloorRenderable> FloorRenderablePtr;
 
 #endif

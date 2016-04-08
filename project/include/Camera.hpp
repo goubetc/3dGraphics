@@ -1,9 +1,15 @@
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
 
+/**@file
+ * @brief Define a camera object.
+ *
+ * Define a camera object to ease the manipulation of the view matrix by user
+ * input such as the keyboard of the mouse.
+ */
+
 #include <glm/glm.hpp>
-/**
- * @brief Manage the Camera.
+/**@brief Manage the Camera.
  *
  * We consider a camera to be defined by two 4x4 matrices:
  *  - the view matrix
@@ -31,7 +37,19 @@
 class Camera
 {
 public:
+    /**@brief Construction.
+     *
+     * Create a default camera located at (0,0,-5), looking at the position
+     * (0,0,0), with an up vector equals to (0,1,0). The default camera
+     * behavior is Camera::ARCBALL_BEHAVIOR. If such default behavior does not
+     * suit you, feel free to change it in the implementation file.
+     */
     Camera();
+
+    /**@brief Destruction.
+     *
+     * Instance destruction.
+     */
     ~Camera();
 
     /** @brief Animate the camera
@@ -48,49 +66,81 @@ public:
      * the camera is positioned and oriented.
      * @{
      */
-    /**
-     * Returns the current view matrix: where the camera looks.
+    /**@brief Read access to the view matrix.
+     *
+     * Allow a read-only access to the view matrix, i.e. where the camera looks.
+     * @return The view matrix
      */
     const glm::mat4& viewMatrix() const;
 
-    /**
-     * Returns the camera position in world coordinates.
+    /**@brief Write to the view matrix.
+     *
+     * Allow to write to the view matrix. This could be useful if the view
+     * matrix is handled in another place than in the camera.
+     * @param view The new view matrix. */
+    void setViewMatrix(const glm::mat4& view);
+
+    /**@brief Read access to the camera world position.
+     *
+     * Allow a read-only access to the camera position in world coordinates.
+     * @return The camera position.
      */
     glm::vec3 getPosition() const;
 
-    /**
-     * Returns the camera right direction (+X) in world coordinates.
+    /**@brief Read access to the camera right direction.
+     *
+     * Allow a read-only access to the right direction of the camera in world
+     * coordinates. This direction corresponds to the (+X) direction of the
+     * camera local frame.
+     *
+     * @return The camera right direction
      */
     glm::vec3 getRight() const;
 
-    /**
-     * Returns the camera up direction (+Y) in world coordinates.
+    /**@brief Read access to the camera up direction.
+     *
+     * Allow a read-only access to the up direction of the camera in world
+     * coordinates. This direction corresponds to the (+Y) direction of the
+     * camera local frame.
+     *
+     * @return The camera up direction.
      */
     glm::vec3 getUp() const;
 
-    /**
-     * Returns the camera forward direction (-Z / looking direction) in world coordinates.
+    /**@brief Read access to the camera forward direction.
+     *
+     * Allow a read-only access to the forward direction of the camera in world
+     * coordinates. This direction corresponds to the (-Z) direction of the
+     * camera local frame, also known as the 'looking direction'.
+     *
+     * @return The camera forward direction.
      */
     glm::vec3 getForward() const;
 
-    /**
-     * Sets the camera position in world coordinates.
+    /**@brief Set the camera world position.
+     *
+     * Set the camera position in world coordinates.
      * @param pos New camera world position.
      */
     void setPosition( const glm::vec3& pos );
 
-    /**
-     * Sets the camera right direction in world coordinates.
-     * @param right New camera right axis.
+    /**@brief Set the camera right direction.
+     *
+     * Set  the camera right direction in world coordinates.
+     * @param right New camera right axis in world coordinates.
      */
     void setRight( const glm::vec3& right );
 
-    /** Set the camera up direction in world coordinates.
-     * @param up New camera up axis.
+    /**@brief Set the camera up direction.
+     *
+     * Set the camera up direction in world coordinates.
+     * @param up New camera up axis in world coordinates.
      */
     void setUp( const glm::vec3& up );
-    /** Set the camera forward (-Z) direction in world coordinates.
-     * @param forward New camera forward direction.
+    /**@brief Set the camera up direction.
+     *
+     * Set the camera forward (-Z) direction in world coordinates.
+     * @param forward New camera forward direction in world coordinates.
      */
     void setForward( const glm::vec3& forward );
     ///@}
@@ -103,57 +153,92 @@ public:
     * on screen.
     * @{
     */
-    /**
-    * Returns the projection matrix.
-    */
+    /**@brief Read access to the camera projection matrix.
+     *
+     * Allow a read-only access to the camera projection matrix. This matrix
+     * defines how to go from the pixel coordinates to the screen coordinates.
+     *
+     * @return The projection matrix.
+     */
     const glm::mat4& projectionMatrix() const;
 
-    /**
-    * Returns the field of view.
-    */
+    /**@brief Write to the projection matrix of the camera.
+     *
+     * Allow to write to the projection matrix of the camera.
+     * @param projection The new projection matrix used by this camera. */
+    void setProjectionMatrix(const glm::mat4& projection);
+
+    /**@brief Get the camera field of view
+     *
+     * Get the field of view of the camera, also known as the camera angle.
+     * @return The camera fov.
+     */
     float fov() const;
 
-    /**
-    * Returns the length ratio of the image taken by this camera:
-    */
+    /**@brief Get the camera ratio.
+     *
+     * The camera ratio is the length ratio of the image taken by this camera. This
+     * ratio is meant to be equal to the width of the display window divided by its
+     * height. This ratio is also know as the aspect ratio.
+     *
+     * @return The length ratio of the image taken by this camera.
+     */
     float ratio() const;
 
-    /**
-    * Returns the near clipping plane: anything closer to the camera than this plane
-    * will be removed from the view.
-    */
+    /**@brief Get the near clipping plane.
+     *
+     * Get the near clipping plane: anything that is closer to the camera than this
+     * will be removed from the rendered image.
+     *
+     * @return The near clipping plane distance.
+     */
     float znear() const;
 
-    /**
-    * Returns the far clipping plane: anything farther from the camera than this plane
-    * will be removed from the view.
-    */
+    /**@brief Get the far clipping plane.
+     *
+     * Get the far clipping plane: anything that is farther from the camera than this
+     * plane will be removed from the rendered image.
+     *
+     * @return The far clipping plane distance.
+     */
     float zfar() const;
 
-    /**
-    * Sets the field of view. 1.04 is a good start.
-    */
+    /**@brief Define the field of view.
+     *
+     * Set the camera field of view. We consider 1.04 is a good start to find a
+     * custom fov.
+     * @param v The new field of view.
+     */
     void setFov( const float& v );
 
-    /**
-    * Sets the ratio of the camera (generally, this is done at each window resize).
-    */
+    /**@brief Define the aspect ratio.
+     *
+     * Set the camera aspect ratio. Generally, this is done at each window resize.
+     * The Viewer automatically call this method on its camera when its window is
+     * resized.
+     * @param v The new aspect ratio (width / height)
+     */
     void setRatio( const float& v );
 
-    /**
-    * Sets the far clipping plane.
-    */
+    /**@brief Define the far clipping plane.
+     *
+     * Set the far clipping plane at the specified distance.
+     * @param v The far clipping plane distance.
+     */
     void setZfar( const float& v );
 
-    /**
-    * Sets the near clipping plane.
-    */
+    /**@brief Define the near clipping plane.
+     *
+     * Set the near clipping plane at the specified distance.
+     * @param v The near clipping plane distance.
+     */
     void setZnear( const float& v );
     ///@}
 
 
-    /**
-     * How the camera react to a mouse displacement.
+    /** @brief Reaction to mouse displacement.
+     *
+     * This enumeration specifies the different kind of reaction to a mouse displacement.
      */
     enum CAMERA_MOUSE_BEHAVIOR {
       /** The view matrix is modified to turn the camera around the world origin.*/
@@ -166,17 +251,24 @@ public:
      * Control the camera with the mouse.
      * @{
      */
-    /**
-    * Returns the mouse behavior.
-    */
+    /**@brief Get the mouse behavior.
+     *
+     * Access to the mouse behavior currently used by the update( dx, dy ) function.
+     * @return The mouse behavior.
+     */
     CAMERA_MOUSE_BEHAVIOR getMouseBehavior() const;
 
-    /**
-    * Sets the mouse behavior.
+    /**@brief Set the mouse behavior.
+     *
+     * Set the new mouse behavior of the camera, that will be used by the update( dx, dy ) function.
+     * @param v The new behavior.
     */
     void setMouseBehavior( const CAMERA_MOUSE_BEHAVIOR& v );
-    /**
-     * Update the camera view matrix according to the current mouse behavior.
+    /**@brief Update the camera view in reaction to a mouse displacement.
+     *
+     * Change the camera view matrix according to the current mouse behavior.
+     * @param dx Mouse x displacement.
+     * @param dy Mouse y displacement.
      */
     void update( float dx, float dy );
     ///@}

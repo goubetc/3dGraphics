@@ -27,6 +27,11 @@ const glm::mat4& Camera::viewMatrix() const
     return m_view;
 }
 
+void Camera::setViewMatrix(const glm::mat4& view)
+{
+    m_view = view;
+}
+
 glm::vec3 Camera::getPosition() const
 {
     return -glm::vec3( m_view[3] ) * glm::mat3( m_view );
@@ -91,6 +96,11 @@ const glm::mat4& Camera::projectionMatrix() const
     return m_projection;
 }
 
+void Camera::setProjectionMatrix(const glm::mat4& projection)
+{
+    m_projection = projection;
+}
+
 float Camera::fov() const
 {
     return m_fov;
@@ -143,6 +153,15 @@ Camera::CAMERA_MOUSE_BEHAVIOR Camera::getMouseBehavior() const
 void Camera::setMouseBehavior( const CAMERA_MOUSE_BEHAVIOR& v )
 {
     m_mouseBehavior = v;
+    if( m_mouseBehavior == ARCBALL_BEHAVIOR )
+      {
+        glm::vec3 pos = getPosition();
+        glm::vec3 up = getUp();
+        m_view = glm::lookAt(
+            getPosition(),
+            glm::vec3{},
+            getUp());
+      }
 }
 
 void Camera::update( float dx, float dy )
@@ -164,13 +183,13 @@ void Camera::update( float dx, float dy )
 
     case SPACESHIP_BEHAVIOR:
     {
-        const auto cx = float( std::cos( dx ) );
-        const auto sx = float( std::sin( dx ) );
-        const auto cy = float( std::cos( dy ) );
-        const auto sy = float( std::sin( dy ) );
+        const float cx = float( std::cos( dx ) );
+        const float sx = float( std::sin( dx ) );
+        const float cy = float( std::cos( dy ) );
+        const float sy = float( std::sin( dy ) );
 
-        auto rotation = glm::mat3( m_view );
-        auto minus_pos = glm::vec3( m_view[3] ) * rotation;
+        glm::mat3 rotation = glm::mat3( m_view );
+        glm::vec3 minus_pos = glm::vec3( m_view[3] ) * rotation;
         // build a rotation matrix to apply to the current rotation:
         //
         rotation = glm::mat3(

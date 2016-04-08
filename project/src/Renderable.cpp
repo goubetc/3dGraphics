@@ -4,14 +4,10 @@
 
 Renderable::~Renderable(){}
 
-Renderable::Renderable()
-  : m_shaderProgram{ nullptr },
-    m_model{} // the default constructor of a mat4 loads the identity
-{}
-
 Renderable::Renderable(ShaderProgramPtr program)
-  : m_shaderProgram{ program },
-    m_model{} // the default constructor of a mat4 loads the identity
+  : m_shaderProgram(program),
+    m_model(glm::mat4(1.0)), // default: loads the identity
+    m_viewer(nullptr)
 {}
 
 void Renderable::bindShaderProgram()
@@ -36,12 +32,16 @@ int Renderable::viewLocation()
 
 void Renderable::draw()
 {
+  beforeDraw();
   do_draw();
+  afterDraw();
 }
 
 void Renderable::animate( float time )
 {
+  beforeAnimate( time );
   do_animate( time );
+  afterAnimate( time );
 }
 
 void Renderable::keyPressedEvent(sf::Event& e)
@@ -93,17 +93,39 @@ void Renderable::do_mouseMoveEvent(sf::Event& e)
 {}
 
 
-void Renderable::setModelMatrix( const glm::mat4& model )
+void Renderable::setModelMatrix( const glm::mat4 & model )
 {
   m_model = model;
 }
 
 const glm::mat4& Renderable::getModelMatrix() const
 {
-  return m_model;
+    return m_model;
 }
 
 void Renderable::setShaderProgram( ShaderProgramPtr prog )
 {
   m_shaderProgram = prog;
+}
+
+
+void Renderable::beforeDraw()
+{}
+
+void Renderable::afterDraw()
+{}
+
+void Renderable::afterAnimate( float time )
+{}
+ShaderProgramPtr Renderable::getShaderProgram() const
+{
+    return m_shaderProgram;
+}
+
+void Renderable::beforeAnimate( float time )
+{}
+
+Viewer* Renderable::getViewer() const
+{
+    return m_viewer;
 }
