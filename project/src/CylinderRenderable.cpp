@@ -5,13 +5,14 @@
 
 #include <glm/gtc/type_ptr.hpp>
 #include <GL/glew.h>
-#include <cmath>
 
-CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces) :
+CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces, float height, float radius, float x, float y, float z ) :
     Renderable(shaderProgram),
     m_vBuffer(0), m_cBuffer(0)
 {
-    
+
+    // Exercice 1: Fill positions and colors to describe a cylinder
+     height /= 2;
     
     /*m_positions.push_back( glm::vec3(0.0,0.0,1.0) );
     m_positions.push_back( glm::vec3(0.0,0.0,0.0) );
@@ -24,22 +25,36 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       float theta = i * 2 * M_PI/faces;
       float theta2 = (i+1) * 2 * M_PI/faces;
       
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),1.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),1.0) );
+      m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z+height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z+height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z+height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z+height) );
+      m_positions.push_back( glm::vec3(0.0+x,0.0+y,z+height) );
+      
 
+      m_colors.push_back( randomColor() );
+      m_colors.push_back( randomColor() );
+      m_colors.push_back( randomColor() );
       m_colors.push_back( randomColor() );
       m_colors.push_back( randomColor() );
       m_colors.push_back( randomColor() );
       
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),1.0) );
+      m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z+height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
+      m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
+      m_positions.push_back( glm::vec3(0.0+x,0.0+y,z-height) );
 
       m_colors.push_back( randomColor() );
       m_colors.push_back( randomColor() );
       m_colors.push_back( randomColor() );
+      m_colors.push_back( randomColor() );
+      m_colors.push_back( randomColor() );
+      m_colors.push_back( randomColor() );
     }
+
 
     // Exercice 2: Compute normal per face or normal per vertex
     // Simply store the normals in m_colors;

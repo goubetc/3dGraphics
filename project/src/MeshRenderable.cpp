@@ -15,20 +15,13 @@ MeshRenderable::MeshRenderable(
 
     // Exercice 3: Use functions in IO to load a mesh from filename
     // (replacet the following stub code that simply creates a triangle)
-    //m_positions.push_back( glm::vec3(-1.0,0.0,0.0) );
-    //m_positions.push_back( glm::vec3(1.0,0.0,0.0) );
-    //m_positions.push_back( glm::vec3(0.0,1.0,0.0) );
+    m_positions.push_back( glm::vec3(-1.0,0.0,0.0) );
+    m_positions.push_back( glm::vec3(1.0,0.0,0.0) );
+    m_positions.push_back( glm::vec3(0.0,1.0,0.0) );
 
-    //m_colors.push_back( randomColor() );
-    //m_colors.push_back( randomColor() );
-    //m_colors.push_back( randomColor() );
-    
-    std::vector<glm::vec2> texCoords;
-    read_obj(filename, m_positions, m_indices, m_normals, texCoords); 
-    
-    m_colors.resize(m_positions.size());
-    for(size_t i=0;i<m_colors.size();i++)
-      m_colors[i] = randomColor();
+    m_colors.push_back( randomColor() );
+    m_colors.push_back( randomColor() );
+    m_colors.push_back( randomColor() );
 
     m_indices.push_back(0);
     m_indices.push_back(1);

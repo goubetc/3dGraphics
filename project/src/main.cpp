@@ -1,8 +1,9 @@
 #include "../include/Viewer.hpp"
 #include "../include/log.hpp"
 #include "./../include/ShaderProgram.hpp"
+#include "./../include/FrameRenderable.hpp"
 #include "./../include/CylinderRenderable.hpp"
-#include "./../include/MeshRenderable.hpp"
+
 
 #include <iostream>
 #include <string>
@@ -27,7 +28,7 @@ static void check_execution_directory()
 
 static void initialize_scene( Viewer& viewer )
 {
-  //initialize your scene into the viewer
+    //initialize your scene into the viewer
   //Path to the vertex shader glsl code
   std::string vShader = "./../shaders/defaultVertex.glsl";
   //Path to the fragment shader glsl code
@@ -44,17 +45,19 @@ static void initialize_scene( Viewer& viewer )
   //Add the shader to the Viewer
   viewer.addShaderProgram(flatShader);
 
-  
-  //CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 30);
+  CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 10, 15, 3, 0, 0, 0);
+  viewer.addRenderable(frame);
+  //CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 0, 0, 0, 0, 0, 0);
   //viewer.addRenderable(frame);
   
-  MeshRenderablePtr suzanne = std::make_shared<MeshRenderable>(defaultShader, "./../meshes/suzanne.obj");
-  viewer.addRenderable(suzanne);
+  
 }
 
 int main()
 {
   check_execution_directory();
+
+    check_execution_directory();
   int width = 1280;
   int heigth = 720;
   Viewer viewer (width, heigth);
