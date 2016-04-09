@@ -50,6 +50,27 @@ static void initialize_hierarchical_scene(Viewer& viewer)
 	};
 	
 	struct sSeat vSeat;
+
+  struct sFloor
+  {
+    float width = 5;
+    float length = 10;
+    float height = 0.3;
+  };
+
+  struct sFloor vFloor;
+
+  struct sWheel
+  {
+    float diameter = 1;
+    float height = 0.5;
+    int faces = 20;
+    float spread  = 3.5;
+    
+  };
+
+  struct sWheel vWheel;
+
 	/*
 	COORDINATES:
 	
@@ -81,25 +102,25 @@ static void initialize_hierarchical_scene(Viewer& viewer)
     
     
     
-    std::shared_ptr<FloorRenderable> floor = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3);
-    std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-    std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-    std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-    std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+    std::shared_ptr<FloorRenderable> kart_floor = std::make_shared<FloorRenderable>(flatShader, vFloor.width, vFloor.height, vFloor.length);
+    std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
+    std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
+    std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
+    std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
     
     
     //wheel_fl->setParentTransform(GeometricTransformation( glm::vec3{5,5,0}, glm::quat(), glm::vec3{1,1,1}).toMatrix());   
     wheel_fl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-    wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,3.5)));   
+    wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-vFloor.width/2 + vWheel.height/2,0.0,vWheel.spread)));   
     
     wheel_fr->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-    wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,3.5)));  
+    wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(vFloor.width/2 + vWheel.height/2,0.0,vWheel.spread)));  
     
     wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-    wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));  
+    wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-vFloor.width/2 + vWheel.height/2,0.0,-vWheel.spread)));  
     
     wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-    wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));  
+    wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(vFloor.width/2 + vWheel.height/2,0.0,-vWheel.spread)));  
     
     // For each element of the hierarchy,
     // Set local transform and parent transform
@@ -110,7 +131,7 @@ static void initialize_hierarchical_scene(Viewer& viewer)
 
 
     // Define parent/children relationships
-    HierarchicalRenderable::addChild(root, floor);
+    HierarchicalRenderable::addChild(root, kart_floor);
     HierarchicalRenderable::addChild(root, wheel_fl);
     HierarchicalRenderable::addChild(root, wheel_fr);
     HierarchicalRenderable::addChild(root, wheel_bl);
