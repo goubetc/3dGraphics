@@ -1,1 +1,1 @@
-/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir
+/home/eline/Documents/3DGraphics/3dGraphics/project/build/CMakeFiles/main.dir
