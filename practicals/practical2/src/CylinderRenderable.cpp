@@ -5,41 +5,20 @@
 
 #include <glm/gtc/type_ptr.hpp>
 #include <GL/glew.h>
-#include <cmath>
 
-CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces) :
+CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram) :
     Renderable(shaderProgram),
     m_vBuffer(0), m_cBuffer(0)
 {
-    
-    
-    /*m_positions.push_back( glm::vec3(0.0,0.0,1.0) );
-    m_positions.push_back( glm::vec3(0.0,0.0,0.0) );
-    m_colors.push_back( randomColor() );
-    m_colors.push_back( randomColor() );*/
-    
+
     // Exercice 1: Fill positions and colors to describe a cylinder
-    for(int i=0;i<faces;i++)
-    {
-      float theta = i * 2 * M_PI/faces;
-      float theta2 = (i+1) * 2 * M_PI/faces;
-      
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),1.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),1.0) );
+    m_positions.push_back( glm::vec3(-1.0,0.0,0.0) );
+    m_positions.push_back( glm::vec3(1.0,0.0,0.0) );
+    m_positions.push_back( glm::vec3(0.0,1.0,0.0) );
 
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      
-      m_positions.push_back( glm::vec3(cos(theta),sin(theta),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),0.0) );
-      m_positions.push_back( glm::vec3(cos(theta2),sin(theta2),1.0) );
-
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-    }
+    m_colors.push_back( glm::vec4(1.0,0.0,0.0,1.0) );
+    m_colors.push_back( glm::vec4(0.0,1.0,0.0,1.0) );
+    m_colors.push_back( glm::vec4(0.0,0.0,1.0,1.0) );
 
     // Exercice 2: Compute normal per face or normal per vertex
     // Simply store the normals in m_colors;

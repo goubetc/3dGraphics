@@ -42,8 +42,8 @@ void initialize_practical_05_scene( Viewer& viewer )
 
     //    practical05_particles(viewer, system, systemRenderable);
     //practical05_springs(viewer, system, systemRenderable);
-    practical05_collisions(viewer, system, systemRenderable);
-    //practical05_playPool(viewer, system, systemRenderable);
+    //   practical05_collisions(viewer, system, systemRenderable);
+    practical05_playPool(viewer, system, systemRenderable);
 
     //Finally activate animation
     viewer.startAnimation();
