@@ -2,6 +2,7 @@
 #include "../include/log.hpp"
 #include "./../include/ShaderProgram.hpp"
 #include "./../include/FrameRenderable.hpp"
+#include "./../include/dynamics/ParticleRenderable.hpp"
 #include "./../include/CylinderRenderable.hpp"
 #include "./../include/FloorRenderable.hpp"
 #include "../include/GeometricTransformation.hpp"
@@ -63,7 +64,7 @@ static void initialize_hierarchical_scene(Viewer& viewer)
 	
 	
     // Create renderables
-    std::shared_ptr<CylinderRenderable> root = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
+    std::shared_ptr<ParticleRenderable> root = std::make_shared<ParticleRenderable>();
     root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
     
     std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
