@@ -4,22 +4,22 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/Camera.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/Camera.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/CubeRenderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/CubeRenderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/CylinderRenderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/FPSCounter.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/FPSCounter.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/FrameRenderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/FrameRenderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/IndexedCubeRenderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/Io.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/Io.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/MeshRenderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/MeshRenderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/Renderable.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/Renderable.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/ShaderProgram.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/TextEngine.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/TextEngine.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/Utils.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/Utils.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/Viewer.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/Viewer.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/gl_helper.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/gl_helper.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/log.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/log.cpp.o"
-  "/user/9/.base/gilskim/home/Downloads/practical1/src/main.cpp" "/user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/Camera.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/Camera.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/CubeRenderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/CubeRenderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/CylinderRenderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/FPSCounter.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/FPSCounter.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/FrameRenderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/FrameRenderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/IndexedCubeRenderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/Io.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/Io.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/MeshRenderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/MeshRenderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/Renderable.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/Renderable.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/ShaderProgram.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/TextEngine.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/TextEngine.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/Utils.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/Utils.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/Viewer.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/Viewer.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/gl_helper.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/gl_helper.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/log.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/log.cpp.o"
+  "/home/tilbuin/Documents/3dGraphics/project/src/main.cpp" "/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

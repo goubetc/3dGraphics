@@ -1704,7 +1704,7 @@ CMakeFiles/main.dir/src/main.cpp.o: ../include/TextEngine.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/Viewer.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/log.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/CylinderRenderable.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/MeshRenderable.hpp
+CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/FrameRenderable.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/ShaderProgram.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
 
