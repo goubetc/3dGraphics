@@ -1,15 +1,15 @@
 #ifndef CYLINDER_RENDERABLE_HPP
 #define CYLINDER_RENDERABLE_HPP
 
-#include "Renderable.hpp"
+#include "HierarchicalRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 
-class CylinderRenderable : public Renderable
+class CylinderRenderable : public HierarchicalRenderable
 {
 public:
     ~CylinderRenderable();
-    CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius, float x, float y, float z );
+    CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
 
 private:
     void do_draw();

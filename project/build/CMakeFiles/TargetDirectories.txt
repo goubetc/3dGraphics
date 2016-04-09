@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/eline/Documents/3DGraphics/3dGraphics/project/build/CMakeFiles/main.dir
+=======
+/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir
+>>>>>>> 000db309e27cb15146cad2fc19c2dcfd4d56dffc

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/eline/Documents/3DGraphics/3dGraphics/project
+=======
+# Install script for directory: /home/tilbuin/Documents/3dGraphics/project
+>>>>>>> 000db309e27cb15146cad2fc19c2dcfd4d56dffc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,9 +32,15 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 # Install shared libraries without execute permission?
+<<<<<<< HEAD
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
+=======
+IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
+ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+>>>>>>> 000db309e27cb15146cad2fc19c2dcfd4d56dffc
 
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
@@ -38,7 +48,14 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
+<<<<<<< HEAD
 file(WRITE "/home/eline/Documents/3DGraphics/3dGraphics/project/build/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
   file(APPEND "/home/eline/Documents/3DGraphics/3dGraphics/project/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()
+=======
+FILE(WRITE "/home/tilbuin/Documents/3dGraphics/project/build/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/tilbuin/Documents/3dGraphics/project/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+ENDFOREACH(file)
+>>>>>>> 000db309e27cb15146cad2fc19c2dcfd4d56dffc

@@ -40,9 +40,9 @@ void initialize_practical_05_scene( Viewer& viewer )
     //Populate the dynamic system with particles, forcefields and create renderables associated to them for visualization.
     //Uncomment only one of the following line
 
-    practical05_particles(viewer, system, systemRenderable);
+    //    practical05_particles(viewer, system, systemRenderable);
     //practical05_springs(viewer, system, systemRenderable);
-    //practical05_collisions(viewer, system, systemRenderable);
+    practical05_collisions(viewer, system, systemRenderable);
     //practical05_playPool(viewer, system, systemRenderable);
 
     //Finally activate animation

@@ -45,6 +45,7 @@ public:
      */
     typedef std::chrono::time_point< clock, Duration > TimePoint;
 
+
     /**@name Construction / Destruction
      * @{*/
     /** @brief Destructor
@@ -127,6 +128,12 @@ public:
      * Switch the camera behavior from the Arcball mode to the Spaceship mode and vice-versa.
      */
     void changeCameraMode();
+
+    /**@brief Get the camera.
+     *
+     * Access to the camera used to render the scene in the viewer.
+     * @return A reference to the viewer's camera. */
+    Camera& getCamera();
 
     /**
      * \brief addRenderable
@@ -233,7 +240,7 @@ private:
     void mouseMoveEvent(sf::Event& e);
 
 
-    Camera m_camera;
+    Camera m_camera; /*!< Camera used to render the scene in the Viewer. */
     sf::RenderWindow m_window; /*!< Pointer to the render window. */
     std::unordered_set< RenderablePtr > m_renderables; /*!< Set of renderables that the viewer displays. */
     TimePoint m_startTime; /*!< Time at the animation start in TimePoint format. */

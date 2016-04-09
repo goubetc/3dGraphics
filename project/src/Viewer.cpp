@@ -66,7 +66,8 @@ Viewer::Viewer(float width, float height) :
   //Set up GLEW
   initializeGL();
 
-  //Initialize the text engine
+  //Initialize the text engine (this SHOULD be done after initializeGL, as the text
+  //engine store some data on the graphic card)
   m_tengine.init();
   m_tengine.setWindowDimensions( m_window.getSize().x, m_window.getSize().y );
 }
@@ -161,6 +162,7 @@ void Viewer::resetAnimation()
 void Viewer::addRenderable(RenderablePtr r)
 {
     m_renderables.insert(r);
+    r->m_viewer = this;
 }
 
 void Viewer::keyPressedEvent(sf::Event& e)
@@ -418,4 +420,9 @@ void Viewer::reloadShaderPrograms()
 {
   for( ShaderProgramPtr program : m_programs )
     program->reload();
+}
+
+Camera& Viewer::getCamera()
+{
+  return m_camera;
 }

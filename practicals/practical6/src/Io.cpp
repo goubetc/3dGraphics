@@ -2,7 +2,7 @@
 #include <iostream>
 
 #define TINYOBJLOADER_IMPLEMENTATION // define this in only *one* .cc
-#include "./../lib/tiny_obj_loader.h"
+#include "tiny_obj_loader.h"
 
 bool read_obj(const std::string& filename,
         std::vector<glm::vec3>& positions,
