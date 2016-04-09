@@ -207,6 +207,30 @@ src/FPSCounter.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FPSCounter.cpp.s
 .PHONY : src/FPSCounter.cpp.s
 
+src/FloorRenderable.o: src/FloorRenderable.cpp.o
+.PHONY : src/FloorRenderable.o
+
+# target to build an object file
+src/FloorRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FloorRenderable.cpp.o
+.PHONY : src/FloorRenderable.cpp.o
+
+src/FloorRenderable.i: src/FloorRenderable.cpp.i
+.PHONY : src/FloorRenderable.i
+
+# target to preprocess a source file
+src/FloorRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FloorRenderable.cpp.i
+.PHONY : src/FloorRenderable.cpp.i
+
+src/FloorRenderable.s: src/FloorRenderable.cpp.s
+.PHONY : src/FloorRenderable.s
+
+# target to generate assembly for a file
+src/FloorRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FloorRenderable.cpp.s
+.PHONY : src/FloorRenderable.cpp.s
+
 src/FrameRenderable.o: src/FrameRenderable.cpp.o
 .PHONY : src/FrameRenderable.o
 
@@ -230,6 +254,54 @@ src/FrameRenderable.s: src/FrameRenderable.cpp.s
 src/FrameRenderable.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FrameRenderable.cpp.s
 .PHONY : src/FrameRenderable.cpp.s
+
+src/GeometricTransformation.o: src/GeometricTransformation.cpp.o
+.PHONY : src/GeometricTransformation.o
+
+# target to build an object file
+src/GeometricTransformation.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
+.PHONY : src/GeometricTransformation.cpp.o
+
+src/GeometricTransformation.i: src/GeometricTransformation.cpp.i
+.PHONY : src/GeometricTransformation.i
+
+# target to preprocess a source file
+src/GeometricTransformation.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GeometricTransformation.cpp.i
+.PHONY : src/GeometricTransformation.cpp.i
+
+src/GeometricTransformation.s: src/GeometricTransformation.cpp.s
+.PHONY : src/GeometricTransformation.s
+
+# target to generate assembly for a file
+src/GeometricTransformation.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GeometricTransformation.cpp.s
+.PHONY : src/GeometricTransformation.cpp.s
+
+src/HierarchicalRenderable.o: src/HierarchicalRenderable.cpp.o
+.PHONY : src/HierarchicalRenderable.o
+
+# target to build an object file
+src/HierarchicalRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o
+.PHONY : src/HierarchicalRenderable.cpp.o
+
+src/HierarchicalRenderable.i: src/HierarchicalRenderable.cpp.i
+.PHONY : src/HierarchicalRenderable.i
+
+# target to preprocess a source file
+src/HierarchicalRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i
+.PHONY : src/HierarchicalRenderable.cpp.i
+
+src/HierarchicalRenderable.s: src/HierarchicalRenderable.cpp.s
+.PHONY : src/HierarchicalRenderable.s
+
+# target to generate assembly for a file
+src/HierarchicalRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s
+.PHONY : src/HierarchicalRenderable.cpp.s
 
 src/IndexedCubeRenderable.o: src/IndexedCubeRenderable.cpp.o
 .PHONY : src/IndexedCubeRenderable.o
@@ -516,9 +588,18 @@ help:
 	@echo "... src/FPSCounter.o"
 	@echo "... src/FPSCounter.i"
 	@echo "... src/FPSCounter.s"
+	@echo "... src/FloorRenderable.o"
+	@echo "... src/FloorRenderable.i"
+	@echo "... src/FloorRenderable.s"
 	@echo "... src/FrameRenderable.o"
 	@echo "... src/FrameRenderable.i"
 	@echo "... src/FrameRenderable.s"
+	@echo "... src/GeometricTransformation.o"
+	@echo "... src/GeometricTransformation.i"
+	@echo "... src/GeometricTransformation.s"
+	@echo "... src/HierarchicalRenderable.o"
+	@echo "... src/HierarchicalRenderable.i"
+	@echo "... src/HierarchicalRenderable.s"
 	@echo "... src/IndexedCubeRenderable.o"
 	@echo "... src/IndexedCubeRenderable.i"
 	@echo "... src/IndexedCubeRenderable.s"
