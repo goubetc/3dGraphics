@@ -4,6 +4,7 @@
 #include "./../include/FrameRenderable.hpp"
 #include "./../include/CylinderRenderable.hpp"
 #include "./../include/FloorRenderable.hpp"
+#include "./../include/TriangleRenderable.hpp"
 #include "../include/GeometricTransformation.hpp"
 
 
@@ -71,6 +72,27 @@ static void initialize_hierarchical_scene(Viewer& viewer)
 
   struct sWheel vWheel;
 
+  struct sHood
+  {
+    float length = 2;
+    float height = 1;    
+  };
+
+  struct sHood vHood;
+
+
+
+  struct sBack
+  {
+    float length = 2;
+    float height = 1;    
+  };
+
+  struct sBack vBack;
+
+
+
+
 	/*
 	COORDINATES:
 	
@@ -90,18 +112,29 @@ static void initialize_hierarchical_scene(Viewer& viewer)
     std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
     root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
     
-    
+    //SEAT
     std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height);
     std::shared_ptr<FloorRenderable> seat_bottom = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.length, vSeat.thickness);
     
     seat_top->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vSeat.height/2 + vSeat.thickness/2, vSeat.length/2))); 
     
     seat->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.25,2.0)));         //SEAT LOCATION
+
+
+    //HOOD
+    std::shared_ptr<TriangleRenderable> hood = std::make_shared<TriangleRenderable>(flatShader, vFloor.width, vHood.height, vHood.length);
+
+    hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.thickness/2 + vHood.height/2,vFloor.length/2 - vHood.length/2)));   
+
+    //BACK
+    std::shared_ptr<FloorRenderable> back = std::make_shared<FloorRenderable>(flatShader, vFloor.width, vBack.height, vBack.length);
+    back->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.thickness/2 + vBack.height/2,vFloor.length/2 - vBack.length/2)));   
+
     
     
     
     
-    
+    //WHEELS
     std::shared_ptr<FloorRenderable> kart_floor = std::make_shared<FloorRenderable>(flatShader, vFloor.width, vFloor.height, vFloor.length);
     std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
     std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, vWheel.faces, vWheel.height, vWheel.diameter);
@@ -139,6 +172,7 @@ static void initialize_hierarchical_scene(Viewer& viewer)
     HierarchicalRenderable::addChild(seat, seat_top);
     HierarchicalRenderable::addChild(seat, seat_bottom);
     HierarchicalRenderable::addChild(root, seat);
+    HierarchicalRenderable::addChild(root, hood);
         
     // Add the root of the hierarchy to the viewer
     viewer.addRenderable(root);
