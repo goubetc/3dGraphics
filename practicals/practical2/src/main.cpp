@@ -1,8 +1,5 @@
 #include "../include/Viewer.hpp"
 #include "../include/log.hpp"
-#include "./../include/ShaderProgram.hpp"
-#include "./../include/CylinderRenderable.hpp"
-#include "./../include/MeshRenderable.hpp"
 
 #include <iostream>
 #include <string>
@@ -28,44 +25,13 @@ static void check_execution_directory()
 static void initialize_scene( Viewer& viewer )
 {
   //initialize your scene into the viewer
-  //Path to the vertex shader glsl code
-  std::string vShader = "./../shaders/defaultVertex.glsl";
-  //Path to the fragment shader glsl code
-  std::string fShader = "./../shaders/defaultFragment.glsl";
-  //Compile and link the shaders into a program
-  ShaderProgramPtr defaultShader = std::make_shared<ShaderProgram>(vShader, fShader);
-  //Add the shader program to the Viewer
-  viewer.addShaderProgram(defaultShader);
-  
-  vShader = "./../shaders/flatVertex.glsl";
-  fShader = "./../shaders/flatFragment.glsl";
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>(vShader, fShader);
-
-  //Add the shader to the Viewer
-  viewer.addShaderProgram(flatShader);
-
-  
-  //CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 30);
-  //viewer.addRenderable(frame);
-  
-  MeshRenderablePtr suzanne = std::make_shared<MeshRenderable>(defaultShader, "./../meshes/suzanne.obj");
-  viewer.addRenderable(suzanne);
 }
 
 int main()
 {
   check_execution_directory();
-  int width = 1280;
-  int heigth = 720;
-  Viewer viewer (width, heigth);
 
-  initialize_scene( viewer );
-  while( viewer.isRunning() )
-{
-    viewer.handleEvent();
-    viewer.draw();
-    viewer.display();
-}
+  // initialize_scene( viewer );
 
     std::cout << "Hello World" << std::endl;
     return EXIT_SUCCESS;

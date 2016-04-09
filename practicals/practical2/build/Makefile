@@ -38,22 +38,19 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /user/9/.base/gilskim/home/Downloads/practical1
+CMAKE_SOURCE_DIR = /home/tilbuin/Documents/3dGraphics/practicals/practical1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /user/9/.base/gilskim/home/Downloads/practical1/build
+CMAKE_BINARY_DIR = /home/tilbuin/Documents/3dGraphics/practicals/practical1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -72,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles /user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tilbuin/Documents/3dGraphics/practicals/practical1/build/CMakeFiles /home/tilbuin/Documents/3dGraphics/practicals/practical1/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /user/9/.base/gilskim/home/Downloads/practical1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tilbuin/Documents/3dGraphics/practicals/practical1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,30 +159,6 @@ src/CubeRenderable.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CubeRenderable.cpp.s
 .PHONY : src/CubeRenderable.cpp.s
 
-src/CylinderRenderable.o: src/CylinderRenderable.cpp.o
-.PHONY : src/CylinderRenderable.o
-
-# target to build an object file
-src/CylinderRenderable.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
-.PHONY : src/CylinderRenderable.cpp.o
-
-src/CylinderRenderable.i: src/CylinderRenderable.cpp.i
-.PHONY : src/CylinderRenderable.i
-
-# target to preprocess a source file
-src/CylinderRenderable.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CylinderRenderable.cpp.i
-.PHONY : src/CylinderRenderable.cpp.i
-
-src/CylinderRenderable.s: src/CylinderRenderable.cpp.s
-.PHONY : src/CylinderRenderable.s
-
-# target to generate assembly for a file
-src/CylinderRenderable.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CylinderRenderable.cpp.s
-.PHONY : src/CylinderRenderable.cpp.s
-
 src/FPSCounter.o: src/FPSCounter.cpp.o
 .PHONY : src/FPSCounter.o
 
@@ -258,54 +231,6 @@ src/IndexedCubeRenderable.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s
 .PHONY : src/IndexedCubeRenderable.cpp.s
 
-src/Io.o: src/Io.cpp.o
-.PHONY : src/Io.o
-
-# target to build an object file
-src/Io.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Io.cpp.o
-.PHONY : src/Io.cpp.o
-
-src/Io.i: src/Io.cpp.i
-.PHONY : src/Io.i
-
-# target to preprocess a source file
-src/Io.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Io.cpp.i
-.PHONY : src/Io.cpp.i
-
-src/Io.s: src/Io.cpp.s
-.PHONY : src/Io.s
-
-# target to generate assembly for a file
-src/Io.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Io.cpp.s
-.PHONY : src/Io.cpp.s
-
-src/MeshRenderable.o: src/MeshRenderable.cpp.o
-.PHONY : src/MeshRenderable.o
-
-# target to build an object file
-src/MeshRenderable.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/MeshRenderable.cpp.o
-.PHONY : src/MeshRenderable.cpp.o
-
-src/MeshRenderable.i: src/MeshRenderable.cpp.i
-.PHONY : src/MeshRenderable.i
-
-# target to preprocess a source file
-src/MeshRenderable.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/MeshRenderable.cpp.i
-.PHONY : src/MeshRenderable.cpp.i
-
-src/MeshRenderable.s: src/MeshRenderable.cpp.s
-.PHONY : src/MeshRenderable.s
-
-# target to generate assembly for a file
-src/MeshRenderable.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/MeshRenderable.cpp.s
-.PHONY : src/MeshRenderable.cpp.s
-
 src/Renderable.o: src/Renderable.cpp.o
 .PHONY : src/Renderable.o
 
@@ -377,30 +302,6 @@ src/TextEngine.s: src/TextEngine.cpp.s
 src/TextEngine.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextEngine.cpp.s
 .PHONY : src/TextEngine.cpp.s
-
-src/Utils.o: src/Utils.cpp.o
-.PHONY : src/Utils.o
-
-# target to build an object file
-src/Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Utils.cpp.o
-.PHONY : src/Utils.cpp.o
-
-src/Utils.i: src/Utils.cpp.i
-.PHONY : src/Utils.i
-
-# target to preprocess a source file
-src/Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Utils.cpp.i
-.PHONY : src/Utils.cpp.i
-
-src/Utils.s: src/Utils.cpp.s
-.PHONY : src/Utils.s
-
-# target to generate assembly for a file
-src/Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Utils.cpp.s
-.PHONY : src/Utils.cpp.s
 
 src/Viewer.o: src/Viewer.cpp.o
 .PHONY : src/Viewer.o
@@ -513,9 +414,6 @@ help:
 	@echo "... src/CubeRenderable.o"
 	@echo "... src/CubeRenderable.i"
 	@echo "... src/CubeRenderable.s"
-	@echo "... src/CylinderRenderable.o"
-	@echo "... src/CylinderRenderable.i"
-	@echo "... src/CylinderRenderable.s"
 	@echo "... src/FPSCounter.o"
 	@echo "... src/FPSCounter.i"
 	@echo "... src/FPSCounter.s"
@@ -525,12 +423,6 @@ help:
 	@echo "... src/IndexedCubeRenderable.o"
 	@echo "... src/IndexedCubeRenderable.i"
 	@echo "... src/IndexedCubeRenderable.s"
-	@echo "... src/Io.o"
-	@echo "... src/Io.i"
-	@echo "... src/Io.s"
-	@echo "... src/MeshRenderable.o"
-	@echo "... src/MeshRenderable.i"
-	@echo "... src/MeshRenderable.s"
 	@echo "... src/Renderable.o"
 	@echo "... src/Renderable.i"
 	@echo "... src/Renderable.s"
@@ -540,9 +432,6 @@ help:
 	@echo "... src/TextEngine.o"
 	@echo "... src/TextEngine.i"
 	@echo "... src/TextEngine.s"
-	@echo "... src/Utils.o"
-	@echo "... src/Utils.i"
-	@echo "... src/Utils.s"
 	@echo "... src/Viewer.o"
 	@echo "... src/Viewer.i"
 	@echo "... src/Viewer.s"

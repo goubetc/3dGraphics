@@ -1,3 +1,0 @@
-﻿  main.cpp
-c:\users\snow\documents\3d_graphics\practicals\practical1\src\main.cpp(60): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  practical1.vcxproj -> C:\Users\Snow\Documents\3d_Graphics\practicals\Debug\practical1.exe

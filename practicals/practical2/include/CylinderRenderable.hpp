@@ -9,7 +9,7 @@ class CylinderRenderable : public Renderable
 {
 public:
     ~CylinderRenderable();
-    CylinderRenderable( ShaderProgramPtr program, int faces );
+    CylinderRenderable( ShaderProgramPtr program );
 
 private:
     void do_draw();
