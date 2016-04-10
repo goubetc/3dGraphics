@@ -28,9 +28,6 @@ static void check_execution_directory()
       exit( EXIT_FAILURE );
     }
 }
-
-<<<<<<< HEAD
-=======
 static void initialize_hierarchical_scene(Viewer& viewer)
 {
   ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");
@@ -126,36 +123,6 @@ static void initialize_hierarchical_scene(Viewer& viewer)
     viewer.addRenderable(root);
    
 
-}
-
->>>>>>> 3e050bb8f43328616869b1d1a1ccf97999de9484
-
-
-static void initialize_scene( Viewer& viewer )
-{
-    //initialize your scene into the viewer
-  //Path to the vertex shader glsl code
-  std::string vShader = "./../shaders/defaultVertex.glsl";
-  //Path to the fragment shader glsl code
-  std::string fShader = "./../shaders/defaultFragment.glsl";
-  //Compile and link the shaders into a program
-  ShaderProgramPtr defaultShader = std::make_shared<ShaderProgram>(vShader, fShader);
-  //Add the shader program to the Viewer
-  viewer.addShaderProgram(defaultShader);
-  
-  vShader = "./../shaders/flatVertex.glsl";
-  fShader = "./../shaders/flatFragment.glsl";
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>(vShader, fShader);
-
-  //Add the shader to the Viewer
-  viewer.addShaderProgram(flatShader);
-
-  CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 10, 15, 3);
-  viewer.addRenderable(frame);
-  //CylinderRenderablePtr frame = std::make_shared<CylinderRenderable>(defaultShader, 0, 0, 0, 0, 0, 0);
-  //viewer.addRenderable(frame);
-  
-  
 }
 
 int main()
