@@ -50,11 +50,17 @@ static glm::mat4 from_scale_rotation_translation(32,1048
 glm::mat4 CustomizedKeyFrame::interpolate(48,1480
 float CustomizedKeyFrame::getTime(68,2344
 
-CylinderRenderable.cpp,183
-CylinderRenderable::CylinderRenderable(10,246
-void CylinderRenderable::do_draw(33,1372
-void CylinderRenderable::do_animate(88,3321
-CylinderRenderable::~CylinderRenderable(90,3377
+CylinderRenderable.cpp,185
+CylinderRenderable::CylinderRenderable(10,223
+void CylinderRenderable::do_draw(79,3183
+void CylinderRenderable::do_animate(105,4292
+CylinderRenderable::~CylinderRenderable(107,4344
+
+FloorRenderable.cpp,168
+FloorRenderable::FloorRenderable(10,220
+void FloorRenderable::do_draw(100,3978
+void FloorRenderable::do_animate(126,5084
+FloorRenderable::~FloorRenderable(128,5133
 
 FPSCounter.cpp,94
 FPSCounter::FPSCounter(4,58
@@ -66,7 +72,7 @@ FrameRenderable::~FrameRenderable(9,208
 FrameRenderable::FrameRenderable(15,339
 void FrameRenderable::initAttributes(35,1326
 void FrameRenderable::do_draw(52,1929
-void FrameRenderable::do_animate(106,4390
+void FrameRenderable::do_animate(106,4381
 
 GeometricTransformation.cpp,705
 GeometricTransformation::GeometricTransformation(3,52
@@ -146,8 +152,8 @@ KeyframedCylinderRenderable::~KeyframedCylinderRenderable(116,4285
 log.cpp,55
 const std::string severity_names[severity_names5,112
 
-main.cpp,16
-int main(8,139
+main.cpp,18
+int main(35,1287
 
 MeshRenderable.cpp,159
 MeshRenderable::MeshRenderable(10,233
@@ -165,13 +171,6 @@ const float& Plane::distanceToOrigin(32,647
 void Plane::setNormal(37,713
 const glm::vec3& Plane::normal(42,773
 
-practical_05_scene.cpp,189
-void initialize_practical_05_scene(20,747
-void practical05_particles(52,2272
-void practical05_springs(102,4572
-void practical05_collisions(199,9343
-void practical05_playPool(278,12869
-
 QuadRendable.cpp,161
 QuadRenderable::QuadRenderable(10,242
 void QuadRenderable::do_draw(55,1939
@@ -183,31 +182,36 @@ Renderable::~Renderable(5,110
 Renderable::Renderable(7,139
 void Renderable::bindShaderProgram(13,304
 void Renderable::unbindShaderProgram(18,375
-int Renderable::projectionLocation(23,448
-int Renderable::viewLocation(28,549
-void Renderable::draw(33,644
-void Renderable::animate(40,717
-void Renderable::keyPressedEvent(47,832
-void Renderable::keyReleasedEvent(52,911
-void Renderable::mousePressEvent(57,992
-void Renderable::mouseReleaseEvent(62,1071
-void Renderable::mouseWheelEvent(67,1154
-void Renderable::mouseMoveEvent(72,1233
-void Renderable::do_keyPressedEvent(77,1310
-void Renderable::do_keyReleasedEvent(80,1364
-void Renderable::do_mousePressEvent(83,1419
-void Renderable::do_mouseReleaseEvent(86,1473
-void Renderable::do_mouseWheelEvent(89,1529
-void Renderable::do_mouseMoveEvent(92,1583
-void Renderable::setModelMatrix(96,1637
-const glm::mat4& Renderable::getModelMatrix(101,1720
-void Renderable::setShaderProgram(106,1797
-void Renderable::beforeDraw(112,1888
-void Renderable::afterDraw(115,1922
-void Renderable::afterAnimate(118,1955
-ShaderProgramPtr Renderable::getShaderProgram(120,2002
-void Renderable::beforeAnimate(125,2089
-Viewer* Renderable::getViewer(128,2138
+int Renderable::projectionLocation(23,450
+int Renderable::viewLocation(28,551
+void Renderable::draw(33,646
+void Renderable::animate(40,719
+void Renderable::keyPressedEvent(47,834
+void Renderable::keyReleasedEvent(52,913
+void Renderable::mousePressEvent(57,994
+void Renderable::mouseReleaseEvent(62,1073
+void Renderable::mouseWheelEvent(67,1156
+void Renderable::mouseMoveEvent(72,1235
+void Renderable::do_keyPressedEvent(77,1312
+void Renderable::do_keyReleasedEvent(80,1366
+void Renderable::do_mousePressEvent(83,1421
+void Renderable::do_mouseReleaseEvent(86,1475
+void Renderable::do_mouseWheelEvent(89,1531
+void Renderable::do_mouseMoveEvent(92,1585
+void Renderable::setModelMatrix(96,1639
+const glm::mat4& Renderable::getModelMatrix(101,1722
+void Renderable::setShaderProgram(106,1799
+void Renderable::beforeDraw(112,1890
+void Renderable::afterDraw(115,1924
+void Renderable::afterAnimate(118,1957
+ShaderProgramPtr Renderable::getShaderProgram(120,2004
+void Renderable::beforeAnimate(125,2091
+Viewer* Renderable::getViewer(128,2140
+
+setup_kart.cpp,92
+void initialize_kart(33,1195
+void hierarchical_kart(60,2463
+  struct sSeat{sSeat81,3579
 
 ShaderProgram.cpp,702
 int ShaderProgram::null_location 17,293
@@ -337,11 +341,11 @@ void Collision::solveCollision(9,152
 
 dynamics/ConstantForceField.cpp,303
 ConstantForceField::ConstantForceField(3,60
-void ConstantForceField::do_addForce(9,221
-const std::vector<ParticlePtr> ConstantForceField::getParticles(17,358
-void ConstantForceField::setParticles(22,453
-const glm::vec3& ConstantForceField::getForce(27,568
-void ConstantForceField::setForce(32,641
+void ConstantForceField::do_addForce(9,217
+const std::vector<ParticlePtr> ConstantForceField::getParticles(17,350
+void ConstantForceField::setParticles(22,443
+const glm::vec3& ConstantForceField::getForce(27,556
+void ConstantForceField::setForce(32,627
 
 dynamics/ConstantForceFieldRenderable.cpp,244
 ConstantForceFieldRenderable::ConstantForceFieldRenderable(8,194
@@ -403,9 +407,9 @@ void DynamicSystemRenderable::do_keyPressedEvent(40,883
 void DynamicSystemRenderable::do_keyReleasedEvent(74,1885
 
 dynamics/EulerExplicitSolver.cpp,139
-EulerExplicitSolver::EulerExplicitSolver(3,61
-EulerExplicitSolver::~EulerExplicitSolver(8,110
-void EulerExplicitSolver::do_solve(13,160
+EulerExplicitSolver::EulerExplicitSolver(4,62
+EulerExplicitSolver::~EulerExplicitSolver(9,111
+void EulerExplicitSolver::do_solve(14,161
 
 dynamics/ForceField.cpp,92
 ForceField::ForceField(3,50
@@ -444,11 +448,11 @@ ParticleParticleCollision::ParticleParticleCollision(9,157
 void ParticleParticleCollision::do_solveCollision(16,353
 bool testParticleParticle(59,2075
 
-dynamics/ParticlePlaneCollision.cpp,194
+dynamics/ParticlePlaneCollision.cpp,195
 ParticlePlaneCollision::~ParticlePlaneCollision(3,64
 ParticlePlaneCollision::ParticlePlaneCollision(7,119
 void ParticlePlaneCollision::do_solveCollision(14,305
-bool testParticlePlane(29,927
+bool testParticlePlane(41,1503
 
 dynamics/ParticleRenderable.cpp,185
 ParticleRenderable::ParticleRenderable(10,267
@@ -459,11 +463,11 @@ ParticleRenderable::~ParticleRenderable(141,6153
 dynamics/Solver.cpp,25
 void Solver::solve(3,47
 
-dynamics/SpringForceField.cpp,186
+dynamics/SpringForceField.cpp,188
 SpringForceField::SpringForceField(3,58
-void SpringForceField::do_addForce(11,323
-ParticlePtr SpringForceField::getParticle1(23,780
-ParticlePtr SpringForceField::getParticle2(28,853
+void SpringForceField::do_addForce(11,313
+ParticlePtr SpringForceField::getParticle1(29,1069
+ParticlePtr SpringForceField::getParticle2(34,1140
 
 dynamics/SpringForceFieldRenderable.cpp,231
 SpringForceFieldRenderable::SpringForceFieldRenderable(9,215

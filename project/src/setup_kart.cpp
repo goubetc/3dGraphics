@@ -93,13 +93,13 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   */
 	
   // Create renderables
-  std::shared_ptr<CylinderRenderable> root = std::make_shared<CylinderRenderable>( flatShader, 10, 1, 1);
-  HierarchicalRenderable::addChild(systemRenderable, root);
-  //root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
+  std::shared_ptr<ParticleRenderable> root = std::make_shared<ParticleRenderable>( flatShader, mobile);
+
+  root->setLocalTransform(glm::scale( glm::mat4(1.), glm::vec3(0,0,0)));
     
   std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
   root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
-    
+  
     
   std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height);
   std::shared_ptr<FloorRenderable> seat_bottom = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.length, vSeat.thickness);
@@ -144,6 +144,7 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   HierarchicalRenderable::addChild(seat, seat_top);
   HierarchicalRenderable::addChild(seat, seat_bottom);
   HierarchicalRenderable::addChild(root, seat);
+  HierarchicalRenderable::addChild(systemRenderable, root);
   //HierarchicalRenderable::addChild(mobile, root);
 
         
