@@ -15,10 +15,10 @@
 ########################
 
 //Value Computed by CMake
-3DGraphics_teacher_BINARY_DIR:STATIC=/home/tilbuin/Documents/3dGraphics/project/build
+3DCG_BINARY_DIR:STATIC=/home/tilbuin/Documents/3dGraphics/project/build
 
 //Value Computed by CMake
-3DGraphics_teacher_SOURCE_DIR:STATIC=/home/tilbuin/Documents/3dGraphics/project
+3DCG_SOURCE_DIR:STATIC=/home/tilbuin/Documents/3dGraphics/project
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -122,7 +122,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=3DGraphics_teacher
+CMAKE_PROJECT_NAME:STATIC=3DCG
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib

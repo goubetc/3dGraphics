@@ -44,11 +44,11 @@ Viewer::Viewer(float width, float height) :
       sf::Style::Default,
       sf::ContextSettings{ 24 /* depth*/, 8 /*stencil*/, 4 /*anti aliasing level*/, 4 /*GL major version*/, 0 /*GL minor version*/}
     },
-    m_startTime{},
     m_modeInformationTextDisappearanceTime{ clock::now() + g_modeInformationTextTimeout },
     m_modeInformationText{ "Arcball Camera Activated" },
     m_applicationRunning{ true }, m_animationLoop{ false }, m_animationIsStarted{ false },
-    m_loopDuration{0}, m_screenshotCounter{0}, m_helpDisplayed{false},
+    m_loopDuration{0}, m_simulationTime{0},
+    m_screenshotCounter{0}, m_helpDisplayed{false},
     m_lastEventHandleTime{ clock::now() }
 {
   sf::ContextSettings settings = m_window.getSettings();
@@ -77,6 +77,8 @@ static const std::string g_help_message =
     "      [F1]  Display/Hide this help message\n"
     "      [F2]  Take a screen shot of the frame currently in the frame buffer\n"
     "      [F3]  Reload all managed shader program from their sources\n"
+    "      [F4]  Pause/Stop the animation\n"
+    "      [F5]  Reset the animation\n"
     "       [c]  Switch the camera mode between Arcball / Space ship\n"
     "[ctrl]+[w]  Quit the application\n"
     "\n"
@@ -89,19 +91,24 @@ static const std::string g_help_message =
     "    [q] to go left         [d] to go right\n"
     "    [z] to go forward      [z] to go backward\n"
     "    [LShift] to go slower  [Space] to go faster\n"
+    "\n"
+    "Note: none of those shortcut keyboard events are transmitted to other renderables."
     ;
 
 void Viewer::draw()
 {
   glcheck(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
   for(RenderablePtr r : m_renderables)
-  {
-    r->bindShaderProgram();
-    glcheck(glUniformMatrix4fv(r->projectionLocation(), 1, GL_FALSE, glm::value_ptr(m_camera.projectionMatrix())));
-    glcheck(glUniformMatrix4fv(r->viewLocation(), 1, GL_FALSE, glm::value_ptr(m_camera.viewMatrix())));
-    r->draw();
-    r->unbindShaderProgram();
-  }
+    {
+      if( r->getShaderProgram() )
+        {
+          r->bindShaderProgram();
+          glcheck(glUniformMatrix4fv(r->projectionLocation(), 1, GL_FALSE, glm::value_ptr(m_camera.projectionMatrix())));
+          glcheck(glUniformMatrix4fv(r->viewLocation(), 1, GL_FALSE, glm::value_ptr(m_camera.viewMatrix())));
+        }
+      r->draw();
+      r->unbindShaderProgram();
+    }
 
   //Refresh the viewer.m_window
   if( clock::now() < m_modeInformationTextDisappearanceTime )
@@ -119,17 +126,20 @@ void Viewer::draw()
 
 float Viewer::getTime()
 {
-    Duration duration = clock::now()-m_startTime;
-    return duration.count();
+  if( m_animationIsStarted )
+    {
+      m_simulationTime += Duration( clock::now() - m_lastSimulationTimePoint).count();
+      m_lastSimulationTimePoint = clock::now();
+    }
+  if( m_animationLoop && m_simulationTime >= m_loopDuration )
+    m_simulationTime = std::fmod( m_simulationTime, m_loopDuration );
+  return m_simulationTime;
 }
 
 void Viewer::animate()
 {
     if(m_animationIsStarted)
     {
-        if(m_animationLoop && getTime()>=m_loopDuration)
-            resetAnimation();
-
         for(RenderablePtr r : m_renderables)
             r->animate( getTime() );
 
@@ -145,7 +155,7 @@ void Viewer::setAnimationLoop(bool animationLoop, float loopDuration)
 
 void Viewer::startAnimation()
 {
-    m_startTime = clock::now();
+    m_lastSimulationTimePoint = clock::now();
     m_animationIsStarted=true;
 }
 
@@ -156,7 +166,8 @@ void Viewer::stopAnimation()
 
 void Viewer::resetAnimation()
 {
-    m_startTime = clock::now();
+    m_lastSimulationTimePoint = clock::now();
+    m_simulationTime = 0;
 }
 
 void Viewer::addRenderable(RenderablePtr r)
@@ -180,6 +191,16 @@ void Viewer::keyPressedEvent(sf::Event& e)
         break;
     case sf::Keyboard::F3:
         reloadShaderPrograms();
+        break;
+    case sf::Keyboard::F4:
+        if( m_animationIsStarted )
+          stopAnimation();
+        else startAnimation();
+        break;
+    case sf::Keyboard::F5:
+        resetAnimation();
+        for(RenderablePtr r : m_renderables)
+            r->keyPressedEvent(e);
         break;
 
     case sf::Keyboard::W:
@@ -215,10 +236,10 @@ void Viewer::keyPressedEvent(sf::Event& e)
         keyboard.slow = true;
         break;
     default:
-        break;
+      for(RenderablePtr r : m_renderables)
+          r->keyPressedEvent(e);
+      break;
     }
-    for(RenderablePtr r : m_renderables)
-        r->keyPressedEvent(e);
 }
 
 void Viewer::keyReleasedEvent(sf::Event& e)
@@ -253,12 +274,10 @@ void Viewer::keyReleasedEvent(sf::Event& e)
       keyboard.slow = false;
       break;
   default:
-      break;
-  }
-
-
     for(RenderablePtr r : m_renderables)
         r->keyReleasedEvent(e);
+    break;
+  }
 }
 
 void Viewer::mousePressEvent(sf::Event& e)
@@ -297,11 +316,11 @@ void Viewer::mouseMoveEvent(sf::Event& e)
 
     //Set value for current mouse position and displacement from the last move.
     m_currentMousePosition = normalizedMousePosition;
-    m_deltaMousePosition = m_currentMousePosition - m_lastMousePosition;
+    glm::vec3 deltaMousePosition = m_currentMousePosition - m_lastMousePosition;
 
     if( sf::Mouse::isButtonPressed(sf::Mouse::Right) )
     {
-        m_camera.update( m_deltaMousePosition.x, -m_deltaMousePosition.y );
+        m_camera.update( deltaMousePosition.x, -deltaMousePosition.y );
     }
 
     //Set last mouse position.
@@ -425,4 +444,16 @@ void Viewer::reloadShaderPrograms()
 Camera& Viewer::getCamera()
 {
   return m_camera;
+}
+
+glm::vec3 Viewer::windowToWorld( const glm::vec3& windowCoordinate )
+{
+  sf::Vector2u size = m_window.getSize();
+  return glm::unProject( windowCoordinate, m_camera.viewMatrix(), m_camera.projectionMatrix(), glm::vec4(0,0,size.x, size.y));
+}
+
+glm::vec3 Viewer::worldToWindow( const glm::vec3& worldCoordinate )
+{
+  sf::Vector2u size = m_window.getSize();
+  return glm::project( worldCoordinate, m_camera.viewMatrix(), m_camera.projectionMatrix(), glm::vec4(0,0,size.x, size.y));
 }

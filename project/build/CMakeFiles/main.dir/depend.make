@@ -421,8 +421,12 @@ CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/CubeRenderable.hpp
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/GeometricTransformation.hpp
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/Plane.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/Renderable.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/ShaderProgram.hpp
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/Sphere.hpp
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/Utils.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/gl_helper.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/./../include/log.hpp
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/CubeRenderable.cpp
@@ -1948,9 +1952,13 @@ CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../extlib/sfml-2.3.2/includ
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/Window.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/GeometricTransformation.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/IndexedCubeRenderable.hpp
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/Plane.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/Renderable.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/ShaderProgram.hpp
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/Sphere.hpp
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/Utils.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/gl_helper.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/./../include/log.hpp
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/IndexedCubeRenderable.cpp
@@ -5990,19 +5998,11 @@ CMakeFiles/main.dir/src/main.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/Win
 CMakeFiles/main.dir/src/main.cpp.o: ../extlib/sfml-2.3.2/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/Camera.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/FPSCounter.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../include/GeometricTransformation.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/Renderable.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/ShaderProgram.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/TextEngine.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/Viewer.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../include/log.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/CylinderRenderable.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/FloorRenderable.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/FrameRenderable.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/HierarchicalRenderable.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/ShaderProgram.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/dynamics/Particle.hpp
-CMakeFiles/main.dir/src/main.cpp.o: ../src/./../include/dynamics/ParticleRenderable.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/main.dir/src/setup_kart.cpp.o: ../extlib/glew-1.13.0/include/GL/glew.h

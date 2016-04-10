@@ -35,6 +35,7 @@ void initialize_kart( Viewer& viewer ){
   ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");  
   viewer.addShaderProgram( flatShader );
   FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
+  std::cout << "address frame : " << &frame << std::endl;
   viewer.addRenderable(frame);
 
   //Initialize a dynamic system (Solver, Time step, Restitution coefficient)
@@ -47,6 +48,7 @@ void initialize_kart( Viewer& viewer ){
   //This renderable is responsible for calling DynamicSystem::computeSimulationStep() in the animate() function
   //It is also responsible for some of the key/mouse events
   DynamicSystemRenderablePtr systemRenderable = std::make_shared<DynamicSystemRenderable>(system);
+  std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
   viewer.addRenderable(systemRenderable);
     
   hierarchical_kart( viewer, system, systemRenderable );
@@ -65,8 +67,9 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   //ShaderProgramPtr parentProg = std::make_shared<ShaderProgram>(  ) ;
   //ShaderProgramPtr childProg = std::make_shared<ShaderProgram>(  ) ;    
   viewer.addShaderProgram( flatShader );
-  FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
-  viewer.addRenderable(frame);
+  // FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
+  // std::cout << "address frame : " << &frame << std::endl;
+  // viewer.addRenderable(frame);
 
   //Initialize particles with position, velocity, mass and radius and add it to the system
   glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
@@ -90,8 +93,9 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   */
 	
   // Create renderables
-  std::shared_ptr<ParticleRenderable> root = std::make_shared<ParticleRenderable>( flatShader, mobile);
-  root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
+  std::shared_ptr<CylinderRenderable> root = std::make_shared<CylinderRenderable>( flatShader, 10, 1, 1);
+  HierarchicalRenderable::addChild(systemRenderable, root);
+  //root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
     
   std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
   root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
@@ -130,6 +134,7 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   glm::mat4 rootParentTransform;
   root->setParentTransform(rootParentTransform);
 
+
   // Define parent/children relationships
   HierarchicalRenderable::addChild(root, floor);
   HierarchicalRenderable::addChild(root, wheel_fl);
@@ -139,6 +144,8 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   HierarchicalRenderable::addChild(seat, seat_top);
   HierarchicalRenderable::addChild(seat, seat_bottom);
   HierarchicalRenderable::addChild(root, seat);
+  //HierarchicalRenderable::addChild(mobile, root);
+
         
   // Add the root of the hierarchy to the viewer
   //viewer.addRenderable(root);
@@ -227,5 +234,5 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   system->setCollisionsDetection(true);
   system->setRestitution(1.0f);
 
-  HierarchicalRenderable::addChild(systemRenderable, root);
+  
 }

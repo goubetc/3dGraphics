@@ -39,9 +39,9 @@ void check_gl_error( const char* call, const char* file, const int line );
  * EVERY openGL command:
  *
  * \code{.cpp}
- * glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_vBuffer));
+ * glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
  * glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
- * glcheck(glDrawArrays(GL_TRIANGLES,0, m_vertices.size()));
+ * glcheck(glDrawArrays(GL_TRIANGLES,0, m_positions.size()));
  * \endcode
  *
  * If an error occurred before the command wrapped in the glcheck() macro, it
@@ -54,7 +54,9 @@ void check_gl_error( const char* call, const char* file, const int line );
  * \sa LOG()
  *
  * The use of this macro creates some runtime overhead. This is why it does
- * nothing when the source code is compiled in release mode.
+ * nothing when the source code is compiled in release mode. Be sure to
+ * compile in debug mode (have the variable CMAKE_BUILD_TYPE set to Debug
+ * in the CMakeLists.txt) if you want to track down a bug.
  */
 # ifdef DEBUG
 #   define glcheck( call )                  \

@@ -7,39 +7,24 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <GL/glew.h>
 
-MeshRenderable::MeshRenderable( 
-        ShaderProgramPtr shaderProgram, 
-        const std::string& filename) 
-: Renderable(shaderProgram)
+MeshRenderable::MeshRenderable( ShaderProgramPtr shaderProgram, const std::string& filename) :
+    Renderable(shaderProgram),
+    m_pBuffer(0), m_cBuffer(0), m_nBuffer(0), m_iBuffer(0)
 {
-
-    // Exercice 3: Use functions in IO to load a mesh from filename
-    // (replacet the following stub code that simply creates a triangle)
-    m_positions.push_back( glm::vec3(-1.0,0.0,0.0) );
-    m_positions.push_back( glm::vec3(1.0,0.0,0.0) );
-    m_positions.push_back( glm::vec3(0.0,1.0,0.0) );
-
-    m_colors.push_back( randomColor() );
-    m_colors.push_back( randomColor() );
-    m_colors.push_back( randomColor() );
-
-    m_indices.push_back(0);
-    m_indices.push_back(1);
-    m_indices.push_back(2);
-
-    m_normals.push_back( glm::vec3(1.0,0.0,0.0) );
-    m_normals.push_back( glm::vec3(1.0,0.0,0.0) );
-    m_normals.push_back( glm::vec3(1.0,0.0,0.0) );
-
+    std::vector<glm::vec2> texCoords;
+    read_obj(filename, m_positions, m_indices, m_normals, texCoords);
+    m_colors.resize( m_positions.size() );
+    for(size_t i=0; i<m_colors.size(); ++i)
+        m_colors[i] = randomColor();
 
     //Create buffers
-    glGenBuffers(1, &m_vBuffer); //positions
+    glGenBuffers(1, &m_pBuffer); //vertices
     glGenBuffers(1, &m_cBuffer); //colors
     glGenBuffers(1, &m_nBuffer); //normals
     glGenBuffers(1, &m_iBuffer); //indices
 
     //Activate buffer and send data to the graphics card
-    glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_vBuffer));
+    glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
     glcheck(glBufferData(GL_ARRAY_BUFFER, m_positions.size()*sizeof(glm::vec3), m_positions.data(), GL_STATIC_DRAW));
     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
     glcheck(glBufferData(GL_ARRAY_BUFFER, m_colors.size()*sizeof(glm::vec4), m_colors.data(), GL_STATIC_DRAW));
@@ -57,34 +42,55 @@ void MeshRenderable::do_draw()
 
     int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
 
-    glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(m_model)));
+    if(modelLocation != ShaderProgram::null_location)
+        glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(getModelMatrix())));
 
-    glcheck(glEnableVertexAttribArray(positionLocation));
-    glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_vBuffer));
-    glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    if(positionLocation != ShaderProgram::null_location)
+    {
+        glcheck(glEnableVertexAttribArray(positionLocation));
+        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
+        glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    }
 
-    glcheck(glEnableVertexAttribArray(colorLocation));
-    glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
-    glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    if(colorLocation != ShaderProgram::null_location)
+    {
+        glcheck(glEnableVertexAttribArray(colorLocation));
+        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
+        glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    }
 
-    glcheck(glEnableVertexAttribArray(normalLocation));
-    glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
-    glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    if(normalLocation != ShaderProgram::null_location)
+    {
+        glcheck(glEnableVertexAttribArray(normalLocation));
+        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
+        glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    }
 
     //Draw triangles elements
     glcheck(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_iBuffer));
     glcheck(glDrawElements(GL_TRIANGLES, m_indices.size()*3, GL_UNSIGNED_INT, (void*)0));
 
-    glcheck(glDisableVertexAttribArray(positionLocation));
-    glcheck(glDisableVertexAttribArray(colorLocation));
-    glcheck(glDisableVertexAttribArray(normalLocation));
+    if(positionLocation != ShaderProgram::null_location)
+    {
+        glcheck(glDisableVertexAttribArray(positionLocation));
+    }
+
+    if(colorLocation != ShaderProgram::null_location)
+    {
+        glcheck(glDisableVertexAttribArray(colorLocation));
+    }
+
+    if(normalLocation != ShaderProgram::null_location)
+    {
+        glcheck(glDisableVertexAttribArray(normalLocation));
+    }
 }
 
 void MeshRenderable::do_animate(float time) {}
 
 MeshRenderable::~MeshRenderable()
 {
-    glcheck(glDeleteBuffers(1, &m_vBuffer));
+    glcheck(glDeleteBuffers(1, &m_pBuffer));
     glcheck(glDeleteBuffers(1, &m_cBuffer));
     glcheck(glDeleteBuffers(1, &m_nBuffer));
     glcheck(glDeleteBuffers(1, &m_iBuffer));

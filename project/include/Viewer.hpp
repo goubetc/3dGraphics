@@ -135,6 +135,20 @@ public:
      * @return A reference to the viewer's camera. */
     Camera& getCamera();
 
+    /**@brief Get the world coordinate of a window point.
+     *
+     * This function returns the world coordinate of a point given in the
+     * window coordinate system. This is handy to find where the mouse is
+     * in the scene. */
+    glm::vec3 windowToWorld( const glm::vec3& windowCoordinate );
+
+    /**@brief Get the window coordinate of a world point.
+     *
+     * This function returns the window coordinate of a point given in the
+     * world coordinate system.
+     */
+    glm::vec3 worldToWindow( const glm::vec3& worldCoordinate );
+
     /**
      * \brief addRenderable
      *
@@ -243,7 +257,7 @@ private:
     Camera m_camera; /*!< Camera used to render the scene in the Viewer. */
     sf::RenderWindow m_window; /*!< Pointer to the render window. */
     std::unordered_set< RenderablePtr > m_renderables; /*!< Set of renderables that the viewer displays. */
-    TimePoint m_startTime; /*!< Time at the animation start in TimePoint format. */
+
 
     std::unordered_set< ShaderProgramPtr > m_programs;
 
@@ -255,10 +269,11 @@ private:
     bool m_animationLoop; /*!< True if the animation loops after a given duration, \ref m_loopDuration. */
     bool m_animationIsStarted; /*!< True if the animation is running. False otherwise. */
     float m_loopDuration; /*!< Duration of the animation loop in seconds. */
+    float m_simulationTime; /*!< Current simulation time in the animation loop. */
+    TimePoint m_lastSimulationTimePoint; /*!< Date of the last simulation. */
 
     glm::vec3 m_currentMousePosition; /*!< Current mouse cursor coordinates normalized between [-1,1]. The z-value is set to 1. */
     glm::vec3 m_lastMousePosition; /*!< Previous mouse cursor coordinates normalized between [-1,1]. The z-value is set to 1. */
-    glm::vec3 m_deltaMousePosition; /*!< m_currentMousePosition - m_lastMousePosition.*/
 
     unsigned int m_screenshotCounter; /*!< Number of screenshots since the beginning of the application. */
 

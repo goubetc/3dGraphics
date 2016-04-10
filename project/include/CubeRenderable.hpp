@@ -17,7 +17,12 @@ class CubeRenderable : public Renderable
         void do_animate( float time );
 
         std::vector< glm::vec3 > m_positions;
-        unsigned int m_vBuffer;
+        std::vector< glm::vec4 > m_colors;
+        std::vector< glm::vec3 > m_normals;
+
+        unsigned int m_pBuffer;
+        unsigned int m_cBuffer;
+        unsigned int m_nBuffer;
 };
 
 typedef std::shared_ptr<CubeRenderable> CubeRenderablePtr;
