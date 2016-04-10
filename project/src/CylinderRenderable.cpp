@@ -108,4 +108,4 @@ CylinderRenderable::~CylinderRenderable()
 {
     glcheck(glDeleteBuffers(1, &m_vBuffer));
     glcheck(glDeleteBuffers(1, &m_cBuffer));
-}
+}setLocalTransform

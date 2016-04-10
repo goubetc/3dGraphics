@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 #include <cmath>
 
-CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces, float height, float radius, float x, float y, float z ) :
+CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces, float height, float radius) :
     HierarchicalRenderable(shaderProgram),
     m_vBuffer(0), m_cBuffer(0)
 {
@@ -19,6 +19,7 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
     m_positions.push_back( glm::vec3(0.0,0.0,0.0) );
     m_colors.push_back( randomColor() );
     m_colors.push_back( randomColor() );*/
+    float x=0, y=0, z=0;
     
     // Exercice 1: Fill positions and colors to describe a cylinder
     for(int i=0;i<faces;i++)
