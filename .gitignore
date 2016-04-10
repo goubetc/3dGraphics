@@ -1,2 +1,8 @@
 */*/extlib/*
 */extlib/*
+*/build/*
+*/*/build/*
+*/build/*/*
+*/*/build/*/*
+*/CMakeFiles/*
+*/*/CMakeFiles/*

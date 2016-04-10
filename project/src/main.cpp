@@ -8,9 +8,12 @@
 #include "../include/GeometricTransformation.hpp"
 
 
+
 #include <iostream>
 #include <string>
 #include <fstream>
+
+void  initialize_kart( Viewer& viewer );
 
 static void check_execution_directory()
 {
