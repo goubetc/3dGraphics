@@ -1,0 +1,478 @@
+
+Camera.cpp,893
+Camera::Camera(10,189
+Camera::~Camera(16,408
+void Camera::animate(21,432
+const glm::mat4& Camera::viewMatrix(25,470
+void Camera::setViewMatrix(30,538
+glm::vec3 Camera::getPosition(35,612
+glm::vec3 Camera::getRight(40,713
+glm::vec3 Camera::getUp(45,819
+glm::vec3 Camera::getForward(50,922
+void Camera::setPosition(55,1033
+void Camera::setRight(67,1275
+void Camera::setUp(76,1528
+void Camera::setForward(85,1753
+const glm::mat4& Camera::projectionMatrix(94,2000
+void Camera::setProjectionMatrix(99,2080
+float Camera::fov(104,2178
+float Camera::ratio(109,2227
+float Camera::znear(114,2280
+float Camera::zfar(119,2333
+void Camera::setFov(124,2384
+void Camera::setRatio(130,2514
+void Camera::setZfar(136,2648
+void Camera::setZnear(142,2780
+Camera::CAMERA_MOUSE_BEHAVIOR Camera::getMouseBehavior(148,2914
+void Camera::setMouseBehavior(153,3010
+void Camera::update(167,3341
+
+ConeRenderable.cpp,158
+ConeRenderable::ConeRenderable(9,202
+void ConeRenderable::do_draw(31,1343
+void ConeRenderable::do_animate(86,3288
+ConeRenderable::~ConeRenderable(88,3336
+
+CubeRenderable.cpp,161
+CubeRenderable::CubeRenderable(10,203
+void CubeRenderable::do_draw(80,2855
+void CubeRenderable::do_animate(135,4800
+CubeRenderable::~CubeRenderable(137,4848
+
+CustomizedKeyFrame.cpp,397
+CustomizedKeyFrame::CustomizedKeyFrame(5,74
+    m_orientation{m_orientation7,232
+    m_scale{m_scale8,266
+CustomizedKeyFrame::CustomizedKeyFrame(12,325
+    m_translation{m_translation15,543
+CustomizedKeyFrame::CustomizedKeyFrame(24,817
+static glm::mat4 from_scale_rotation_translation(32,1048
+glm::mat4 CustomizedKeyFrame::interpolate(48,1480
+float CustomizedKeyFrame::getTime(68,2344
+
+CylinderRenderable.cpp,183
+CylinderRenderable::CylinderRenderable(10,246
+void CylinderRenderable::do_draw(33,1372
+void CylinderRenderable::do_animate(88,3321
+CylinderRenderable::~CylinderRenderable(90,3377
+
+FPSCounter.cpp,94
+FPSCounter::FPSCounter(4,58
+FPSCounter::~FPSCounter(10,336
+float FPSCounter::getFPS(13,366
+
+FrameRenderable.cpp,210
+FrameRenderable::~FrameRenderable(9,208
+FrameRenderable::FrameRenderable(15,339
+void FrameRenderable::initAttributes(35,1326
+void FrameRenderable::do_draw(52,1929
+void FrameRenderable::do_animate(106,4390
+
+GeometricTransformation.cpp,705
+GeometricTransformation::GeometricTransformation(3,52
+    m_orientation{m_orientation8,233
+glm::mat4 GeometricTransformation::toMatrix(12,292
+GeometricTransformation GeometricTransformation::makeTranslation(29,776
+GeometricTransformation GeometricTransformation::makeRotation(36,967
+GeometricTransformation GeometricTransformation::makeScale(43,1155
+void GeometricTransformation::setOrientation(50,1322
+const glm::quat& GeometricTransformation::getOrientation(55,1435
+void GeometricTransformation::setTranslation(60,1529
+const glm::vec3& GeometricTransformation::getTranslation(65,1642
+void GeometricTransformation::setScale(70,1736
+const glm::vec3& GeometricTransformation::getScale(75,1825
+
+gl_helper.cpp,56
+check_previous_gl_errors(10,180
+check_gl_error(22,446
+
+HierarchicalCylinderRenderable.cpp,255
+HierarchicalCylinderRenderable::HierarchicalCylinderRenderable(10,258
+void HierarchicalCylinderRenderable::do_draw(33,1420
+void HierarchicalCylinderRenderable::do_animate(88,3381
+HierarchicalCylinderRenderable::~HierarchicalCylinderRenderable(90,3449
+
+HierarchicalMeshRenderable.cpp,231
+HierarchicalMeshRenderable::HierarchicalMeshRenderable(10,245
+void HierarchicalMeshRenderable::do_draw(37,1653
+void HierarchicalMeshRenderable::do_animate(89,3569
+HierarchicalMeshRenderable::~HierarchicalMeshRenderable(91,3629
+
+HierarchicalRenderable.cpp,766
+HierarchicalRenderable::~HierarchicalRenderable(7,178
+HierarchicalRenderable::HierarchicalRenderable(9,231
+const glm::mat4& HierarchicalRenderable::getParentTransform(15,446
+void HierarchicalRenderable::setParentTransform(20,549
+void HierarchicalRenderable::updateModelMatrix(25,679
+const glm::mat4& HierarchicalRenderable::getLocalTransform(31,833
+void HierarchicalRenderable::setLocalTransform(36,934
+glm::mat4 HierarchicalRenderable::computeTotalParentTransform(41,1058
+void HierarchicalRenderable::beforeDraw(55,1397
+void HierarchicalRenderable::afterDraw(64,1920
+void HierarchicalRenderable::afterAnimate(92,3396
+void HierarchicalRenderable::addChild(100,3649
+std::vector< HierarchicalRenderablePtr > & HierarchicalRenderable::getChildren(106,3832
+
+HierarchicalSphereRenderable.cpp,242
+HierarchicalSphereRenderable::HierarchicalSphereRenderable(9,216
+void HierarchicalSphereRenderable::do_draw(35,1416
+void HierarchicalSphereRenderable::do_animate(90,3375
+HierarchicalSphereRenderable::~HierarchicalSphereRenderable(92,3441
+
+IndexedCubeRenderable.cpp,200
+IndexedCubeRenderable::IndexedCubeRenderable(9,209
+void IndexedCubeRenderable::do_draw(39,1737
+void IndexedCubeRenderable::do_animate(95,3779
+IndexedCubeRenderable::~IndexedCubeRenderable(97,3834
+
+Io.cpp,64
+#define TINYOBJLOADER_IMPLEMENTATION 4,52
+bool read_obj(7,152
+
+KeyframeCollection.cpp,234
+void KeyframeCollection::add(4,87
+glm::mat4 KeyframeCollection::interpolateTransformation(9,246
+bool KeyframeCollection::empty(46,2370
+std::array< KeyframeCollection::Keyframe, 2 > KeyframeCollection::getBoundingKeyframes(51,2446
+
+KeyframedCylinderRenderable.cpp,377
+KeyframedCylinderRenderable::KeyframedCylinderRenderable(9,233
+void KeyframedCylinderRenderable::addLocalTransformKeyframe(38,1554
+void KeyframedCylinderRenderable::addParentTransformKeyframe(43,1728
+void KeyframedCylinderRenderable::do_draw(48,1904
+void KeyframedCylinderRenderable::do_animate(103,3862
+KeyframedCylinderRenderable::~KeyframedCylinderRenderable(116,4285
+
+log.cpp,55
+const std::string severity_names[severity_names5,112
+
+main.cpp,16
+int main(8,139
+
+MeshRenderable.cpp,159
+MeshRenderable::MeshRenderable(10,233
+void MeshRenderable::do_draw(37,1604
+void MeshRenderable::do_animate(89,3508
+MeshRenderable::~MeshRenderable(91,3556
+
+Plane.cpp,253
+Plane::Plane(5,73
+    m_d{m_d9,164
+Plane::Plane(12,202
+glm::vec3 Plane::projectOnPlane(18,358
+void Plane::setDistanceToOrigin(27,581
+const float& Plane::distanceToOrigin(32,647
+void Plane::setNormal(37,713
+const glm::vec3& Plane::normal(42,773
+
+practical_05_scene.cpp,189
+void initialize_practical_05_scene(20,747
+void practical05_particles(52,2272
+void practical05_springs(102,4572
+void practical05_collisions(199,9343
+void practical05_playPool(278,12869
+
+QuadRendable.cpp,161
+QuadRenderable::QuadRenderable(10,242
+void QuadRenderable::do_draw(55,1939
+void QuadRenderable::do_animate(106,3788
+QuadRenderable::~QuadRenderable(108,3836
+
+Renderable.cpp,1206
+Renderable::~Renderable(5,110
+Renderable::Renderable(7,139
+void Renderable::bindShaderProgram(13,304
+void Renderable::unbindShaderProgram(18,375
+int Renderable::projectionLocation(23,448
+int Renderable::viewLocation(28,549
+void Renderable::draw(33,644
+void Renderable::animate(40,717
+void Renderable::keyPressedEvent(47,832
+void Renderable::keyReleasedEvent(52,911
+void Renderable::mousePressEvent(57,992
+void Renderable::mouseReleaseEvent(62,1071
+void Renderable::mouseWheelEvent(67,1154
+void Renderable::mouseMoveEvent(72,1233
+void Renderable::do_keyPressedEvent(77,1310
+void Renderable::do_keyReleasedEvent(80,1364
+void Renderable::do_mousePressEvent(83,1419
+void Renderable::do_mouseReleaseEvent(86,1473
+void Renderable::do_mouseWheelEvent(89,1529
+void Renderable::do_mouseMoveEvent(92,1583
+void Renderable::setModelMatrix(96,1637
+const glm::mat4& Renderable::getModelMatrix(101,1720
+void Renderable::setShaderProgram(106,1797
+void Renderable::beforeDraw(112,1888
+void Renderable::afterDraw(115,1922
+void Renderable::afterAnimate(118,1955
+ShaderProgramPtr Renderable::getShaderProgram(120,2002
+void Renderable::beforeAnimate(125,2089
+Viewer* Renderable::getViewer(128,2138
+
+ShaderProgram.cpp,702
+int ShaderProgram::null_location 17,293
+dump_shader_log(20,345
+check_program_status(35,695
+compile_shader(54,1217
+ShaderProgram::ShaderProgram(97,2507
+ShaderProgram::ShaderProgram(101,2561
+ShaderProgram::~ShaderProgram(109,2744
+void ShaderProgram::load(115,2857
+ShaderProgram::reload(171,5077
+ShaderProgram::bind(178,5226
+ShaderProgram::unbind(184,5298
+static const GLenum uniform_properties[uniform_properties189,5357
+static const GLenum attribute_properties[attribute_properties195,5463
+GLuint ShaderProgram::programId(200,5551
+void ShaderProgram::resources_introspection(205,5614
+GLint ShaderProgram::getUniformLocation(248,7138
+GLint ShaderProgram::getAttributeLocation(257,7484
+
+Sphere.cpp,181
+Sphere::~Sphere(3,36
+Sphere::Sphere(5,57
+void Sphere::setRadius(11,139
+const float& Sphere::radius(16,196
+void Sphere::setCenter(21,253
+const glm::vec3& Sphere::center(26,314
+
+SphereRenderable.cpp,170
+SphereRenderable::SphereRenderable(9,204
+void SphereRenderable::do_draw(33,1360
+void SphereRenderable::do_animate(83,3185
+SphereRenderable::~SphereRenderable(85,3235
+
+TextEngine.cpp,1146
+static const int max_texture_width 17,375
+struct TextAtlas 19,419
+  GLuint textureID;TextAtlas::textureID20,438
+  unsigned int textureWidth;TextAtlas::textureWidth22,459
+  unsigned int textureHeight;TextAtlas::textureHeight23,488
+  unsigned int maxCharacterHeight;TextAtlas::maxCharacterHeight24,518
+  struct CharacterInformation TextAtlas::CharacterInformation26,554
+    glm::vec2 advance;TextAtlas::CharacterInformation::advance27,586
+    glm::ivec2 size;TextAtlas::CharacterInformation::size28,609
+    glm::ivec2 bearing;TextAtlas::CharacterInformation::bearing29,630
+    float tx;TextAtlas::CharacterInformation::tx31,655
+    float ty;TextAtlas::CharacterInformation::ty32,713
+  } characterInformation[TextAtlas::characterInformation33,771
+  TextAtlas(TextAtlas::TextAtlas35,803
+    : textureWidth{0}, textureHeight{TextAtlas::textureHeight36,841
+  ~TextAtlas(TextAtlas::~TextAtlas122,4121
+TextEngine::TextEngine(127,4192
+    m_vboVertices{m_vboVertices129,4239
+void TextEngine::init(134,4364
+TextEngine::~TextEngine(166,5439
+void TextEngine::setWindowDimensions(171,5488
+void TextEngine::render(176,5624
+
+TorusRenderable.cpp,164
+TorusRenderable::TorusRenderable(9,203
+void TorusRenderable::do_draw(35,1445
+void TorusRenderable::do_animate(90,3391
+TorusRenderable::~TorusRenderable(92,3440
+
+TriangleRenderable.cpp,182
+TriangleRenderable::TriangleRenderable(8,172
+void TriangleRenderable::do_draw(29,1057
+void TriangleRenderable::do_animate(52,2030
+TriangleRenderable::~TriangleRenderable(54,2082
+
+Utils.cpp,251
+float random(15,432
+glm::vec4 randomColor(21,555
+glm::vec4 getColor(30,874
+void getUnitIndexedCube(41,1299
+void getUnitCube(71,2480
+void getUnitCylinder(230,8019
+void getUnitSphere(285,10398
+void getTorus(332,13142
+void getUnitCone(391,15794
+
+Viewer.cpp,1731
+static const Viewer::Duration g_modeInformationTextTimeout 11,218
+static const std::string screenshot_basename 13,307
+static void initializeGL(15,369
+Viewer::KeyboardState::KeyboardState(32,865
+Viewer::~Viewer(37,1027
+Viewer::Viewer(40,1049
+    m_applicationRunning{m_applicationRunning49,1494
+    m_applicationRunning{ true }, m_animationLoop{m_animationLoop49,1494
+    m_applicationRunning{ true }, m_animationLoop{ false }, m_animationIsStarted{m_animationIsStarted49,1494
+    m_loopDuration{m_loopDuration50,1585
+    m_loopDuration{0}, m_simulationTime{m_simulationTime50,1585
+    m_screenshotCounter{m_screenshotCounter51,1629
+    m_screenshotCounter{0}, m_helpDisplayed{m_helpDisplayed51,1629
+    m_lastEventHandleTime{m_lastEventHandleTime52,1681
+static const std::string g_help_message 75,2536
+void Viewer::draw(98,3468
+float Viewer::getTime(127,4550
+void Viewer::animate(139,4914
+void Viewer::setAnimationLoop(150,5105
+void Viewer::startAnimation(156,5252
+void Viewer::stopAnimation(162,5364
+void Viewer::resetAnimation(167,5430
+void Viewer::addRenderable(173,5537
+void Viewer::keyPressedEvent(179,5639
+void Viewer::keyReleasedEvent(245,7096
+void Viewer::mousePressEvent(283,7906
+void Viewer::mouseReleaseEvent(289,8026
+void Viewer::mouseWheelEvent(295,8150
+void Viewer::mouseMoveEvent(309,8821
+void Viewer::handleEvent(334,9686
+void Viewer::takeScreenshot(391,11631
+void Viewer::changeCameraMode(408,12139
+bool Viewer::isRunning(423,12615
+void Viewer::display(428,12682
+void Viewer::addShaderProgram(433,12732
+void Viewer::reloadShaderPrograms(438,12827
+Camera& Viewer::getCamera(444,12938
+glm::vec3 Viewer::windowToWorld(449,12990
+glm::vec3 Viewer::worldToWindow(455,13233
+
+dynamics/Collision.cpp,93
+Collision::~Collision(3,51
+Collision::Collision(6,79
+void Collision::solveCollision(9,152
+
+dynamics/ConstantForceField.cpp,303
+ConstantForceField::ConstantForceField(3,60
+void ConstantForceField::do_addForce(9,221
+const std::vector<ParticlePtr> ConstantForceField::getParticles(17,358
+void ConstantForceField::setParticles(22,453
+const glm::vec3& ConstantForceField::getForce(27,568
+void ConstantForceField::setForce(32,641
+
+dynamics/ConstantForceFieldRenderable.cpp,244
+ConstantForceFieldRenderable::ConstantForceFieldRenderable(8,194
+void ConstantForceFieldRenderable::do_draw(46,1802
+void ConstantForceFieldRenderable::do_animate(120,4578
+ConstantForceFieldRenderable::~ConstantForceFieldRenderable(122,4640
+
+dynamics/ControlledForceFieldRenderable.cpp,625
+ControlledForceFieldStatus::~ControlledForceFieldStatus(8,241
+ControlledForceFieldStatus::ControlledForceFieldStatus(10,302
+ControlledForceFieldStatus::ControlledForceFieldStatus(15,377
+void ControlledForceFieldStatus::clear(22,555
+ControlledForceFieldRenderable::ControlledForceFieldRenderable(42,981
+ControlledForceFieldRenderable::~ControlledForceFieldRenderable(78,2716
+void ControlledForceFieldRenderable::do_keyPressedEvent(85,2922
+void ControlledForceFieldRenderable::do_keyReleasedEvent(105,3388
+void ControlledForceFieldRenderable::do_animate(125,3859
+void ControlledForceFieldRenderable::do_draw(163,5472
+
+dynamics/DampingForceField.cpp,296
+DampingForceField::DampingForceField(3,59
+void DampingForceField::do_addForce(9,218
+const std::vector<ParticlePtr> DampingForceField::getParticles(17,361
+void DampingForceField::setParticles(22,455
+const float& DampingForceField::getDamping(27,569
+void DampingForceField::setDamping(32,641
+
+dynamics/DynamicSystem.cpp,995
+DynamicSystem::DynamicSystem(13,345
+const std::vector<ParticlePtr>& DynamicSystem::getParticles(21,452
+void DynamicSystem::setParticles(26,549
+const std::vector<ForceFieldPtr>& DynamicSystem::getForceFields(31,659
+void DynamicSystem::setForceFields(36,762
+float DynamicSystem::getDt(42,883
+void DynamicSystem::setDt(47,940
+DynamicSystem::~DynamicSystem(52,996
+void DynamicSystem::clear(54,1032
+bool DynamicSystem::getCollisionDetection(61,1147
+void DynamicSystem::setCollisionsDetection(66,1227
+void DynamicSystem::addParticle(71,1319
+void DynamicSystem::addForceField(76,1401
+void DynamicSystem::addPlaneObstacle(81,1507
+SolverPtr DynamicSystem::getSolver(86,1620
+void DynamicSystem::setSolver(91,1683
+void DynamicSystem::detectCollisions(96,1759
+void DynamicSystem::solveCollisions(127,2665
+void DynamicSystem::computeSimulationStep(137,2877
+const float DynamicSystem::getRestitution(160,3350
+void DynamicSystem::setRestitution(165,3425
+std::ostream& operator<<(170,3554
+
+dynamics/DynamicSystemRenderable.cpp,381
+DynamicSystemRenderable::~DynamicSystemRenderable(12,280
+DynamicSystemRenderable::DynamicSystemRenderable(15,336
+void DynamicSystemRenderable::do_draw(21,499
+void DynamicSystemRenderable::do_animate(24,543
+void DynamicSystemRenderable::setDynamicSystem(35,776
+void DynamicSystemRenderable::do_keyPressedEvent(40,883
+void DynamicSystemRenderable::do_keyReleasedEvent(74,1885
+
+dynamics/EulerExplicitSolver.cpp,139
+EulerExplicitSolver::EulerExplicitSolver(3,61
+EulerExplicitSolver::~EulerExplicitSolver(8,110
+void EulerExplicitSolver::do_solve(13,160
+
+dynamics/ForceField.cpp,92
+ForceField::ForceField(3,50
+ForceField::~ForceField(5,78
+void ForceField::addForce(7,107
+
+dynamics/Particle.cpp,633
+void Particle::setRadius(3,50
+bool Particle::isFixed(9,125
+void Particle::setFixed(14,183
+Particle::Particle(19,251
+Particle::~Particle(28,596
+const glm::vec3 & Particle::getPosition(32,623
+const glm::vec3 & Particle::getVelocity(37,699
+const glm::vec3 & Particle::getForce(42,775
+float Particle::getMass(47,845
+float Particle::getRadius(52,901
+void Particle::setPosition(57,961
+void Particle::setVelocity(62,1037
+void Particle::setForce(67,1114
+void Particle::incrPosition(72,1188
+void Particle::incrVelocity(77,1266
+void Particle::incrForce(82,1344
+void Particle::restart(87,1419
+std::ostream& operator<<(93,1517
+
+dynamics/ParticleListRenderable.cpp,206
+ParticleListRenderable::ParticleListRenderable(7,169
+void ParticleListRenderable::do_draw(41,1519
+void ParticleListRenderable::do_animate(89,3432
+ParticleListRenderable::~ParticleListRenderable(92,3490
+
+dynamics/ParticleParticleCollision.cpp,213
+ParticleParticleCollision::~ParticleParticleCollision(4,95
+ParticleParticleCollision::ParticleParticleCollision(9,157
+void ParticleParticleCollision::do_solveCollision(16,353
+bool testParticleParticle(59,2075
+
+dynamics/ParticlePlaneCollision.cpp,194
+ParticlePlaneCollision::~ParticlePlaneCollision(3,64
+ParticlePlaneCollision::ParticlePlaneCollision(7,119
+void ParticlePlaneCollision::do_solveCollision(14,305
+bool testParticlePlane(29,927
+
+dynamics/ParticleRenderable.cpp,185
+ParticleRenderable::ParticleRenderable(10,267
+void ParticleRenderable::do_draw(81,3829
+void ParticleRenderable::do_animate(139,6101
+ParticleRenderable::~ParticleRenderable(141,6153
+
+dynamics/Solver.cpp,25
+void Solver::solve(3,47
+
+dynamics/SpringForceField.cpp,186
+SpringForceField::SpringForceField(3,58
+void SpringForceField::do_addForce(11,323
+ParticlePtr SpringForceField::getParticle1(23,780
+ParticlePtr SpringForceField::getParticle2(28,853
+
+dynamics/SpringForceFieldRenderable.cpp,231
+SpringForceFieldRenderable::SpringForceFieldRenderable(9,215
+void SpringForceFieldRenderable::do_draw(37,1579
+void SpringForceFieldRenderable::do_animate(99,3887
+SpringForceFieldRenderable::~SpringForceFieldRenderable(101,3947
+
+dynamics/SpringListRenderable.cpp,196
+SpringListRenderable::SpringListRenderable(8,188
+void SpringListRenderable::do_draw(41,1652
+void SpringListRenderable::do_animate(112,4273
+SpringListRenderable::~SpringListRenderable(114,4327

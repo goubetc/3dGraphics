@@ -55,7 +55,7 @@ void initialize_kart( Viewer& viewer ){
   viewer.startAnimation();
 }
 
-void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+void hierarchical_kart( Viewer& viewer ){
 
   //Position the camera
   viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(0,0,10), glm::vec3(0,0,0), glm::vec3(0,1,0)));
@@ -167,8 +167,8 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
 
   planeNormal = glm::vec3(0,0,1);
   planePoint = glm::vec3(0,0,0);
-  PlanePtr floorPlane = std::make_shared<Plane>( planeNormal, planePoint);
-  system->addPlaneObstacle( floorPlane );
+  PlanePtr floor = std::make_shared<Plane>( planeNormal, planePoint);
+  system->addPlaneObstacle( floor );
 
   //Create  plane renderables to display each obstacle
   //Add them to the system renderable
@@ -227,5 +227,5 @@ void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRe
   system->setCollisionsDetection(true);
   system->setRestitution(1.0f);
 
-  HierarchicalRenderable::addChild(systemRenderable, root);
+  HierarchicalRenderable::addChild(systemRenderable, mobileRenderable);
 }
