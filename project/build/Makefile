@@ -38,19 +38,22 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tilbuin/Documents/3dGraphics/project
+CMAKE_SOURCE_DIR = "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tilbuin/Documents/3dGraphics/project/build
+CMAKE_BINARY_DIR = "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -1263,6 +1266,54 @@ src/gl_helper.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gl_helper.cpp.s
 .PHONY : src/gl_helper.cpp.s
 
+src/initialize_kart.o: src/initialize_kart.cpp.o
+.PHONY : src/initialize_kart.o
+
+# target to build an object file
+src/initialize_kart.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.o
+.PHONY : src/initialize_kart.cpp.o
+
+src/initialize_kart.i: src/initialize_kart.cpp.i
+.PHONY : src/initialize_kart.i
+
+# target to preprocess a source file
+src/initialize_kart.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.i
+.PHONY : src/initialize_kart.cpp.i
+
+src/initialize_kart.s: src/initialize_kart.cpp.s
+.PHONY : src/initialize_kart.s
+
+# target to generate assembly for a file
+src/initialize_kart.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.s
+.PHONY : src/initialize_kart.cpp.s
+
+src/initialize_person.o: src/initialize_person.cpp.o
+.PHONY : src/initialize_person.o
+
+# target to build an object file
+src/initialize_person.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.o
+.PHONY : src/initialize_person.cpp.o
+
+src/initialize_person.i: src/initialize_person.cpp.i
+.PHONY : src/initialize_person.i
+
+# target to preprocess a source file
+src/initialize_person.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.i
+.PHONY : src/initialize_person.cpp.i
+
+src/initialize_person.s: src/initialize_person.cpp.s
+.PHONY : src/initialize_person.s
+
+# target to generate assembly for a file
+src/initialize_person.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.s
+.PHONY : src/initialize_person.cpp.s
+
 src/log.o: src/log.cpp.o
 .PHONY : src/log.o
 
@@ -1334,6 +1385,150 @@ src/setup_kart.s: src/setup_kart.cpp.s
 src/setup_kart.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/setup_kart.cpp.s
 .PHONY : src/setup_kart.cpp.s
+
+src/texturing/BillBoardPlaneRenderable.o: src/texturing/BillBoardPlaneRenderable.cpp.o
+.PHONY : src/texturing/BillBoardPlaneRenderable.o
+
+# target to build an object file
+src/texturing/BillBoardPlaneRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o
+.PHONY : src/texturing/BillBoardPlaneRenderable.cpp.o
+
+src/texturing/BillBoardPlaneRenderable.i: src/texturing/BillBoardPlaneRenderable.cpp.i
+.PHONY : src/texturing/BillBoardPlaneRenderable.i
+
+# target to preprocess a source file
+src/texturing/BillBoardPlaneRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.i
+.PHONY : src/texturing/BillBoardPlaneRenderable.cpp.i
+
+src/texturing/BillBoardPlaneRenderable.s: src/texturing/BillBoardPlaneRenderable.cpp.s
+.PHONY : src/texturing/BillBoardPlaneRenderable.s
+
+# target to generate assembly for a file
+src/texturing/BillBoardPlaneRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.s
+.PHONY : src/texturing/BillBoardPlaneRenderable.cpp.s
+
+src/texturing/MipMapCubeRenderable.o: src/texturing/MipMapCubeRenderable.cpp.o
+.PHONY : src/texturing/MipMapCubeRenderable.o
+
+# target to build an object file
+src/texturing/MipMapCubeRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o
+.PHONY : src/texturing/MipMapCubeRenderable.cpp.o
+
+src/texturing/MipMapCubeRenderable.i: src/texturing/MipMapCubeRenderable.cpp.i
+.PHONY : src/texturing/MipMapCubeRenderable.i
+
+# target to preprocess a source file
+src/texturing/MipMapCubeRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.i
+.PHONY : src/texturing/MipMapCubeRenderable.cpp.i
+
+src/texturing/MipMapCubeRenderable.s: src/texturing/MipMapCubeRenderable.cpp.s
+.PHONY : src/texturing/MipMapCubeRenderable.s
+
+# target to generate assembly for a file
+src/texturing/MipMapCubeRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.s
+.PHONY : src/texturing/MipMapCubeRenderable.cpp.s
+
+src/texturing/MultiTexturedCubeRenderable.o: src/texturing/MultiTexturedCubeRenderable.cpp.o
+.PHONY : src/texturing/MultiTexturedCubeRenderable.o
+
+# target to build an object file
+src/texturing/MultiTexturedCubeRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o
+.PHONY : src/texturing/MultiTexturedCubeRenderable.cpp.o
+
+src/texturing/MultiTexturedCubeRenderable.i: src/texturing/MultiTexturedCubeRenderable.cpp.i
+.PHONY : src/texturing/MultiTexturedCubeRenderable.i
+
+# target to preprocess a source file
+src/texturing/MultiTexturedCubeRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.i
+.PHONY : src/texturing/MultiTexturedCubeRenderable.cpp.i
+
+src/texturing/MultiTexturedCubeRenderable.s: src/texturing/MultiTexturedCubeRenderable.cpp.s
+.PHONY : src/texturing/MultiTexturedCubeRenderable.s
+
+# target to generate assembly for a file
+src/texturing/MultiTexturedCubeRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.s
+.PHONY : src/texturing/MultiTexturedCubeRenderable.cpp.s
+
+src/texturing/TexturedCubeRenderable.o: src/texturing/TexturedCubeRenderable.cpp.o
+.PHONY : src/texturing/TexturedCubeRenderable.o
+
+# target to build an object file
+src/texturing/TexturedCubeRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o
+.PHONY : src/texturing/TexturedCubeRenderable.cpp.o
+
+src/texturing/TexturedCubeRenderable.i: src/texturing/TexturedCubeRenderable.cpp.i
+.PHONY : src/texturing/TexturedCubeRenderable.i
+
+# target to preprocess a source file
+src/texturing/TexturedCubeRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.i
+.PHONY : src/texturing/TexturedCubeRenderable.cpp.i
+
+src/texturing/TexturedCubeRenderable.s: src/texturing/TexturedCubeRenderable.cpp.s
+.PHONY : src/texturing/TexturedCubeRenderable.s
+
+# target to generate assembly for a file
+src/texturing/TexturedCubeRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.s
+.PHONY : src/texturing/TexturedCubeRenderable.cpp.s
+
+src/texturing/TexturedLightedMeshRenderable.o: src/texturing/TexturedLightedMeshRenderable.cpp.o
+.PHONY : src/texturing/TexturedLightedMeshRenderable.o
+
+# target to build an object file
+src/texturing/TexturedLightedMeshRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o
+.PHONY : src/texturing/TexturedLightedMeshRenderable.cpp.o
+
+src/texturing/TexturedLightedMeshRenderable.i: src/texturing/TexturedLightedMeshRenderable.cpp.i
+.PHONY : src/texturing/TexturedLightedMeshRenderable.i
+
+# target to preprocess a source file
+src/texturing/TexturedLightedMeshRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.i
+.PHONY : src/texturing/TexturedLightedMeshRenderable.cpp.i
+
+src/texturing/TexturedLightedMeshRenderable.s: src/texturing/TexturedLightedMeshRenderable.cpp.s
+.PHONY : src/texturing/TexturedLightedMeshRenderable.s
+
+# target to generate assembly for a file
+src/texturing/TexturedLightedMeshRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.s
+.PHONY : src/texturing/TexturedLightedMeshRenderable.cpp.s
+
+src/texturing/TexturedPlaneRenderable.o: src/texturing/TexturedPlaneRenderable.cpp.o
+.PHONY : src/texturing/TexturedPlaneRenderable.o
+
+# target to build an object file
+src/texturing/TexturedPlaneRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o
+.PHONY : src/texturing/TexturedPlaneRenderable.cpp.o
+
+src/texturing/TexturedPlaneRenderable.i: src/texturing/TexturedPlaneRenderable.cpp.i
+.PHONY : src/texturing/TexturedPlaneRenderable.i
+
+# target to preprocess a source file
+src/texturing/TexturedPlaneRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.i
+.PHONY : src/texturing/TexturedPlaneRenderable.cpp.i
+
+src/texturing/TexturedPlaneRenderable.s: src/texturing/TexturedPlaneRenderable.cpp.s
+.PHONY : src/texturing/TexturedPlaneRenderable.s
+
+# target to generate assembly for a file
+src/texturing/TexturedPlaneRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.s
+.PHONY : src/texturing/TexturedPlaneRenderable.cpp.s
 
 # Help Target
 help:
@@ -1488,6 +1683,12 @@ help:
 	@echo "... src/gl_helper.o"
 	@echo "... src/gl_helper.i"
 	@echo "... src/gl_helper.s"
+	@echo "... src/initialize_kart.o"
+	@echo "... src/initialize_kart.i"
+	@echo "... src/initialize_kart.s"
+	@echo "... src/initialize_person.o"
+	@echo "... src/initialize_person.i"
+	@echo "... src/initialize_person.s"
 	@echo "... src/log.o"
 	@echo "... src/log.i"
 	@echo "... src/log.s"
@@ -1497,6 +1698,24 @@ help:
 	@echo "... src/setup_kart.o"
 	@echo "... src/setup_kart.i"
 	@echo "... src/setup_kart.s"
+	@echo "... src/texturing/BillBoardPlaneRenderable.o"
+	@echo "... src/texturing/BillBoardPlaneRenderable.i"
+	@echo "... src/texturing/BillBoardPlaneRenderable.s"
+	@echo "... src/texturing/MipMapCubeRenderable.o"
+	@echo "... src/texturing/MipMapCubeRenderable.i"
+	@echo "... src/texturing/MipMapCubeRenderable.s"
+	@echo "... src/texturing/MultiTexturedCubeRenderable.o"
+	@echo "... src/texturing/MultiTexturedCubeRenderable.i"
+	@echo "... src/texturing/MultiTexturedCubeRenderable.s"
+	@echo "... src/texturing/TexturedCubeRenderable.o"
+	@echo "... src/texturing/TexturedCubeRenderable.i"
+	@echo "... src/texturing/TexturedCubeRenderable.s"
+	@echo "... src/texturing/TexturedLightedMeshRenderable.o"
+	@echo "... src/texturing/TexturedLightedMeshRenderable.i"
+	@echo "... src/texturing/TexturedLightedMeshRenderable.s"
+	@echo "... src/texturing/TexturedPlaneRenderable.o"
+	@echo "... src/texturing/TexturedPlaneRenderable.i"
+	@echo "... src/texturing/TexturedPlaneRenderable.s"
 .PHONY : help
 
 

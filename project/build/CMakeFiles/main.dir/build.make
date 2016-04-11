@@ -34,11 +34,14 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tilbuin/Documents/3dGraphics/project
+CMAKE_SOURCE_DIR = "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tilbuin/Documents/3dGraphics/project/build
+CMAKE_BINARY_DIR = "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -49,755 +52,65 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/src/ConeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/ConeRenderable.cpp.o: ../src/ConeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ConeRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ConeRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/ConeRenderable.cpp
-
-CMakeFiles/main.dir/src/ConeRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/ConeRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/ConeRenderable.cpp > CMakeFiles/main.dir/src/ConeRenderable.cpp.i
-
-CMakeFiles/main.dir/src/ConeRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/ConeRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/ConeRenderable.cpp -o CMakeFiles/main.dir/src/ConeRenderable.cpp.s
-
-CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/ConeRenderable.cpp.o
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/FrameRenderable.cpp.o: ../src/FrameRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FrameRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FrameRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/FrameRenderable.cpp
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FrameRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/FrameRenderable.cpp > CMakeFiles/main.dir/src/FrameRenderable.cpp.i
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FrameRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/FrameRenderable.cpp -o CMakeFiles/main.dir/src/FrameRenderable.cpp.s
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides: CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/FrameRenderable.cpp.o
-
-CMakeFiles/main.dir/src/Plane.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Plane.cpp.o: ../src/Plane.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Plane.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Plane.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Plane.cpp
-
-CMakeFiles/main.dir/src/Plane.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Plane.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Plane.cpp > CMakeFiles/main.dir/src/Plane.cpp.i
-
-CMakeFiles/main.dir/src/Plane.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Plane.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Plane.cpp -o CMakeFiles/main.dir/src/Plane.cpp.s
-
-CMakeFiles/main.dir/src/Plane.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Plane.cpp.o.requires
-
-CMakeFiles/main.dir/src/Plane.cpp.o.provides: CMakeFiles/main.dir/src/Plane.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Plane.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Plane.cpp.o.provides
-
-CMakeFiles/main.dir/src/Plane.cpp.o.provides.build: CMakeFiles/main.dir/src/Plane.cpp.o
-
-CMakeFiles/main.dir/src/gl_helper.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/gl_helper.cpp.o: ../src/gl_helper.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/gl_helper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/gl_helper.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/gl_helper.cpp
-
-CMakeFiles/main.dir/src/gl_helper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/gl_helper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/gl_helper.cpp > CMakeFiles/main.dir/src/gl_helper.cpp.i
-
-CMakeFiles/main.dir/src/gl_helper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/gl_helper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/gl_helper.cpp -o CMakeFiles/main.dir/src/gl_helper.cpp.s
-
-CMakeFiles/main.dir/src/gl_helper.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
-
-CMakeFiles/main.dir/src/gl_helper.cpp.o.provides: CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gl_helper.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/gl_helper.cpp.o.provides
-
-CMakeFiles/main.dir/src/gl_helper.cpp.o.provides.build: CMakeFiles/main.dir/src/gl_helper.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: ../src/dynamics/Solver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Solver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Solver.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Solver.cpp
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Solver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Solver.cpp > CMakeFiles/main.dir/src/dynamics/Solver.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Solver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Solver.cpp -o CMakeFiles/main.dir/src/dynamics/Solver.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: ../src/dynamics/ConstantForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp > CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: ../src/dynamics/Particle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Particle.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Particle.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Particle.cpp
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Particle.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Particle.cpp > CMakeFiles/main.dir/src/dynamics/Particle.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Particle.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Particle.cpp -o CMakeFiles/main.dir/src/dynamics/Particle.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: ../src/dynamics/ConstantForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceField.cpp
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceField.cpp > CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ConstantForceField.cpp -o CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: ../src/dynamics/DynamicSystemRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp > CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: ../src/dynamics/DampingForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DampingForceField.cpp
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DampingForceField.cpp > CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DampingForceField.cpp -o CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: ../src/dynamics/ParticlePlaneCollision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp > CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp -o CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: ../src/dynamics/SpringForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceField.cpp
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceField.cpp > CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceField.cpp -o CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: ../src/dynamics/ControlledForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp > CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: ../src/dynamics/Collision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Collision.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Collision.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Collision.cpp
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Collision.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Collision.cpp > CMakeFiles/main.dir/src/dynamics/Collision.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Collision.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/Collision.cpp -o CMakeFiles/main.dir/src/dynamics/Collision.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: ../src/dynamics/SpringListRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringListRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringListRenderable.cpp > CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringListRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: ../src/dynamics/ParticleListRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp > CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: ../src/dynamics/ForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_17)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ForceField.cpp
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ForceField.cpp > CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ForceField.cpp -o CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: ../src/dynamics/DynamicSystem.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystem.cpp
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystem.cpp > CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/DynamicSystem.cpp -o CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: ../src/dynamics/SpringForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_19)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp > CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: ../src/dynamics/EulerExplicitSolver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_20)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp > CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp -o CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: ../src/dynamics/ParticleRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_21)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleRenderable.cpp
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleRenderable.cpp > CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleRenderable.cpp -o CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: ../src/dynamics/ParticleParticleCollision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_22)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp > CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp -o CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides
-
-CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.o: ../src/TriangleRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_23)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TriangleRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TriangleRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/TriangleRenderable.cpp
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TriangleRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/TriangleRenderable.cpp > CMakeFiles/main.dir/src/TriangleRenderable.cpp.i
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TriangleRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/TriangleRenderable.cpp -o CMakeFiles/main.dir/src/TriangleRenderable.cpp.s
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: ../src/KeyframeCollection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_24)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframeCollection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/KeyframeCollection.cpp
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/KeyframeCollection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/KeyframeCollection.cpp > CMakeFiles/main.dir/src/KeyframeCollection.cpp.i
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/KeyframeCollection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/KeyframeCollection.cpp -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.s
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides
-
-CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: ../src/GeometricTransformation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_25)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/GeometricTransformation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/GeometricTransformation.cpp
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/GeometricTransformation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/GeometricTransformation.cpp > CMakeFiles/main.dir/src/GeometricTransformation.cpp.i
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/GeometricTransformation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/GeometricTransformation.cpp -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.s
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides
-
-CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides.build: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
-
-CMakeFiles/main.dir/src/Viewer.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Viewer.cpp.o: ../src/Viewer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_26)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Viewer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Viewer.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Viewer.cpp
-
-CMakeFiles/main.dir/src/Viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Viewer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Viewer.cpp > CMakeFiles/main.dir/src/Viewer.cpp.i
-
-CMakeFiles/main.dir/src/Viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Viewer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Viewer.cpp -o CMakeFiles/main.dir/src/Viewer.cpp.s
-
-CMakeFiles/main.dir/src/Viewer.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Viewer.cpp.o.requires
-
-CMakeFiles/main.dir/src/Viewer.cpp.o.provides: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Viewer.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Viewer.cpp.o.provides
-
-CMakeFiles/main.dir/src/Viewer.cpp.o.provides.build: CMakeFiles/main.dir/src/Viewer.cpp.o
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: ../src/HierarchicalMeshRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_27)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalMeshRenderable.cpp
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalMeshRenderable.cpp > CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalMeshRenderable.cpp -o CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/ShaderProgram.cpp.o: ../src/ShaderProgram.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_28)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ShaderProgram.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/ShaderProgram.cpp
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/ShaderProgram.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/ShaderProgram.cpp > CMakeFiles/main.dir/src/ShaderProgram.cpp.i
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/ShaderProgram.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/ShaderProgram.cpp -o CMakeFiles/main.dir/src/ShaderProgram.cpp.s
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides
-
-CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/TorusRenderable.cpp.o: ../src/TorusRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_29)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TorusRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/TorusRenderable.cpp
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TorusRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/TorusRenderable.cpp > CMakeFiles/main.dir/src/TorusRenderable.cpp.i
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TorusRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/TorusRenderable.cpp -o CMakeFiles/main.dir/src/TorusRenderable.cpp.s
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
-
-CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_30)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/main.cpp
-
-CMakeFiles/main.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
-
-CMakeFiles/main.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
-
-CMakeFiles/main.dir/src/main.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/main.cpp.o.requires
-
-CMakeFiles/main.dir/src/main.cpp.o.provides: CMakeFiles/main.dir/src/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/main.cpp.o.provides
-
-CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.cpp.o
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: ../src/HierarchicalCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_31)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp > CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o
-
-CMakeFiles/main.dir/src/Io.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Io.cpp.o: ../src/Io.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_32)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Io.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Io.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Io.cpp
-
-CMakeFiles/main.dir/src/Io.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Io.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Io.cpp > CMakeFiles/main.dir/src/Io.cpp.i
-
-CMakeFiles/main.dir/src/Io.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Io.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Io.cpp -o CMakeFiles/main.dir/src/Io.cpp.s
-
-CMakeFiles/main.dir/src/Io.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Io.cpp.o.requires
-
-CMakeFiles/main.dir/src/Io.cpp.o.provides: CMakeFiles/main.dir/src/Io.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Io.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Io.cpp.o.provides
-
-CMakeFiles/main.dir/src/Io.cpp.o.provides.build: CMakeFiles/main.dir/src/Io.cpp.o
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/CubeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CubeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CubeRenderable.cpp"
+
+CMakeFiles/main.dir/src/CubeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CubeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CubeRenderable.cpp" > CMakeFiles/main.dir/src/CubeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/CubeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CubeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CubeRenderable.cpp" -o CMakeFiles/main.dir/src/CubeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/CubeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/FloorRenderable.cpp.o: ../src/FloorRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FloorRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FloorRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FloorRenderable.cpp"
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FloorRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FloorRenderable.cpp" > CMakeFiles/main.dir/src/FloorRenderable.cpp.i
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FloorRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FloorRenderable.cpp" -o CMakeFiles/main.dir/src/FloorRenderable.cpp.s
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides: CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/FloorRenderable.cpp.o
 
 CMakeFiles/main.dir/src/log.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/log.cpp.o: ../src/log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/log.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/log.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/log.cpp
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/log.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/log.cpp"
 
 CMakeFiles/main.dir/src/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/log.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/log.cpp > CMakeFiles/main.dir/src/log.cpp.i
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/log.cpp" > CMakeFiles/main.dir/src/log.cpp.i
 
 CMakeFiles/main.dir/src/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/log.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/log.cpp -o CMakeFiles/main.dir/src/log.cpp.s
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/log.cpp" -o CMakeFiles/main.dir/src/log.cpp.s
 
 CMakeFiles/main.dir/src/log.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/log.cpp.o.requires
@@ -808,19 +121,180 @@ CMakeFiles/main.dir/src/log.cpp.o.provides: CMakeFiles/main.dir/src/log.cpp.o.re
 
 CMakeFiles/main.dir/src/log.cpp.o.provides.build: CMakeFiles/main.dir/src/log.cpp.o
 
+CMakeFiles/main.dir/src/Io.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Io.cpp.o: ../src/Io.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Io.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Io.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Io.cpp"
+
+CMakeFiles/main.dir/src/Io.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Io.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Io.cpp" > CMakeFiles/main.dir/src/Io.cpp.i
+
+CMakeFiles/main.dir/src/Io.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Io.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Io.cpp" -o CMakeFiles/main.dir/src/Io.cpp.s
+
+CMakeFiles/main.dir/src/Io.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Io.cpp.o.requires
+
+CMakeFiles/main.dir/src/Io.cpp.o.provides: CMakeFiles/main.dir/src/Io.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Io.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Io.cpp.o.provides
+
+CMakeFiles/main.dir/src/Io.cpp.o.provides.build: CMakeFiles/main.dir/src/Io.cpp.o
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/FrameRenderable.cpp.o: ../src/FrameRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FrameRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FrameRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FrameRenderable.cpp"
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FrameRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FrameRenderable.cpp" > CMakeFiles/main.dir/src/FrameRenderable.cpp.i
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FrameRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FrameRenderable.cpp" -o CMakeFiles/main.dir/src/FrameRenderable.cpp.s
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides: CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/FrameRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/FrameRenderable.cpp.o
+
+CMakeFiles/main.dir/src/Utils.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Utils.cpp.o: ../src/Utils.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Utils.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Utils.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Utils.cpp"
+
+CMakeFiles/main.dir/src/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Utils.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Utils.cpp" > CMakeFiles/main.dir/src/Utils.cpp.i
+
+CMakeFiles/main.dir/src/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Utils.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Utils.cpp" -o CMakeFiles/main.dir/src/Utils.cpp.s
+
+CMakeFiles/main.dir/src/Utils.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Utils.cpp.o.requires
+
+CMakeFiles/main.dir/src/Utils.cpp.o.provides: CMakeFiles/main.dir/src/Utils.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Utils.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Utils.cpp.o.provides
+
+CMakeFiles/main.dir/src/Utils.cpp.o.provides.build: CMakeFiles/main.dir/src/Utils.cpp.o
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/IndexedCubeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/IndexedCubeRenderable.cpp"
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/IndexedCubeRenderable.cpp" > CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/IndexedCubeRenderable.cpp" -o CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/FPSCounter.cpp.o: ../src/FPSCounter.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FPSCounter.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FPSCounter.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FPSCounter.cpp"
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FPSCounter.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FPSCounter.cpp" > CMakeFiles/main.dir/src/FPSCounter.cpp.i
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FPSCounter.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FPSCounter.cpp" -o CMakeFiles/main.dir/src/FPSCounter.cpp.s
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides: CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides
+
+CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides.build: CMakeFiles/main.dir/src/FPSCounter.cpp.o
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.o: ../src/TriangleRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TriangleRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TriangleRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TriangleRenderable.cpp"
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TriangleRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TriangleRenderable.cpp" > CMakeFiles/main.dir/src/TriangleRenderable.cpp.i
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TriangleRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TriangleRenderable.cpp" -o CMakeFiles/main.dir/src/TriangleRenderable.cpp.s
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o
+
+CMakeFiles/main.dir/src/Renderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Renderable.cpp.o: ../src/Renderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Renderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Renderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Renderable.cpp"
+
+CMakeFiles/main.dir/src/Renderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Renderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Renderable.cpp" > CMakeFiles/main.dir/src/Renderable.cpp.i
+
+CMakeFiles/main.dir/src/Renderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Renderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Renderable.cpp" -o CMakeFiles/main.dir/src/Renderable.cpp.s
+
+CMakeFiles/main.dir/src/Renderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Renderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/Renderable.cpp.o.provides: CMakeFiles/main.dir/src/Renderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Renderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Renderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/Renderable.cpp.o.provides.build: CMakeFiles/main.dir/src/Renderable.cpp.o
+
 CMakeFiles/main.dir/src/MeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/MeshRenderable.cpp.o: ../src/MeshRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/MeshRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/MeshRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/MeshRenderable.cpp
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/MeshRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/MeshRenderable.cpp"
 
 CMakeFiles/main.dir/src/MeshRenderable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/MeshRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/MeshRenderable.cpp > CMakeFiles/main.dir/src/MeshRenderable.cpp.i
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/MeshRenderable.cpp" > CMakeFiles/main.dir/src/MeshRenderable.cpp.i
 
 CMakeFiles/main.dir/src/MeshRenderable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/MeshRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/MeshRenderable.cpp -o CMakeFiles/main.dir/src/MeshRenderable.cpp.s
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/MeshRenderable.cpp" -o CMakeFiles/main.dir/src/MeshRenderable.cpp.s
 
 CMakeFiles/main.dir/src/MeshRenderable.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/MeshRenderable.cpp.o.requires
@@ -833,17 +307,17 @@ CMakeFiles/main.dir/src/MeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o: ../src/HierarchicalSphereRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalSphereRenderable.cpp
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalSphereRenderable.cpp"
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalSphereRenderable.cpp > CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.i
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalSphereRenderable.cpp" > CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.i
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalSphereRenderable.cpp -o CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.s
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalSphereRenderable.cpp" -o CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.s
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.requires
@@ -854,318 +328,19 @@ CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.provides: CMakeFiles/
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o
 
-CMakeFiles/main.dir/src/FloorRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/FloorRenderable.cpp.o: ../src/FloorRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_36)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FloorRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FloorRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/FloorRenderable.cpp
-
-CMakeFiles/main.dir/src/FloorRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FloorRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/FloorRenderable.cpp > CMakeFiles/main.dir/src/FloorRenderable.cpp.i
-
-CMakeFiles/main.dir/src/FloorRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FloorRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/FloorRenderable.cpp -o CMakeFiles/main.dir/src/FloorRenderable.cpp.s
-
-CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides: CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/FloorRenderable.cpp.o
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/QuadRendable.cpp.o: ../src/QuadRendable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_37)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/QuadRendable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/QuadRendable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/QuadRendable.cpp
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/QuadRendable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/QuadRendable.cpp > CMakeFiles/main.dir/src/QuadRendable.cpp.i
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/QuadRendable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/QuadRendable.cpp -o CMakeFiles/main.dir/src/QuadRendable.cpp.s
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides: CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides
-
-CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build: CMakeFiles/main.dir/src/QuadRendable.cpp.o
-
-CMakeFiles/main.dir/src/setup_kart.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/setup_kart.cpp.o: ../src/setup_kart.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_38)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/setup_kart.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/setup_kart.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/setup_kart.cpp
-
-CMakeFiles/main.dir/src/setup_kart.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/setup_kart.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/setup_kart.cpp > CMakeFiles/main.dir/src/setup_kart.cpp.i
-
-CMakeFiles/main.dir/src/setup_kart.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/setup_kart.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/setup_kart.cpp -o CMakeFiles/main.dir/src/setup_kart.cpp.s
-
-CMakeFiles/main.dir/src/setup_kart.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
-
-CMakeFiles/main.dir/src/setup_kart.cpp.o.provides: CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/setup_kart.cpp.o.provides
-
-CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build: CMakeFiles/main.dir/src/setup_kart.cpp.o
-
-CMakeFiles/main.dir/src/Sphere.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_39)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Sphere.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Sphere.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Sphere.cpp
-
-CMakeFiles/main.dir/src/Sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Sphere.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Sphere.cpp > CMakeFiles/main.dir/src/Sphere.cpp.i
-
-CMakeFiles/main.dir/src/Sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Sphere.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Sphere.cpp -o CMakeFiles/main.dir/src/Sphere.cpp.s
-
-CMakeFiles/main.dir/src/Sphere.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Sphere.cpp.o.requires
-
-CMakeFiles/main.dir/src/Sphere.cpp.o.provides: CMakeFiles/main.dir/src/Sphere.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Sphere.cpp.o.provides
-
-CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build: CMakeFiles/main.dir/src/Sphere.cpp.o
-
-CMakeFiles/main.dir/src/TextEngine.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/TextEngine.cpp.o: ../src/TextEngine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_40)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TextEngine.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextEngine.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/TextEngine.cpp
-
-CMakeFiles/main.dir/src/TextEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TextEngine.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/TextEngine.cpp > CMakeFiles/main.dir/src/TextEngine.cpp.i
-
-CMakeFiles/main.dir/src/TextEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TextEngine.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/TextEngine.cpp -o CMakeFiles/main.dir/src/TextEngine.cpp.s
-
-CMakeFiles/main.dir/src/TextEngine.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
-
-CMakeFiles/main.dir/src/TextEngine.cpp.o.provides: CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/TextEngine.cpp.o.provides
-
-CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build: CMakeFiles/main.dir/src/TextEngine.cpp.o
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/CubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_41)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CubeRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CubeRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CubeRenderable.cpp
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CubeRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/CubeRenderable.cpp > CMakeFiles/main.dir/src/CubeRenderable.cpp.i
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CubeRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/CubeRenderable.cpp -o CMakeFiles/main.dir/src/CubeRenderable.cpp.s
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/CubeRenderable.cpp.o
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/IndexedCubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_42)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/IndexedCubeRenderable.cpp
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/IndexedCubeRenderable.cpp > CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.i
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/IndexedCubeRenderable.cpp -o CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.s
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: ../src/HierarchicalRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_43)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalRenderable.cpp
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalRenderable.cpp > CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalRenderable.cpp -o CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o
-
-CMakeFiles/main.dir/src/Camera.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_44)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Camera.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Camera.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Camera.cpp
-
-CMakeFiles/main.dir/src/Camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Camera.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Camera.cpp > CMakeFiles/main.dir/src/Camera.cpp.i
-
-CMakeFiles/main.dir/src/Camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Camera.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Camera.cpp -o CMakeFiles/main.dir/src/Camera.cpp.s
-
-CMakeFiles/main.dir/src/Camera.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Camera.cpp.o.requires
-
-CMakeFiles/main.dir/src/Camera.cpp.o.provides: CMakeFiles/main.dir/src/Camera.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Camera.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Camera.cpp.o.provides
-
-CMakeFiles/main.dir/src/Camera.cpp.o.provides.build: CMakeFiles/main.dir/src/Camera.cpp.o
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: ../src/CylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_45)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CylinderRenderable.cpp
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CylinderRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/CylinderRenderable.cpp > CMakeFiles/main.dir/src/CylinderRenderable.cpp.i
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CylinderRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/CylinderRenderable.cpp -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.s
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
-
-CMakeFiles/main.dir/src/Renderable.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Renderable.cpp.o: ../src/Renderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_46)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Renderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Renderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Renderable.cpp
-
-CMakeFiles/main.dir/src/Renderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Renderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Renderable.cpp > CMakeFiles/main.dir/src/Renderable.cpp.i
-
-CMakeFiles/main.dir/src/Renderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Renderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Renderable.cpp -o CMakeFiles/main.dir/src/Renderable.cpp.s
-
-CMakeFiles/main.dir/src/Renderable.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Renderable.cpp.o.requires
-
-CMakeFiles/main.dir/src/Renderable.cpp.o.provides: CMakeFiles/main.dir/src/Renderable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Renderable.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Renderable.cpp.o.provides
-
-CMakeFiles/main.dir/src/Renderable.cpp.o.provides.build: CMakeFiles/main.dir/src/Renderable.cpp.o
-
-CMakeFiles/main.dir/src/Utils.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Utils.cpp.o: ../src/Utils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_47)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Utils.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Utils.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Utils.cpp
-
-CMakeFiles/main.dir/src/Utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Utils.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/Utils.cpp > CMakeFiles/main.dir/src/Utils.cpp.i
-
-CMakeFiles/main.dir/src/Utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Utils.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/Utils.cpp -o CMakeFiles/main.dir/src/Utils.cpp.s
-
-CMakeFiles/main.dir/src/Utils.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/Utils.cpp.o.requires
-
-CMakeFiles/main.dir/src/Utils.cpp.o.provides: CMakeFiles/main.dir/src/Utils.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Utils.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/Utils.cpp.o.provides
-
-CMakeFiles/main.dir/src/Utils.cpp.o.provides.build: CMakeFiles/main.dir/src/Utils.cpp.o
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: ../src/CustomizedKeyFrame.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_48)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CustomizedKeyFrame.cpp
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/CustomizedKeyFrame.cpp > CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/CustomizedKeyFrame.cpp -o CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides
-
-CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides.build: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o
-
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o: ../src/KeyframedCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/KeyframedCylinderRenderable.cpp
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframedCylinderRenderable.cpp"
 
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/KeyframedCylinderRenderable.cpp > CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.i
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframedCylinderRenderable.cpp" > CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.i
 
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/KeyframedCylinderRenderable.cpp -o CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.s
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframedCylinderRenderable.cpp" -o CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.s
 
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.requires
@@ -1176,19 +351,249 @@ CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.provides: CMakeFiles/m
 
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o
 
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: ../src/HierarchicalRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalRenderable.cpp"
+
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalRenderable.cpp" > CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.i
+
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalRenderable.cpp" -o CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.s
+
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: ../src/CustomizedKeyFrame.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CustomizedKeyFrame.cpp"
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CustomizedKeyFrame.cpp" > CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.i
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CustomizedKeyFrame.cpp" -o CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.s
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides
+
+CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides.build: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o
+
+CMakeFiles/main.dir/src/gl_helper.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/gl_helper.cpp.o: ../src/gl_helper.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/gl_helper.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/gl_helper.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/gl_helper.cpp"
+
+CMakeFiles/main.dir/src/gl_helper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/gl_helper.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/gl_helper.cpp" > CMakeFiles/main.dir/src/gl_helper.cpp.i
+
+CMakeFiles/main.dir/src/gl_helper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/gl_helper.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/gl_helper.cpp" -o CMakeFiles/main.dir/src/gl_helper.cpp.s
+
+CMakeFiles/main.dir/src/gl_helper.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
+
+CMakeFiles/main.dir/src/gl_helper.cpp.o.provides: CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gl_helper.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/gl_helper.cpp.o.provides
+
+CMakeFiles/main.dir/src/gl_helper.cpp.o.provides.build: CMakeFiles/main.dir/src/gl_helper.cpp.o
+
+CMakeFiles/main.dir/src/Viewer.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Viewer.cpp.o: ../src/Viewer.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Viewer.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Viewer.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Viewer.cpp"
+
+CMakeFiles/main.dir/src/Viewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Viewer.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Viewer.cpp" > CMakeFiles/main.dir/src/Viewer.cpp.i
+
+CMakeFiles/main.dir/src/Viewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Viewer.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Viewer.cpp" -o CMakeFiles/main.dir/src/Viewer.cpp.s
+
+CMakeFiles/main.dir/src/Viewer.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Viewer.cpp.o.requires
+
+CMakeFiles/main.dir/src/Viewer.cpp.o.provides: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Viewer.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Viewer.cpp.o.provides
+
+CMakeFiles/main.dir/src/Viewer.cpp.o.provides.build: CMakeFiles/main.dir/src/Viewer.cpp.o
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o: ../src/texturing/MipMapCubeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MipMapCubeRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MipMapCubeRenderable.cpp" > CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MipMapCubeRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o: ../src/texturing/TexturedLightedMeshRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedLightedMeshRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedLightedMeshRenderable.cpp" > CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedLightedMeshRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o: ../src/texturing/TexturedPlaneRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp" > CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o: ../src/texturing/MultiTexturedCubeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MultiTexturedCubeRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MultiTexturedCubeRenderable.cpp" > CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MultiTexturedCubeRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o: ../src/texturing/TexturedCubeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_22)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp" > CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o: ../src/texturing/BillBoardPlaneRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/BillBoardPlaneRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/BillBoardPlaneRenderable.cpp" > CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/BillBoardPlaneRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o
+
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: ../src/SphereRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/SphereRenderable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/SphereRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/SphereRenderable.cpp
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/SphereRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/SphereRenderable.cpp"
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/SphereRenderable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/SphereRenderable.cpp > CMakeFiles/main.dir/src/SphereRenderable.cpp.i
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/SphereRenderable.cpp" > CMakeFiles/main.dir/src/SphereRenderable.cpp.i
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/SphereRenderable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/SphereRenderable.cpp -o CMakeFiles/main.dir/src/SphereRenderable.cpp.s
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/SphereRenderable.cpp" -o CMakeFiles/main.dir/src/SphereRenderable.cpp.s
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/SphereRenderable.cpp.o.requires
@@ -1199,142 +604,942 @@ CMakeFiles/main.dir/src/SphereRenderable.cpp.o.provides: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/SphereRenderable.cpp.o
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/FPSCounter.cpp.o: ../src/FPSCounter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_51)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FPSCounter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FPSCounter.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/FPSCounter.cpp
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: ../src/dynamics/ParticleParticleCollision.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_25)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp"
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/FPSCounter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/FPSCounter.cpp > CMakeFiles/main.dir/src/FPSCounter.cpp.i
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp" > CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.i
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/FPSCounter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/FPSCounter.cpp -o CMakeFiles/main.dir/src/FPSCounter.cpp.s
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp" -o CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.s
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides: CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides
 
-CMakeFiles/main.dir/src/FPSCounter.cpp.o.provides.build: CMakeFiles/main.dir/src/FPSCounter.cpp.o
+CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: ../src/dynamics/ConstantForceField.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceField.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceField.cpp" > CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceField.cpp" -o CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: ../src/dynamics/SpringListRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringListRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringListRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringListRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: ../src/dynamics/DampingForceField.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_28)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DampingForceField.cpp"
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DampingForceField.cpp" > CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DampingForceField.cpp" -o CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: ../src/dynamics/ParticleListRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: ../src/dynamics/Solver.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_30)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Solver.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Solver.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Solver.cpp"
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Solver.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Solver.cpp" > CMakeFiles/main.dir/src/dynamics/Solver.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Solver.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Solver.cpp" -o CMakeFiles/main.dir/src/dynamics/Solver.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: ../src/dynamics/DynamicSystemRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_31)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: ../src/dynamics/ConstantForceFieldRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_32)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: ../src/dynamics/ControlledForceFieldRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_33)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: ../src/dynamics/EulerExplicitSolver.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_34)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp"
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp" > CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp" -o CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: ../src/dynamics/SpringForceField.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_35)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceField.cpp"
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceField.cpp" > CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceField.cpp" -o CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: ../src/dynamics/DynamicSystem.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_36)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystem.cpp"
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystem.cpp" > CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystem.cpp" -o CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: ../src/dynamics/Particle.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_37)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Particle.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Particle.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Particle.cpp"
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Particle.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Particle.cpp" > CMakeFiles/main.dir/src/dynamics/Particle.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Particle.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Particle.cpp" -o CMakeFiles/main.dir/src/dynamics/Particle.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: ../src/dynamics/ForceField.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_38)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ForceField.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ForceField.cpp" > CMakeFiles/main.dir/src/dynamics/ForceField.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ForceField.cpp" -o CMakeFiles/main.dir/src/dynamics/ForceField.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: ../src/dynamics/Collision.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_39)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Collision.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Collision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Collision.cpp"
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/Collision.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Collision.cpp" > CMakeFiles/main.dir/src/dynamics/Collision.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/Collision.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Collision.cpp" -o CMakeFiles/main.dir/src/dynamics/Collision.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: ../src/dynamics/ParticlePlaneCollision.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_40)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp" > CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp" -o CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: ../src/dynamics/SpringForceFieldRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_41)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: ../src/dynamics/ParticleRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_42)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleRenderable.cpp"
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleRenderable.cpp" > CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.i
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleRenderable.cpp" -o CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.s
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/ShaderProgram.cpp.o: ../src/ShaderProgram.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_43)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ShaderProgram.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ShaderProgram.cpp"
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/ShaderProgram.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ShaderProgram.cpp" > CMakeFiles/main.dir/src/ShaderProgram.cpp.i
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/ShaderProgram.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ShaderProgram.cpp" -o CMakeFiles/main.dir/src/ShaderProgram.cpp.s
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides
+
+CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/ConeRenderable.cpp.o: ../src/ConeRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_44)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ConeRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ConeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ConeRenderable.cpp"
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/ConeRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ConeRenderable.cpp" > CMakeFiles/main.dir/src/ConeRenderable.cpp.i
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/ConeRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ConeRenderable.cpp" -o CMakeFiles/main.dir/src/ConeRenderable.cpp.s
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides: CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/ConeRenderable.cpp.o
+
+CMakeFiles/main.dir/src/Plane.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Plane.cpp.o: ../src/Plane.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_45)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Plane.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Plane.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Plane.cpp"
+
+CMakeFiles/main.dir/src/Plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Plane.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Plane.cpp" > CMakeFiles/main.dir/src/Plane.cpp.i
+
+CMakeFiles/main.dir/src/Plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Plane.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Plane.cpp" -o CMakeFiles/main.dir/src/Plane.cpp.s
+
+CMakeFiles/main.dir/src/Plane.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Plane.cpp.o.requires
+
+CMakeFiles/main.dir/src/Plane.cpp.o.provides: CMakeFiles/main.dir/src/Plane.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Plane.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Plane.cpp.o.provides
+
+CMakeFiles/main.dir/src/Plane.cpp.o.provides.build: CMakeFiles/main.dir/src/Plane.cpp.o
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: ../src/HierarchicalMeshRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_46)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalMeshRenderable.cpp"
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalMeshRenderable.cpp" > CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.i
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalMeshRenderable.cpp" -o CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.s
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/initialize_kart.cpp.o: ../src/initialize_kart.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_47)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/initialize_kart.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/initialize_kart.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp"
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/initialize_kart.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp" > CMakeFiles/main.dir/src/initialize_kart.cpp.i
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/initialize_kart.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp" -o CMakeFiles/main.dir/src/initialize_kart.cpp.s
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build: CMakeFiles/main.dir/src/initialize_kart.cpp.o
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: ../src/CylinderRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_48)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp"
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/CylinderRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp" > CMakeFiles/main.dir/src/CylinderRenderable.cpp.i
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/CylinderRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp" -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.s
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
+
+CMakeFiles/main.dir/src/Camera.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Camera.cpp.o: ../src/Camera.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_49)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Camera.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Camera.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp"
+
+CMakeFiles/main.dir/src/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Camera.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp" > CMakeFiles/main.dir/src/Camera.cpp.i
+
+CMakeFiles/main.dir/src/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Camera.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp" -o CMakeFiles/main.dir/src/Camera.cpp.s
+
+CMakeFiles/main.dir/src/Camera.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Camera.cpp.o.requires
+
+CMakeFiles/main.dir/src/Camera.cpp.o.provides: CMakeFiles/main.dir/src/Camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Camera.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Camera.cpp.o.provides
+
+CMakeFiles/main.dir/src/Camera.cpp.o.provides.build: CMakeFiles/main.dir/src/Camera.cpp.o
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TorusRenderable.cpp.o: ../src/TorusRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_50)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TorusRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp"
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TorusRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp" > CMakeFiles/main.dir/src/TorusRenderable.cpp.i
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TorusRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp" -o CMakeFiles/main.dir/src/TorusRenderable.cpp.s
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
+
+CMakeFiles/main.dir/src/initialize_person.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/initialize_person.cpp.o: ../src/initialize_person.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_51)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/initialize_person.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/initialize_person.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_person.cpp"
+
+CMakeFiles/main.dir/src/initialize_person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/initialize_person.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_person.cpp" > CMakeFiles/main.dir/src/initialize_person.cpp.i
+
+CMakeFiles/main.dir/src/initialize_person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/initialize_person.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_person.cpp" -o CMakeFiles/main.dir/src/initialize_person.cpp.s
+
+CMakeFiles/main.dir/src/initialize_person.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/initialize_person.cpp.o.requires
+
+CMakeFiles/main.dir/src/initialize_person.cpp.o.provides: CMakeFiles/main.dir/src/initialize_person.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/initialize_person.cpp.o.provides
+
+CMakeFiles/main.dir/src/initialize_person.cpp.o.provides.build: CMakeFiles/main.dir/src/initialize_person.cpp.o
+
+CMakeFiles/main.dir/src/TextEngine.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/TextEngine.cpp.o: ../src/TextEngine.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_52)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TextEngine.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextEngine.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp"
+
+CMakeFiles/main.dir/src/TextEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TextEngine.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp" > CMakeFiles/main.dir/src/TextEngine.cpp.i
+
+CMakeFiles/main.dir/src/TextEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TextEngine.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp" -o CMakeFiles/main.dir/src/TextEngine.cpp.s
+
+CMakeFiles/main.dir/src/TextEngine.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
+
+CMakeFiles/main.dir/src/TextEngine.cpp.o.provides: CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/TextEngine.cpp.o.provides
+
+CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build: CMakeFiles/main.dir/src/TextEngine.cpp.o
+
+CMakeFiles/main.dir/src/setup_kart.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/setup_kart.cpp.o: ../src/setup_kart.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_53)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/setup_kart.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/setup_kart.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp"
+
+CMakeFiles/main.dir/src/setup_kart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/setup_kart.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp" > CMakeFiles/main.dir/src/setup_kart.cpp.i
+
+CMakeFiles/main.dir/src/setup_kart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/setup_kart.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp" -o CMakeFiles/main.dir/src/setup_kart.cpp.s
+
+CMakeFiles/main.dir/src/setup_kart.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
+
+CMakeFiles/main.dir/src/setup_kart.cpp.o.provides: CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/setup_kart.cpp.o.provides
+
+CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build: CMakeFiles/main.dir/src/setup_kart.cpp.o
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/QuadRendable.cpp.o: ../src/QuadRendable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_54)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/QuadRendable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/QuadRendable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp"
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/QuadRendable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp" > CMakeFiles/main.dir/src/QuadRendable.cpp.i
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/QuadRendable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp" -o CMakeFiles/main.dir/src/QuadRendable.cpp.s
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides: CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides
+
+CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build: CMakeFiles/main.dir/src/QuadRendable.cpp.o
+
+CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_55)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp"
+
+CMakeFiles/main.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp" > CMakeFiles/main.dir/src/main.cpp.i
+
+CMakeFiles/main.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp" -o CMakeFiles/main.dir/src/main.cpp.s
+
+CMakeFiles/main.dir/src/main.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/main.cpp.o.requires
+
+CMakeFiles/main.dir/src/main.cpp.o.provides: CMakeFiles/main.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/main.cpp.o.provides
+
+CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.cpp.o
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: ../src/KeyframeCollection.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_56)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframeCollection.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp"
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/KeyframeCollection.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp" > CMakeFiles/main.dir/src/KeyframeCollection.cpp.i
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/KeyframeCollection.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp" -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.s
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides
+
+CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o
+
+CMakeFiles/main.dir/src/Sphere.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_57)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Sphere.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Sphere.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp"
+
+CMakeFiles/main.dir/src/Sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Sphere.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp" > CMakeFiles/main.dir/src/Sphere.cpp.i
+
+CMakeFiles/main.dir/src/Sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Sphere.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp" -o CMakeFiles/main.dir/src/Sphere.cpp.s
+
+CMakeFiles/main.dir/src/Sphere.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/Sphere.cpp.o.requires
+
+CMakeFiles/main.dir/src/Sphere.cpp.o.provides: CMakeFiles/main.dir/src/Sphere.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/Sphere.cpp.o.provides
+
+CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build: CMakeFiles/main.dir/src/Sphere.cpp.o
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: ../src/HierarchicalCylinderRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_58)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp"
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp" > CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.i
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp" -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.s
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: ../src/GeometricTransformation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_59)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/GeometricTransformation.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp"
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/GeometricTransformation.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp" > CMakeFiles/main.dir/src/GeometricTransformation.cpp.i
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/GeometricTransformation.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp" -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.s
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides
+
+CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.provides.build: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/ConeRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/FrameRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/Plane.cpp.o" \
-"CMakeFiles/main.dir/src/gl_helper.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/Solver.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/Particle.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/Collision.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o" \
-"CMakeFiles/main.dir/src/TriangleRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/KeyframeCollection.cpp.o" \
-"CMakeFiles/main.dir/src/GeometricTransformation.cpp.o" \
-"CMakeFiles/main.dir/src/Viewer.cpp.o" \
-"CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/ShaderProgram.cpp.o" \
-"CMakeFiles/main.dir/src/TorusRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/main.cpp.o" \
-"CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/Io.cpp.o" \
+"CMakeFiles/main.dir/src/CubeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/FloorRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/log.cpp.o" \
+"CMakeFiles/main.dir/src/Io.cpp.o" \
+"CMakeFiles/main.dir/src/FrameRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/Utils.cpp.o" \
+"CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/FPSCounter.cpp.o" \
+"CMakeFiles/main.dir/src/TriangleRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/Renderable.cpp.o" \
 "CMakeFiles/main.dir/src/MeshRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/FloorRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/QuadRendable.cpp.o" \
-"CMakeFiles/main.dir/src/setup_kart.cpp.o" \
-"CMakeFiles/main.dir/src/Sphere.cpp.o" \
-"CMakeFiles/main.dir/src/TextEngine.cpp.o" \
-"CMakeFiles/main.dir/src/CubeRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/Camera.cpp.o" \
-"CMakeFiles/main.dir/src/CylinderRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/Renderable.cpp.o" \
-"CMakeFiles/main.dir/src/Utils.cpp.o" \
-"CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o" \
 "CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o" \
+"CMakeFiles/main.dir/src/gl_helper.cpp.o" \
+"CMakeFiles/main.dir/src/Viewer.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/SphereRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/FPSCounter.cpp.o"
+"CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/Solver.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/Particle.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/Collision.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/ShaderProgram.cpp.o" \
+"CMakeFiles/main.dir/src/ConeRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/Plane.cpp.o" \
+"CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/initialize_kart.cpp.o" \
+"CMakeFiles/main.dir/src/CylinderRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/Camera.cpp.o" \
+"CMakeFiles/main.dir/src/TorusRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/initialize_person.cpp.o" \
+"CMakeFiles/main.dir/src/TextEngine.cpp.o" \
+"CMakeFiles/main.dir/src/setup_kart.cpp.o" \
+"CMakeFiles/main.dir/src/QuadRendable.cpp.o" \
+"CMakeFiles/main.dir/src/main.cpp.o" \
+"CMakeFiles/main.dir/src/KeyframeCollection.cpp.o" \
+"CMakeFiles/main.dir/src/Sphere.cpp.o" \
+"CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/GeometricTransformation.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/src/ConeRenderable.cpp.o
-main: CMakeFiles/main.dir/src/FrameRenderable.cpp.o
-main: CMakeFiles/main.dir/src/Plane.cpp.o
-main: CMakeFiles/main.dir/src/gl_helper.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o
-main: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o
-main: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o
-main: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o
-main: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
-main: CMakeFiles/main.dir/src/Viewer.cpp.o
-main: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
-main: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
-main: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
-main: CMakeFiles/main.dir/src/main.cpp.o
-main: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o
-main: CMakeFiles/main.dir/src/Io.cpp.o
+main: CMakeFiles/main.dir/src/CubeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/FloorRenderable.cpp.o
 main: CMakeFiles/main.dir/src/log.cpp.o
+main: CMakeFiles/main.dir/src/Io.cpp.o
+main: CMakeFiles/main.dir/src/FrameRenderable.cpp.o
+main: CMakeFiles/main.dir/src/Utils.cpp.o
+main: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/FPSCounter.cpp.o
+main: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o
+main: CMakeFiles/main.dir/src/Renderable.cpp.o
 main: CMakeFiles/main.dir/src/MeshRenderable.cpp.o
 main: CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o
-main: CMakeFiles/main.dir/src/FloorRenderable.cpp.o
-main: CMakeFiles/main.dir/src/QuadRendable.cpp.o
-main: CMakeFiles/main.dir/src/setup_kart.cpp.o
-main: CMakeFiles/main.dir/src/Sphere.cpp.o
-main: CMakeFiles/main.dir/src/TextEngine.cpp.o
-main: CMakeFiles/main.dir/src/CubeRenderable.cpp.o
-main: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o
-main: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o
-main: CMakeFiles/main.dir/src/Camera.cpp.o
-main: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
-main: CMakeFiles/main.dir/src/Renderable.cpp.o
-main: CMakeFiles/main.dir/src/Utils.cpp.o
-main: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o
 main: CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o
+main: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o
+main: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o
+main: CMakeFiles/main.dir/src/gl_helper.cpp.o
+main: CMakeFiles/main.dir/src/Viewer.cpp.o
+main: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o
 main: CMakeFiles/main.dir/src/SphereRenderable.cpp.o
-main: CMakeFiles/main.dir/src/FPSCounter.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o
+main: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o
+main: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
+main: CMakeFiles/main.dir/src/ConeRenderable.cpp.o
+main: CMakeFiles/main.dir/src/Plane.cpp.o
+main: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
+main: CMakeFiles/main.dir/src/initialize_kart.cpp.o
+main: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
+main: CMakeFiles/main.dir/src/Camera.cpp.o
+main: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
+main: CMakeFiles/main.dir/src/initialize_person.cpp.o
+main: CMakeFiles/main.dir/src/TextEngine.cpp.o
+main: CMakeFiles/main.dir/src/setup_kart.cpp.o
+main: CMakeFiles/main.dir/src/QuadRendable.cpp.o
+main: CMakeFiles/main.dir/src/main.cpp.o
+main: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o
+main: CMakeFiles/main.dir/src/Sphere.cpp.o
+main: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o
+main: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
 main: CMakeFiles/main.dir/build.make
-main: /usr/lib/x86_64-linux-gnu/libGLU.so
-main: /usr/lib/x86_64-linux-gnu/libGL.so
-main: /usr/lib/x86_64-linux-gnu/libX11.so
-main: /usr/lib/x86_64-linux-gnu/libXext.so
+main: /usr/lib64/libGLU.so
+main: /usr/lib64/libGL.so
+main: /usr/lib64/libSM.so
+main: /usr/lib64/libICE.so
+main: /usr/lib64/libX11.so
+main: /usr/lib64/libXext.so
 main: ../extlib/glew-1.13.0/lib/libGLEW.so
 main: ../extlib/freetype-2.5.5/build/libfreetype.a
 main: ../extlib/sfml-2.3.2/build/lib/libsfml-system.so
@@ -1349,57 +1554,65 @@ main: CMakeFiles/main.dir/link.txt
 CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Plane.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Io.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/log.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Io.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FrameRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Utils.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TriangleRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Renderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/MeshRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FloorRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Sphere.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CubeRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Camera.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Renderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Utils.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/SphereRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/FPSCounter.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Plane.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Camera.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/initialize_person.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TextEngine.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/setup_kart.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/QuadRendable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Sphere.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:
@@ -1407,6 +1620,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/tilbuin/Documents/3dGraphics/project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tilbuin/Documents/3dGraphics/project /home/tilbuin/Documents/3dGraphics/project /home/tilbuin/Documents/3dGraphics/project/build /home/tilbuin/Documents/3dGraphics/project/build /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

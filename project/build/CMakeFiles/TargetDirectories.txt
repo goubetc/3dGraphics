@@ -1,1 +1,1 @@
-/home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles/main.dir
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir

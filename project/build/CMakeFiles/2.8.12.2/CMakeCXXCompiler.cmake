@@ -1,7 +1,7 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/c++")
+set(CMAKE_CXX_COMPILER "/opt/gcc-4.9.3/bin/g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
-set(CMAKE_CXX_COMPILER_VERSION "4.8.4")
+set(CMAKE_CXX_COMPILER_VERSION "4.9.3")
 set(CMAKE_CXX_PLATFORM_ID "Linux")
 
 set(CMAKE_AR "/usr/bin/ar")
@@ -32,7 +32,7 @@ set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
 # Save compiler ABI information.
 set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
 set(CMAKE_CXX_COMPILER_ABI "ELF")
-set(CMAKE_CXX_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
+set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")
 
 if(CMAKE_CXX_SIZEOF_DATA_PTR)
   set(CMAKE_SIZEOF_VOID_P "${CMAKE_CXX_SIZEOF_DATA_PTR}")
@@ -43,14 +43,14 @@ if(CMAKE_CXX_COMPILER_ABI)
 endif()
 
 if(CMAKE_CXX_LIBRARY_ARCHITECTURE)
-  set(CMAKE_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
+  set(CMAKE_LIBRARY_ARCHITECTURE "")
 endif()
 
 
 
 
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;c")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/4.8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3;/opt/gcc-4.9.3/lib64;/lib64;/usr/lib64;/opt/gcc-4.9.3/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 
 
