@@ -270,21 +270,21 @@ std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderab
  
 
  //Initialize a force field that apply only to the mobile particle
- glm::vec3 nullForce(0.0,0.0,0.0);
+ /*glm::vec3 nullForce(0.0,0.0,0.0);
  std::vector<ParticlePtr> vParticle;
  vParticle.push_back(mobile);
  ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
- system->addForceField( force );
+ system->addForceField( force );*/
 
  //Initialize a renderable for the force field applied on the mobile particle.
  //This renderable allows to modify the attribute of the force by key/mouse events
  //Add this renderable to the systemRenderable.
- ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
- HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
+ /*ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
+ HierarchicalRenderable::addChild(systemRenderable, forceRenderable);*/
 
  //Add a damping force field to the mobile.
- DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
- system->addForceField( dampingForceField );
+ /*DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
+ system->addForceField( dampingForceField );*/
 
  //Activate collision and set the restitution coefficient to 1.0
  system->setCollisionsDetection(true);
@@ -294,7 +294,7 @@ std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderab
 
  ///////////////////// Person ///////////////////////
 
- struct sPerson
+ /*struct sPerson
  {
    float length = 0.5;
    float height = 2.5;  
@@ -306,7 +306,7 @@ std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderab
  }; struct sPerson vPerson;
 
 
-
+*/
 
  /*
    COORDINATES:
@@ -321,11 +321,11 @@ std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderab
 	
 	
  // Create renderables
- std::shared_ptr<CylinderRenderable> person = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
+ /*std::shared_ptr<CylinderRenderable> person = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
  person->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
-
+*/
  //PERSON
- std::shared_ptr<HierarchicalSphereRenderable> head = std::make_shared<HierarchicalSphereRenderable>(flatShader);
+ /*std::shared_ptr<HierarchicalSphereRenderable> head = std::make_shared<HierarchicalSphereRenderable>(flatShader);
  std::shared_ptr<FloorRenderable> body = std::make_shared<FloorRenderable>(flatShader, vPerson.width, vPerson.height, vPerson.length);
 
  body->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   
@@ -394,13 +394,14 @@ neck->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3
  // root->updateModelMatrix();
 // hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vHood.height/2,-vFloor.length/2 + vHood.length/2)));   
 
-//     hood->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   
+//     hood->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   */
   
 }
 
 void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
 
     //Temporary variables
+    glm::mat4 parentTransformation(1.0), localTransformation(1.0);
     MaterialPtr pearl = Material::Pearl();
     std::string filename = "./../textures/mipmap1.png";
 
@@ -409,18 +410,30 @@ void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSyste
   ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
   viewer.addShaderProgram( texShader );
   
+  //Define a directional light for the whole scene
+    glm::vec3 d_direction = glm::normalize(glm::vec3(0.0,0.0,-1.0));
+    glm::vec3 d_ambient(1.0,1.0,1.0), d_diffuse(1.0,1.0,0.8), d_specular(1.0,1.0,1.0);
+    DirectionalLightPtr directionalLight = std::make_shared<DirectionalLight>(d_direction, d_ambient, d_diffuse, d_specular);
+    //Add a renderable to display the light and control it via mouse/key event
+    glm::vec3 lightPosition(0.0,0.0,5.0);
+    DirectionalLightRenderablePtr directionalLightRenderable = std::make_shared<DirectionalLightRenderable>(flatShader, directionalLight, lightPosition);
+    localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
+    directionalLightRenderable->setLocalTransform(localTransformation);
+    viewer.setDirectionalLight(directionalLight);
+    viewer.addRenderable(directionalLightRenderable);
+  
   //root
   std::shared_ptr<CylinderRenderable> root = std::make_shared<CylinderRenderable>( flatShader, 1, 1, 1);
   root->setLocalTransform(glm::scale( glm::mat4(1.), glm::vec3(0,0,0)));
 
   //variables
-  float poleRadius = 2;
+  float poleRadius = 0.05;
   float poleHeight = 4;
   float poleX = 0.0;
   float poleY = 0.0;
   float poleZ = 0.0;
-  float billboardWidth = 4;
-  float billboardHeight = 0.2;
+  float billboardWidth = 0.2;
+  float billboardHeight = 4;
   float billboardThickness = 2;
   float billboardX = 0.0;
   float billboardY = 0.0;
@@ -439,13 +452,25 @@ void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSyste
 
   //Textured plane
     TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
-    texPlane->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(billboardX,billboardY,billboardZ)));
-    //parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(10.0,10.0,10.0));
+    //parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(2,4,2));
+    //texPlane->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::vec3(0.0,1.0,0.0)));
     //texPlane->setParentTransform(parentTransformation);
-    texPlane->setMaterial(pearl);
-    viewer.addRenderable(texPlane);
+    //texPlane->setMaterial(pearl);
+    //texBil->setParentTransform( glm::translate(glm::mat4(1.0), glm::vec3(billboardX+2,billboardY+2,billboardZ+2)));
+    //viewer.addRenderable(texPlane);
+    
+    texPlane->setParentTransform( GeometricTransformation( glm::vec3{billboardX+0.101,billboardY,0},
+        glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
+        glm::vec3{2,4,2}).toMatrix() );
+        
+    texPlane->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::vec3(0.0,0.0,1.0)));
+    
     texPlane->setMaterial(pearl);
     HierarchicalRenderable::addChild( root, texPlane );
+    
+    //Rotate the root
+    //root->setParentTransform( glm::translate(glm::mat4(1.0), glm::vec3(0,0,6)));
+    root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::vec3(0.0,1.0,0.0)));
     
     HierarchicalRenderable::addChild(systemRenderable, root);
 }
