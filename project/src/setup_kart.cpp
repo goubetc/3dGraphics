@@ -126,9 +126,9 @@ struct sSeat vSeat;
 std::shared_ptr<ParticleRenderable> master = std::make_shared<ParticleRenderable>( flatShader, mobile);
 
 master->setLocalTransform(glm::scale( glm::mat4(1.), glm::vec3(0,0,0)));
-    
-std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
-//root->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
+
+  std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
+  seat->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
   
     
 std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height);
@@ -384,6 +384,53 @@ neck->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3
 // hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vHood.height/2,-vFloor.length/2 + vHood.length/2)));   
 
 //     hood->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   
-
   
+}
+
+CylinderRenderablePtr initialize_billboard(Viewer& viewer){
+  std::string filename = "./../textures/mipmap1.png";
+
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");
+  viewer.addShaderProgram( flatShader );
+  ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
+  viewer.addShaderProgram( texShader );
+  
+  //root
+  std::shared_ptr<CylinderRenderable> root = std::make_shared<CylinderRenderable>( flatShader);
+  root->setLocalTransform(glm::scale( glm::mat4(1.), glm::vec3(0,0,0)));
+
+  //variables
+  float poleRadius = 2;
+  float poleHeight = 4;
+  float poleX = 0.0;
+  float poleY = 0.0;
+  float poleZ = 0.0;
+  float billboardWidth = 4;
+  float billboardHeight = 0.2;
+  float billboardThickness = 2;
+  float billboardX = 0.0;
+  float billboardY = 0.0;
+  float billboardZ = 3.0;
+
+  //pole of the billboard
+  std::shared_ptr<CylinderRenderable> pole = std::make_shared<CylinderRenderable>(flatShader, 20, poleHeight, poleRadius);
+  pole->setLocalTransform( glm::translate(glm::mat4(1.0), glm::vec3(poleX,poleY,poleZ)));
+
+  //front of the billboard
+  std::shared_ptr<FloorRenderable> billboard = std::make_shared<FloorRenderable>(flatShader, billboardWidth, billboardThickness, billboardHeight);
+  pole->setLocalTransform( glm::translate(glm::mat4(1.0), glm::vec3(billboardX,billboardY,billboardZ)));
+
+  HierarchicalRenderable::addChild(root, pole);
+  HierarchicalRenderable::addChild(root, billboard);
+
+  //Textured plane
+    TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+    texPlane->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(billboardX,billboardY,billboardZ)));
+    //parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(10.0,10.0,10.0));
+    //texPlane->setParentTransform(parentTransformation);
+    texPlane->setMaterial(pearl);
+    viewer.addRenderable(texPlane);
+    texPlane->setMaterial(pearl);
+    HierarchicalRenderable::addChild( root, texPlane );
+    return root;
 }
