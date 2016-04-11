@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../extlib/freetype-2.5.5/include/config/ftheader.h
-
-../extlib/freetype-2.5.5/include/ft2build.h
-config/ftheader.h
--
-
 ../extlib/glew-1.13.0/include/GL/glew.h
 stddef.h
 -
@@ -598,14 +592,6 @@ constants.inl
 limits
 -
 
-../extlib/glm-0.9.7.1/glm/gtc/matrix_access.hpp
-../detail/setup.hpp
-../extlib/glm-0.9.7.1/glm/detail/setup.hpp
-matrix_access.inl
-../extlib/glm-0.9.7.1/glm/gtc/matrix_access.inl
-
-../extlib/glm-0.9.7.1/glm/gtc/matrix_access.inl
-
 ../extlib/glm-0.9.7.1/glm/gtc/matrix_transform.hpp
 ../mat4x4.hpp
 ../extlib/glm-0.9.7.1/glm/mat4x4.hpp
@@ -650,26 +636,6 @@ quaternion.inl
 ../exponential.hpp
 ../extlib/glm-0.9.7.1/glm/exponential.hpp
 limits
--
-
-../extlib/glm-0.9.7.1/glm/gtc/random.hpp
-../vec2.hpp
-../extlib/glm-0.9.7.1/glm/vec2.hpp
-../vec3.hpp
-../extlib/glm-0.9.7.1/glm/vec3.hpp
-random.inl
-../extlib/glm-0.9.7.1/glm/gtc/random.inl
-
-../extlib/glm-0.9.7.1/glm/gtc/random.inl
-../geometric.hpp
-../extlib/glm-0.9.7.1/glm/geometric.hpp
-../exponential.hpp
-../extlib/glm-0.9.7.1/glm/exponential.hpp
-cstdlib
--
-ctime
--
-cassert
 -
 
 ../extlib/glm-0.9.7.1/glm/gtc/type_precision.hpp
@@ -751,58 +717,6 @@ vec1.inl
 ../extlib/glm-0.9.7.1/glm/gtc/vec1.inl
 
 ../extlib/glm-0.9.7.1/glm/gtc/vec1.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/color_space.hpp
-../glm.hpp
-../extlib/glm-0.9.7.1/glm/glm.hpp
-color_space.inl
-../extlib/glm-0.9.7.1/glm/gtx/color_space.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/color_space.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/compatibility.hpp
-../glm.hpp
-../extlib/glm-0.9.7.1/glm/glm.hpp
-../gtc/quaternion.hpp
-../extlib/glm-0.9.7.1/glm/gtc/quaternion.hpp
-cfloat
--
-cmath
--
-compatibility.inl
-../extlib/glm-0.9.7.1/glm/gtx/compatibility.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/compatibility.inl
-limits
--
-
-../extlib/glm-0.9.7.1/glm/gtx/norm.hpp
-../glm.hpp
-../extlib/glm-0.9.7.1/glm/glm.hpp
-../gtx/quaternion.hpp
-../extlib/glm-0.9.7.1/glm/gtx/quaternion.hpp
-norm.inl
-../extlib/glm-0.9.7.1/glm/gtx/norm.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/norm.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/quaternion.hpp
-../glm.hpp
-../extlib/glm-0.9.7.1/glm/glm.hpp
-../gtc/constants.hpp
-../extlib/glm-0.9.7.1/glm/gtc/constants.hpp
-../gtc/quaternion.hpp
-../extlib/glm-0.9.7.1/glm/gtc/quaternion.hpp
-../gtx/norm.hpp
-../extlib/glm-0.9.7.1/glm/gtx/norm.hpp
-quaternion.inl
-../extlib/glm-0.9.7.1/glm/gtx/quaternion.inl
-
-../extlib/glm-0.9.7.1/glm/gtx/quaternion.inl
-limits
--
-../gtc/constants.hpp
-../extlib/glm-0.9.7.1/glm/gtc/constants.hpp
 
 ../extlib/glm-0.9.7.1/glm/integer.hpp
 detail/func_integer.hpp
@@ -1526,38 +1440,6 @@ SFML/Config.hpp
 
 ../extlib/sfml-2.3.2/include/SFML/Window/WindowStyle.hpp
 
-../extlib/tinyobjloader/tiny_obj_loader.h
-string
--
-vector
--
-map
--
-cstdlib
--
-cstring
--
-cassert
--
-cmath
--
-cstddef
--
-cctype
--
-string
--
-vector
--
-map
--
-fstream
--
-sstream
--
-tiny_obj_loader.h
-../extlib/tinyobjloader/tiny_obj_loader.h
-
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Camera.hpp
 glm/glm.hpp
 -
@@ -1566,10 +1448,26 @@ glm/glm.hpp
 chrono
 -
 
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/FrameRenderable.hpp
+Renderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Renderable.hpp
+vector
+-
+glm/glm.hpp
+-
+
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
 glm/glm.hpp
 -
 glm/gtc/quaternion.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalCylinderRenderable.hpp
+HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
+vector
+-
+glm/glm.hpp
 -
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
@@ -1582,19 +1480,11 @@ memory
 glm/glm.hpp
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/KeyframeCollection.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
-map
--
-array
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/KeyframedCylinderRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalSphereRenderable.hpp
 HierarchicalRenderable.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
-KeyframeCollection.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/KeyframeCollection.hpp
+vector
+-
 glm/glm.hpp
 -
 
@@ -1602,6 +1492,16 @@ glm/glm.hpp
 glm/glm.hpp
 -
 memory
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/QuadRenderable.hpp
+HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
+Plane.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Plane.hpp
+vector
+-
+glm/glm.hpp
 -
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Renderable.hpp
@@ -1686,6 +1586,28 @@ glm/gtc/matrix_transform.hpp
 glm/gtc/type_ptr.hpp
 -
 
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/HierarchicalRenderable.hpp
+Renderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/Renderable.hpp
+vector
+-
+memory
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/dynamics/ConstantForceField.hpp
+vector
+-
+ForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/dynamics/ForceField.hpp
+Particle.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/dynamics/Particle.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Collision.hpp
+memory
+-
+
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ConstantForceField.hpp
 vector
 -
@@ -1699,6 +1621,46 @@ Particle.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
 ConstantForceField.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ConstantForceField.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ControlledForceFieldRenderable.hpp
+./../../include/HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/HierarchicalRenderable.hpp
+./../../include/dynamics/ConstantForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/./../../include/dynamics/ConstantForceField.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DampingForceField.hpp
+vector
+-
+ForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ForceField.hpp
+Particle.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Particle.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystem.hpp
+vector
+-
+Collision.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Collision.hpp
+ForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ForceField.hpp
+Particle.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Particle.hpp
+Solver.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Solver.hpp
+../Plane.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Plane.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystemRenderable.hpp
+vector
+-
+DynamicSystem.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystem.hpp
+../HierarchicalCylinderRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalCylinderRenderable.hpp
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/EulerExplicitSolver.hpp
+Solver.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Solver.hpp
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ForceField.hpp
 memory
@@ -1728,6 +1690,16 @@ glm/glm.hpp
 GL/glew.h
 -
 
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ParticleRenderable.hpp
+../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
+Particle.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Particle.hpp
+vector
+-
+glm/glm.hpp
+-
+
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Solver.hpp
 memory
 -
@@ -1748,6 +1720,16 @@ Particle.hpp
 SpringForceField.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringForceField.hpp
 
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringListRenderable.hpp
+../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalRenderable.hpp
+SpringForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringForceField.hpp
+list
+-
+vector
+-
+
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../../include/ShaderProgram.hpp
@@ -1758,68 +1740,14 @@ memory
 unordered_map
 -
 
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/DirectionalLightRenderable.hpp
+./../HierarchicalRenderable.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../Renderable.hpp
+Light.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/Light.hpp
 vector
 -
-memory
--
 glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/Material.hpp
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/ShaderProgram.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/log.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/./../../include/gl_helper.hpp
-GL/glew.h
--
-glm/glm.hpp
--
-string
--
-memory
 -
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/Light.hpp
@@ -1832,1283 +1760,39 @@ glm/glm.hpp
 ./../../include/ShaderProgram.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../../include/ShaderProgram.hpp
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/LightedCubeRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/LightedCylinderRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
 iostream
 -
 ctime
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Camera.hpp
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ConeRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CubeRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CustomizedKeyFrame.hpp
-KeyFrame.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/KeyFrame.hpp
-glm/glm.hpp
--
-glm/gtc/type_precision.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CylinderRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FPSCounter.hpp
-chrono
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FloorRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FrameRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/GeometricTransformation.hpp
-glm/glm.hpp
--
-glm/gtc/quaternion.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalCylinderRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalMeshRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-string
--
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalSphereRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/IndexedCubeRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Io.hpp
-vector
--
-glm/glm.hpp
--
-string
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/KeyframeCollection.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/GeometricTransformation.hpp
-map
--
-array
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/MeshRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-string
--
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-glm/glm.hpp
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/QuadRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Sphere.hpp
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/SphereRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TextEngine.hpp
-string
--
-glm/glm.hpp
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TorusRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/GeometricTransformation.hpp
-Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Sphere.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-array
--
-vector
--
-utility
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Viewer.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-Camera.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Camera.hpp
-lighting/Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/lighting/Light.hpp
-TextEngine.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TextEngine.hpp
-FPSCounter.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FPSCounter.hpp
-unordered_set
--
-memory
--
-string
--
-chrono
--
-GL/glew.h
--
-SFML/Graphics.hpp
--
-SFML/OpenGL.hpp
--
-glm/gtc/type_precision.hpp
--
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/lighting/Light.hpp
-vector
--
-GL/glew.h
--
-glm/glm.hpp
--
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/lighting/./../../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp
-./../include/Camera.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Camera.hpp
-iostream
--
-glm/gtc/type_precision.hpp
--
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ConeRenderable.cpp
-./../include/ConeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ConeRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CubeRenderable.cpp
-./../include/CubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CubeRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CustomizedKeyFrame.cpp
-./../include/CustomizedKeyFrame.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CustomizedKeyFrame.hpp
-iostream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp
-./../include/CylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CylinderRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-cmath
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FPSCounter.cpp
-./../include/FPSCounter.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FPSCounter.hpp
-chrono
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FloorRenderable.cpp
-./../include/FloorRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FloorRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-cmath
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/FrameRenderable.cpp
-./../include/FrameRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FrameRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp
-../include/GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp
-./../include/HierarchicalCylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalCylinderRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalMeshRenderable.cpp
-./../include/HierarchicalMeshRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalMeshRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Io.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Io.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalRenderable.cpp
-./../include/HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Viewer.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalSphereRenderable.cpp
-./../include/HierarchicalSphereRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalSphereRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/IndexedCubeRenderable.cpp
-./../include/IndexedCubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/IndexedCubeRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Io.cpp
-./../include/Io.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Io.hpp
-iostream
--
-tiny_obj_loader.h
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/tiny_obj_loader.h
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp
-./../include/KeyframeCollection.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/KeyframeCollection.hpp
-glm/gtx/compatibility.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframedCylinderRenderable.cpp
-../include/KeyframedCylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/KeyframedCylinderRenderable.hpp
-../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-../include/GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
-../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/MeshRenderable.cpp
-./../include/MeshRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/MeshRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Io.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Io.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Plane.cpp
-./../include/Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-glm/gtc/matrix_access.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp
-./../include/QuadRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/QuadRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Renderable.cpp
-./../include/Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Viewer.hpp
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ShaderProgram.cpp
-algorithm
--
-fstream
--
-iostream
--
-iomanip
--
-sstream
--
-string
--
-vector
--
-GL/glew.h
--
-./../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp
-./../include/Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Sphere.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/SphereRenderable.cpp
-./../include/SphereRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/SphereRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp
-./../include/TextEngine.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TextEngine.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-vector
--
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-ft2build.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp
-./../include/TorusRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TorusRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TriangleRenderable.cpp
-./../include/TriangleRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-cmath
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Utils.cpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-chrono
--
-random
--
-glm/gtx/color_space.hpp
--
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Viewer.cpp
-./../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Viewer.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-iostream
--
-sstream
--
-iomanip
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Camera.hpp
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/FPSCounter.hpp
-chrono
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/GeometricTransformation.hpp
-glm/glm.hpp
--
-glm/gtc/quaternion.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalCylinderRenderable.hpp
-HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalRenderable.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Renderable.hpp
-vector
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Plane.hpp
-glm/glm.hpp
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Sphere.hpp
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/TextEngine.hpp
-string
--
-glm/glm.hpp
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Utils.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/GeometricTransformation.hpp
-Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Sphere.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Plane.hpp
-array
--
-vector
--
-utility
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Viewer.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Renderable.hpp
-Camera.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Camera.hpp
-lighting/Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/lighting/Light.hpp
-TextEngine.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/TextEngine.hpp
-FPSCounter.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/FPSCounter.hpp
-unordered_set
--
-memory
--
-string
--
-chrono
--
-GL/glew.h
--
-SFML/Graphics.hpp
--
-SFML/OpenGL.hpp
--
-glm/gtc/type_precision.hpp
--
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/Renderable.hpp
-vector
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/Plane.hpp
-glm/glm.hpp
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/ConstantForceField.hpp
-vector
--
-ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/ForceField.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/ForceField.hpp
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/Particle.hpp
-iostream
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Collision.hpp
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ConstantForceField.hpp
-vector
--
-ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ForceField.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ControlledForceFieldRenderable.hpp
-./../../include/HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/HierarchicalRenderable.hpp
-./../../include/dynamics/ConstantForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/dynamics/ConstantForceField.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DampingForceField.hpp
-vector
--
-ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ForceField.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DynamicSystem.hpp
-vector
--
-Collision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Collision.hpp
-ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ForceField.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-Solver.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Solver.hpp
-../Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Plane.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DynamicSystemRenderable.hpp
-vector
--
-DynamicSystem.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DynamicSystem.hpp
-../HierarchicalCylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalCylinderRenderable.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/EulerExplicitSolver.hpp
-Solver.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Solver.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ForceField.hpp
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-iostream
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticleParticleCollision.hpp
-Collision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Collision.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticlePlaneCollision.hpp
-Collision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Collision.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-./../../include/Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/./../../include/Plane.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticleRenderable.hpp
-../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalRenderable.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Solver.hpp
-memory
--
-vector
--
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/SpringForceField.hpp
-ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ForceField.hpp
-Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/SpringListRenderable.hpp
-../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/HierarchicalRenderable.hpp
-SpringForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/SpringForceField.hpp
-list
--
-vector
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/lighting/Light.hpp
-vector
--
-GL/glew.h
--
-glm/glm.hpp
--
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/lighting/./../../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Collision.cpp
-./../../include/dynamics/Collision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Collision.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceField.cpp
-./../../include/dynamics/ConstantForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ConstantForceField.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp
-../../include/dynamics/ConstantForceFieldRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ConstantForceFieldRenderable.hpp
-../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp
-./../../include/dynamics/ControlledForceFieldRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ControlledForceFieldRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/log.hpp
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DampingForceField.cpp
-./../../include/dynamics/DampingForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DampingForceField.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystem.cpp
-cmath
--
-iostream
--
-GL/glew.h
--
-glm/gtc/type_ptr.hpp
--
-glm/gtx/norm.hpp
--
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/gl_helper.hpp
-./../../include/dynamics/DynamicSystem.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DynamicSystem.hpp
-./../../include/dynamics/ParticlePlaneCollision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticlePlaneCollision.hpp
-./../../include/dynamics/ParticleParticleCollision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticleParticleCollision.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp
-cmath
--
-iostream
--
-map
--
-GL/glew.h
--
-glm/gtc/type_ptr.hpp
--
-glm/gtc/random.hpp
--
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/gl_helper.hpp
-./../../include/dynamics/DynamicSystemRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/DynamicSystemRenderable.hpp
-./../../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Viewer.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp
-./../../include/dynamics/EulerExplicitSolver.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/EulerExplicitSolver.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ForceField.cpp
-../../include/dynamics/ForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ForceField.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Particle.cpp
-./../../include/dynamics/Particle.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/Particle.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp
-../../include/dynamics/ParticleListRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ParticleListRenderable.hpp
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp
-./../../include/dynamics/ParticleParticleCollision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticleParticleCollision.hpp
-glm/gtx/norm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp
-./../../include/dynamics/ParticlePlaneCollision.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticlePlaneCollision.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleRenderable.cpp
-./../../include/dynamics/ParticleRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/ParticleRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/Utils.hpp
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Solver.cpp
-../../include/dynamics/Solver.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/Solver.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceField.cpp
-./../../include/dynamics/SpringForceField.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/SpringForceField.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp
-../../include/dynamics/SpringForceFieldRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringForceFieldRenderable.hpp
-../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-glm/glm.hpp
--
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringListRenderable.cpp
-./../../include/dynamics/SpringListRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/./../../include/dynamics/SpringListRenderable.hpp
-../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/gl_helper.cpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/setup_kart.hpp
 ../include/Viewer.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Viewer.hpp
-../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-./../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-./../include/FrameRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FrameRenderable.hpp
-./../include/CylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CylinderRenderable.hpp
-./../include/FloorRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FloorRenderable.hpp
-./../include/TriangleRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
-../include/GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
-iostream
--
-string
--
-fstream
--
+../include/dynamics/DynamicSystem.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystem.hpp
+../include/dynamics/DynamicSystemRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystemRenderable.hpp
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/GeometricTransformation.hpp
-glm/glm.hpp
--
-glm/gtc/quaternion.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Io.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
+Renderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../Renderable.hpp
 vector
--
-glm/glm.hpp
--
-string
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Plane.hpp
-glm/glm.hpp
 -
 memory
 -
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Sphere.hpp
 glm/glm.hpp
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Utils.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/GeometricTransformation.hpp
-Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Sphere.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Plane.hpp
-array
--
-vector
--
-utility
--
-glm/glm.hpp
--
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/gl_helper.hpp
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/log.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/log.hpp
 iostream
 -
 ctime
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../Renderable.hpp
-vector
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/Light.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Light.hpp
 vector
 -
 GL/glew.h
@@ -3116,15 +1800,15 @@ GL/glew.h
 glm/glm.hpp
 -
 ./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/./../../include/ShaderProgram.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/ShaderProgram.hpp
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
 ./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/./../../include/ShaderProgram.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/ShaderProgram.hpp
 ./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/./../../include/log.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/log.hpp
 ./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/./../../include/gl_helper.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/./../../include/gl_helper.hpp
 GL/glew.h
 -
 glm/glm.hpp
@@ -3134,33 +1818,43 @@ string
 memory
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/DirectionalLightRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/MipMapCubeRenderable.hpp
 ./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../HierarchicalRenderable.hpp
-Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Light.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Light.hpp
-vector
--
-GL/glew.h
--
-glm/glm.hpp
--
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/LightedMeshRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
 ./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/MultiTexturedCubeRenderable.hpp
+./../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
+./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedCubeRenderable.hpp
+./../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
+./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedLightedMeshRenderable.hpp
+./../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
+./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
 ./../lighting/Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../lighting/Light.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Light.hpp
 string
 -
 vector
@@ -3168,168 +1862,64 @@ vector
 glm/glm.hpp
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Material.hpp
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/ShaderProgram.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/log.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../../include/gl_helper.hpp
-GL/glew.h
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedPlaneRenderable.hpp
+./../HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../HierarchicalRenderable.hpp
+./../lighting/Material.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/./../lighting/Material.hpp
+vector
 -
 glm/glm.hpp
 -
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CylinderRenderable.hpp
+HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FloorRenderable.hpp
+HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/FrameRenderable.hpp
+Renderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
+vector
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
+Renderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
+vector
+-
+memory
+-
+glm/glm.hpp
+-
+
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
 string
 -
 memory
 -
+unordered_map
+-
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/PointLightRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../HierarchicalRenderable.hpp
-Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Light.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
+HierarchicalRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
 vector
 -
 glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/SpotLightRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/./../HierarchicalRenderable.hpp
-Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Light.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/DirectionalLightRenderable.cpp
-./../../include/lighting/DirectionalLightRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/DirectionalLightRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Utils.hpp
-glm/gtx/quaternion.hpp
--
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/Light.cpp
-./../../include/lighting/Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Light.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/LightedCubeRenderable.cpp
-../../include/lighting/LightedCubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/LightedCubeRenderable.hpp
-../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/LightedCylinderRenderable.cpp
-../../include/lighting/LightedCylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/LightedCylinderRenderable.hpp
-../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/gl_helper.hpp
-../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/LightedMeshRenderable.cpp
-./../../include/lighting/LightedMeshRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/LightedMeshRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-./../../include/Io.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Io.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/Material.cpp
-./../../include/lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/Material.hpp
-glm/gtc/type_ptr.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/PointLightRenderable.cpp
-./../../include/lighting/PointLightRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/PointLightRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Utils.hpp
-glm/gtx/quaternion.hpp
--
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/SpotLightRenderable.cpp
-./../../include/lighting/SpotLightRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/lighting/SpotLightRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/lighting/./../../include/Utils.hpp
-glm/gtx/quaternion.hpp
--
-glm/gtc/type_ptr.hpp
--
-glm/gtc/matrix_transform.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/log.cpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp
-../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Viewer.hpp
-../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-sstream
 -
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp
@@ -3349,294 +1939,56 @@ sstream
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
 ../include/GeometricTransformation.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/GeometricTransformation.hpp
+../include/ShaderProgram.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/ShaderProgram.hpp
+../include/QuadRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/QuadRenderable.hpp
+../include/FrameRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/FrameRenderable.hpp
+../include/dynamics/DampingForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DampingForceField.hpp
+../include/dynamics/ConstantForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ConstantForceField.hpp
+../include/dynamics/SpringForceField.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringForceField.hpp
+../include/dynamics/EulerExplicitSolver.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/EulerExplicitSolver.hpp
+../include/dynamics/ParticleRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ParticleRenderable.hpp
+../include/dynamics/ParticleListRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ParticleListRenderable.hpp
+../include/dynamics/ConstantForceFieldRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ConstantForceFieldRenderable.hpp
+../include/dynamics/SpringForceFieldRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringForceFieldRenderable.hpp
+../include/dynamics/SpringListRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/SpringListRenderable.hpp
+../include/dynamics/ControlledForceFieldRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/ControlledForceFieldRenderable.hpp
+../include/dynamics/DynamicSystem.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystem.hpp
+../include/dynamics/DynamicSystemRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/dynamics/DynamicSystemRenderable.hpp
+../include/setup_kart.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/setup_kart.hpp
+../include/HierarchicalSphereRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/HierarchicalSphereRenderable.hpp
+../include/texturing/TexturedPlaneRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedPlaneRenderable.hpp
+../include/texturing/TexturedCubeRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedCubeRenderable.hpp
+../include/texturing/MultiTexturedCubeRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/MultiTexturedCubeRenderable.hpp
+../include/texturing/MipMapCubeRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/MipMapCubeRenderable.hpp
+../include/texturing/TexturedLightedMeshRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/texturing/TexturedLightedMeshRenderable.hpp
+../include/lighting/DirectionalLightRenderable.hpp
+/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/lighting/DirectionalLightRenderable.hpp
 iostream
 -
 string
 -
 fstream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/GeometricTransformation.hpp
-glm/glm.hpp
--
-glm/gtc/quaternion.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Io.hpp
-vector
--
-glm/glm.hpp
--
-string
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Plane.hpp
-glm/glm.hpp
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Sphere.hpp
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/GeometricTransformation.hpp
-Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Sphere.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Plane.hpp
-array
--
-vector
--
-utility
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../Renderable.hpp
-vector
--
-memory
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/ShaderProgram.hpp
-string
--
-memory
--
-unordered_map
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Light.hpp
-vector
--
-GL/glew.h
--
-glm/glm.hpp
--
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/ShaderProgram.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-./../../include/ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/ShaderProgram.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/log.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/./../../include/gl_helper.hpp
-GL/glew.h
--
-glm/glm.hpp
--
-string
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/BillBoardPlaneRenderable.hpp
-./../Renderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../Renderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/MipMapCubeRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/MultiTexturedCubeRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedCubeRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedLightedMeshRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-./../lighting/Light.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Light.hpp
-string
--
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedPlaneRenderable.hpp
-./../HierarchicalRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../HierarchicalRenderable.hpp
-./../lighting/Material.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/./../lighting/Material.hpp
-vector
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/BillBoardPlaneRenderable.cpp
-./../../include/texturing/BillBoardPlaneRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/BillBoardPlaneRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-SFML/Graphics/Image.hpp
--
-iostream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MipMapCubeRenderable.cpp
-./../../include/texturing/MipMapCubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/MipMapCubeRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-SFML/Graphics/Image.hpp
--
-iostream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MultiTexturedCubeRenderable.cpp
-./../../include/texturing/MultiTexturedCubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/MultiTexturedCubeRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-SFML/Graphics/Image.hpp
--
-iostream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp
-./../../include/texturing/TexturedCubeRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedCubeRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-SFML/Graphics/Image.hpp
--
-iostream
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedLightedMeshRenderable.cpp
-./../../include/texturing/TexturedLightedMeshRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedLightedMeshRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/log.hpp
-./../../include/Io.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Io.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp
-./../../include/texturing/TexturedPlaneRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/texturing/TexturedPlaneRenderable.hpp
-./../../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/gl_helper.hpp
-./../../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/log.hpp
-./../../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/./../../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-SFML/Graphics/Image.hpp
--
-iostream
 -
 

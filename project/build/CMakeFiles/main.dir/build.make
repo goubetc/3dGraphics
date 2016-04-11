@@ -1294,32 +1294,9 @@ CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides: CMakeFiles/ma
 
 CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
 
-CMakeFiles/main.dir/src/initialize_kart.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/initialize_kart.cpp.o: ../src/initialize_kart.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_55)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/initialize_kart.cpp.o"
-	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/initialize_kart.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp"
-
-CMakeFiles/main.dir/src/initialize_kart.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/initialize_kart.cpp.i"
-	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp" > CMakeFiles/main.dir/src/initialize_kart.cpp.i
-
-CMakeFiles/main.dir/src/initialize_kart.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/initialize_kart.cpp.s"
-	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/initialize_kart.cpp" -o CMakeFiles/main.dir/src/initialize_kart.cpp.s
-
-CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
-
-CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides
-
-CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build: CMakeFiles/main.dir/src/initialize_kart.cpp.o
-
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: ../src/CylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_56)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_55)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp"
 
@@ -1342,7 +1319,7 @@ CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/Camera.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_57)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_56)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Camera.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Camera.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp"
 
@@ -1365,7 +1342,7 @@ CMakeFiles/main.dir/src/Camera.cpp.o.provides.build: CMakeFiles/main.dir/src/Cam
 
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: ../src/TorusRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_58)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_57)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TorusRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp"
 
@@ -1388,7 +1365,7 @@ CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build: CMakeFiles/main.di
 
 CMakeFiles/main.dir/src/TextEngine.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TextEngine.cpp.o: ../src/TextEngine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_59)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_58)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TextEngine.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextEngine.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp"
 
@@ -1411,7 +1388,7 @@ CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/setup_kart.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/setup_kart.cpp.o: ../src/setup_kart.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_60)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_59)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/setup_kart.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/setup_kart.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp"
 
@@ -1434,7 +1411,7 @@ CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: ../src/QuadRendable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_61)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_60)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/QuadRendable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/QuadRendable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp"
 
@@ -1457,7 +1434,7 @@ CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build: CMakeFiles/main.dir/s
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_62)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_61)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp"
 
@@ -1480,7 +1457,7 @@ CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.
 
 CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: ../src/KeyframeCollection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_63)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_62)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframeCollection.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp"
 
@@ -1503,7 +1480,7 @@ CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/Sphere.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_64)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_63)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Sphere.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Sphere.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp"
 
@@ -1526,7 +1503,7 @@ CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build: CMakeFiles/main.dir/src/Sph
 
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: ../src/HierarchicalCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_65)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_64)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp"
 
@@ -1549,7 +1526,7 @@ CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build: CMa
 
 CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: ../src/GeometricTransformation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_66)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_65)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/GeometricTransformation.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp"
 
@@ -1626,7 +1603,6 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/ConeRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/Plane.cpp.o" \
 "CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o" \
-"CMakeFiles/main.dir/src/initialize_kart.cpp.o" \
 "CMakeFiles/main.dir/src/CylinderRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/Camera.cpp.o" \
 "CMakeFiles/main.dir/src/TorusRenderable.cpp.o" \
@@ -1696,7 +1672,6 @@ main: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
 main: CMakeFiles/main.dir/src/ConeRenderable.cpp.o
 main: CMakeFiles/main.dir/src/Plane.cpp.o
 main: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
-main: CMakeFiles/main.dir/src/initialize_kart.cpp.o
 main: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o
 main: CMakeFiles/main.dir/src/Camera.cpp.o
 main: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
@@ -1783,7 +1758,6 @@ CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requir
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ConeRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Plane.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Camera.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires

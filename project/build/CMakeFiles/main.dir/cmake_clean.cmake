@@ -53,7 +53,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/ConeRenderable.cpp.o"
   "CMakeFiles/main.dir/src/Plane.cpp.o"
   "CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o"
-  "CMakeFiles/main.dir/src/initialize_kart.cpp.o"
   "CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
   "CMakeFiles/main.dir/src/Camera.cpp.o"
   "CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
