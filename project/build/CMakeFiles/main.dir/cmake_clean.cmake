@@ -27,6 +27,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/Viewer.cpp.o"
   "CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o"
   "CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
+  "CMakeFiles/main.dir/src/initialize_kart.cpp.o"
   "CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
   "CMakeFiles/main.dir/src/main.cpp.o"
   "CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"

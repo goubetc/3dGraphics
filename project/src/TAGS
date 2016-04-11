@@ -52,15 +52,15 @@ float CustomizedKeyFrame::getTime(68,2344
 
 CylinderRenderable.cpp,185
 CylinderRenderable::CylinderRenderable(10,223
-void CylinderRenderable::do_draw(79,3183
-void CylinderRenderable::do_animate(105,4292
-CylinderRenderable::~CylinderRenderable(107,4344
+void CylinderRenderable::do_draw(79,3144
+void CylinderRenderable::do_animate(105,4219
+CylinderRenderable::~CylinderRenderable(107,4271
 
 FloorRenderable.cpp,168
 FloorRenderable::FloorRenderable(10,220
-void FloorRenderable::do_draw(100,3978
-void FloorRenderable::do_animate(126,5084
-FloorRenderable::~FloorRenderable(128,5133
+void FloorRenderable::do_draw(100,3866
+void FloorRenderable::do_animate(126,4938
+FloorRenderable::~FloorRenderable(128,4987
 
 FPSCounter.cpp,94
 FPSCounter::FPSCounter(4,58
@@ -130,6 +130,15 @@ IndexedCubeRenderable::IndexedCubeRenderable(9,209
 void IndexedCubeRenderable::do_draw(39,1737
 void IndexedCubeRenderable::do_animate(95,3779
 IndexedCubeRenderable::~IndexedCubeRenderable(97,3834
+
+initialize_kart.cpp,190
+static void initialize_hierarchical_scene(17,399
+	struct sSeat28,990
+  struct sFloor40,1131
+  struct sWheel49,1250
+  struct sHood60,1399
+  struct sBack70,1499
+  struct sPerson80,1597
 
 Io.cpp,64
 #define TINYOBJLOADER_IMPLEMENTATION 4,52
@@ -208,10 +217,104 @@ ShaderProgramPtr Renderable::getShaderProgram(120,2004
 void Renderable::beforeAnimate(125,2091
 Viewer* Renderable::getViewer(128,2140
 
-setup_kart.cpp,92
-void initialize_kart(33,1195
-void hierarchical_kart(60,2463
-  struct sSeat{sSeat81,3579
+setup_kart.cpp,3311
+void initialize_kart(35,1297
+void hierarchical_kart(62,2525
+struct sSeat{sSeat83,3609
+struct sSeat vSeat;90,3704
+  struct sFloor91,3724
+    float width sFloor::width93,3744
+    float length sFloor::length94,3765
+    float height sFloor::height95,3788
+  struct sFloor vFloor;98,3818
+  struct sHood101,3844
+    float length sHood::length103,3863
+    float height sHood::height104,3885
+  struct sHood vHood;107,3919
+  struct sBack111,3944
+    float length sBack::length113,3963
+    float height sBack::height114,3985
+  struct sBack vBack;117,4017
+std::shared_ptr<ParticleRenderable> master 126,4157
+std::shared_ptr<CylinderRenderable> seat 130,4340
+std::shared_ptr<FloorRenderable> seat_top 134,4553
+std::shared_ptr<FloorRenderable> seat_bottom 135,4688
+std::shared_ptr<FloorRenderable> root 142,5082
+std::shared_ptr<CylinderRenderable> wheel_fl 143,5181
+std::shared_ptr<CylinderRenderable> wheel_fr 144,5290
+std::shared_ptr<CylinderRenderable> wheel_bl 145,5399
+std::shared_ptr<CylinderRenderable> wheel_br 146,5508
+    std::shared_ptr<TriangleRenderable> hood 150,5632
+    std::shared_ptr<FloorRenderable> back 157,6042
+ glm::mat4 rootParentTransform;177,7342
+ glm::vec3 planeNormal,199,8121
+ glm::vec3 planeNormal, planePoint;199,8121
+ planeNormal 200,8157
+ planePoint 201,8191
+ PlanePtr p0 202,8224
+ planeNormal 205,8324
+ planePoint 206,8357
+ PlanePtr p1 207,8391
+ planeNormal 210,8491
+ planePoint 211,8525
+ PlanePtr p2 212,8558
+ planeNormal 215,8658
+ planePoint 216,8691
+ PlanePtr p3 217,8725
+ planeNormal 220,8825
+ planePoint 221,8858
+ PlanePtr floorPlane 222,8890
+ glm::vec3 x1,227,9097
+ glm::vec3 x1, x2,227,9097
+ glm::vec3 x1, x2, x3,227,9097
+ glm::vec3 x1, x2, x3, x4;227,9097
+ glm::vec4 color;228,9124
+ x1 229,9142
+ x2 230,9170
+ x3 231,9198
+ x4 232,9226
+ color 233,9254
+ PlaneRenderablePtr p1Renderable 234,9295
+ x1 237,9468
+ x2 238,9497
+ x3 239,9526
+ x4 240,9554
+ color 241,9582
+ PlaneRenderablePtr p2Renderable 242,9623
+ x1 245,9796
+ x2 246,9826
+ x3 247,9856
+ x4 248,9884
+ color 249,9912
+ PlaneRenderablePtr p3Renderable 250,9954
+ x1 253,10127
+ x2 254,10156
+ x3 255,10185
+ x4 256,10214
+ color 257,10243
+ PlaneRenderablePtr p4Renderable 258,10283
+ std::vector<ParticlePtr> vParticle;263,10558
+ ConstantForceFieldPtr force 265,10625
+ ControlledForceFieldRenderablePtr forceRenderable 271,10960
+ DampingForceFieldPtr dampingForceField 275,11199
+ system->setRestitution(1.0f)f280,11444
+ struct sPerson286,11533
+   float length sPerson::length288,11552
+   float height sPerson::height289,11575
+   float width sPerson::width290,11600
+   float limb_diameter sPerson::limb_diameter291,11624
+   float limb_length sPerson::limb_length292,11655
+   int faces sPerson::faces293,11683
+   float neck_length sPerson::neck_length294,11702
+ }; struct sPerson vPerson;295,11730
+ std::shared_ptr<CylinderRenderable> person 313,11891
+ std::shared_ptr<HierarchicalSphereRenderable> head 317,12111
+ std::shared_ptr<FloorRenderable> body 318,12225
+ std::shared_ptr<CylinderRenderable> arm_r 326,12683
+ std::shared_ptr<CylinderRenderable> arm_l 327,12837
+ std::shared_ptr<CylinderRenderable> leg_r 328,12991
+ std::shared_ptr<CylinderRenderable> leg_l 329,13145
+ std::shared_ptr<CylinderRenderable> neck 331,13300
 
 ShaderProgram.cpp,702
 int ShaderProgram::null_location 17,293
@@ -276,11 +379,11 @@ void TorusRenderable::do_draw(35,1445
 void TorusRenderable::do_animate(90,3391
 TorusRenderable::~TorusRenderable(92,3440
 
-TriangleRenderable.cpp,182
-TriangleRenderable::TriangleRenderable(8,172
-void TriangleRenderable::do_draw(29,1057
-void TriangleRenderable::do_animate(52,2030
-TriangleRenderable::~TriangleRenderable(54,2082
+TriangleRenderable.cpp,185
+TriangleRenderable::TriangleRenderable(10,223
+void TriangleRenderable::do_draw(84,2961
+void TriangleRenderable::do_animate(110,4036
+TriangleRenderable::~TriangleRenderable(112,4088
 
 Utils.cpp,251
 float random(15,432
@@ -455,10 +558,10 @@ void ParticlePlaneCollision::do_solveCollision(14,305
 bool testParticlePlane(41,1503
 
 dynamics/ParticleRenderable.cpp,185
-ParticleRenderable::ParticleRenderable(10,267
-void ParticleRenderable::do_draw(81,3829
-void ParticleRenderable::do_animate(139,6101
-ParticleRenderable::~ParticleRenderable(141,6153
+ParticleRenderable::ParticleRenderable(11,268
+void ParticleRenderable::do_draw(84,3834
+void ParticleRenderable::do_animate(144,6109
+ParticleRenderable::~ParticleRenderable(146,6161
 
 dynamics/Solver.cpp,25
 void Solver::solve(3,47

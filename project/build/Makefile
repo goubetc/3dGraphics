@@ -1263,6 +1263,30 @@ src/gl_helper.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gl_helper.cpp.s
 .PHONY : src/gl_helper.cpp.s
 
+src/initialize_kart.o: src/initialize_kart.cpp.o
+.PHONY : src/initialize_kart.o
+
+# target to build an object file
+src/initialize_kart.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.o
+.PHONY : src/initialize_kart.cpp.o
+
+src/initialize_kart.i: src/initialize_kart.cpp.i
+.PHONY : src/initialize_kart.i
+
+# target to preprocess a source file
+src/initialize_kart.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.i
+.PHONY : src/initialize_kart.cpp.i
+
+src/initialize_kart.s: src/initialize_kart.cpp.s
+.PHONY : src/initialize_kart.s
+
+# target to generate assembly for a file
+src/initialize_kart.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.s
+.PHONY : src/initialize_kart.cpp.s
+
 src/log.o: src/log.cpp.o
 .PHONY : src/log.o
 
@@ -1488,6 +1512,9 @@ help:
 	@echo "... src/gl_helper.o"
 	@echo "... src/gl_helper.i"
 	@echo "... src/gl_helper.s"
+	@echo "... src/initialize_kart.o"
+	@echo "... src/initialize_kart.i"
+	@echo "... src/initialize_kart.s"
 	@echo "... src/log.o"
 	@echo "... src/log.i"
 	@echo "... src/log.s"

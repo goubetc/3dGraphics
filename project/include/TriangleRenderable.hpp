@@ -1,26 +1,25 @@
 #ifndef TRIANGLE_RENDERABLE_HPP
 #define TRIANGLE_RENDERABLE_HPP
 
-#include "Renderable.hpp"
+#include "HierarchicalRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 
-class TriangleRenderable : public Renderable
+class TriangleRenderable : public HierarchicalRenderable
 {
-    public:
-        ~TriangleRenderable();
-        TriangleRenderable( ShaderProgramPtr program );
+public:
+  ~TriangleRenderable();
+  TriangleRenderable( ShaderProgramPtr program, float width, float height, float depth);
 
-    private:
-        TriangleRenderable();
-        void do_draw();
-        void do_animate( float time );
+private:
+  void do_draw();
+  void do_animate( float time );
 
-        std::vector< glm::vec3 > m_positions;
-        std::vector< glm::vec4 > m_colors;
+  std::vector< glm::vec3 > m_positions;
+  std::vector< glm::vec4 > m_colors;
 
-        unsigned int m_pBuffer;
-        unsigned int m_cBuffer;
+  unsigned int m_vBuffer;
+  unsigned int m_cBuffer;
 };
 
 typedef std::shared_ptr<TriangleRenderable> TriangleRenderablePtr;

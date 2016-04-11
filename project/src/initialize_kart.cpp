@@ -172,9 +172,18 @@ static void initialize_hierarchical_scene(Viewer& viewer)
     HierarchicalRenderable::addChild(root, seat);
     HierarchicalRenderable::addChild(root, hood);
     HierarchicalRenderable::addChild(root, back);
+
+
+
         
     // Add the root of the hierarchy to the viewer
     viewer.addRenderable(root);
+
+
+
+
+
+
    
 
 }

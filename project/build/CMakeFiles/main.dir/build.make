@@ -693,9 +693,32 @@ CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides: CMakeFiles/main.dir/src/Sh
 
 CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
 
+CMakeFiles/main.dir/src/initialize_kart.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/initialize_kart.cpp.o: ../src/initialize_kart.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/initialize_kart.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/initialize_kart.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/initialize_kart.cpp
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/initialize_kart.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tilbuin/Documents/3dGraphics/project/src/initialize_kart.cpp > CMakeFiles/main.dir/src/initialize_kart.cpp.i
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/initialize_kart.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tilbuin/Documents/3dGraphics/project/src/initialize_kart.cpp -o CMakeFiles/main.dir/src/initialize_kart.cpp.s
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides
+
+CMakeFiles/main.dir/src/initialize_kart.cpp.o.provides.build: CMakeFiles/main.dir/src/initialize_kart.cpp.o
+
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: ../src/TorusRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TorusRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/TorusRenderable.cpp
 
@@ -718,7 +741,7 @@ CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build: CMakeFiles/main.di
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/main.cpp
 
@@ -741,7 +764,7 @@ CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.
 
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: ../src/HierarchicalCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp
 
@@ -764,7 +787,7 @@ CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build: CMa
 
 CMakeFiles/main.dir/src/Io.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Io.cpp.o: ../src/Io.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Io.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Io.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Io.cpp
 
@@ -787,7 +810,7 @@ CMakeFiles/main.dir/src/Io.cpp.o.provides.build: CMakeFiles/main.dir/src/Io.cpp.
 
 CMakeFiles/main.dir/src/log.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/log.cpp.o: ../src/log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/log.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/log.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/log.cpp
 
@@ -810,7 +833,7 @@ CMakeFiles/main.dir/src/log.cpp.o.provides.build: CMakeFiles/main.dir/src/log.cp
 
 CMakeFiles/main.dir/src/MeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/MeshRenderable.cpp.o: ../src/MeshRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/MeshRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/MeshRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/MeshRenderable.cpp
 
@@ -833,7 +856,7 @@ CMakeFiles/main.dir/src/MeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir
 
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o: ../src/HierarchicalSphereRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalSphereRenderable.cpp
 
@@ -856,7 +879,7 @@ CMakeFiles/main.dir/src/HierarchicalSphereRenderable.cpp.o.provides.build: CMake
 
 CMakeFiles/main.dir/src/FloorRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/FloorRenderable.cpp.o: ../src/FloorRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FloorRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FloorRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/FloorRenderable.cpp
 
@@ -879,7 +902,7 @@ CMakeFiles/main.dir/src/FloorRenderable.cpp.o.provides.build: CMakeFiles/main.di
 
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: ../src/QuadRendable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/QuadRendable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/QuadRendable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/QuadRendable.cpp
 
@@ -902,7 +925,7 @@ CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build: CMakeFiles/main.dir/s
 
 CMakeFiles/main.dir/src/setup_kart.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/setup_kart.cpp.o: ../src/setup_kart.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/setup_kart.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/setup_kart.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/setup_kart.cpp
 
@@ -925,7 +948,7 @@ CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/Sphere.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Sphere.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Sphere.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Sphere.cpp
 
@@ -948,7 +971,7 @@ CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build: CMakeFiles/main.dir/src/Sph
 
 CMakeFiles/main.dir/src/TextEngine.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TextEngine.cpp.o: ../src/TextEngine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TextEngine.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextEngine.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/TextEngine.cpp
 
@@ -971,7 +994,7 @@ CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/CubeRenderable.cpp.o: ../src/CubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CubeRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CubeRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CubeRenderable.cpp
 
@@ -994,7 +1017,7 @@ CMakeFiles/main.dir/src/CubeRenderable.cpp.o.provides.build: CMakeFiles/main.dir
 
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o: ../src/IndexedCubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/IndexedCubeRenderable.cpp
 
@@ -1017,7 +1040,7 @@ CMakeFiles/main.dir/src/IndexedCubeRenderable.cpp.o.provides.build: CMakeFiles/m
 
 CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o: ../src/HierarchicalRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/HierarchicalRenderable.cpp
 
@@ -1040,7 +1063,7 @@ CMakeFiles/main.dir/src/HierarchicalRenderable.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/main.dir/src/Camera.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Camera.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Camera.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Camera.cpp
 
@@ -1063,7 +1086,7 @@ CMakeFiles/main.dir/src/Camera.cpp.o.provides.build: CMakeFiles/main.dir/src/Cam
 
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: ../src/CylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CylinderRenderable.cpp
 
@@ -1086,7 +1109,7 @@ CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/Renderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Renderable.cpp.o: ../src/Renderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Renderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Renderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Renderable.cpp
 
@@ -1109,7 +1132,7 @@ CMakeFiles/main.dir/src/Renderable.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/Utils.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Utils.cpp.o: ../src/Utils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Utils.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Utils.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/Utils.cpp
 
@@ -1132,7 +1155,7 @@ CMakeFiles/main.dir/src/Utils.cpp.o.provides.build: CMakeFiles/main.dir/src/Util
 
 CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o: ../src/CustomizedKeyFrame.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/CustomizedKeyFrame.cpp
 
@@ -1155,7 +1178,7 @@ CMakeFiles/main.dir/src/CustomizedKeyFrame.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o: ../src/KeyframedCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/KeyframedCylinderRenderable.cpp
 
@@ -1178,7 +1201,7 @@ CMakeFiles/main.dir/src/KeyframedCylinderRenderable.cpp.o.provides.build: CMakeF
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: ../src/SphereRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/SphereRenderable.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/SphereRenderable.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/SphereRenderable.cpp
 
@@ -1201,7 +1224,7 @@ CMakeFiles/main.dir/src/SphereRenderable.cpp.o.provides.build: CMakeFiles/main.d
 
 CMakeFiles/main.dir/src/FPSCounter.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/FPSCounter.cpp.o: ../src/FPSCounter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tilbuin/Documents/3dGraphics/project/build/CMakeFiles $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/FPSCounter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/FPSCounter.cpp.o -c /home/tilbuin/Documents/3dGraphics/project/src/FPSCounter.cpp
 
@@ -1252,6 +1275,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/Viewer.cpp.o" \
 "CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/ShaderProgram.cpp.o" \
+"CMakeFiles/main.dir/src/initialize_kart.cpp.o" \
 "CMakeFiles/main.dir/src/TorusRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/main.cpp.o" \
 "CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o" \
@@ -1307,6 +1331,7 @@ main: CMakeFiles/main.dir/src/GeometricTransformation.cpp.o
 main: CMakeFiles/main.dir/src/Viewer.cpp.o
 main: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o
 main: CMakeFiles/main.dir/src/ShaderProgram.cpp.o
+main: CMakeFiles/main.dir/src/initialize_kart.cpp.o
 main: CMakeFiles/main.dir/src/TorusRenderable.cpp.o
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o
@@ -1377,6 +1402,7 @@ CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/GeometricTransformation.cp
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/ShaderProgram.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/initialize_kart.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/TorusRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.requires
