@@ -28,30 +28,30 @@ The CXX compiler identification is GNU, found in "/user/5/.base/beslice/home/Doc
 Determining if the C compiler works passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec3661576015/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3661576015.dir/build.make CMakeFiles/cmTryCompileExec3661576015.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2174772470/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2174772470.dir/build.make CMakeFiles/cmTryCompileExec2174772470.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec3661576015.dir/testCCompiler.c.o
-/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec3661576015.dir/testCCompiler.c.o   -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/testCCompiler.c"
-Linking C executable cmTryCompileExec3661576015
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3661576015.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc       CMakeFiles/cmTryCompileExec3661576015.dir/testCCompiler.c.o  -o cmTryCompileExec3661576015 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2174772470.dir/testCCompiler.c.o
+/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec2174772470.dir/testCCompiler.c.o   -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/testCCompiler.c"
+Linking C executable cmTryCompileExec2174772470
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2174772470.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc       CMakeFiles/cmTryCompileExec2174772470.dir/testCCompiler.c.o  -o cmTryCompileExec2174772470 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec3606366664/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3606366664.dir/build.make CMakeFiles/cmTryCompileExec3606366664.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1117743981/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1117743981.dir/build.make CMakeFiles/cmTryCompileExec1117743981.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o
-/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec3606366664
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3606366664.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc     -v CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3606366664 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o
+/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1117743981
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1117743981.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc     -v CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1117743981 -rdynamic  
 Utilisation des specs internes.
 COLLECT_GCC=/opt/gcc-4.9.3/bin/gcc
 COLLECT_LTO_WRAPPER=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper
@@ -61,8 +61,8 @@ Modèle de thread: posix
 gcc version 4.9.3 (GCC) 
 COMPILER_PATH=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/
 LIBRARY_PATH=/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3606366664' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3606366664 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1117743981' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1117743981 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
@@ -70,15 +70,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec3606366664/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3606366664.dir/build.make CMakeFiles/cmTryCompileExec3606366664.dir/build]
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec1117743981/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1117743981.dir/build.make CMakeFiles/cmTryCompileExec1117743981.dir/build]
   ignore line: [gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »]
   ignore line: [/usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec3606366664]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3606366664.dir/link.txt --verbose=1]
-  ignore line: [/opt/gcc-4.9.3/bin/gcc     -v CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3606366664 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/gcc-4.9.3/bin/gcc    -o CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1117743981]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1117743981.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-4.9.3/bin/gcc     -v CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1117743981 -rdynamic  ]
   ignore line: [Utilisation des specs internes.]
   ignore line: [COLLECT_GCC=/opt/gcc-4.9.3/bin/gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper]
@@ -88,8 +88,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.9.3 (GCC) ]
   ignore line: [COMPILER_PATH=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/]
   ignore line: [LIBRARY_PATH=/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3606366664' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3606366664 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1117743981' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1117743981 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o]
     arg [/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
@@ -98,7 +98,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec3606366664] ==> ignore
+    arg [cmTryCompileExec1117743981] ==> ignore
     arg [/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/usr/lib/../lib64/crti.o] ==> ignore
     arg [/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o] ==> ignore
@@ -107,7 +107,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../..] ==> dir [/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../..]
-    arg [CMakeFiles/cmTryCompileExec3606366664.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec1117743981.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -136,30 +136,30 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec1678422324/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1678422324.dir/build.make CMakeFiles/cmTryCompileExec1678422324.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec950605803/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec950605803.dir/build.make CMakeFiles/cmTryCompileExec950605803.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building CXX object CMakeFiles/cmTryCompileExec1678422324.dir/testCXXCompiler.cxx.o
-/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec1678422324.dir/testCXXCompiler.cxx.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
-Linking CXX executable cmTryCompileExec1678422324
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1678422324.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/g++        CMakeFiles/cmTryCompileExec1678422324.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1678422324 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec950605803.dir/testCXXCompiler.cxx.o
+/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec950605803.dir/testCXXCompiler.cxx.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
+Linking CXX executable cmTryCompileExec950605803
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec950605803.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/g++        CMakeFiles/cmTryCompileExec950605803.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec950605803 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec2692794230/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2692794230.dir/build.make CMakeFiles/cmTryCompileExec2692794230.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3432223780/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3432223780.dir/build.make CMakeFiles/cmTryCompileExec3432223780.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building CXX object CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o
-/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec2692794230
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2692794230.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/g++      -v CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2692794230 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o
+/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3432223780
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3432223780.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/g++      -v CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3432223780 -rdynamic  
 Utilisation des specs internes.
 COLLECT_GCC=/opt/gcc-4.9.3/bin/g++
 COLLECT_LTO_WRAPPER=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper
@@ -169,8 +169,8 @@ Modèle de thread: posix
 gcc version 4.9.3 (GCC) 
 COMPILER_PATH=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/
 LIBRARY_PATH=/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2692794230' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2692794230 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3432223780' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3432223780 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
@@ -178,15 +178,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec2692794230/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2692794230.dir/build.make CMakeFiles/cmTryCompileExec2692794230.dir/build]
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec3432223780/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3432223780.dir/build.make CMakeFiles/cmTryCompileExec3432223780.dir/build]
   ignore line: [gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »]
   ignore line: [/usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec2692794230]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2692794230.dir/link.txt --verbose=1]
-  ignore line: [/opt/gcc-4.9.3/bin/g++      -v CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2692794230 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/gcc-4.9.3/bin/g++     -o CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3432223780]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3432223780.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-4.9.3/bin/g++      -v CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3432223780 -rdynamic  ]
   ignore line: [Utilisation des specs internes.]
   ignore line: [COLLECT_GCC=/opt/gcc-4.9.3/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper]
@@ -196,8 +196,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.9.3 (GCC) ]
   ignore line: [COMPILER_PATH=/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/]
   ignore line: [LIBRARY_PATH=/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2692794230' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2692794230 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3432223780' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3432223780 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../.. CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtend.o /usr/lib/../lib64/crtn.o]
     arg [/opt/gcc-4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/collect2] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
@@ -206,7 +206,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2692794230] ==> ignore
+    arg [cmTryCompileExec3432223780] ==> ignore
     arg [/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/usr/lib/../lib64/crti.o] ==> ignore
     arg [/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/crtbegin.o] ==> ignore
@@ -215,7 +215,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../..] ==> dir [/opt/gcc-4.9.3/lib/gcc/x86_64-unknown-linux-gnu/4.9.3/../../..]
-    arg [CMakeFiles/cmTryCompileExec2692794230.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3432223780.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -242,90 +242,90 @@ Parsed CXX implicit link information from above output:
 Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec356774427/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec356774427.dir/build.make CMakeFiles/cmTryCompileExec356774427.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2699083632/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2699083632.dir/build.make CMakeFiles/cmTryCompileExec2699083632.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec356774427.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec356774427.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec356774427
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec356774427.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec356774427.dir/CheckFunctionExists.c.o  -o cmTryCompileExec356774427 -rdynamic -lX11 -lXext 
+Building C object CMakeFiles/cmTryCompileExec2699083632.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2699083632.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2699083632
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2699083632.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2699083632.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2699083632 -rdynamic -lX11 -lXext 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec329605911/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec329605911.dir/build.make CMakeFiles/cmTryCompileExec329605911.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2988593644/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2988593644.dir/build.make CMakeFiles/cmTryCompileExec2988593644.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec329605911.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec329605911.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec329605911
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec329605911.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec329605911.dir/CheckFunctionExists.c.o  -o cmTryCompileExec329605911 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2988593644.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2988593644.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2988593644
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2988593644.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2988593644.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2988593644 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec659594011/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec659594011.dir/build.make CMakeFiles/cmTryCompileExec659594011.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec227363350/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec227363350.dir/build.make CMakeFiles/cmTryCompileExec227363350.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec659594011.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec659594011.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec659594011
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec659594011.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec659594011.dir/CheckFunctionExists.c.o  -o cmTryCompileExec659594011 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec227363350.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec227363350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec227363350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec227363350.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec227363350.dir/CheckFunctionExists.c.o  -o cmTryCompileExec227363350 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec3816716467/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3816716467.dir/build.make CMakeFiles/cmTryCompileExec3816716467.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4074584965/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4074584965.dir/build.make CMakeFiles/cmTryCompileExec4074584965.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec3816716467.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3816716467.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3816716467
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3816716467.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3816716467.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3816716467 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec4074584965.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec4074584965.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4074584965
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4074584965.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec4074584965.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4074584965 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec1099381310/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1099381310.dir/build.make CMakeFiles/cmTryCompileExec1099381310.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2912187802/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2912187802.dir/build.make CMakeFiles/cmTryCompileExec2912187802.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec1099381310.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec1099381310.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1099381310
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1099381310.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec1099381310.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1099381310 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2912187802.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2912187802.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2912187802
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2912187802.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2912187802.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2912187802 -rdynamic 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec2065870897/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2065870897.dir/build.make CMakeFiles/cmTryCompileExec2065870897.dir/build
+Run Build Command:/usr/bin/gmake "cmTryCompileExec412696431/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec412696431.dir/build.make CMakeFiles/cmTryCompileExec412696431.dir/build
 gmake[1]: entrant dans le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 /usr/bin/cmake -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec2065870897.dir/CheckFunctionExists.c.o
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec2065870897.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2065870897
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2065870897.dir/link.txt --verbose=1
-/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec2065870897.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2065870897 -rdynamic -lICE 
+Building C object CMakeFiles/cmTryCompileExec412696431.dir/CheckFunctionExists.c.o
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec412696431.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec412696431
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec412696431.dir/link.txt --verbose=1
+/opt/gcc-4.9.3/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec412696431.dir/CheckFunctionExists.c.o  -o cmTryCompileExec412696431 -rdynamic -lICE 
 gmake[1]: quittant le répertoire « /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/CMakeTmp »
 
 

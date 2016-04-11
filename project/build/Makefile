@@ -1290,29 +1290,197 @@ src/initialize_kart.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_kart.cpp.s
 .PHONY : src/initialize_kart.cpp.s
 
-src/initialize_person.o: src/initialize_person.cpp.o
-.PHONY : src/initialize_person.o
+src/lighting/DirectionalLightRenderable.o: src/lighting/DirectionalLightRenderable.cpp.o
+.PHONY : src/lighting/DirectionalLightRenderable.o
 
 # target to build an object file
-src/initialize_person.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.o
-.PHONY : src/initialize_person.cpp.o
+src/lighting/DirectionalLightRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/DirectionalLightRenderable.cpp.o
+.PHONY : src/lighting/DirectionalLightRenderable.cpp.o
 
-src/initialize_person.i: src/initialize_person.cpp.i
-.PHONY : src/initialize_person.i
+src/lighting/DirectionalLightRenderable.i: src/lighting/DirectionalLightRenderable.cpp.i
+.PHONY : src/lighting/DirectionalLightRenderable.i
 
 # target to preprocess a source file
-src/initialize_person.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.i
-.PHONY : src/initialize_person.cpp.i
+src/lighting/DirectionalLightRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/DirectionalLightRenderable.cpp.i
+.PHONY : src/lighting/DirectionalLightRenderable.cpp.i
 
-src/initialize_person.s: src/initialize_person.cpp.s
-.PHONY : src/initialize_person.s
+src/lighting/DirectionalLightRenderable.s: src/lighting/DirectionalLightRenderable.cpp.s
+.PHONY : src/lighting/DirectionalLightRenderable.s
 
 # target to generate assembly for a file
-src/initialize_person.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/initialize_person.cpp.s
-.PHONY : src/initialize_person.cpp.s
+src/lighting/DirectionalLightRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/DirectionalLightRenderable.cpp.s
+.PHONY : src/lighting/DirectionalLightRenderable.cpp.s
+
+src/lighting/Light.o: src/lighting/Light.cpp.o
+.PHONY : src/lighting/Light.o
+
+# target to build an object file
+src/lighting/Light.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Light.cpp.o
+.PHONY : src/lighting/Light.cpp.o
+
+src/lighting/Light.i: src/lighting/Light.cpp.i
+.PHONY : src/lighting/Light.i
+
+# target to preprocess a source file
+src/lighting/Light.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Light.cpp.i
+.PHONY : src/lighting/Light.cpp.i
+
+src/lighting/Light.s: src/lighting/Light.cpp.s
+.PHONY : src/lighting/Light.s
+
+# target to generate assembly for a file
+src/lighting/Light.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Light.cpp.s
+.PHONY : src/lighting/Light.cpp.s
+
+src/lighting/LightedCubeRenderable.o: src/lighting/LightedCubeRenderable.cpp.o
+.PHONY : src/lighting/LightedCubeRenderable.o
+
+# target to build an object file
+src/lighting/LightedCubeRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCubeRenderable.cpp.o
+.PHONY : src/lighting/LightedCubeRenderable.cpp.o
+
+src/lighting/LightedCubeRenderable.i: src/lighting/LightedCubeRenderable.cpp.i
+.PHONY : src/lighting/LightedCubeRenderable.i
+
+# target to preprocess a source file
+src/lighting/LightedCubeRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCubeRenderable.cpp.i
+.PHONY : src/lighting/LightedCubeRenderable.cpp.i
+
+src/lighting/LightedCubeRenderable.s: src/lighting/LightedCubeRenderable.cpp.s
+.PHONY : src/lighting/LightedCubeRenderable.s
+
+# target to generate assembly for a file
+src/lighting/LightedCubeRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCubeRenderable.cpp.s
+.PHONY : src/lighting/LightedCubeRenderable.cpp.s
+
+src/lighting/LightedCylinderRenderable.o: src/lighting/LightedCylinderRenderable.cpp.o
+.PHONY : src/lighting/LightedCylinderRenderable.o
+
+# target to build an object file
+src/lighting/LightedCylinderRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCylinderRenderable.cpp.o
+.PHONY : src/lighting/LightedCylinderRenderable.cpp.o
+
+src/lighting/LightedCylinderRenderable.i: src/lighting/LightedCylinderRenderable.cpp.i
+.PHONY : src/lighting/LightedCylinderRenderable.i
+
+# target to preprocess a source file
+src/lighting/LightedCylinderRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCylinderRenderable.cpp.i
+.PHONY : src/lighting/LightedCylinderRenderable.cpp.i
+
+src/lighting/LightedCylinderRenderable.s: src/lighting/LightedCylinderRenderable.cpp.s
+.PHONY : src/lighting/LightedCylinderRenderable.s
+
+# target to generate assembly for a file
+src/lighting/LightedCylinderRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedCylinderRenderable.cpp.s
+.PHONY : src/lighting/LightedCylinderRenderable.cpp.s
+
+src/lighting/LightedMeshRenderable.o: src/lighting/LightedMeshRenderable.cpp.o
+.PHONY : src/lighting/LightedMeshRenderable.o
+
+# target to build an object file
+src/lighting/LightedMeshRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedMeshRenderable.cpp.o
+.PHONY : src/lighting/LightedMeshRenderable.cpp.o
+
+src/lighting/LightedMeshRenderable.i: src/lighting/LightedMeshRenderable.cpp.i
+.PHONY : src/lighting/LightedMeshRenderable.i
+
+# target to preprocess a source file
+src/lighting/LightedMeshRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedMeshRenderable.cpp.i
+.PHONY : src/lighting/LightedMeshRenderable.cpp.i
+
+src/lighting/LightedMeshRenderable.s: src/lighting/LightedMeshRenderable.cpp.s
+.PHONY : src/lighting/LightedMeshRenderable.s
+
+# target to generate assembly for a file
+src/lighting/LightedMeshRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/LightedMeshRenderable.cpp.s
+.PHONY : src/lighting/LightedMeshRenderable.cpp.s
+
+src/lighting/Material.o: src/lighting/Material.cpp.o
+.PHONY : src/lighting/Material.o
+
+# target to build an object file
+src/lighting/Material.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Material.cpp.o
+.PHONY : src/lighting/Material.cpp.o
+
+src/lighting/Material.i: src/lighting/Material.cpp.i
+.PHONY : src/lighting/Material.i
+
+# target to preprocess a source file
+src/lighting/Material.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Material.cpp.i
+.PHONY : src/lighting/Material.cpp.i
+
+src/lighting/Material.s: src/lighting/Material.cpp.s
+.PHONY : src/lighting/Material.s
+
+# target to generate assembly for a file
+src/lighting/Material.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/Material.cpp.s
+.PHONY : src/lighting/Material.cpp.s
+
+src/lighting/PointLightRenderable.o: src/lighting/PointLightRenderable.cpp.o
+.PHONY : src/lighting/PointLightRenderable.o
+
+# target to build an object file
+src/lighting/PointLightRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/PointLightRenderable.cpp.o
+.PHONY : src/lighting/PointLightRenderable.cpp.o
+
+src/lighting/PointLightRenderable.i: src/lighting/PointLightRenderable.cpp.i
+.PHONY : src/lighting/PointLightRenderable.i
+
+# target to preprocess a source file
+src/lighting/PointLightRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/PointLightRenderable.cpp.i
+.PHONY : src/lighting/PointLightRenderable.cpp.i
+
+src/lighting/PointLightRenderable.s: src/lighting/PointLightRenderable.cpp.s
+.PHONY : src/lighting/PointLightRenderable.s
+
+# target to generate assembly for a file
+src/lighting/PointLightRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/PointLightRenderable.cpp.s
+.PHONY : src/lighting/PointLightRenderable.cpp.s
+
+src/lighting/SpotLightRenderable.o: src/lighting/SpotLightRenderable.cpp.o
+.PHONY : src/lighting/SpotLightRenderable.o
+
+# target to build an object file
+src/lighting/SpotLightRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/SpotLightRenderable.cpp.o
+.PHONY : src/lighting/SpotLightRenderable.cpp.o
+
+src/lighting/SpotLightRenderable.i: src/lighting/SpotLightRenderable.cpp.i
+.PHONY : src/lighting/SpotLightRenderable.i
+
+# target to preprocess a source file
+src/lighting/SpotLightRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/SpotLightRenderable.cpp.i
+.PHONY : src/lighting/SpotLightRenderable.cpp.i
+
+src/lighting/SpotLightRenderable.s: src/lighting/SpotLightRenderable.cpp.s
+.PHONY : src/lighting/SpotLightRenderable.s
+
+# target to generate assembly for a file
+src/lighting/SpotLightRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lighting/SpotLightRenderable.cpp.s
+.PHONY : src/lighting/SpotLightRenderable.cpp.s
 
 src/log.o: src/log.cpp.o
 .PHONY : src/log.o
@@ -1686,9 +1854,30 @@ help:
 	@echo "... src/initialize_kart.o"
 	@echo "... src/initialize_kart.i"
 	@echo "... src/initialize_kart.s"
-	@echo "... src/initialize_person.o"
-	@echo "... src/initialize_person.i"
-	@echo "... src/initialize_person.s"
+	@echo "... src/lighting/DirectionalLightRenderable.o"
+	@echo "... src/lighting/DirectionalLightRenderable.i"
+	@echo "... src/lighting/DirectionalLightRenderable.s"
+	@echo "... src/lighting/Light.o"
+	@echo "... src/lighting/Light.i"
+	@echo "... src/lighting/Light.s"
+	@echo "... src/lighting/LightedCubeRenderable.o"
+	@echo "... src/lighting/LightedCubeRenderable.i"
+	@echo "... src/lighting/LightedCubeRenderable.s"
+	@echo "... src/lighting/LightedCylinderRenderable.o"
+	@echo "... src/lighting/LightedCylinderRenderable.i"
+	@echo "... src/lighting/LightedCylinderRenderable.s"
+	@echo "... src/lighting/LightedMeshRenderable.o"
+	@echo "... src/lighting/LightedMeshRenderable.i"
+	@echo "... src/lighting/LightedMeshRenderable.s"
+	@echo "... src/lighting/Material.o"
+	@echo "... src/lighting/Material.i"
+	@echo "... src/lighting/Material.s"
+	@echo "... src/lighting/PointLightRenderable.o"
+	@echo "... src/lighting/PointLightRenderable.i"
+	@echo "... src/lighting/PointLightRenderable.s"
+	@echo "... src/lighting/SpotLightRenderable.o"
+	@echo "... src/lighting/SpotLightRenderable.i"
+	@echo "... src/lighting/SpotLightRenderable.s"
 	@echo "... src/log.o"
 	@echo "... src/log.i"
 	@echo "... src/log.s"
