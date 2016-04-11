@@ -90,53 +90,53 @@ void ParticleRenderable::do_draw()
     glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
     setParentTransform(translate*scale);
 
-    //Draw geometric data
-    int positionLocation = m_shaderProgram->getAttributeLocation("vPosition");
-    int colorLocation = m_shaderProgram->getAttributeLocation("vColor");
-    int normalLocation = m_shaderProgram->getAttributeLocation("vNormal");
-    int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
+    // //Draw geometric data
+    // int positionLocation = m_shaderProgram->getAttributeLocation("vPosition");
+    // int colorLocation = m_shaderProgram->getAttributeLocation("vColor");
+    // int normalLocation = m_shaderProgram->getAttributeLocation("vNormal");
+    // int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
 
-    if(modelLocation != ShaderProgram::null_location)
-    {
-        glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(getModelMatrix())));
-    }
+    // if(modelLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(getModelMatrix())));
+    // }
 
-    if(positionLocation != ShaderProgram::null_location)
-    {
-        glcheck(glEnableVertexAttribArray(positionLocation));
-        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
-        glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-    }
+    // if(positionLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glEnableVertexAttribArray(positionLocation));
+    //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
+    //     glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    // }
 
-    if(colorLocation != ShaderProgram::null_location)
-    {
-        glcheck(glEnableVertexAttribArray(colorLocation));
-        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
-        glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
-    }
+    // if(colorLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glEnableVertexAttribArray(colorLocation));
+    //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
+    //     glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    // }
 
-    if(normalLocation != ShaderProgram::null_location)
-    {
-        glcheck(glEnableVertexAttribArray(normalLocation));
-        glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
-        glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-    }
+    // if(normalLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glEnableVertexAttribArray(normalLocation));
+    //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
+    //     glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
+    // }
 
-    //Draw triangles elements
-    glcheck(glDrawArrays(GL_TRIANGLES,0, m_positions.size()));
+    // //Draw triangles elements
+    // glcheck(glDrawArrays(GL_TRIANGLES,0, m_positions.size()));
 
-    if(positionLocation != ShaderProgram::null_location)
-    {
-        glcheck(glDisableVertexAttribArray(positionLocation));
-    }
-    if(colorLocation != ShaderProgram::null_location)
-    {
-        glcheck(glDisableVertexAttribArray(colorLocation));
-    }
-    if(normalLocation != ShaderProgram::null_location)
-    {
-        glcheck(glDisableVertexAttribArray(normalLocation));
-    }
+    // if(positionLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glDisableVertexAttribArray(positionLocation));
+    // }
+    // if(colorLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glDisableVertexAttribArray(colorLocation));
+    // }
+    // if(normalLocation != ShaderProgram::null_location)
+    // {
+    //     glcheck(glDisableVertexAttribArray(normalLocation));
+    // }
 }
 
 
