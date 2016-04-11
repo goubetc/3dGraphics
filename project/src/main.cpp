@@ -13,7 +13,7 @@
 // #include <string>
 // #include <fstream>
 
-void  initialize_kart( Viewer& viewer );
+void  initialize_scene( Viewer& viewer );
 
 // static void check_execution_directory()
 // {
@@ -41,7 +41,7 @@ int main()
   int heigth = 720;
   Viewer viewer (width, heigth);
 
-  initialize_kart( viewer );
+  initialize_scene( viewer );
   
   while( viewer.isRunning() )
 {

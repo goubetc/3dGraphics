@@ -35,12 +35,12 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       m_positions.push_back( glm::vec3(0.0+x,0.0+y,z+height) );
       
 
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
+      m_colors.push_back( getColor(20,50,70) );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70) );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70) );
       
       m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
       m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
@@ -49,12 +49,12 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
       m_positions.push_back( glm::vec3(0.0+x,0.0+y,z-height) );
 
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
+      m_colors.push_back( getColor(20,50,70)  );
     }
 
 
@@ -108,4 +108,4 @@ CylinderRenderable::~CylinderRenderable()
 {
     glcheck(glDeleteBuffers(1, &m_vBuffer));
     glcheck(glDeleteBuffers(1, &m_cBuffer));
-}
+}//setLocalTransform

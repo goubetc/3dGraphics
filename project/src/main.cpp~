@@ -41,7 +41,7 @@ int main()
   int heigth = 720;
   Viewer viewer (width, heigth);
 
-  initialize_kart( viewer );
+  initialize_scene( viewer );
   
   while( viewer.isRunning() )
 {
