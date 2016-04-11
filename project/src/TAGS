@@ -217,104 +217,9 @@ ShaderProgramPtr Renderable::getShaderProgram(120,2004
 void Renderable::beforeAnimate(125,2091
 Viewer* Renderable::getViewer(128,2140
 
-setup_kart.cpp,3311
-void initialize_kart(35,1297
-void hierarchical_kart(62,2525
-struct sSeat{sSeat83,3609
-struct sSeat vSeat;90,3704
-  struct sFloor91,3724
-    float width sFloor::width93,3744
-    float length sFloor::length94,3765
-    float height sFloor::height95,3788
-  struct sFloor vFloor;98,3818
-  struct sHood101,3844
-    float length sHood::length103,3863
-    float height sHood::height104,3885
-  struct sHood vHood;107,3919
-  struct sBack111,3944
-    float length sBack::length113,3963
-    float height sBack::height114,3985
-  struct sBack vBack;117,4017
-std::shared_ptr<ParticleRenderable> master 126,4157
-std::shared_ptr<CylinderRenderable> seat 130,4340
-std::shared_ptr<FloorRenderable> seat_top 134,4553
-std::shared_ptr<FloorRenderable> seat_bottom 135,4688
-std::shared_ptr<FloorRenderable> root 142,5082
-std::shared_ptr<CylinderRenderable> wheel_fl 143,5181
-std::shared_ptr<CylinderRenderable> wheel_fr 144,5290
-std::shared_ptr<CylinderRenderable> wheel_bl 145,5399
-std::shared_ptr<CylinderRenderable> wheel_br 146,5508
-    std::shared_ptr<TriangleRenderable> hood 150,5632
-    std::shared_ptr<FloorRenderable> back 157,6042
- glm::mat4 rootParentTransform;177,7342
- glm::vec3 planeNormal,199,8121
- glm::vec3 planeNormal, planePoint;199,8121
- planeNormal 200,8157
- planePoint 201,8191
- PlanePtr p0 202,8224
- planeNormal 205,8324
- planePoint 206,8357
- PlanePtr p1 207,8391
- planeNormal 210,8491
- planePoint 211,8525
- PlanePtr p2 212,8558
- planeNormal 215,8658
- planePoint 216,8691
- PlanePtr p3 217,8725
- planeNormal 220,8825
- planePoint 221,8858
- PlanePtr floorPlane 222,8890
- glm::vec3 x1,227,9097
- glm::vec3 x1, x2,227,9097
- glm::vec3 x1, x2, x3,227,9097
- glm::vec3 x1, x2, x3, x4;227,9097
- glm::vec4 color;228,9124
- x1 229,9142
- x2 230,9170
- x3 231,9198
- x4 232,9226
- color 233,9254
- PlaneRenderablePtr p1Renderable 234,9295
- x1 237,9468
- x2 238,9497
- x3 239,9526
- x4 240,9554
- color 241,9582
- PlaneRenderablePtr p2Renderable 242,9623
- x1 245,9796
- x2 246,9826
- x3 247,9856
- x4 248,9884
- color 249,9912
- PlaneRenderablePtr p3Renderable 250,9954
- x1 253,10127
- x2 254,10156
- x3 255,10185
- x4 256,10214
- color 257,10243
- PlaneRenderablePtr p4Renderable 258,10283
- std::vector<ParticlePtr> vParticle;263,10558
- ConstantForceFieldPtr force 265,10625
- ControlledForceFieldRenderablePtr forceRenderable 271,10960
- DampingForceFieldPtr dampingForceField 275,11199
- system->setRestitution(1.0f)f280,11444
- struct sPerson286,11533
-   float length sPerson::length288,11552
-   float height sPerson::height289,11575
-   float width sPerson::width290,11600
-   float limb_diameter sPerson::limb_diameter291,11624
-   float limb_length sPerson::limb_length292,11655
-   int faces sPerson::faces293,11683
-   float neck_length sPerson::neck_length294,11702
- }; struct sPerson vPerson;295,11730
- std::shared_ptr<CylinderRenderable> person 313,11891
- std::shared_ptr<HierarchicalSphereRenderable> head 317,12111
- std::shared_ptr<FloorRenderable> body 318,12225
- std::shared_ptr<CylinderRenderable> arm_r 326,12683
- std::shared_ptr<CylinderRenderable> arm_l 327,12837
- std::shared_ptr<CylinderRenderable> leg_r 328,12991
- std::shared_ptr<CylinderRenderable> leg_l 329,13145
- std::shared_ptr<CylinderRenderable> neck 331,13300
+setup_kart.cpp,63
+void initialize_kart(41,1459
+void hierarchical_kart(136,5461
 
 ShaderProgram.cpp,702
 int ShaderProgram::null_location 17,293
@@ -519,6 +424,17 @@ ForceField::ForceField(3,50
 ForceField::~ForceField(5,78
 void ForceField::addForce(7,107
 
+dynamics/KartRenderable.cpp,289
+KartRenderable::KartRenderable(38,1375
+  struct sSeat{sSeat49,1630
+  struct sFloor57,1770
+  struct sHood65,1888
+  struct sBack72,1985
+struct sPerson79,2080
+void KartRenderable::do_draw(246,10993
+void KartRenderable::do_animate(306,13339
+KartRenderable::~KartRenderable(308,13387
+
 dynamics/Particle.cpp,633
 void Particle::setRadius(3,50
 bool Particle::isFixed(9,125
@@ -560,8 +476,8 @@ bool testParticlePlane(41,1503
 dynamics/ParticleRenderable.cpp,185
 ParticleRenderable::ParticleRenderable(11,268
 void ParticleRenderable::do_draw(84,3834
-void ParticleRenderable::do_animate(144,6109
-ParticleRenderable::~ParticleRenderable(146,6161
+void ParticleRenderable::do_animate(144,6232
+ParticleRenderable::~ParticleRenderable(146,6284
 
 dynamics/Solver.cpp,25
 void Solver::solve(3,47
@@ -583,3 +499,171 @@ SpringListRenderable::SpringListRenderable(8,188
 void SpringListRenderable::do_draw(41,1652
 void SpringListRenderable::do_animate(112,4273
 SpringListRenderable::~SpringListRenderable(114,4327
+
+lighting/DirectionalLightRenderable.cpp,345
+DirectionalLightRenderable::DirectionalLightRenderable(11,309
+void DirectionalLightRenderable::do_draw(50,2394
+void DirectionalLightRenderable::do_animate(105,4351
+glm::vec3 DirectionalLightRenderable::position(106,4414
+void DirectionalLightRenderable::setPosition(111,4497
+DirectionalLightRenderable::~DirectionalLightRenderable(117,4602
+
+lighting/Light.cpp,2727
+DirectionalLight::~DirectionalLight(6,155
+DirectionalLight::DirectionalLight(9,197
+DirectionalLight::DirectionalLight(17,370
+DirectionalLight::DirectionalLight(25,634
+const glm::vec3 &DirectionalLight::direction(DirectionalLight::direction33,887
+void DirectionalLight::setDirection(38,969
+const glm::vec3& DirectionalLight::ambient(43,1067
+void DirectionalLight::setAmbient(48,1145
+const glm::vec3 &DirectionalLight::diffuse(DirectionalLight::diffuse53,1235
+void DirectionalLight::setDiffuse(58,1313
+const glm::vec3& DirectionalLight::specular(63,1403
+void DirectionalLight::setSpecular(68,1483
+bool DirectionalLight::sendToGPU(73,1577
+PointLight::~PointLight(126,2927
+PointLight::PointLight(131,2959
+PointLight::PointLight(142,3184
+PointLight::PointLight(153,3516
+const glm::vec3 &PointLight::position(PointLight::position165,3912
+void PointLight::setPosition(170,3986
+const glm::vec3& PointLight::ambient(175,4074
+void PointLight::setAmbient(180,4146
+const glm::vec3 &PointLight::diffuse(PointLight::diffuse185,4230
+void PointLight::setDiffuse(190,4302
+const glm::vec3& PointLight::specular(195,4386
+void PointLight::setSpecular(200,4460
+const float &PointLight::constant(PointLight::constant205,4548
+void PointLight::setConstant(210,4618
+const float& PointLight::linear(215,4695
+void PointLight::setLinear(220,4761
+const float &PointLight::quadratic(PointLight::quadratic225,4830
+void PointLight::setQuadratic(230,4902
+bool PointLight::sendToGPU(235,4983
+bool PointLight::sendToGPU(319,7083
+SpotLight::~SpotLight(419,10306
+SpotLight::SpotLight(424,10336
+SpotLight::SpotLight(438,10647
+SpotLight::SpotLight(452,11107
+const glm::vec3 &SpotLight::position(SpotLight::position469,11707
+void SpotLight::setPosition(474,11780
+const glm::vec3 &SpotLight::spotDirection(SpotLight::spotDirection479,11867
+void SpotLight::setSpotDirection(484,11950
+const glm::vec3 &SpotLight::ambient(SpotLight::ambient489,12057
+void SpotLight::setAmbient(494,12128
+const glm::vec3& SpotLight::diffuse(499,12211
+void SpotLight::setDiffuse(504,12282
+const glm::vec3 &SpotLight::specular(SpotLight::specular509,12365
+void SpotLight::setSpecular(514,12438
+const float& SpotLight::constant(519,12525
+void SpotLight::setConstant(524,12594
+const float &SpotLight::linear(SpotLight::linear529,12670
+void SpotLight::setLinear(534,12735
+const float& SpotLight::quadratic(539,12803
+void SpotLight::setQuadratic(544,12874
+const float &SpotLight::innerCutOff(SpotLight::innerCutOff549,12954
+void SpotLight::setInnerCutOff(554,13029
+const float& SpotLight::outerCutOff(559,13117
+void SpotLight::setOuterCutOff(564,13192
+bool SpotLight::sendToGPU(569,13280
+bool SpotLight::sendToGPU(682,16184
+
+lighting/LightedCubeRenderable.cpp,250
+LightedCubeRenderable::~LightedCubeRenderable(8,194
+LightedCubeRenderable::LightedCubeRenderable(15,382
+void LightedCubeRenderable::do_draw(38,1519
+void LightedCubeRenderable::do_animate(103,3847
+void LightedCubeRenderable::setMaterial(107,3905
+
+lighting/LightedCylinderRenderable.cpp,278
+LightedCylinderRenderable::~LightedCylinderRenderable(8,198
+LightedCylinderRenderable::LightedCylinderRenderable(15,394
+void LightedCylinderRenderable::do_draw(38,1534
+void LightedCylinderRenderable::do_animate(103,3866
+void LightedCylinderRenderable::setMaterial(107,3928
+
+lighting/LightedMeshRenderable.cpp,251
+LightedMeshRenderable::~LightedMeshRenderable(10,264
+LightedMeshRenderable::LightedMeshRenderable(18,497
+void LightedMeshRenderable::do_draw(43,1841
+void LightedMeshRenderable::do_animate(111,4259
+void LightedMeshRenderable::setMaterial(113,4314
+
+lighting/Material.cpp,591
+Material::~Material(4,82
+Material::Material(7,108
+Material::Material(15,278
+Material::Material(23,511
+const glm::vec3& Material::ambient(31,711
+void Material::setAmbient(36,781
+const glm::vec3& Material::diffuse(41,863
+void Material::setDiffuse(46,933
+const glm::vec3& Material::specular(51,1015
+void Material::setSpecular(56,1087
+void Material::setShininess(61,1173
+const float &Material::shininess(Material::shininess66,1252
+bool Material::sendToGPU(71,1322
+MaterialPtr Material::Pearl(124,2554
+MaterialPtr Material::Emerald(134,2882
+MaterialPtr Material::Bronze(144,3212
+
+lighting/PointLightRenderable.cpp,195
+PointLightRenderable::PointLightRenderable(11,303
+void PointLightRenderable::do_draw(41,1720
+void PointLightRenderable::do_animate(96,3671
+PointLightRenderable::~PointLightRenderable(98,3729
+
+lighting/SpotLightRenderable.cpp,191
+SpotLightRenderable::SpotLightRenderable(11,302
+void SpotLightRenderable::do_draw(53,2294
+void SpotLightRenderable::do_animate(108,4244
+SpotLightRenderable::~SpotLightRenderable(110,4301
+
+texturing/BillBoardPlaneRenderable.cpp,375
+BillBoardPlaneRenderable::~BillBoardPlaneRenderable(11,289
+static const glm::vec2 shift[shift18,482
+BillBoardPlaneRenderable::BillBoardPlaneRenderable(25,626
+void BillBoardPlaneRenderable::do_draw(75,2718
+void BillBoardPlaneRenderable::do_animate(130,4900
+void BillBoardPlaneRenderable::do_keyPressedEvent(133,4958
+void BillBoardPlaneRenderable::setMaterial(136,5028
+
+texturing/MipMapCubeRenderable.cpp,357
+MipMapCubeRenderable::~MipMapCubeRenderable(10,250
+MipMapCubeRenderable::MipMapCubeRenderable(19,590
+void MipMapCubeRenderable::do_draw(77,3189
+void MipMapCubeRenderable::do_animate(162,6420
+void MipMapCubeRenderable::updateTextureOption(167,6476
+void MipMapCubeRenderable::do_keyPressedEvent(213,8000
+void MipMapCubeRenderable::setMaterial(223,8220
+
+texturing/MultiTexturedCubeRenderable.cpp,293
+MultiTexturedCubeRenderable::~MultiTexturedCubeRenderable(10,257
+MultiTexturedCubeRenderable::MultiTexturedCubeRenderable(21,639
+void MultiTexturedCubeRenderable::do_draw(85,4028
+void MultiTexturedCubeRenderable::do_animate(195,8329
+void MultiTexturedCubeRenderable::setMaterial(200,8435
+
+texturing/TexturedCubeRenderable.cpp,258
+TexturedCubeRenderable::~TexturedCubeRenderable(10,252
+TexturedCubeRenderable::TexturedCubeRenderable(19,531
+void TexturedCubeRenderable::do_draw(64,2775
+void TexturedCubeRenderable::do_animate(149,6014
+void TexturedCubeRenderable::setMaterial(154,6072
+
+texturing/TexturedLightedMeshRenderable.cpp,307
+TexturedLightedMeshRenderable::~TexturedLightedMeshRenderable(10,273
+TexturedLightedMeshRenderable::TexturedLightedMeshRenderable(20,611
+void TexturedLightedMeshRenderable::do_draw(65,3186
+void TexturedLightedMeshRenderable::do_animate(152,6431
+void TexturedLightedMeshRenderable::setMaterial(154,6494
+
+texturing/TexturedPlaneRenderable.cpp,384
+TexturedPlaneRenderable::~TexturedPlaneRenderable(11,288
+TexturedPlaneRenderable::TexturedPlaneRenderable(20,569
+void TexturedPlaneRenderable::do_draw(66,2828
+void TexturedPlaneRenderable::do_animate(151,6064
+void TexturedPlaneRenderable::updateTextureOption(156,6123
+void TexturedPlaneRenderable::do_keyPressedEvent(255,9609
+void TexturedPlaneRenderable::setMaterial(269,9977
