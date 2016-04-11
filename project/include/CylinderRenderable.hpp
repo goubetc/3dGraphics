@@ -8,18 +8,18 @@
 class CylinderRenderable : public HierarchicalRenderable
 {
 public:
-    ~CylinderRenderable();
-    CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
+  ~CylinderRenderable();
+  CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
 
 private:
-    void do_draw();
-    void do_animate( float time );
+  void do_draw();
+  void do_animate( float time );
 
-    std::vector< glm::vec3 > m_positions;
-    std::vector< glm::vec4 > m_colors;
+  std::vector< glm::vec3 > m_positions;
+  std::vector< glm::vec4 > m_colors;
 
-    unsigned int m_vBuffer;
-    unsigned int m_cBuffer;
+  unsigned int m_vBuffer;
+  unsigned int m_cBuffer;
 };
 
 typedef std::shared_ptr<CylinderRenderable> CylinderRenderablePtr;

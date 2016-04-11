@@ -7,13 +7,16 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <GL/glew.h>
 
+
 ParticleRenderable::ParticleRenderable(ShaderProgramPtr shaderProgram, ParticlePtr particle) :
+  
     HierarchicalRenderable(shaderProgram),
     m_particle(particle),
     m_pBuffer(0),
     m_cBuffer(0),
     m_nBuffer(0)
 {
+
     double radius=1.0;
     int thetaStep = 40;
     int phiStep = 20;
@@ -135,6 +138,8 @@ void ParticleRenderable::do_draw()
         glcheck(glDisableVertexAttribArray(normalLocation));
     }
 }
+
+
 
 void ParticleRenderable::do_animate(float time) {}
 
