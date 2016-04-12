@@ -3,6 +3,7 @@
 
 #include "../HierarchicalRenderable.hpp"
 #include "Particle.hpp"
+#include "./ConstantForceField.hpp"
 #include "DynamicSystem.hpp"
 
 #include <vector>
@@ -29,16 +30,20 @@ public:
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  ParticleRenderable( ShaderProgramPtr program, ParticlePtr particle );
+  ParticleRenderable( ShaderProgramPtr program, ParticlePtr particle, ConstantForceFieldPtr force, bool back );
 
 private:
   void do_draw();
   void do_animate( float time );
 
   ParticlePtr m_particle;
+  ConstantForceFieldPtr m_force;
 std::vector< glm::vec3 > m_positions;
   std::vector< glm::vec4 > m_colors;
   std::vector< glm::vec3 > m_normals;
+
+  float angle;
+  bool m_back;
 
   unsigned int m_pBuffer;
   unsigned int m_cBuffer;

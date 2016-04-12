@@ -35,7 +35,7 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
@@ -43,6 +43,9 @@ KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile) 
   m_cBuffer(0),
   m_nBuffer(0)
 {
+
+  m_force = force;
+  m_back = cback;
 
   ////////////////// kart parts //////////////////////////
 
@@ -90,7 +93,7 @@ struct sPerson
 
 ////////////////////////////// Creating Kart ////////////////////////////
 
-master = std::make_shared<ParticleRenderable>( flatShader, mobile);
+master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back);
 
 
 // need to not print master.
@@ -245,10 +248,12 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
 
 void KartRenderable::do_draw()
 {
+  //glm::mat4 rotate = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
+  
   // //Update the parent and local transform matrix to position the geometric data according to the particle's data.
   // const float& pRadius = m_particle->getRadius();
   // const glm::vec3& pPosition = m_particle->getPosition();
-  // glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
+   
   // glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
   // setParentTransform(translate*scale);
 

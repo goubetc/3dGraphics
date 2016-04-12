@@ -64,7 +64,7 @@ void initialize_kart( Viewer& viewer ){
   px = glm::vec3(0.0,0.0,1.0);
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
+  
   
 
   //Initialize a force field that apply only to the mobile particle
@@ -73,11 +73,13 @@ void initialize_kart( Viewer& viewer ){
   vParticle.push_back(mobile);
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
+  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack());
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
   //Add this renderable to the systemRenderable.
-  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
+  
   
 //Add a damping force field to the mobile.
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);

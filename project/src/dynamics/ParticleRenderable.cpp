@@ -8,7 +8,7 @@
 #include <GL/glew.h>
 
 
-ParticleRenderable::ParticleRenderable(ShaderProgramPtr shaderProgram, ParticlePtr particle) :
+ParticleRenderable::ParticleRenderable(ShaderProgramPtr shaderProgram, ParticlePtr particle, ConstantForceFieldPtr force, bool back ) :
   
     HierarchicalRenderable(shaderProgram),
     m_particle(particle),
@@ -20,6 +20,11 @@ ParticleRenderable::ParticleRenderable(ShaderProgramPtr shaderProgram, ParticleP
     double radius=1.0;
     int thetaStep = 40;
     int phiStep = 20;
+    //
+    
+    float angle;
+    m_force = force;
+    m_back = back;
 
     glm::vec3 center(0.0,0.0,0.0);
 
@@ -88,7 +93,24 @@ void ParticleRenderable::do_draw()
     const glm::vec3& pPosition = m_particle->getPosition();
     glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
     glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-    setParentTransform(translate*scale);
+    //float angle;
+    //if(m_force->getForce()[0] + m_force->getForce()[1] + m_force->getForce()[2] == 0) m_force->getForce()[0] = 0., m_force->getForce()[1] = 0., m_force->getForce()[2] = 0.;
+    float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
+    glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
+    
+    if(!(dot != dot))
+      angle = acos(dot);
+    glm::mat4 rotate;
+    
+    if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
+    //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
+    //if(m_force->getForce()[0] + m_force->getForce()[0] + m_force->getForce()[0] == 0) angle = 0;
+    //if(m_back) angle = angle + M_PI;
+    std::cout<<angle<<std::endl;
+    rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
+    
+    setParentTransform(translate*scale*rotate);
+    
 
     // //Draw geometric data
     // int positionLocation = m_shaderProgram->getAttributeLocation("vPosition");

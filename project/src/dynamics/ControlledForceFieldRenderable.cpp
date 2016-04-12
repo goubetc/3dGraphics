@@ -26,12 +26,12 @@ void ControlledForceFieldStatus::clear()
     angle =  0;
     last_time =  0;
     intensity = 0;
-    acceleration = 10.0;
-    deacceleration = 5.0;
+    acceleration = 20.0;
+    deacceleration = 10.0;
     angularSpeed = 2.0;
-    dampingFactor = 0.8;
-    min_intensity = -1;
-    max_intensity = 10;
+    dampingFactor = 0.9;
+    min_intensity = -5;
+    max_intensity = 20;
 
     accelerating =  false;
     deaccelerating =  false;
@@ -128,7 +128,7 @@ void ControlledForceFieldRenderable::do_animate( float time )
     {
         float dt = time - m_status.last_time;
 
-        if ( m_status.turning_left && !m_status.turning_right )
+        if ( m_status.turning_left && !m_status.turning_right && (m_status.accelerating || m_status.deaccelerating) )
         {
             m_status.angle += dt * m_status.angularSpeed;
             float cos = std::cos( m_status.angle );
@@ -137,7 +137,7 @@ void ControlledForceFieldRenderable::do_animate( float time )
                                           sin * m_status.initial.x + cos * m_status.initial.y,
                                           0);
         }
-        else if( m_status.turning_right && !m_status.turning_left )
+        else if( m_status.turning_right && !m_status.turning_left && (m_status.accelerating || m_status.deaccelerating) )
         {
             m_status.angle -= dt * m_status.angularSpeed;
             float cos = std::cos( m_status.angle );
@@ -235,4 +235,10 @@ void ControlledForceFieldRenderable::do_draw()
     {
         glcheck(glDisableVertexAttribArray(normalLocation));
     }
+}
+
+
+bool ControlledForceFieldRenderable::getBack()
+{
+  return m_status.deaccelerating;
 }
