@@ -5,9 +5,9 @@
 #include "../include/dynamics/DynamicSystem.hpp"
 #include "../include/dynamics/DynamicSystemRenderable.hpp"
 
-void initialize_kart( Viewer& viewer );
+void initialize_scene( Viewer& viewer );
 
-void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+void initialize_walls(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
 
 void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
 

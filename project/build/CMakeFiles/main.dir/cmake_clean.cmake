@@ -26,6 +26,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/Viewer.cpp.o"
   "CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o"
   "CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o"
+  "CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o"
   "CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o"
   "CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o"
   "CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o"

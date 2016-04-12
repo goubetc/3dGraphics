@@ -9,4 +9,6 @@ void initialize_kart( Viewer& viewer );
 
 void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
 
+void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+
 #endif

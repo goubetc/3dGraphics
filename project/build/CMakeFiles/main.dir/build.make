@@ -673,9 +673,32 @@ CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides: 
 
 CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o
 
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o: ../src/texturing/TexturedRoadTurnRenderable.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_28)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o"
+	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedRoadTurnRenderable.cpp"
+
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.i"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedRoadTurnRenderable.cpp" > CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.i
+
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.s"
+	/opt/gcc-4.9.3/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedRoadTurnRenderable.cpp" -o CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.s
+
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.requires
+
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.provides: CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.provides
+
+CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.provides.build: CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o
+
 CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o: ../src/texturing/TexturedPlaneRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp"
 
@@ -698,7 +721,7 @@ CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.provides.build: 
 
 CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o: ../src/texturing/MultiTexturedCubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/MultiTexturedCubeRenderable.cpp"
 
@@ -721,7 +744,7 @@ CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.provides.bui
 
 CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o: ../src/texturing/TexturedCubeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp"
 
@@ -744,7 +767,7 @@ CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.provides.build: C
 
 CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o: ../src/texturing/BillBoardPlaneRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/BillBoardPlaneRenderable.cpp"
 
@@ -767,7 +790,7 @@ CMakeFiles/main.dir/src/texturing/BillBoardPlaneRenderable.cpp.o.provides.build:
 
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/SphereRenderable.cpp.o: ../src/SphereRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/SphereRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/SphereRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/SphereRenderable.cpp"
 
@@ -790,7 +813,7 @@ CMakeFiles/main.dir/src/SphereRenderable.cpp.o.provides.build: CMakeFiles/main.d
 
 CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o: ../src/dynamics/ParticleParticleCollision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleParticleCollision.cpp"
 
@@ -813,7 +836,7 @@ CMakeFiles/main.dir/src/dynamics/ParticleParticleCollision.cpp.o.provides.build:
 
 CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o: ../src/dynamics/ConstantForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceField.cpp"
 
@@ -836,7 +859,7 @@ CMakeFiles/main.dir/src/dynamics/ConstantForceField.cpp.o.provides.build: CMakeF
 
 CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o: ../src/dynamics/SpringListRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringListRenderable.cpp"
 
@@ -859,7 +882,7 @@ CMakeFiles/main.dir/src/dynamics/SpringListRenderable.cpp.o.provides.build: CMak
 
 CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o: ../src/dynamics/DampingForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DampingForceField.cpp"
 
@@ -882,7 +905,7 @@ CMakeFiles/main.dir/src/dynamics/DampingForceField.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o: ../src/dynamics/ParticleListRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleListRenderable.cpp"
 
@@ -905,7 +928,7 @@ CMakeFiles/main.dir/src/dynamics/ParticleListRenderable.cpp.o.provides.build: CM
 
 CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/Solver.cpp.o: ../src/dynamics/Solver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Solver.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Solver.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Solver.cpp"
 
@@ -928,7 +951,7 @@ CMakeFiles/main.dir/src/dynamics/Solver.cpp.o.provides.build: CMakeFiles/main.di
 
 CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o: ../src/dynamics/DynamicSystemRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystemRenderable.cpp"
 
@@ -951,7 +974,7 @@ CMakeFiles/main.dir/src/dynamics/DynamicSystemRenderable.cpp.o.provides.build: C
 
 CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o: ../src/dynamics/ConstantForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ConstantForceFieldRenderable.cpp"
 
@@ -974,7 +997,7 @@ CMakeFiles/main.dir/src/dynamics/ConstantForceFieldRenderable.cpp.o.provides.bui
 
 CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o: ../src/dynamics/ControlledForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ControlledForceFieldRenderable.cpp"
 
@@ -997,7 +1020,7 @@ CMakeFiles/main.dir/src/dynamics/ControlledForceFieldRenderable.cpp.o.provides.b
 
 CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o: ../src/dynamics/EulerExplicitSolver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/EulerExplicitSolver.cpp"
 
@@ -1020,7 +1043,7 @@ CMakeFiles/main.dir/src/dynamics/EulerExplicitSolver.cpp.o.provides.build: CMake
 
 CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o: ../src/dynamics/SpringForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceField.cpp"
 
@@ -1043,7 +1066,7 @@ CMakeFiles/main.dir/src/dynamics/SpringForceField.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o: ../src/dynamics/DynamicSystem.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/DynamicSystem.cpp"
 
@@ -1066,7 +1089,7 @@ CMakeFiles/main.dir/src/dynamics/DynamicSystem.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/Particle.cpp.o: ../src/dynamics/Particle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Particle.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Particle.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Particle.cpp"
 
@@ -1089,7 +1112,7 @@ CMakeFiles/main.dir/src/dynamics/Particle.cpp.o.provides.build: CMakeFiles/main.
 
 CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o: ../src/dynamics/ForceField.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ForceField.cpp"
 
@@ -1112,7 +1135,7 @@ CMakeFiles/main.dir/src/dynamics/ForceField.cpp.o.provides.build: CMakeFiles/mai
 
 CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/Collision.cpp.o: ../src/dynamics/Collision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/Collision.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/Collision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/Collision.cpp"
 
@@ -1135,7 +1158,7 @@ CMakeFiles/main.dir/src/dynamics/Collision.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o: ../src/dynamics/ParticlePlaneCollision.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticlePlaneCollision.cpp"
 
@@ -1158,7 +1181,7 @@ CMakeFiles/main.dir/src/dynamics/ParticlePlaneCollision.cpp.o.provides.build: CM
 
 CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o: ../src/dynamics/SpringForceFieldRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/SpringForceFieldRenderable.cpp"
 
@@ -1181,7 +1204,7 @@ CMakeFiles/main.dir/src/dynamics/SpringForceFieldRenderable.cpp.o.provides.build
 
 CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o: ../src/dynamics/ParticleRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/dynamics/ParticleRenderable.cpp"
 
@@ -1204,7 +1227,7 @@ CMakeFiles/main.dir/src/dynamics/ParticleRenderable.cpp.o.provides.build: CMakeF
 
 CMakeFiles/main.dir/src/ShaderProgram.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/ShaderProgram.cpp.o: ../src/ShaderProgram.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ShaderProgram.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ShaderProgram.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ShaderProgram.cpp"
 
@@ -1227,7 +1250,7 @@ CMakeFiles/main.dir/src/ShaderProgram.cpp.o.provides.build: CMakeFiles/main.dir/
 
 CMakeFiles/main.dir/src/ConeRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/ConeRenderable.cpp.o: ../src/ConeRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_52)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_53)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/ConeRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ConeRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/ConeRenderable.cpp"
 
@@ -1250,7 +1273,7 @@ CMakeFiles/main.dir/src/ConeRenderable.cpp.o.provides.build: CMakeFiles/main.dir
 
 CMakeFiles/main.dir/src/Plane.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Plane.cpp.o: ../src/Plane.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_53)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_54)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Plane.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Plane.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Plane.cpp"
 
@@ -1273,7 +1296,7 @@ CMakeFiles/main.dir/src/Plane.cpp.o.provides.build: CMakeFiles/main.dir/src/Plan
 
 CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o: ../src/HierarchicalMeshRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_54)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_55)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalMeshRenderable.cpp"
 
@@ -1296,7 +1319,7 @@ CMakeFiles/main.dir/src/HierarchicalMeshRenderable.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/CylinderRenderable.cpp.o: ../src/CylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_55)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_56)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/CylinderRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/CylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp"
 
@@ -1319,7 +1342,7 @@ CMakeFiles/main.dir/src/CylinderRenderable.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/Camera.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_56)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_57)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Camera.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Camera.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Camera.cpp"
 
@@ -1342,7 +1365,7 @@ CMakeFiles/main.dir/src/Camera.cpp.o.provides.build: CMakeFiles/main.dir/src/Cam
 
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TorusRenderable.cpp.o: ../src/TorusRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_57)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_58)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TorusRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TorusRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TorusRenderable.cpp"
 
@@ -1365,7 +1388,7 @@ CMakeFiles/main.dir/src/TorusRenderable.cpp.o.provides.build: CMakeFiles/main.di
 
 CMakeFiles/main.dir/src/TextEngine.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TextEngine.cpp.o: ../src/TextEngine.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_58)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_59)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/TextEngine.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextEngine.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/TextEngine.cpp"
 
@@ -1388,7 +1411,7 @@ CMakeFiles/main.dir/src/TextEngine.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/setup_kart.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/setup_kart.cpp.o: ../src/setup_kart.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_59)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_60)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/setup_kart.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/setup_kart.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp"
 
@@ -1411,7 +1434,7 @@ CMakeFiles/main.dir/src/setup_kart.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/QuadRendable.cpp.o: ../src/QuadRendable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_60)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_61)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/QuadRendable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/QuadRendable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/QuadRendable.cpp"
 
@@ -1434,7 +1457,7 @@ CMakeFiles/main.dir/src/QuadRendable.cpp.o.provides.build: CMakeFiles/main.dir/s
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_61)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_62)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp"
 
@@ -1457,7 +1480,7 @@ CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.
 
 CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/KeyframeCollection.cpp.o: ../src/KeyframeCollection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_62)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_63)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/KeyframeCollection.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/KeyframeCollection.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/KeyframeCollection.cpp"
 
@@ -1480,7 +1503,7 @@ CMakeFiles/main.dir/src/KeyframeCollection.cpp.o.provides.build: CMakeFiles/main
 
 CMakeFiles/main.dir/src/Sphere.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_63)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_64)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/Sphere.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Sphere.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/Sphere.cpp"
 
@@ -1503,7 +1526,7 @@ CMakeFiles/main.dir/src/Sphere.cpp.o.provides.build: CMakeFiles/main.dir/src/Sph
 
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o: ../src/HierarchicalCylinderRenderable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_64)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_65)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/HierarchicalCylinderRenderable.cpp"
 
@@ -1526,7 +1549,7 @@ CMakeFiles/main.dir/src/HierarchicalCylinderRenderable.cpp.o.provides.build: CMa
 
 CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/GeometricTransformation.cpp.o: ../src/GeometricTransformation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_65)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles" $(CMAKE_PROGRESS_66)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/GeometricTransformation.cpp.o"
 	/opt/gcc-4.9.3/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/GeometricTransformation.cpp.o -c "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/GeometricTransformation.cpp"
 
@@ -1576,6 +1599,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/Viewer.cpp.o" \
 "CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o" \
+"CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o" \
 "CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o" \
@@ -1645,6 +1669,7 @@ main: CMakeFiles/main.dir/src/gl_helper.cpp.o
 main: CMakeFiles/main.dir/src/Viewer.cpp.o
 main: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o
 main: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o
+main: CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o
 main: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o
 main: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o
 main: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o
@@ -1731,6 +1756,7 @@ CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/gl_helper.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/Viewer.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/MipMapCubeRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/MultiTexturedCubeRenderable.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o.requires

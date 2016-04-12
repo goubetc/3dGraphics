@@ -219,5 +219,8 @@ void initialize_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSyste
     //root->setParentTransform( glm::translate(glm::mat4(1.0), glm::vec3(0,0,6)));
     root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::vec3(0.0,1.0,0.0)));
     
+    auto roadTurn = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+    
     HierarchicalRenderable::addChild(systemRenderable, root);
+    HierarchicalRenderable::addChild(systemRenderable, roadTurn);
 }

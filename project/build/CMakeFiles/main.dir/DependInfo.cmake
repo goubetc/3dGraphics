@@ -69,6 +69,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedCubeRenderable.cpp" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir/src/texturing/TexturedCubeRenderable.cpp.o"
   "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedLightedMeshRenderable.cpp" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir/src/texturing/TexturedLightedMeshRenderable.cpp.o"
   "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedPlaneRenderable.cpp" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.o"
+  "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/texturing/TexturedRoadTurnRenderable.cpp" "/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/build/CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1674,6 +1674,30 @@ src/texturing/TexturedPlaneRenderable.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedPlaneRenderable.cpp.s
 .PHONY : src/texturing/TexturedPlaneRenderable.cpp.s
 
+src/texturing/TexturedRoadTurnRenderable.o: src/texturing/TexturedRoadTurnRenderable.cpp.o
+.PHONY : src/texturing/TexturedRoadTurnRenderable.o
+
+# target to build an object file
+src/texturing/TexturedRoadTurnRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.o
+.PHONY : src/texturing/TexturedRoadTurnRenderable.cpp.o
+
+src/texturing/TexturedRoadTurnRenderable.i: src/texturing/TexturedRoadTurnRenderable.cpp.i
+.PHONY : src/texturing/TexturedRoadTurnRenderable.i
+
+# target to preprocess a source file
+src/texturing/TexturedRoadTurnRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.i
+.PHONY : src/texturing/TexturedRoadTurnRenderable.cpp.i
+
+src/texturing/TexturedRoadTurnRenderable.s: src/texturing/TexturedRoadTurnRenderable.cpp.s
+.PHONY : src/texturing/TexturedRoadTurnRenderable.s
+
+# target to generate assembly for a file
+src/texturing/TexturedRoadTurnRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/texturing/TexturedRoadTurnRenderable.cpp.s
+.PHONY : src/texturing/TexturedRoadTurnRenderable.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1878,6 +1902,9 @@ help:
 	@echo "... src/texturing/TexturedPlaneRenderable.o"
 	@echo "... src/texturing/TexturedPlaneRenderable.i"
 	@echo "... src/texturing/TexturedPlaneRenderable.s"
+	@echo "... src/texturing/TexturedRoadTurnRenderable.o"
+	@echo "... src/texturing/TexturedRoadTurnRenderable.i"
+	@echo "... src/texturing/TexturedRoadTurnRenderable.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-#include "./../../include/texturing/TexturedPlaneRenderable.hpp"
+#include "./../../include/texturing/TexturedRoadTurnRenderable.hpp"
 #include "./../../include/gl_helper.hpp"
 #include "./../../include/log.hpp"
 #include "./../../include/Utils.hpp"
@@ -25,18 +25,19 @@ TexturedRoadTurnRenderable::TexturedRoadTurnRenderable(ShaderProgramPtr shaderPr
     //getUnitPlane(m_positions, m_normals, m_origTexCoords);
     float outerRadius = 8;
     float innerRadius = 4;
+    float faces = 20;
     
     for(int i=0;i<faces;i++)
     {
       float theta = i * M_PI/(4*faces);
       float theta2 = (i+1) * M_PI/(4*faces);
     
-      m_positions.push_back( glm::vec3(innerRadius*cos(theta),radius*sin(theta),0) );
-      m_positions.push_back( glm::vec3(outerRadius*cos(theta),radius*sin(theta),0) );
-      m_positions.push_back( glm::vec3(innerRadius*cos(theta2),radius*sin(theta2),0) );
-      m_positions.push_back( glm::vec3(outerRadius*cos(theta),radius*sin(theta),0) );
-      m_positions.push_back( glm::vec3(innerRadius*cos(theta2),radius*sin(theta2),0) );
-      m_positions.push_back( glm::vec3(outerRadius*cos(theta2),radius*sin(theta2),0) );
+      m_positions.push_back( glm::vec3(innerRadius*cos(theta),innerRadius*sin(theta),0) );
+      m_positions.push_back( glm::vec3(outerRadius*cos(theta),outerRadius*sin(theta),0) );
+      m_positions.push_back( glm::vec3(innerRadius*cos(theta2),innerRadius*sin(theta2),0) );
+      m_positions.push_back( glm::vec3(outerRadius*cos(theta),outerRadius*sin(theta),0) );
+      m_positions.push_back( glm::vec3(innerRadius*cos(theta2),innerRadius*sin(theta2),0) );
+      m_positions.push_back( glm::vec3(outerRadius*cos(theta2),outerRadius*sin(theta2),0) );
       
       m_colors.push_back( getColor(20,50,70) );
       m_colors.push_back( getColor(20,50,70)  );

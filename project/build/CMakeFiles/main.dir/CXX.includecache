@@ -1896,12 +1896,6 @@ vector
 glm/glm.hpp
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/GeometricTransformation.hpp
-glm/glm.hpp
--
-glm/gtc/quaternion.hpp
--
-
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
 Renderable.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
@@ -1912,26 +1906,6 @@ memory
 glm/glm.hpp
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-glm/glm.hpp
--
-memory
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Renderable.hpp
-glm/glm.hpp
--
-unordered_set
--
-memory
--
-vector
--
-ShaderProgram.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
-SFML/Graphics.hpp
--
-
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/ShaderProgram.hpp
 string
 -
@@ -1940,64 +1914,12 @@ memory
 unordered_map
 -
 
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Sphere.hpp
-glm/glm.hpp
--
-
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/TriangleRenderable.hpp
 HierarchicalRenderable.hpp
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/HierarchicalRenderable.hpp
 vector
 -
 glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-GeometricTransformation.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/GeometricTransformation.hpp
-Sphere.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Sphere.hpp
-Plane.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Plane.hpp
-array
--
-vector
--
-utility
--
-glm/glm.hpp
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-iostream
--
-ctime
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/CylinderRenderable.cpp
-./../include/CylinderRenderable.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/CylinderRenderable.hpp
-./../include/gl_helper.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/gl_helper.hpp
-./../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/log.hpp
-./../include/Utils.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/./../include/Utils.hpp
-glm/gtc/type_ptr.hpp
--
-GL/glew.h
--
-cmath
--
-
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/main.cpp
-../include/Viewer.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/Viewer.hpp
-../include/log.hpp
-/user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/include/log.hpp
-sstream
 -
 
 /user/5/.base/beslice/home/Documents/3D graphics/3dGraphics/project/src/setup_kart.cpp
