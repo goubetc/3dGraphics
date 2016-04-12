@@ -59,13 +59,13 @@ BillboardRenderable::BillboardRenderable(ShaderProgramPtr flatShader, ParticlePt
      
   //variables
   float poleRadius = 0.05;
-  float poleHeight = 4;
+  float poleHeight = 5;
   float poleX = 0.0;
   float poleY = 0.0;
   float poleZ = 0.0;
   float billboardWidth = 0.2;
-  float billboardHeight = 4;
-  float billboardThickness = 2;
+  float billboardHeight = 8;
+  float billboardThickness = 4;
   float billboardX = 0.0;
   float billboardY = 0.0;
   float billboardZ = 3.0;
@@ -86,7 +86,7 @@ BillboardRenderable::BillboardRenderable(ShaderProgramPtr flatShader, ParticlePt
     
   texPlane->setParentTransform( GeometricTransformation( glm::vec3{billboardX+0.101,billboardY,0},
   							 glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
-  							 glm::vec3{2,4,2}).toMatrix() );
+  							 glm::vec3{4,8,4}).toMatrix() );
 texPlane->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(3*M_PI/2), glm::vec3(0.0,0.0,1.0)));
     
   

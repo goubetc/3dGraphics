@@ -33,7 +33,7 @@
 #include "../include/ShaderProgram.hpp"
 #include "../include/FrameRenderable.hpp"
 
-
+#include "../include/BillboardRenderable.hpp"
 
 #include <iostream>
 #include <string>
@@ -141,18 +141,25 @@ system->setRestitution(1.0f);
 
 // viewer.addRenderable(kart);
 
+// create Billboard
+ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
+ BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile);
+ viewer.addShaderProgram( billboard.texShader );
+ billboard.master->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+								glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+								glm::vec3{1,1,1}).toMatrix() );
 
-
-
+ 
 
  HierarchicalRenderable::addChild(systemRenderable, texPlane);
  HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
  HierarchicalRenderable::addChild(systemRenderable, kart->master);
+ HierarchicalRenderable::addChild(systemRenderable, billboard.master); 
  HierarchicalRenderable::addChild(forceRenderable, kart->master);
  //  HierarchicalRenderable::addChild(kart->master, kart->root );
   
 
- system->addParticle( mobile );
+  system->addParticle( mobile );
  //hierarchical_kart( viewer, system, systemRenderable );
 
     

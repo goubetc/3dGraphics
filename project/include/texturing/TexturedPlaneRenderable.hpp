@@ -12,12 +12,13 @@ public :
     ~TexturedPlaneRenderable();
     TexturedPlaneRenderable(ShaderProgramPtr shaderProgram, const std::string& filename);
     void setMaterial(const MaterialPtr& material);
-
+  void setWrapOption(const int option);
+  void updateTextureOption();
 private:
     void do_draw();
     void do_animate( float time );
     void do_keyPressedEvent( sf::Event& e );
-    void updateTextureOption();
+    
 
     std::vector< glm::vec3 > m_positions;
     std::vector< glm::vec4 > m_colors;

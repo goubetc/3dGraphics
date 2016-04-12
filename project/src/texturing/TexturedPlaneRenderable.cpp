@@ -56,7 +56,7 @@ TexturedPlaneRenderable::TexturedPlaneRenderable(ShaderProgramPtr shaderProgram,
 
 
     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_tBuffer));
-    glcheck(glBufferData(GL_ARRAY_BUFFER, m_texCoords.size()*sizeof(glm::vec2), m_texCoords.data(), GL_STATIC_DRAW));
+    //    glcheck(glBufferData(GL_ARRAY_BUFFER, m_texCoords.size()*sizeof(glm::vec2), m_texCoords.data(), GL_STATIC_DRAW));
 
     //Release the texture
     // glBindTexture(GL_TEXTURE_2D, 0);
@@ -281,8 +281,8 @@ void TexturedPlaneRenderable::updateTextureOption()
 
     //Release the texture
     glBindTexture(GL_TEXTURE_2D, 0);
-
-    displayTextInViewer(text);
+    // Changed here 04/12 +goubetc
+    //displayTextInViewer(text);
 }
 
 void TexturedPlaneRenderable::do_keyPressedEvent( sf::Event& e )
@@ -302,4 +302,7 @@ void TexturedPlaneRenderable::do_keyPressedEvent( sf::Event& e )
 void TexturedPlaneRenderable::setMaterial(const MaterialPtr& material)
 {
     m_material = material;
+}
+void TexturedPlaneRenderable::setWrapOption(int option){
+  m_wrapOption = option;
 }
