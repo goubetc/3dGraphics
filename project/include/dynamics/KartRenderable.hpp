@@ -2,6 +2,7 @@
 #define KART_RENDERABLE_HPP
 
 #include "../HierarchicalRenderable.hpp"
+#include "./ConstantForceField.hpp"
 #include "Particle.hpp"
 #include "DynamicSystem.hpp"
 #include "DynamicSystemRenderable.hpp"
@@ -32,17 +33,20 @@ std::shared_ptr<ParticleRenderable> master;
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, MaterialPtr material, float r, float g, float b );
+  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, MaterialPtr material, float r, float g, float b );
   void setMaterial(const MaterialPtr& material);
 
 
 private:
   void do_draw();
   void do_animate( float time );
+  
+  bool m_back;
 
 
 
   ParticlePtr m_particle;
+  ConstantForceFieldPtr m_force;
 std::vector< glm::vec3 > m_positions;
   std::vector< glm::vec4 > m_colors;
   std::vector< glm::vec3 > m_normals;

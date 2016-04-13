@@ -41,7 +41,7 @@
 
 #include "../include/BillboardRenderable.hpp"
 
-#include "./../include/MeshRenderable.hpp"
+#include "./../include/HierarchicalMeshRenderable.hpp"
 
 #include <iostream>
 #include <string>
@@ -92,15 +92,15 @@ system->setRestitution(1.0f);
 
   
  //hierarchical_kart( viewer, system, systemRenderable );
-  std::shared_ptr<MeshRenderable> road = std::make_shared<MeshRenderable>(flatShader, "./../meshes/track.obj");
+  std::shared_ptr<HierarchicalMeshRenderable> road = std::make_shared<HierarchicalMeshRenderable>(flatShader, "./../meshes/track.obj");
 
-  //  road->setLocalTransform( GeometricTransformation( glm::vec3{5,5,5.5},
-								 // glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
-								 // glm::vec3{1,1,1}).toMatrix() );
+  road->setLocalTransform( GeometricTransformation( glm::vec3{0,0,19},
+						    glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 1,0,0)) ),
+						    glm::vec3{20,20,20}).toMatrix() );
  
   viewer.addRenderable(road);
   
- //Finally activate animation
+  //Finally activate animation
  viewer.startAnimation();
 }
 
@@ -166,13 +166,12 @@ void setup_lights(Viewer& viewer){
 void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
   //Initialize Kart with position, velocity, mass and radius and add it to the system
   ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
-  glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
+  glm::vec3 px(0.0,10.0,0.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
-  px = glm::vec3(0.0,0.0,1.0);
+  px = glm::vec3(20.0,20.0,1.0);
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
   MaterialPtr emmerald = Material::Bronze();
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, emmerald, 0,0,200);
 
   //Initialize a force field that apply only to the mobile particle
   glm::vec3 nullForce(0.0,0.0,0.0);
@@ -180,11 +179,12 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   vParticle.push_back(mobile);
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
+  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force);
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack(), emmerald,0,0,200 );
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
   //Add this renderable to the systemRenderable.
-  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force ); 
   //Add a damping force field to the mobile.
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
   system->addForceField( dampingForceField );

@@ -60,6 +60,7 @@ public:
    */
   ControlledForceFieldRenderable(ShaderProgramPtr program,ConstantForceFieldPtr forceField );
   ~ControlledForceFieldRenderable();
+  bool getBack();
 
 private:
 
@@ -67,6 +68,7 @@ private:
   virtual void do_keyReleasedEvent( sf::Event& e );
   virtual void do_animate( float time );
   virtual void do_draw();
+  
 
   ControlledForceFieldStatus m_status;
   ConstantForceFieldPtr m_force;

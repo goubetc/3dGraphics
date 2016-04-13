@@ -35,7 +35,7 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, MaterialPtr material, float r, float g, float b) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, MaterialPtr material, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
@@ -44,6 +44,9 @@ KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, 
   m_nBuffer(0),
   m_material(material)
 {
+
+  m_force = force;
+  m_back = cback;
 
   ////////////////// kart parts //////////////////////////
 
@@ -91,7 +94,7 @@ struct sPerson
 
 ////////////////////////////// Creating Kart ////////////////////////////
 
-master = std::make_shared<ParticleRenderable>( flatShader, mobile);
+master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back);
 
 
 // need to not print master.
