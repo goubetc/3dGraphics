@@ -98,7 +98,7 @@ void ParticleRenderable::do_draw()
     float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
     
-    if(!((dot != dot) || (angle != angle)))
+    if(!((dot != dot) || (acos(dot) != acos(dot))))
       angle = acos(dot);
     glm::mat4 rotate;
     
