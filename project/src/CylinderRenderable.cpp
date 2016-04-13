@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 #include <cmath>
 
-CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces, float height, float radius) :
+CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces, float height, float radius, float r, float g, float b) :
   HierarchicalRenderable(shaderProgram),
   m_vBuffer(0), m_cBuffer(0)
 {
@@ -17,8 +17,8 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
     
   /*m_positions.push_back( glm::vec3(0.0,0.0,1.0) );
     m_positions.push_back( glm::vec3(0.0,0.0,0.0) );
-    m_colors.push_back( randomColor() );
-    m_colors.push_back( randomColor() );*/
+    m_colors.push_back( glm::vec4(r,g,b,1) );
+    m_colors.push_back( glm::vec4(r,g,b,1) );*/
   float x=0, y=0, z=0;
     
   // Exercice 1: Fill positions and colors to describe a cylinder
@@ -35,12 +35,12 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       m_positions.push_back( glm::vec3(0.0+x,0.0+y,z+height) );
       
 
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
       
       m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
       m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
@@ -49,12 +49,12 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
       m_positions.push_back( glm::vec3(0.0+x,0.0+y,z-height) );
 
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
-      m_colors.push_back( randomColor() );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(r,g,b,1) );
     }
 
 

@@ -35,13 +35,14 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, MaterialPtr material, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
-  m_nBuffer(0)
+  m_nBuffer(0),
+  m_material(material)
 {
 
   ////////////////// kart parts //////////////////////////
@@ -96,34 +97,35 @@ master = std::make_shared<ParticleRenderable>( flatShader, mobile);
 // need to not print master.
 //  master->setLocalTransform(glm::scale( glm::mat4(1.), glm::vec3(0,0,0)));
 
-  std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
+  std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1, 0,0,0);
   seat->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
   
     
-  std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height);
-  std::shared_ptr<FloorRenderable> seat_bottom = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.length, vSeat.thickness);
+  std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height, 0, 0, 0);
+  std::shared_ptr<FloorRenderable> seat_bottom = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.length, vSeat.thickness, 0, 0, 0);
     
   seat_top->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vSeat.height/2 + vSeat.thickness/2, vSeat.length/2))); 
     
   seat->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.25,2.0)));         //SEAT LOCATION
     
     
-std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3);
-  std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3, r,g,b);
+  std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
   
 
   //HOOD
-  std::shared_ptr<TriangleRenderable> hood = std::make_shared<TriangleRenderable>(flatShader, vFloor.width, vHood.height, vHood.length);
+  std::shared_ptr<TriangleRenderable> hood = std::make_shared<TriangleRenderable>(flatShader, vFloor.width, vHood.height, vHood.length, r,g,b);
+  hood->setMaterial(m_material);
     
   hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vHood.height/2,-vFloor.length/2 + vHood.length/2)));   
 
   hood->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   
 
   //BACK
-  std::shared_ptr<FloorRenderable> back = std::make_shared<FloorRenderable>(flatShader, vFloor.width, vBack.height, vBack.length);
+  std::shared_ptr<FloorRenderable> back = std::make_shared<FloorRenderable>(flatShader, vFloor.width, vBack.height, vBack.length, r,g,b);
   back->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vBack.height/2,vFloor.length/2 - vBack.length/2)));   
 
   
@@ -164,12 +166,12 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
 
 	
   // Create renderables
-  std::shared_ptr<CylinderRenderable> person = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
+  std::shared_ptr<CylinderRenderable> person = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1, 255, 0, 0);
   person->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
 
   //PERSON
-  std::shared_ptr<HierarchicalSphereRenderable> head = std::make_shared<HierarchicalSphereRenderable>(flatShader);
-  std::shared_ptr<FloorRenderable> body = std::make_shared<FloorRenderable>(flatShader, vPerson.width, vPerson.height, vPerson.length);
+  std::shared_ptr<HierarchicalSphereRenderable> head = std::make_shared<HierarchicalSphereRenderable>(flatShader, 255, 0, 0);
+  std::shared_ptr<FloorRenderable> body = std::make_shared<FloorRenderable>(flatShader, vPerson.width, vPerson.height, vPerson.length, 0, 100, 50);
 
   body->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(1.0,0.0,0.0)));   
   body->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vPerson.height/2,0.0)));
@@ -177,12 +179,12 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   head->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vPerson.height + vPerson.neck_length + 1.0,0.0)));
 
 
-  std::shared_ptr<CylinderRenderable> arm_r = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter);
-  std::shared_ptr<CylinderRenderable> arm_l = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter);
-  std::shared_ptr<CylinderRenderable> leg_r = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter);
-  std::shared_ptr<CylinderRenderable> leg_l = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter);
+  std::shared_ptr<CylinderRenderable> arm_r = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter, 255, 0, 0);
+  std::shared_ptr<CylinderRenderable> arm_l = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter, 255, 0, 0);
+  std::shared_ptr<CylinderRenderable> leg_r = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter, 255, 0, 0);
+  std::shared_ptr<CylinderRenderable> leg_l = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.limb_length, vPerson.limb_diameter, 255, 0, 0);
 
-  std::shared_ptr<CylinderRenderable> neck = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.neck_length*3, vPerson.limb_diameter);
+  std::shared_ptr<CylinderRenderable> neck = std::make_shared<CylinderRenderable>(flatShader, vPerson.faces, vPerson.neck_length*3, vPerson.limb_diameter, 255, 0, 0);
 
   arm_r->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(0.25), glm::vec3(1.0,0.0,0.0)));
   arm_r->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(vPerson.width/2,vPerson.height - vPerson.limb_diameter*2,-vPerson.limb_length/2)));  
@@ -245,60 +247,6 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
 
 void KartRenderable::do_draw()
 {
-  // //Update the parent and local transform matrix to position the geometric data according to the particle's data.
-  // const float& pRadius = m_particle->getRadius();
-  // const glm::vec3& pPosition = m_particle->getPosition();
-  // glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
-  // glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-  // setParentTransform(translate*scale);
-
-  // //Draw geometric data
-  // int positionLocation = m_shaderProgram->getAttributeLocation("vPosition");
-  // int colorLocation = m_shaderProgram->getAttributeLocation("vColor");
-  // int normalLocation = m_shaderProgram->getAttributeLocation("vNormal");
-  // int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
-
-  // if(modelLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(getModelMatrix())));
-  //   }
-
-  // if(positionLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(positionLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
-  //     glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // if(colorLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(colorLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
-  //     glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // if(normalLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(normalLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
-  //     glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // //Draw triangles elements
-  // glcheck(glDrawArrays(GL_TRIANGLES,0, m_positions.size()));
-
-  // if(positionLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(positionLocation));
-  //   }
-  // if(colorLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(colorLocation));
-  //   }
-  // if(normalLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(normalLocation));
-  //   }
 }
 
 

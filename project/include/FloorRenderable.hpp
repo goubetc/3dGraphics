@@ -9,7 +9,7 @@ class FloorRenderable : public HierarchicalRenderable
 {
 public:
   ~FloorRenderable();
-  FloorRenderable( ShaderProgramPtr program, float width, float height, float depth);
+  FloorRenderable( ShaderProgramPtr program, float width, float height, float depth, float r, float g, float b);
 
 private:
   void do_draw();

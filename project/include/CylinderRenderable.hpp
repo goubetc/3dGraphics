@@ -9,7 +9,7 @@ class CylinderRenderable : public HierarchicalRenderable
 {
 public:
   ~CylinderRenderable();
-  CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
+  CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius, float r, float g, float b);
 
 private:
   void do_draw();

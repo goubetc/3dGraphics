@@ -4,12 +4,14 @@
 #include "HierarchicalRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
+#include "./lighting/Material.hpp"
 
 class TriangleRenderable : public HierarchicalRenderable
 {
 public:
   ~TriangleRenderable();
-  TriangleRenderable( ShaderProgramPtr program, float width, float height, float depth);
+  TriangleRenderable( ShaderProgramPtr program, float width, float height, float depth, float r, float g, float b);
+  void setMaterial(const MaterialPtr& material);
 
 private:
   void do_draw();
@@ -20,6 +22,7 @@ private:
 
   unsigned int m_vBuffer;
   unsigned int m_cBuffer;
+  MaterialPtr m_material;
 };
 
 typedef std::shared_ptr<TriangleRenderable> TriangleRenderablePtr;

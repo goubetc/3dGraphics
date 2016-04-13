@@ -9,7 +9,7 @@ class HierarchicalSphereRenderable : public HierarchicalRenderable
 {
     public:
         ~HierarchicalSphereRenderable();
-        HierarchicalSphereRenderable( ShaderProgramPtr program );
+        HierarchicalSphereRenderable( ShaderProgramPtr program , float r, float g, float b);
 
     private:
         void do_draw();

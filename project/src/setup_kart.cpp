@@ -171,8 +171,8 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   px = glm::vec3(0.0,0.0,1.0);
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
-    
+  MaterialPtr emmerald = Material::Bronze();
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, emmerald, 0,0,200);
 
   //Initialize a force field that apply only to the mobile particle
   glm::vec3 nullForce(0.0,0.0,0.0);
@@ -184,8 +184,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
   //Add this renderable to the systemRenderable.
-  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
-    
+  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force ); 
   //Add a damping force field to the mobile.
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
   system->addForceField( dampingForceField );
@@ -193,6 +192,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   HierarchicalRenderable::addChild(systemRenderable, kart->master);
   HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
   HierarchicalRenderable::addChild(forceRenderable, kart->master);
+
 }
 
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
@@ -216,7 +216,7 @@ void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRend
 void setup_textures(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
   // texturing plane
 
-MaterialPtr pearl = Material::Pearl();
+MaterialPtr pearl = Material::Emerald();
 //Textured shader
 ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
  viewer.addShaderProgram( texShader );

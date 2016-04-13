@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 #include <cmath>
 
-TriangleRenderable::TriangleRenderable(ShaderProgramPtr shaderProgram, float width, float height, float depth) :
+TriangleRenderable::TriangleRenderable(ShaderProgramPtr shaderProgram, float width, float height, float depth, float r, float g, float b) :
   HierarchicalRenderable(shaderProgram),
   m_vBuffer(0), m_cBuffer(0)
 {
@@ -60,7 +60,7 @@ TriangleRenderable::TriangleRenderable(ShaderProgramPtr shaderProgram, float wid
     
     
   for(int i=0;i<8*3;i++)    
-    m_colors.push_back( randomColor() );
+    m_colors.push_back( glm::vec4(r,g,b,1) );
 
 
   // Exercice 2: Compute normal per face or normal per vertex
@@ -83,6 +83,7 @@ TriangleRenderable::TriangleRenderable(ShaderProgramPtr shaderProgram, float wid
 
 void TriangleRenderable::do_draw()
 {
+
   //Uniform: Get location and send data to GPU
   int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
   glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(m_model)));
@@ -105,6 +106,9 @@ void TriangleRenderable::do_draw()
 
   glcheck(glDisableVertexAttribArray(positionLocation));
   glcheck(glDisableVertexAttribArray(colorLocation));
+
+  //Send material uniform to GPU
+    Material::sendToGPU(m_shaderProgram, m_material);
 }
 
 void TriangleRenderable::do_animate(float time) {}
@@ -114,3 +118,9 @@ TriangleRenderable::~TriangleRenderable()
   glcheck(glDeleteBuffers(1, &m_vBuffer));
   glcheck(glDeleteBuffers(1, &m_cBuffer));
 }
+
+void TriangleRenderable::setMaterial(const MaterialPtr& material)
+{
+    m_material = material;
+}
+

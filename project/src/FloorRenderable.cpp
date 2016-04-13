@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 #include <cmath>
 
-FloorRenderable::FloorRenderable(ShaderProgramPtr shaderProgram, float width, float height, float depth) :
+FloorRenderable::FloorRenderable(ShaderProgramPtr shaderProgram, float width, float height, float depth, float r, float g, float b) :
   HierarchicalRenderable(shaderProgram),
   m_vBuffer(0), m_cBuffer(0)
 {
@@ -76,7 +76,7 @@ FloorRenderable::FloorRenderable(ShaderProgramPtr shaderProgram, float width, fl
     
     
   for(int i=0;i<12*3;i++)    
-    m_colors.push_back( randomColor() );
+    m_colors.push_back( glm::vec4(r,g,b,1) );
 
 
   // Exercice 2: Compute normal per face or normal per vertex
