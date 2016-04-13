@@ -35,6 +35,8 @@
 
 #include "../include/BillboardRenderable.hpp"
 
+#include "./../include/MeshRenderable.hpp"
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -161,8 +163,13 @@ ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
 
   system->addParticle( mobile );
  //hierarchical_kart( viewer, system, systemRenderable );
+  std::shared_ptr<MeshRenderable> road = std::make_shared<MeshRenderable>(flatShader, "./../meshes/track.obj");
 
-    
+  //  road->setLocalTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+								 // glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
+								 // glm::vec3{1,1,1}).toMatrix() );
+ 
+  viewer.addRenderable(road);
  //Finally activate animation
  viewer.startAnimation();
 }
