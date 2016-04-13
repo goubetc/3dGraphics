@@ -5,10 +5,13 @@
 #include "dynamics/DynamicSystem.hpp"
 #include "dynamics/DynamicSystemRenderable.hpp"
 
-void initialize_kart( Viewer& viewer );
-
-void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+void initialize_scene( Viewer& viewer );
 
 void setup_lights(Viewer& viewer);
 
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+
+void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+
+void setup_textures(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
 #endif

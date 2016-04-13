@@ -47,14 +47,16 @@
 #include <string>
 #include <fstream>
 
-void initialize_kart( Viewer& viewer ){
+void initialize_scene( Viewer& viewer ){
 //Set up a shader and add a 3D frame.
 ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");  
 viewer.addShaderProgram( flatShader );
 FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
-std::cout << "address frame : " << &frame << std::endl;
 viewer.addRenderable(frame);
+
+//Set up the lights in the scene
 setup_lights(viewer);
+
 //Initialize a dynamic system (Solver, Time step, Restitution coefficient)
 DynamicSystemPtr system = std::make_shared<DynamicSystem>();
 EulerExplicitSolverPtr solver = std::make_shared<EulerExplicitSolver>();
@@ -71,64 +73,11 @@ viewer.addRenderable(systemRenderable);
 //Position the camera
 viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(0,0,10), glm::vec3(0,0,0), glm::vec3(0,1,0)));
 
+//Setup the textures in the scene
+setup_textures(viewer, system, systemRenderable);
 
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////
-
-// texturing plane
-
-MaterialPtr pearl = Material::Pearl();
-//Textured shader
-ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
- viewer.addShaderProgram( texShader );
-
- ShaderProgramPtr multiTexShader = std::make_shared<ShaderProgram>("../shaders/multiTextureVertex.glsl","../shaders/multiTextureFragment.glsl");
- viewer.addShaderProgram( multiTexShader );
-
-glm::mat4 parentTransformation;
-
- //Textured plane
- std::string filename = "./../textures/grass_texture.png";
- TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
- parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(100.0,100.0,100.0));
- texPlane->setParentTransform(parentTransformation);
- texPlane->setMaterial(pearl);
-
- viewer.addRenderable(texPlane);
-
-
-//Initialize Kart with position, velocity, mass and radius and add it to the system
- 
-glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
-float pm=1.0, pr=1.0;
-px = glm::vec3(0.0,0.0,1.0);
-
-ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
-  
-
-//Initialize a force field that apply only to the mobile particle
-glm::vec3 nullForce(0.0,0.0,0.0);
-std::vector<ParticlePtr> vParticle;
-vParticle.push_back(mobile);
-ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
-system->addForceField( force );
-
-//Initialize a renderable for the force field applied on the mobile particle.
-//This renderable allows to modify the attribute of the force by key/mouse events
-//Add this renderable to the systemRenderable.
-ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
-  
-//Add a damping force field to the mobile.
-DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
-system->addForceField( dampingForceField );
-
-
+//Setup the kart in the scene
+ setup_kart(viewer, system, systemRenderable);
 
 // TODO init obstacles before
 
@@ -138,25 +87,10 @@ system->setRestitution(1.0f);
 
 // viewer.addRenderable(kart);
 
-// create Billboard
-ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
- BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile);
- viewer.addShaderProgram( billboard.texShader );
- billboard.master->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
-								glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
-								glm::vec3{1,1,1}).toMatrix() );
+  //Setup a Billboard in the scene
+  setup_billboard(viewer, system, systemRenderable);
 
- 
-
- HierarchicalRenderable::addChild(systemRenderable, texPlane);
- HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
- HierarchicalRenderable::addChild(systemRenderable, kart->master);
- HierarchicalRenderable::addChild(systemRenderable, billboard.master); 
- HierarchicalRenderable::addChild(forceRenderable, kart->master);
- //  HierarchicalRenderable::addChild(kart->master, kart->root );
   
-
-  system->addParticle( mobile );
  //hierarchical_kart( viewer, system, systemRenderable );
   std::shared_ptr<MeshRenderable> road = std::make_shared<MeshRenderable>(flatShader, "./../meshes/track.obj");
 
@@ -229,90 +163,76 @@ void setup_lights(Viewer& viewer){
   viewer.addRenderable(pointLightRenderable2);*/
 }
 
-void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  //Initialize Kart with position, velocity, mass and radius and add it to the system
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+  glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
+  float pm=1.0, pr=1.0;
+  px = glm::vec3(0.0,0.0,1.0);
 
-  // // FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
-  // // std::cout << "address frame : " << &frame << std::endl;
-  // // viewer.addRenderable(frame);
+  ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
+    
 
-  // //Initialize particles with position, velocity, mass and radius and add it to the system
-  // glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
-  // float pm=1.0, pr=1.0;
-  // px = glm::vec3(0.0,0.0,1.0);
+  //Initialize a force field that apply only to the mobile particle
+  glm::vec3 nullForce(0.0,0.0,0.0);
+  std::vector<ParticlePtr> vParticle;
+  vParticle.push_back(mobile);
+  ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
+  system->addForceField( force );
 
-  // ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  // KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
+  //Initialize a renderable for the force field applied on the mobile particle.
+  //This renderable allows to modify the attribute of the force by key/mouse events
+  //Add this renderable to the systemRenderable.
+  ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
+    
+  //Add a damping force field to the mobile.
+  DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
+  system->addForceField( dampingForceField );
+  system->addParticle( mobile );
+  HierarchicalRenderable::addChild(systemRenderable, kart->master);
+  HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
+  HierarchicalRenderable::addChild(forceRenderable, kart->master);
+}
 
-  // system->addParticle( mobile );
+void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+  glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
+  float pm=1.0, pr=1.0;
+  px = glm::vec3(0.0,0.0,1.0);
+  ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
+  BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile);
+  viewer.addShaderProgram( billboard.texShader );
+  billboard.master->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+                glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+                glm::vec3{1,1,1}).toMatrix() );
 
-  // /* COORDINATES:	
-  //    (width, height, length)	
-  //    (sideways, up, forwards)	
-  //    THIS ORDER 	
-  // */
-	
-  // // Create renderables
-  // //Initialize four planes to create walls arround the particles
-  // glm::vec3 planeNormal, planePoint;
-  // planeNormal = glm::vec3(-1,0,0);
-  // planePoint = glm::vec3(10,0,0);
-  // PlanePtr p0 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p0 );
 
-  // planeNormal = glm::vec3(1,0,0);
-  // planePoint = glm::vec3(-10,0,0);
-  // PlanePtr p1 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p1 );
 
-  // planeNormal = glm::vec3(0,-1,0);
-  // planePoint = glm::vec3(0,10,0);
-  // PlanePtr p2 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p2 );
+  HierarchicalRenderable::addChild(systemRenderable, billboard.master); 
+  //  HierarchicalRenderable::addChild(kart->master, kart->root );
+}
 
-  // planeNormal = glm::vec3(0,1,0);
-  // planePoint = glm::vec3(0,-10,0);
-  // PlanePtr p3 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p3 );
+void setup_textures(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  // texturing plane
 
-  // planeNormal = glm::vec3(0,0,1);
-  // planePoint = glm::vec3(0,0,0);
-  // PlanePtr floorPlane = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( floorPlane );
+MaterialPtr pearl = Material::Pearl();
+//Textured shader
+ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
+ viewer.addShaderProgram( texShader );
 
-  // //Create  plane renderables to display each obstacle
-  // //Add them to the system renderable
-  // glm::vec3 x1, x2, x3, x4;
-  // glm::vec4 color;
-  // x1 = glm::vec3( 10, 10,5);
-  // x2 = glm::vec3( 10, 10,0);
-  // x3 = glm::vec3( 10,-10,0);
-  // x4 = glm::vec3( 10,-10,5);
-  // color = glm::vec4( 0.4, 0.2, 0.2, 1.0);
-  // PlaneRenderablePtr p1Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p1Renderable);
+ ShaderProgramPtr multiTexShader = std::make_shared<ShaderProgram>("../shaders/multiTextureVertex.glsl","../shaders/multiTextureFragment.glsl");
+ viewer.addShaderProgram( multiTexShader );
 
-  // x1 = glm::vec3( -10, 10,5);
-  // x2 = glm::vec3( -10, 10,0);
-  // x3 = glm::vec3( 10, 10,0);
-  // x4 = glm::vec3( 10, 10,5);
-  // color = glm::vec4( 0.4, 0.2, 0.2, 1.0);
-  // PlaneRenderablePtr p2Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p2Renderable);
+glm::mat4 parentTransformation;
 
-  // x1 = glm::vec3( -10, -10,5);
-  // x2 = glm::vec3( -10, -10,0);
-  // x3 = glm::vec3( -10,10,0);
-  // x4 = glm::vec3( -10,10,5);
-  // color = glm::vec4( 0.2, 0.4, 0.4, 1.0 );
-  // PlaneRenderablePtr p3Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p3Renderable);
+ //Textured plane
+ std::string filename = "./../textures/grass_texture.png";
+ TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+ parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(100.0,100.0,100.0));
+ texPlane->setParentTransform(parentTransformation);
+ texPlane->setMaterial(pearl);
 
-  // x1 = glm::vec3( 10, -10,5);
-  // x2 = glm::vec3( 10, -10,0);
-  // x3 = glm::vec3( -10,-10,0);
-  // x4 = glm::vec3( -10,-10,5);
-  // color = glm::vec4(0.2, 0.4, 0.4, 1.0);
-  // PlaneRenderablePtr p4Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p4Renderable);
-  
+ viewer.addRenderable(texPlane);
+ HierarchicalRenderable::addChild(systemRenderable, texPlane);
 }
