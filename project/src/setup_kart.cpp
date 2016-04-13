@@ -28,7 +28,13 @@
 #include "../include/HierarchicalSphereRenderable.hpp"
 #include "../include/dynamics/KartRenderable.hpp"
 #include "../include/texturing/TexturedPlaneRenderable.hpp"
+
+#include "../include/lighting/LightedMeshRenderable.hpp"
+#include "../include/lighting/LightedCubeRenderable.hpp"
+#include "../include/lighting/LightedCylinderRenderable.hpp"
 #include "../include/lighting/DirectionalLightRenderable.hpp"
+#include "../include/lighting/PointLightRenderable.hpp"
+#include "../include/lighting/SpotLightRenderable.hpp"
 
 #include "../include/ShaderProgram.hpp"
 #include "../include/FrameRenderable.hpp"
@@ -48,7 +54,7 @@ viewer.addShaderProgram( flatShader );
 FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
 std::cout << "address frame : " << &frame << std::endl;
 viewer.addRenderable(frame);
-
+setup_lights(viewer);
 //Initialize a dynamic system (Solver, Time step, Restitution coefficient)
 DynamicSystemPtr system = std::make_shared<DynamicSystem>();
 EulerExplicitSolverPtr solver = std::make_shared<EulerExplicitSolver>();
@@ -73,18 +79,6 @@ viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(0,0,10), glm::vec3(0,0,
 
 
 ///////////////////////////////////////////////////////////////////
-glm::mat4 parentTransformation(1.0), localTransformation(1.0);
-//Define a directional light for the whole scene
-glm::vec3 d_direction = glm::normalize(glm::vec3(0.0,0.0,-1.0));
-glm::vec3 d_ambient(1.0,1.0,1.0), d_diffuse(1.0,1.0,0.8), d_specular(1.0,1.0,1.0);
-DirectionalLightPtr directionalLight = std::make_shared<DirectionalLight>(d_direction, d_ambient, d_diffuse, d_specular);
-//Add a renderable to display the light and control it via mouse/key event
-glm::vec3 lightPosition(0.0,0.0,5.0);
-DirectionalLightRenderablePtr directionalLightRenderable = std::make_shared<DirectionalLightRenderable>(flatShader, directionalLight, lightPosition);
-localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
-directionalLightRenderable->setLocalTransform(localTransformation);
-viewer.setDirectionalLight(directionalLight);
-viewer.addRenderable(directionalLightRenderable);
 
 // texturing plane
 
@@ -96,6 +90,7 @@ ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/texture
  ShaderProgramPtr multiTexShader = std::make_shared<ShaderProgram>("../shaders/multiTextureVertex.glsl","../shaders/multiTextureFragment.glsl");
  viewer.addShaderProgram( multiTexShader );
 
+glm::mat4 parentTransformation;
 
  //Textured plane
  std::string filename = "./../textures/grass_texture.png";
@@ -170,8 +165,68 @@ ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
 								 // glm::vec3{1,1,1}).toMatrix() );
  
   viewer.addRenderable(road);
+  
  //Finally activate animation
  viewer.startAnimation();
+}
+
+void setup_lights(Viewer& viewer){
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+  //Define a shader that encode an illumination model
+  ShaderProgramPtr phongShader = std::make_shared<ShaderProgram>("../shaders/phongVertex.glsl", "../shaders/phongFragment.glsl");
+  viewer.addShaderProgram( phongShader );
+
+  glm::mat4 localTransformation;
+
+  //Add a 3D frame to the viewer
+  FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
+  viewer.addRenderable(frame);
+
+  //Define a directional light for the whole scene
+  glm::vec3 d_direction = glm::normalize(glm::vec3(0.0,0.0,-1.0));
+  glm::vec3 d_ambient(1.0,1.0,1.0), d_diffuse(1.0,1.0,0.8), d_specular(1.0,1.0,1.0);
+  //glm::vec3 d_ambient(0.0,0.0,0.0), d_diffuse(0.0,0.0,0.0), d_specular(0.0,0.0,0.0);
+  DirectionalLightPtr directionalLight = std::make_shared<DirectionalLight>(d_direction, d_ambient, d_diffuse, d_specular);
+  //Add a renderable to display the light and control it via mouse/key event
+  glm::vec3 lightPosition(0.0,5.0,8.0);
+  DirectionalLightRenderablePtr directionalLightRenderable = std::make_shared<DirectionalLightRenderable>(flatShader, directionalLight, lightPosition);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(1,1,1));
+  directionalLightRenderable->setLocalTransform(localTransformation);
+  viewer.setDirectionalLight(directionalLight);
+  viewer.addRenderable(directionalLightRenderable);
+
+  //Define a point light
+  //TODO: PUT POINT LIGHT ABOVE BILLBOARDS AND OTHER STATIC OBJECTS
+  glm::vec3 p_position(0.0,0.0,0.0), p_ambient(0.0,0.0,0.0), p_diffuse(0.0,0.0,0.0), p_specular(0.0,0.0,0.0);
+  float p_constant=0.0, p_linear=0.0, p_quadratic=0.0;
+
+  p_position = glm::vec3(-8, 5.0, 5.0);
+  p_ambient = glm::vec3(0.0,0.0,0.0);
+  p_diffuse = glm::vec3(1.0,0.0,0.0);
+  p_specular = glm::vec3(1.0,0.0,0.0);
+  p_constant=1.0;
+  p_linear=5e-1;
+  p_quadratic=0;
+  PointLightPtr pointLight1 = std::make_shared<PointLight>(p_position, p_ambient, p_diffuse, p_specular, p_constant, p_linear, p_quadratic);
+  PointLightRenderablePtr pointLightRenderable1 = std::make_shared<PointLightRenderable>(flatShader, pointLight1);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
+  pointLightRenderable1->setLocalTransform(localTransformation);
+  viewer.addPointLight(pointLight1);
+  viewer.addRenderable(pointLightRenderable1);
+
+  /*p_position = glm::vec3(8, 5.0, 5.0);
+  p_ambient = glm::vec3(0.0,0.0,0.0);
+  p_diffuse = glm::vec3(0.0,0.0,1.0);
+  p_specular = glm::vec3(0.0,0.0,1.0);
+  p_constant=1.0;
+  p_linear=5e-1;
+  p_quadratic=0;
+  PointLightPtr pointLight2 = std::make_shared<PointLight>(p_position, p_ambient, p_diffuse, p_specular, p_constant, p_linear, p_quadratic);
+  PointLightRenderablePtr pointLightRenderable2 = std::make_shared<PointLightRenderable>(flatShader, pointLight2);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
+  pointLightRenderable2->setLocalTransform(localTransformation);
+  viewer.addPointLight(pointLight2);
+  viewer.addRenderable(pointLightRenderable2);*/
 }
 
 void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){

@@ -17,12 +17,14 @@ DirectionalLightRenderable::DirectionalLightRenderable(ShaderProgramPtr shaderPr
     glm::mat4 transformation(1.0);
 
     transformation = glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.0,1.0));
-    getUnitCone(tmp_x, tmp_n, strips, slices);
+    //COMMENTED THIS OUT TO REMOVE THE ARROW
+    //getUnitCone(tmp_x, tmp_n, strips, slices);
     for(size_t i=0; i<tmp_x.size(); ++i) m_positions.push_back(glm::vec3(transformation*glm::vec4(tmp_x[i],1.0)));
     m_normals.insert(m_normals.end(), tmp_n.begin(), tmp_n.end());
 
     transformation = glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.0,-1.0))*glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,2.0));
-    getUnitCylinder(tmp_x, tmp_n, strips);
+    //COMMENTED THIS OUT TO REMOVE THE ARROW
+    //getUnitCylinder(tmp_x, tmp_n, strips);
     for(size_t i=0; i<tmp_x.size(); ++i) m_positions.push_back(glm::vec3(transformation*glm::vec4(tmp_x[i],1.0)));
     m_normals.insert(m_normals.end(), tmp_n.begin(), tmp_n.end());
 
