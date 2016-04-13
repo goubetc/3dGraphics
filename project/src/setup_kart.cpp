@@ -27,45 +27,150 @@
 #include "../include/setup_kart.hpp"
 #include "../include/HierarchicalSphereRenderable.hpp"
 #include "../include/dynamics/KartRenderable.hpp"
+#include "../include/texturing/TexturedPlaneRenderable.hpp"
+
+#include "../include/lighting/LightedMeshRenderable.hpp"
+#include "../include/lighting/LightedCubeRenderable.hpp"
+#include "../include/lighting/LightedCylinderRenderable.hpp"
+#include "../include/lighting/DirectionalLightRenderable.hpp"
+#include "../include/lighting/PointLightRenderable.hpp"
+#include "../include/lighting/SpotLightRenderable.hpp"
+
+#include "../include/ShaderProgram.hpp"
+#include "../include/FrameRenderable.hpp"
+
+#include "../include/BillboardRenderable.hpp"
+
+#include "./../include/MeshRenderable.hpp"
 
 #include <iostream>
 #include <string>
 #include <fstream>
 
-void initialize_kart( Viewer& viewer ){
-  //Set up a shader and add a 3D frame.
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");  
-  viewer.addShaderProgram( flatShader );
-  FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
-  std::cout << "address frame : " << &frame << std::endl;
-  viewer.addRenderable(frame);
+void initialize_scene( Viewer& viewer ){
+//Set up a shader and add a 3D frame.
+ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/defaultVertex.glsl", "../shaders/defaultFragment.glsl");  
+viewer.addShaderProgram( flatShader );
+FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
+viewer.addRenderable(frame);
 
-  //Initialize a dynamic system (Solver, Time step, Restitution coefficient)
-  DynamicSystemPtr system = std::make_shared<DynamicSystem>();
-  EulerExplicitSolverPtr solver = std::make_shared<EulerExplicitSolver>();
-  system->setSolver(solver);
-  system->setDt(0.01);
+//Set up the lights in the scene
+setup_lights(viewer);
 
-  //Create a renderable associated to the dynamic system
-  //This renderable is responsible for calling DynamicSystem::computeSimulationStep() in the animate() function
-  //It is also responsible for some of the key/mouse events
-  DynamicSystemRenderablePtr systemRenderable = std::make_shared<DynamicSystemRenderable>(system);
-  std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
-  viewer.addRenderable(systemRenderable);
+//Initialize a dynamic system (Solver, Time step, Restitution coefficient)
+DynamicSystemPtr system = std::make_shared<DynamicSystem>();
+EulerExplicitSolverPtr solver = std::make_shared<EulerExplicitSolver>();
+system->setSolver(solver);
+system->setDt(0.01);
+
+//Create a renderable associated to the dynamic system
+//This renderable is responsible for calling DynamicSystem::computeSimulationStep() in the animate() function
+//It is also responsible for some of the key/mouse events
+DynamicSystemRenderablePtr systemRenderable = std::make_shared<DynamicSystemRenderable>(system);
+std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
+viewer.addRenderable(systemRenderable);
 
 //Position the camera
-  viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(0,0,10), glm::vec3(0,0,0), glm::vec3(0,1,0)));
+viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(0,0,10), glm::vec3(0,0,0), glm::vec3(0,1,0)));
 
+//Setup the textures in the scene
+setup_textures(viewer, system, systemRenderable);
 
-  //Initialize Kart with position, velocity, mass and radius and add it to the system
+//Setup the kart in the scene
+ setup_kart(viewer, system, systemRenderable);
+
+// TODO init obstacles before
+
+//Activate collision and set the restitution coefficient to 1.0
+system->setCollisionsDetection(true);
+system->setRestitution(1.0f);
+
+// viewer.addRenderable(kart);
+
+  //Setup a Billboard in the scene
+  setup_billboard(viewer, system, systemRenderable);
+
   
+ //hierarchical_kart( viewer, system, systemRenderable );
+  std::shared_ptr<MeshRenderable> road = std::make_shared<MeshRenderable>(flatShader, "./../meshes/track.obj");
+
+  //  road->setLocalTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+								 // glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
+								 // glm::vec3{1,1,1}).toMatrix() );
+ 
+  viewer.addRenderable(road);
+  
+ //Finally activate animation
+ viewer.startAnimation();
+}
+
+void setup_lights(Viewer& viewer){
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+  //Define a shader that encode an illumination model
+  ShaderProgramPtr phongShader = std::make_shared<ShaderProgram>("../shaders/phongVertex.glsl", "../shaders/phongFragment.glsl");
+  viewer.addShaderProgram( phongShader );
+
+  glm::mat4 localTransformation;
+
+  //Add a 3D frame to the viewer
+  FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
+  viewer.addRenderable(frame);
+
+  //Define a directional light for the whole scene
+  glm::vec3 d_direction = glm::normalize(glm::vec3(0.0,0.0,-1.0));
+  glm::vec3 d_ambient(1.0,1.0,1.0), d_diffuse(1.0,1.0,0.8), d_specular(1.0,1.0,1.0);
+  //glm::vec3 d_ambient(0.0,0.0,0.0), d_diffuse(0.0,0.0,0.0), d_specular(0.0,0.0,0.0);
+  DirectionalLightPtr directionalLight = std::make_shared<DirectionalLight>(d_direction, d_ambient, d_diffuse, d_specular);
+  //Add a renderable to display the light and control it via mouse/key event
+  glm::vec3 lightPosition(0.0,5.0,8.0);
+  DirectionalLightRenderablePtr directionalLightRenderable = std::make_shared<DirectionalLightRenderable>(flatShader, directionalLight, lightPosition);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(1,1,1));
+  directionalLightRenderable->setLocalTransform(localTransformation);
+  viewer.setDirectionalLight(directionalLight);
+  viewer.addRenderable(directionalLightRenderable);
+
+  //Define a point light
+  //TODO: PUT POINT LIGHT ABOVE BILLBOARDS AND OTHER STATIC OBJECTS
+  glm::vec3 p_position(0.0,0.0,0.0), p_ambient(0.0,0.0,0.0), p_diffuse(0.0,0.0,0.0), p_specular(0.0,0.0,0.0);
+  float p_constant=0.0, p_linear=0.0, p_quadratic=0.0;
+
+  p_position = glm::vec3(-8, 5.0, 5.0);
+  p_ambient = glm::vec3(0.0,0.0,0.0);
+  p_diffuse = glm::vec3(1.0,0.0,0.0);
+  p_specular = glm::vec3(1.0,0.0,0.0);
+  p_constant=1.0;
+  p_linear=5e-1;
+  p_quadratic=0;
+  PointLightPtr pointLight1 = std::make_shared<PointLight>(p_position, p_ambient, p_diffuse, p_specular, p_constant, p_linear, p_quadratic);
+  PointLightRenderablePtr pointLightRenderable1 = std::make_shared<PointLightRenderable>(flatShader, pointLight1);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
+  pointLightRenderable1->setLocalTransform(localTransformation);
+  viewer.addPointLight(pointLight1);
+  viewer.addRenderable(pointLightRenderable1);
+
+  /*p_position = glm::vec3(8, 5.0, 5.0);
+  p_ambient = glm::vec3(0.0,0.0,0.0);
+  p_diffuse = glm::vec3(0.0,0.0,1.0);
+  p_specular = glm::vec3(0.0,0.0,1.0);
+  p_constant=1.0;
+  p_linear=5e-1;
+  p_quadratic=0;
+  PointLightPtr pointLight2 = std::make_shared<PointLight>(p_position, p_ambient, p_diffuse, p_specular, p_constant, p_linear, p_quadratic);
+  PointLightRenderablePtr pointLightRenderable2 = std::make_shared<PointLightRenderable>(flatShader, pointLight2);
+  localTransformation = glm::scale(glm::mat4(1.0), glm::vec3(0.5,0.5,0.5));
+  pointLightRenderable2->setLocalTransform(localTransformation);
+  viewer.addPointLight(pointLight2);
+  viewer.addRenderable(pointLightRenderable2);*/
+}
+
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  //Initialize Kart with position, velocity, mass and radius and add it to the system
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
   glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
   px = glm::vec3(0.0,0.0,1.0);
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  
-  
 
   //Initialize a force field that apply only to the mobile particle
   glm::vec3 nullForce(0.0,0.0,0.0);
@@ -79,120 +184,52 @@ void initialize_kart( Viewer& viewer ){
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
   //Add this renderable to the systemRenderable.
-  
-  
-//Add a damping force field to the mobile.
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
   system->addForceField( dampingForceField );
-
-
-
-  HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
-  HierarchicalRenderable::addChild(systemRenderable, kart->master);
-  HierarchicalRenderable::addChild(forceRenderable, kart->master);
-  //  HierarchicalRenderable::addChild(kart->master, kart->root );
-  
-
   system->addParticle( mobile );
-  //hierarchical_kart( viewer, system, systemRenderable );
-
-
-  // TODO init obstacles before
-
-  //Activate collision and set the restitution coefficient to 1.0
-  system->setCollisionsDetection(true);
-  system->setRestitution(1.0f);
-
-  // viewer.addRenderable(kart);
-    
-  //Finally activate animation
-  viewer.startAnimation();
+  HierarchicalRenderable::addChild(systemRenderable, kart->master);
+  HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
+  HierarchicalRenderable::addChild(forceRenderable, kart->master);
 }
 
-void hierarchical_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+  glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
+  float pm=1.0, pr=1.0;
+  px = glm::vec3(0.0,0.0,1.0);
+  ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
+  BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile);
+  viewer.addShaderProgram( billboard.texShader );
+  billboard.master->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+                glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+                glm::vec3{1,1,1}).toMatrix() );
 
-  // // FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
-  // // std::cout << "address frame : " << &frame << std::endl;
-  // // viewer.addRenderable(frame);
 
-  // //Initialize particles with position, velocity, mass and radius and add it to the system
-  // glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
-  // float pm=1.0, pr=1.0;
-  // px = glm::vec3(0.0,0.0,1.0);
 
-  // ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  // KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile);
+  HierarchicalRenderable::addChild(systemRenderable, billboard.master); 
+  //  HierarchicalRenderable::addChild(kart->master, kart->root );
+}
 
-  // system->addParticle( mobile );
+void setup_textures(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+  // texturing plane
 
-  // /* COORDINATES:	
-  //    (width, height, length)	
-  //    (sideways, up, forwards)	
-  //    THIS ORDER 	
-  // */
-	
-  // // Create renderables
-  // //Initialize four planes to create walls arround the particles
-  // glm::vec3 planeNormal, planePoint;
-  // planeNormal = glm::vec3(-1,0,0);
-  // planePoint = glm::vec3(10,0,0);
-  // PlanePtr p0 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p0 );
+MaterialPtr pearl = Material::Pearl();
+//Textured shader
+ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
+ viewer.addShaderProgram( texShader );
 
-  // planeNormal = glm::vec3(1,0,0);
-  // planePoint = glm::vec3(-10,0,0);
-  // PlanePtr p1 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p1 );
+ ShaderProgramPtr multiTexShader = std::make_shared<ShaderProgram>("../shaders/multiTextureVertex.glsl","../shaders/multiTextureFragment.glsl");
+ viewer.addShaderProgram( multiTexShader );
 
-  // planeNormal = glm::vec3(0,-1,0);
-  // planePoint = glm::vec3(0,10,0);
-  // PlanePtr p2 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p2 );
+glm::mat4 parentTransformation;
 
-  // planeNormal = glm::vec3(0,1,0);
-  // planePoint = glm::vec3(0,-10,0);
-  // PlanePtr p3 = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( p3 );
+ //Textured plane
+ std::string filename = "./../textures/grass_texture.png";
+ TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+ parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(100.0,100.0,100.0));
+ texPlane->setParentTransform(parentTransformation);
+ texPlane->setMaterial(pearl);
 
-  // planeNormal = glm::vec3(0,0,1);
-  // planePoint = glm::vec3(0,0,0);
-  // PlanePtr floorPlane = std::make_shared<Plane>( planeNormal, planePoint);
-  // system->addPlaneObstacle( floorPlane );
-
-  // //Create  plane renderables to display each obstacle
-  // //Add them to the system renderable
-  // glm::vec3 x1, x2, x3, x4;
-  // glm::vec4 color;
-  // x1 = glm::vec3( 10, 10,5);
-  // x2 = glm::vec3( 10, 10,0);
-  // x3 = glm::vec3( 10,-10,0);
-  // x4 = glm::vec3( 10,-10,5);
-  // color = glm::vec4( 0.4, 0.2, 0.2, 1.0);
-  // PlaneRenderablePtr p1Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p1Renderable);
-
-  // x1 = glm::vec3( -10, 10,5);
-  // x2 = glm::vec3( -10, 10,0);
-  // x3 = glm::vec3( 10, 10,0);
-  // x4 = glm::vec3( 10, 10,5);
-  // color = glm::vec4( 0.4, 0.2, 0.2, 1.0);
-  // PlaneRenderablePtr p2Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p2Renderable);
-
-  // x1 = glm::vec3( -10, -10,5);
-  // x2 = glm::vec3( -10, -10,0);
-  // x3 = glm::vec3( -10,10,0);
-  // x4 = glm::vec3( -10,10,5);
-  // color = glm::vec4( 0.2, 0.4, 0.4, 1.0 );
-  // PlaneRenderablePtr p3Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p3Renderable);
-
-  // x1 = glm::vec3( 10, -10,5);
-  // x2 = glm::vec3( 10, -10,0);
-  // x3 = glm::vec3( -10,-10,0);
-  // x4 = glm::vec3( -10,-10,5);
-  // color = glm::vec4(0.2, 0.4, 0.4, 1.0);
-  // PlaneRenderablePtr p4Renderable = std::make_shared<QuadRenderable>( flatShader, x1, x2, x3, x4, color);
-  // HierarchicalRenderable::addChild(systemRenderable, p4Renderable);
-  
+ viewer.addRenderable(texPlane);
+ HierarchicalRenderable::addChild(systemRenderable, texPlane);
 }
