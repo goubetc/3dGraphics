@@ -5,9 +5,11 @@
 #include "./ConstantForceField.hpp"
 #include "Particle.hpp"
 #include "DynamicSystem.hpp"
+#include "./../../include/CylinderRenderable.hpp"
 #include "DynamicSystemRenderable.hpp"
 #include "ParticleRenderable.hpp"
 #include "../FloorRenderable.hpp"
+#include "./../../include/dynamics/ControlledWheelRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 
@@ -24,7 +26,10 @@
 class KartRenderable : public HierarchicalRenderable
 {
 public:
-std::shared_ptr<ParticleRenderable> master;        
+std::shared_ptr<FloorRenderable> root; 
+std::shared_ptr<CylinderRenderable> wheel_fl;
+ControlledWheelRenderablePtr rightWheelRenderable;
+ControlledWheelRenderablePtr leftWheelRenderable;       
   ~KartRenderable();
   /**@brief Build a particle renderable.
    *
@@ -32,7 +37,7 @@ std::shared_ptr<ParticleRenderable> master;
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback );
+  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback);
 
 
 private:
@@ -40,6 +45,7 @@ private:
   void do_animate( float time );
   
   bool m_back;
+  
 
 
 
@@ -52,6 +58,7 @@ std::vector< glm::vec3 > m_positions;
   unsigned int m_pBuffer;
   unsigned int m_cBuffer;
   unsigned int m_nBuffer;
+  float angle;
 };
 
 typedef std::shared_ptr<KartRenderable> KartRenderablePtr;

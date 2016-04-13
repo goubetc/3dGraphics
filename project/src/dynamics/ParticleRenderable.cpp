@@ -98,18 +98,24 @@ void ParticleRenderable::do_draw()
     float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
     
-    if(!(dot != dot))
+    if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
       angle = acos(dot);
     glm::mat4 rotate;
     
     if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
     //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
     //if(m_force->getForce()[0] + m_force->getForce()[0] + m_force->getForce()[0] == 0) angle = 0;
-    //if(m_back) angle = angle + M_PI;
-    std::cout<<angle<<std::endl;
+    //if((int)m_back) angle = angle + M_PI;
+    //std::cout<<angle<<std::endl;
     rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
     
-    setParentTransform(translate*scale*rotate);
+    this->setParentTransform(translate*scale*rotate);
+    
+    
+    
+     //wheel_fl->addLocalTransformKeyframe( GeometricTransformation( glm::vec3{0, 0, 0 }, glm::quat( glm::vec3{0.0, 0.0, 0.0} ) ), 0 );
+  //wheel_fl->addLocalTransformKeyframe( GeometricTransformation( glm::vec3{0, 0, 0 }, glm::quat( glm::vec3{0.0,  0.5, 0.0} ) ), 2 );
+  //wheel_fl->addLocalTransformKeyframe( GeometricTransformation( glm::vec3{0, 0, 0 }, glm::quat( glm::vec3{0.0, M_PI/4, 0.0} ) ), 5 );
     
 
     // //Draw geometric data

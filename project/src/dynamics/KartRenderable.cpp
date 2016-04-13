@@ -2,6 +2,7 @@
 #include "./../../include/gl_helper.hpp"
 #include "./../../include/log.hpp"
 #include "./../../include/Utils.hpp"
+#include "../../include/FrameRenderable.hpp"
 
 
 #include "./../../include/FrameRenderable.hpp"
@@ -18,6 +19,7 @@
 #include "../../include/dynamics/EulerExplicitSolver.hpp"
 
 #include "../../include/dynamics/ParticleRenderable.hpp"
+#include "../../include/dynamics/ControlledWheelRenderable.hpp"
 #include "../../include/dynamics/ParticleListRenderable.hpp"
 #include "../../include/dynamics/ConstantForceFieldRenderable.hpp"
 #include "../../include/dynamics/SpringForceFieldRenderable.hpp"
@@ -93,7 +95,7 @@ struct sPerson
 
 ////////////////////////////// Creating Kart ////////////////////////////
 
-master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back);
+// master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back );
 
 
 // need to not print master.
@@ -101,6 +103,9 @@ master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back
 
   std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1);
   seat->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
+  
+  rightWheelRenderable = std::make_shared<ControlledWheelRenderable>( flatShader, 1 );
+  leftWheelRenderable = std::make_shared<ControlledWheelRenderable>( flatShader, -1 );
   
     
   std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height);
@@ -111,8 +116,8 @@ master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back
   seat->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.25,2.0)));         //SEAT LOCATION
     
     
-std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3);
-  std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+  root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3);
+  wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
   std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
   std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
   std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
@@ -132,17 +137,22 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   
     
   //wheel_fl->setParentTransform(GeometricTransformation( glm::vec3{5,5,0}, glm::quat(), glm::vec3{1,1,1}).toMatrix());   
-  wheel_fl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,3.5)));   
+  //wheel_fl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,3.5)) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));
     
-  wheel_fr->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,3.5)));  
+  //wheel_fr->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,3.5)) * glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
     
-  wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));  
+  //wheel_bl->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
     
-  wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));  
+  //wheel_br->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)) * glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
+  
+   // rightWheelRenderable->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));
+   // rightWheelRenderable->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));
+   // leftWheelRenderable->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));
+   // leftWheelRenderable->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));
     
   // // For each element of the hierarchy,
   // // Set local transform and parent transform
@@ -155,11 +165,19 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   HierarchicalRenderable::addChild(root, wheel_fr);
   HierarchicalRenderable::addChild(root, wheel_bl);
   HierarchicalRenderable::addChild(root, wheel_br);
+  
+  // HierarchicalRenderable::addChild(root, leftWheelRenderable);
+  // HierarchicalRenderable::addChild(root, rightWheelRenderable);
+  
+  // HierarchicalRenderable::addChild(leftWheelRenderable, wheel_bl);
+  // HierarchicalRenderable::addChild(rightWheelRenderable, wheel_br);
   HierarchicalRenderable::addChild(seat, seat_top);
   HierarchicalRenderable::addChild(seat, seat_bottom);
   HierarchicalRenderable::addChild(root, seat);
   HierarchicalRenderable::addChild(root, hood);
   HierarchicalRenderable::addChild(root, back);
+  
+  
 
   //HierarchicalRenderable::addChild(mobile, root);
 
@@ -226,9 +244,9 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
         
   //  HierarchicalRenderable::addChild(forceRenderable, master);
 
-  HierarchicalRenderable::addChild(master, root);
+  // HierarchicalRenderable::addChild(master, root);
   
-  root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(1.0,0.0,0.0)));
+  root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,0.0,1.0)));
 
 
 
@@ -246,64 +264,30 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   glcheck(glBufferData(GL_ARRAY_BUFFER, m_normals.size()*sizeof(glm::vec3), m_normals.data(), GL_STATIC_DRAW));
 }
 
-void KartRenderable::do_draw()
-{
-  //glm::mat4 rotate = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
-  
-  // //Update the parent and local transform matrix to position the geometric data according to the particle's data.
-  // const float& pRadius = m_particle->getRadius();
-  // const glm::vec3& pPosition = m_particle->getPosition();
-   
-  // glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-  // setParentTransform(translate*scale);
+void KartRenderable::do_draw() {
 
-  // //Draw geometric data
-  // int positionLocation = m_shaderProgram->getAttributeLocation("vPosition");
-  // int colorLocation = m_shaderProgram->getAttributeLocation("vColor");
-  // int normalLocation = m_shaderProgram->getAttributeLocation("vNormal");
-  // int modelLocation = m_shaderProgram->getUniformLocation("modelMat");
-
-  // if(modelLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(getModelMatrix())));
-  //   }
-
-  // if(positionLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(positionLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_pBuffer));
-  //     glcheck(glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // if(colorLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(colorLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_cBuffer));
-  //     glcheck(glVertexAttribPointer(colorLocation, 4, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // if(normalLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glEnableVertexAttribArray(normalLocation));
-  //     glcheck(glBindBuffer(GL_ARRAY_BUFFER, m_nBuffer));
-  //     glcheck(glVertexAttribPointer(normalLocation, 3, GL_FLOAT, GL_FALSE, 0, (void*)0));
-  //   }
-
-  // //Draw triangles elements
-  // glcheck(glDrawArrays(GL_TRIANGLES,0, m_positions.size()));
-
-  // if(positionLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(positionLocation));
-  //   }
-  // if(colorLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(colorLocation));
-  //   }
-  // if(normalLocation != ShaderProgram::null_location)
-  //   {
-  //     glcheck(glDisableVertexAttribArray(normalLocation));
-  //   }
+  //Update the parent and local transform matrix to position the geometric data according to the particle's data.
+    const float& pRadius = m_particle->getRadius();
+    const glm::vec3& pPosition = m_particle->getPosition();
+    glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
+    glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
+    //float angle;
+    //if(m_force->getForce()[0] + m_force->getForce()[1] + m_force->getForce()[2] == 0) m_force->getForce()[0] = 0., m_force->getForce()[1] = 0., m_force->getForce()[2] = 0.;
+    float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
+    glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
+    
+    if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
+      angle = acos(dot);
+    glm::mat4 rotate;
+    
+    if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
+    //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
+    //if(m_force->getForce()[0] + m_force->getForce()[0] + m_force->getForce()[0] == 0) angle = 0;
+    //if((int)m_back) angle = angle + M_PI;
+    //std::cout<<angle<<std::endl;
+    rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
+    
+    root->setParentTransform(translate*scale*rotate);
 }
 
 

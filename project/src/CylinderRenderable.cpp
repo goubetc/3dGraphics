@@ -76,6 +76,17 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
 }
 
 
+void CylinderRenderable::addLocalTransformKeyframe( const GeometricTransformation& transformation, float time )
+{
+  m_localKeyframes.add( transformation, time );
+}
+
+void CylinderRenderable::addParentTransformKeyframe( const GeometricTransformation& transformation, float time )
+{
+  m_parentKeyframes.add( transformation, time );
+}
+
+
 void CylinderRenderable::do_draw()
 {
   //Uniform: Get location and send data to GPU
@@ -102,7 +113,20 @@ void CylinderRenderable::do_draw()
   glcheck(glDisableVertexAttribArray(colorLocation));
 }
 
-void CylinderRenderable::do_animate(float time) {}
+
+
+void CylinderRenderable::do_animate(float time) {
+//Assign the interpolated transformations from the keyframes to the local/parent transformations.
+    if(!m_localKeyframes.empty())
+    {
+        setLocalTransform( m_localKeyframes.interpolateTransformation( time ) );
+    }
+    if(!m_parentKeyframes.empty())
+    {
+        setParentTransform( m_parentKeyframes.interpolateTransformation( time ) );
+    }
+
+}
 
 CylinderRenderable::~CylinderRenderable()
 {

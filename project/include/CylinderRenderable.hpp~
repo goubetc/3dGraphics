@@ -5,21 +5,29 @@
 #include <vector>
 #include <glm/glm.hpp>
 
+class GeometricTransformation;
+
 class CylinderRenderable : public HierarchicalRenderable
 {
 public:
-    ~CylinderRenderable();
-    CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius, float x, float y, float z );
+  ~CylinderRenderable();
+  CylinderRenderable( ShaderProgramPtr program, int faces, float height, float radius);
+  void addLocalTransformKeyframe( const GeometricTransformation& transformation, float time );
+  void addParentTransformKeyframe( const GeometricTransformation& transformation, float time );
+
 
 private:
-    void do_draw();
-    void do_animate( float time );
+  void do_draw();
+  void do_animate( float time );
 
-    std::vector< glm::vec3 > m_positions;
-    std::vector< glm::vec4 > m_colors;
+  std::vector< glm::vec3 > m_positions;
+  std::vector< glm::vec4 > m_colors;
+  
+  KeyframeCollection m_localKeyframes; /*!< A collection of keyframes for the local transformation of renderable. */
+    KeyframeCollection m_parentKeyframes; /*!< A collection of keyframes for the parent transformation of renderable. */
 
-    unsigned int m_vBuffer;
-    unsigned int m_cBuffer;
+  unsigned int m_vBuffer;
+  unsigned int m_cBuffer;
 };
 
 typedef std::shared_ptr<CylinderRenderable> CylinderRenderablePtr;
