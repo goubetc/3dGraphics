@@ -37,7 +37,6 @@
 #include "../include/lighting/SpotLightRenderable.hpp"
 #include "../include/texturing/MipMapCubeRenderable.hpp"
 #include "../include/texturing/TexturedCubeRenderable.hpp"
-
 #include "../include/ShaderProgram.hpp"
 #include "../include/FrameRenderable.hpp"
 
@@ -84,16 +83,16 @@ setup_textures(viewer, system, systemRenderable);
 system->setCollisionsDetection(true);
 system->setRestitution(1.0f);
   //Setup a Billboard in the scene
-  setup_billboard(viewer, system, systemRenderable, flatShader);
+  setup_billboard(viewer, system, systemRenderable, flatShader) ;
 
   
 
  //hierarchical_kart( viewer, system, systemRenderable );
   std::shared_ptr<HierarchicalMeshRenderable> road = std::make_shared<HierarchicalMeshRenderable>(flatShader, "./../meshes/road.obj");
 
-  road->setLocalTransform( GeometricTransformation( glm::vec3{0,0,0},
+  road->setLocalTransform( GeometricTransformation( glm::vec3{0,0,-21},
 						    glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 1,0,0)) ),
-						    glm::vec3{30,30,30}).toMatrix() );
+						    glm::vec3{180,180,180}).toMatrix() );
  
   viewer.addRenderable(road); 
   //Finally activate animation
@@ -237,7 +236,7 @@ glm::mat4 parentTransformation;
  //Textured plane
  std::string filename = "./../textures/grass_texture.png";
  TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
- parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(100.0,100.0,100.0));
+ parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(600.0,600.0,600.0));
  texPlane->setParentTransform(parentTransformation);
  texPlane->setMaterial(pearl);
  viewer.addRenderable(texPlane);
