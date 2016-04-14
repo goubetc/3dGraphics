@@ -1,1 +1,0 @@
-/home/tilbuin/Documents/3dGraphics/practicals/practical1/build/CMakeFiles/main.dir

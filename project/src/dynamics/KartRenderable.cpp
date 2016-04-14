@@ -2,6 +2,7 @@
 #include "./../../include/gl_helper.hpp"
 #include "./../../include/log.hpp"
 #include "./../../include/Utils.hpp"
+#include "../../include/FrameRenderable.hpp"
 
 
 #include "./../../include/FrameRenderable.hpp"
@@ -35,19 +36,17 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, MaterialPtr material, float r, float g, float b) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
-  m_nBuffer(0),
-  m_material(material)
-{
+  m_nBuffer(0)
+  {
 
   m_force = force;
-  m_back = cback;
-
+  m_forceRend = forceRenderable;
   ////////////////// kart parts //////////////////////////
 
   struct sSeat{
@@ -94,7 +93,7 @@ struct sPerson
 
 ////////////////////////////// Creating Kart ////////////////////////////
 
-master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back);
+// master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back );
 
 
 // need to not print master.
@@ -103,7 +102,6 @@ master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back
   std::shared_ptr<CylinderRenderable> seat = std::make_shared<CylinderRenderable>(flatShader, 1, 1, 1, 0,0,0);
   seat->setLocalTransform(GeometricTransformation( glm::vec3{}, glm::quat(), glm::vec3{}).toMatrix());
   
-    
   std::shared_ptr<FloorRenderable> seat_top = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.thickness, vSeat.height, 0, 0, 0);
   std::shared_ptr<FloorRenderable> seat_bottom = std::make_shared<FloorRenderable>(flatShader, vSeat.width, vSeat.length, vSeat.thickness, 0, 0, 0);
     
@@ -112,16 +110,15 @@ master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back
   seat->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.25,2.0)));         //SEAT LOCATION
     
     
-std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3, r,g,b);
-  std::shared_ptr<CylinderRenderable> wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
-  std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
-  std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
-  std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3, r,g,b);
+  wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
+  wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1, 0, 0, 0);
   
 
   //HOOD
   std::shared_ptr<TriangleRenderable> hood = std::make_shared<TriangleRenderable>(flatShader, vFloor.width, vHood.height, vHood.length, r,g,b);
-  hood->setMaterial(m_material);
     
   hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vHood.height/2,-vFloor.length/2 + vHood.length/2)));   
 
@@ -134,17 +131,22 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   
     
   //wheel_fl->setParentTransform(GeometricTransformation( glm::vec3{5,5,0}, glm::quat(), glm::vec3{1,1,1}).toMatrix());   
-  wheel_fl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,3.5)));   
+  //wheel_fl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_fl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,3.5)) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));
     
-  wheel_fr->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,3.5)));  
+  //wheel_fr->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_fr->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,3.5)) * glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
     
-  wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));  
+  //wheel_bl->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_bl->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
     
-  wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
-  wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));  
+  //wheel_br->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));   
+  wheel_br->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)) * glm::rotate(glm::mat4(1.0), (float)(-M_PI/2.0), glm::vec3(0.0,1.0,0.0)));  
+  
+   // rightWheelRenderable->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));
+   // rightWheelRenderable->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(2.75,0.0,-3.5)));
+   // leftWheelRenderable->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));
+   // leftWheelRenderable->setLocalTransform(glm::translate(glm::mat4(1.0), glm::vec3(-2.75,0.0,-3.5)));
     
   // // For each element of the hierarchy,
   // // Set local transform and parent transform
@@ -157,11 +159,19 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   HierarchicalRenderable::addChild(root, wheel_fr);
   HierarchicalRenderable::addChild(root, wheel_bl);
   HierarchicalRenderable::addChild(root, wheel_br);
+  
+  // HierarchicalRenderable::addChild(root, leftWheelRenderable);
+  // HierarchicalRenderable::addChild(root, rightWheelRenderable);
+  
+  // HierarchicalRenderable::addChild(leftWheelRenderable, wheel_bl);
+  // HierarchicalRenderable::addChild(rightWheelRenderable, wheel_br);
   HierarchicalRenderable::addChild(seat, seat_top);
   HierarchicalRenderable::addChild(seat, seat_bottom);
   HierarchicalRenderable::addChild(root, seat);
   HierarchicalRenderable::addChild(root, hood);
   HierarchicalRenderable::addChild(root, back);
+  
+  
 
   //HierarchicalRenderable::addChild(mobile, root);
 
@@ -228,9 +238,9 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
         
   //  HierarchicalRenderable::addChild(forceRenderable, master);
 
-  HierarchicalRenderable::addChild(master, root);
+  // HierarchicalRenderable::addChild(master, root);
   
-  root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(1.0,0.0,0.0)));
+  // root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));
 
 
 
@@ -248,11 +258,55 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
   glcheck(glBufferData(GL_ARRAY_BUFFER, m_normals.size()*sizeof(glm::vec3), m_normals.data(), GL_STATIC_DRAW));
 }
 
-void KartRenderable::do_draw()
-{
+void KartRenderable::do_draw(){
+
+  //Update the parent and local transform matrix to position the geometric data according to the particle's data.
+    const float& pRadius = m_particle->getRadius();
+    const glm::vec3& pPosition = m_particle->getPosition();
+    glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
+    glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
+    float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
+    glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
+    
+    if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
+      angle = acos(dot);
+    glm::mat4 rotate;
+
+    
+    if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
+    //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
+    //if(m_force->getForce()[0] + m_force->getForce()[0] + m_force->getForce()[0] == 0) angle = 0;
+    //if((int)m_back) angle = angle + M_PI;
+    //std::cout<<angle<<std::endl;
+    rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
+    glm::mat4 rotate2 = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0)));
+    
+    root->setParentTransform(translate*scale*rotate*rotate2);
+
+
+    /////////////////////////   TURNING    ///////////////////////////
+
+    int wheel_turn_right = (int)m_forceRend->m_status.turning_right;
+    int wheel_turn_left = (int)m_forceRend->m_status.turning_left;
+    if(wheel_turn_right)
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
+
+    
+    else if(wheel_turn_left)
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
+
+    else
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
 }
-
-
 
 void KartRenderable::do_animate(float time) {}
 
@@ -262,3 +316,7 @@ KartRenderable::~KartRenderable()
   glcheck(glDeleteBuffers(1, &m_cBuffer));
   glcheck(glDeleteBuffers(1, &m_nBuffer));
 }
+
+/*glm::vec3 KartRenderable::getPosition() const{
+    return m_positions;
+}*/

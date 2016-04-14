@@ -1,4 +1,5 @@
 #include "./../../include/dynamics/ControlledForceFieldRenderable.hpp"
+#include "../../include/GeometricTransformation.hpp"
 #include "./../../include/gl_helper.hpp"
 #include "./../../include/log.hpp"
 #include <glm/gtc/type_ptr.hpp>
@@ -140,6 +141,7 @@ void ControlledForceFieldRenderable::do_animate( float time )
         else if( m_status.turning_right && !m_status.turning_left && (m_status.accelerating || m_status.deaccelerating) )
         {
             m_status.angle -= dt * m_status.angularSpeed;
+            //setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, m_status.angularSpeed, 0.0} ) ).toMatrix());
             float cos = std::cos( m_status.angle );
             float sin = std::sin( m_status.angle );
             m_status.movement = glm::vec3(cos * m_status.initial.x - sin * m_status.initial.y,
@@ -148,11 +150,17 @@ void ControlledForceFieldRenderable::do_animate( float time )
         }
 
         if( m_status.accelerating )
+        {
             m_status.intensity += dt * m_status.acceleration;
+            // setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, 0.0} ) ).toMatrix());
+        }
         else if( m_status.deaccelerating )
+        {
             m_status.intensity -= dt * m_status.deacceleration;
+            // setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, M_PI} ) ).toMatrix());
+        }
         else m_status.intensity *= dt * m_status.dampingFactor;
-
+        //std::cout<<(int)m_status.deaccelerating<<"\n";
         m_status.intensity = glm::clamp( m_status.intensity, m_status.min_intensity, m_status.max_intensity );
 
         m_force->setForce( m_status.movement * m_status.intensity );
