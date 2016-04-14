@@ -35,12 +35,12 @@ CylinderRenderable::CylinderRenderable(ShaderProgramPtr shaderProgram, int faces
       m_positions.push_back( glm::vec3(0.0+x,0.0+y,z+height) );
       
 
-      m_colors.push_back( glm::vec4(r,g,b,1) );
-      m_colors.push_back( glm::vec4(r,g,b,1) );
-      m_colors.push_back( glm::vec4(r,g,b,1) );
-      m_colors.push_back( glm::vec4(r,g,b,1) );
-      m_colors.push_back( glm::vec4(r,g,b,1) );
-      m_colors.push_back( glm::vec4(r,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
+      m_colors.push_back( glm::vec4(125,g,b,1) );
       
       m_positions.push_back( glm::vec3(radius*cos(theta)+x,radius*sin(theta)+y,z-height) );
       m_positions.push_back( glm::vec3(radius*cos(theta2)+x,radius*sin(theta2)+y,z-height) );
