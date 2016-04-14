@@ -28,6 +28,7 @@
 #include "../../include/dynamics/DynamicSystemRenderable.hpp"
 //#include "../include/setup_kart.hpp"
 #include "../../include/HierarchicalSphereRenderable.hpp"
+#include "../../include/Viewer.hpp"
 
 
 
@@ -36,17 +37,19 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, Viewer& viewer, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
-  m_nBuffer(0)
+  m_nBuffer(0),
+  m_viewer(viewer)
   {
 
   m_force = force;
   m_forceRend = forceRenderable;
+
   ////////////////// kart parts //////////////////////////
 
   struct sSeat{
@@ -306,9 +309,16 @@ void KartRenderable::do_draw(){
       wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
       wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
     }
+
+    //m_viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(20,20,10), glm::vec3(0,0,1)));
 }
 
-void KartRenderable::do_animate(float time) {}
+void KartRenderable::do_animate(float time) {
+  const glm::vec3& pPosition = m_particle->getPosition();
+  //Position the camera
+  //m_viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(0,0,0), glm::vec3(0,0,1)));
+  //m_viewer.getCamera();
+}
 
 KartRenderable::~KartRenderable()
 {

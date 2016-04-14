@@ -72,9 +72,6 @@ DynamicSystemRenderablePtr systemRenderable = std::make_shared<DynamicSystemRend
 std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
 viewer.addRenderable(systemRenderable);
 
-//Position the camera
-viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(20,20,2), glm::vec3(0,0,1)));
-
 //Setup the textures in the scene
 setup_textures(viewer, system, systemRenderable);
 
@@ -86,9 +83,6 @@ setup_textures(viewer, system, systemRenderable);
 //Activate collision and set the restitution coefficient to 1.0
 system->setCollisionsDetection(true);
 system->setRestitution(1.0f);
-
-// viewer.addRenderable(kart);
-
   //Setup a Billboard in the scene
   setup_billboard(viewer, system, systemRenderable, flatShader);
 
@@ -183,6 +177,9 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   float pm=1.0, pr=1.0;
   //px = glm::vec3(20.0,20.0,1.0);
 
+  //Position the camera
+  viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), px, glm::vec3(0,0,1)));
+
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
 
   //Initialize a force field that apply only to the mobile particle
@@ -192,7 +189,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
   ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force);
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable, 0,0,200 );
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, viewer, force, forceRenderable, 0,0,200 );
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
@@ -204,7 +201,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   HierarchicalRenderable::addChild(systemRenderable, kart->root);
   HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
   HierarchicalRenderable::addChild(forceRenderable, kart->root);
-
+  viewer.addRenderable(kart);
 }
 
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
