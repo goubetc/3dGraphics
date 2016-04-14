@@ -10,7 +10,6 @@
 #include "../FloorRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
-#include "./../lighting/Material.hpp"
 
 
 
@@ -33,9 +32,8 @@ std::shared_ptr<ParticleRenderable> master;
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, MaterialPtr material, float r, float g, float b );
-  void setMaterial(const MaterialPtr& material);
-
+  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, float r, float g, float b );
+  glm::vec3 KartRenderable::getPosition() const;
 
 private:
   void do_draw();
@@ -54,7 +52,6 @@ std::vector< glm::vec3 > m_positions;
   unsigned int m_pBuffer;
   unsigned int m_cBuffer;
   unsigned int m_nBuffer;
-  MaterialPtr m_material;
 };
 
 typedef std::shared_ptr<KartRenderable> KartRenderablePtr;

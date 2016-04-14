@@ -55,7 +55,7 @@ FrameRenderablePtr frame = std::make_shared<FrameRenderable>(flatShader);
 viewer.addRenderable(frame);
 
 //Set up the lights in the scene
-setup_lights(viewer);
+setup_lights(viewer, flatShader);
 
 //Initialize a dynamic system (Solver, Time step, Restitution coefficient)
 DynamicSystemPtr system = std::make_shared<DynamicSystem>();
@@ -71,13 +71,13 @@ std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
 viewer.addRenderable(systemRenderable);
 
 //Position the camera
-viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(20,10,2), glm::vec3(10,20,2), glm::vec3(0,0,1)));
+viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(20,20,2), glm::vec3(0,0,1)));
 
 //Setup the textures in the scene
 setup_textures(viewer, system, systemRenderable);
 
 //Setup the kart in the scene²
- setup_kart(viewer, system, systemRenderable);
+ setup_kart(viewer, system, systemRenderable, flatShader);
 
 // TODO init obstacles before
 
@@ -88,7 +88,7 @@ system->setRestitution(1.0f);
 // viewer.addRenderable(kart);
 
   //Setup a Billboard in the scene
-  setup_billboard(viewer, system, systemRenderable);
+  setup_billboard(viewer, system, systemRenderable, flatShader);
 
   
  //Setup mountains in the scene
@@ -109,8 +109,7 @@ void setup_mountains(Viewer &viewer, ShaderProgramPtr &flatShader){
   viewer.addRenderable(mountains);
 }
 
-void setup_lights(Viewer& viewer){
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+void setup_lights(Viewer& viewer, ShaderProgramPtr &flatShader){
   //Define a shader that encode an illumination model
   ShaderProgramPtr phongShader = std::make_shared<ShaderProgram>("../shaders/phongVertex.glsl", "../shaders/phongFragment.glsl");
   viewer.addShaderProgram( phongShader );
@@ -168,15 +167,13 @@ void setup_lights(Viewer& viewer){
   viewer.addRenderable(pointLightRenderable2);*/
 }
 
-void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
   //Initialize Kart with position, velocity, mass and radius and add it to the system
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
-  glm::vec3 px(0.0,10.0,0.0),pv(0.0,0.0,0.0);
+  glm::vec3 px(20.0,20.0,1.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
-  px = glm::vec3(20.0,20.0,1.0);
+  //px = glm::vec3(20.0,20.0,1.0);
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
-  MaterialPtr emmerald = Material::Bronze();
 
   //Initialize a force field that apply only to the mobile particle
   glm::vec3 nullForce(0.0,0.0,0.0);
@@ -185,7 +182,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
   ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force);
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack(), emmerald,0,0,200 );
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack(), 0,0,200 );
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
@@ -200,8 +197,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
 
 }
 
-void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable){
-  ShaderProgramPtr flatShader = std::make_shared<ShaderProgram>("../shaders/flatVertex.glsl","../shaders/flatFragment.glsl");
+void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
   glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
   px = glm::vec3(0.0,0.0,1.0);

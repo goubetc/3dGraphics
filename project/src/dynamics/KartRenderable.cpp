@@ -35,15 +35,14 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, MaterialPtr material, float r, float g, float b) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
-  m_nBuffer(0),
-  m_material(material)
-{
+  m_nBuffer(0)
+  {
 
   m_force = force;
   m_back = cback;
@@ -121,7 +120,6 @@ std::shared_ptr<FloorRenderable> root = std::make_shared<FloorRenderable>(flatSh
 
   //HOOD
   std::shared_ptr<TriangleRenderable> hood = std::make_shared<TriangleRenderable>(flatShader, vFloor.width, vHood.height, vHood.length, r,g,b);
-  hood->setMaterial(m_material);
     
   hood->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,vFloor.height/2 + vHood.height/2,-vFloor.length/2 + vHood.length/2)));   
 
@@ -252,8 +250,6 @@ void KartRenderable::do_draw()
 {
 }
 
-
-
 void KartRenderable::do_animate(float time) {}
 
 KartRenderable::~KartRenderable()
@@ -261,4 +257,8 @@ KartRenderable::~KartRenderable()
   glcheck(glDeleteBuffers(1, &m_pBuffer));
   glcheck(glDeleteBuffers(1, &m_cBuffer));
   glcheck(glDeleteBuffers(1, &m_nBuffer));
+}
+
+glm::vec3 KartRenderable::getPosition() const{
+    return m_positions;
 }
