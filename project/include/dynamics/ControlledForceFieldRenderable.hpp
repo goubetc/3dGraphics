@@ -21,6 +21,7 @@ public:
 public:
     glm::vec3 initial;
     glm::vec3 movement;
+    glm::vec3 normalizedMousePosition;
     float angle;
     float last_time;
     float intensity;
@@ -30,6 +31,8 @@ public:
     float deacceleration;
     float angularSpeed;
     float dampingFactor;
+    float dx;
+    float dy;
 
     bool accelerating;
     bool deaccelerating;

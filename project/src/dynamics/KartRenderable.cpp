@@ -310,7 +310,13 @@ void KartRenderable::do_draw(){
       wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
     }
 
-    //m_viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(20,20,10), glm::vec3(0,0,1)));
+
+    /////////////////////// CAMERA ///////////////////////////////////////////////////
+    //Compute normalized mouse position between [-1,1]
+    float x = 15 * cos((float)(angle));
+    float y = 15  * sin((float)(angle));  
+    glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-10);
+    m_viewer.getCamera().setViewMatrix( glm::lookAt( cameraPos, pPosition, glm::vec3(0,0,1)));
 }
 
 void KartRenderable::do_animate(float time) {
