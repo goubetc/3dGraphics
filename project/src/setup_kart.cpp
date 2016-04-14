@@ -35,6 +35,8 @@
 #include "../include/lighting/DirectionalLightRenderable.hpp"
 #include "../include/lighting/PointLightRenderable.hpp"
 #include "../include/lighting/SpotLightRenderable.hpp"
+#include "../include/texturing/MipMapCubeRenderable.hpp"
+#include "../include/texturing/TexturedCubeRenderable.hpp"
 
 #include "../include/ShaderProgram.hpp"
 #include "../include/FrameRenderable.hpp"
@@ -92,15 +94,17 @@ system->setRestitution(1.0f);
 
   
  //hierarchical_kart( viewer, system, systemRenderable );
-  std::shared_ptr<HierarchicalMeshRenderable> road = std::make_shared<HierarchicalMeshRenderable>(flatShader, "./../meshes/track.obj");
+  std::shared_ptr<HierarchicalMeshRenderable> road = std::make_shared<HierarchicalMeshRenderable>(flatShader, "./../meshes/road.obj");
 
-  road->setLocalTransform( GeometricTransformation( glm::vec3{0,0,19},
+  road->setLocalTransform( GeometricTransformation( glm::vec3{0,0,0},
 						    glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 1,0,0)) ),
-						    glm::vec3{20,20,20}).toMatrix() );
+						    glm::vec3{30,30,30}).toMatrix() );
  
-  viewer.addRenderable(road);
-  
+  viewer.addRenderable(road); 
   //Finally activate animation
+
+  
+
  viewer.startAnimation();
 }
 
@@ -232,7 +236,20 @@ glm::mat4 parentTransformation;
  parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(100.0,100.0,100.0));
  texPlane->setParentTransform(parentTransformation);
  texPlane->setMaterial(pearl);
-
  viewer.addRenderable(texPlane);
+
+
+//Textured cube
+    filename = "./../textures/brick.jpg";
+    TexturedCubeRenderablePtr texCube = std::make_shared<TexturedCubeRenderable>(texShader, filename);
+    parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
+    texCube->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+                glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+                glm::vec3{2,4,2}).toMatrix() );
+
+// texCube->setParentTransform(parentTransformation);
+     texCube->setMaterial(pearl);
+     viewer.addRenderable(texCube);
+
  HierarchicalRenderable::addChild(systemRenderable, texPlane);
 }
