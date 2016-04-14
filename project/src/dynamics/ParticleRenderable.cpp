@@ -109,7 +109,7 @@ void ParticleRenderable::do_draw()
     //std::cout<<angle<<std::endl;
     rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
     
-    this->setParentTransform(translate*scale*rotate);
+    setParentTransform(translate*scale*rotate);
     
     
     

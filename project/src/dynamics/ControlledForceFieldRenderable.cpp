@@ -152,12 +152,12 @@ void ControlledForceFieldRenderable::do_animate( float time )
         if( m_status.accelerating )
         {
             m_status.intensity += dt * m_status.acceleration;
-            setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, 0.0} ) ).toMatrix());
+            // setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, 0.0} ) ).toMatrix());
         }
         else if( m_status.deaccelerating )
         {
             m_status.intensity -= dt * m_status.deacceleration;
-            setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, M_PI} ) ).toMatrix());
+            // setParentTransform(GeometricTransformation( {0,0,0 }, glm::quat( glm::vec3{0.0, 0.0, M_PI} ) ).toMatrix());
         }
         else m_status.intensity *= dt * m_status.dampingFactor;
         //std::cout<<(int)m_status.deaccelerating<<"\n";

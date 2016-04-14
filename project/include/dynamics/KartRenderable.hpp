@@ -10,6 +10,7 @@
 #include "ParticleRenderable.hpp"
 #include "../FloorRenderable.hpp"
 #include "./../../include/dynamics/ControlledWheelRenderable.hpp"
+#include "./../../include/dynamics/ControlledForceFieldRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
 
@@ -27,7 +28,6 @@ class KartRenderable : public HierarchicalRenderable
 {
 public:
 std::shared_ptr<FloorRenderable> root; 
-std::shared_ptr<CylinderRenderable> wheel_fl;
 ControlledWheelRenderablePtr rightWheelRenderable;
 ControlledWheelRenderablePtr leftWheelRenderable;       
   ~KartRenderable();
@@ -37,7 +37,7 @@ ControlledWheelRenderablePtr leftWheelRenderable;
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback);
+  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable);
 
 
 private:
@@ -45,8 +45,12 @@ private:
   void do_animate( float time );
   
   bool m_back;
+  std::shared_ptr<CylinderRenderable> wheel_br;
+  std::shared_ptr<CylinderRenderable> wheel_bl;
+  std::shared_ptr<CylinderRenderable> wheel_fr;
+  std::shared_ptr<CylinderRenderable> wheel_fl;
   
-
+  ControlledForceFieldRenderablePtr m_forceRend;
 
 
   ParticlePtr m_particle;

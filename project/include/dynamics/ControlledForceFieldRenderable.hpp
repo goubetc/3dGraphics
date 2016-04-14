@@ -61,6 +61,7 @@ public:
   ControlledForceFieldRenderable(ShaderProgramPtr program,ConstantForceFieldPtr forceField );
   ~ControlledForceFieldRenderable();
   bool getBack();
+  ControlledForceFieldStatus m_status;
 
 private:
 
@@ -70,7 +71,7 @@ private:
   virtual void do_draw();
   
 
-  ControlledForceFieldStatus m_status;
+  
   ConstantForceFieldPtr m_force;
 
   std::vector< glm::vec3 > m_positions;

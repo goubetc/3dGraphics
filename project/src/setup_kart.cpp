@@ -76,7 +76,7 @@ void initialize_kart( Viewer& viewer ){
   ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force );
   //ControlledWheelRenderablePtr rightWheelRenderable = std::make_shared<ControlledWheelRenderable>( flatShader );
   //ControlledWheelRenderablePtr leftWheelRenderable = std::make_shared<ControlledWheelRenderable>( flatShader );
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack());
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable);
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events

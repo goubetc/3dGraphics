@@ -37,7 +37,7 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, bool cback) :
+KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
@@ -47,8 +47,7 @@ KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, 
 {
 
   m_force = force;
-  m_back = cback;
-
+  m_forceRend = forceRenderable;
   ////////////////// kart parts //////////////////////////
 
   struct sSeat{
@@ -118,9 +117,9 @@ struct sPerson
     
   root = std::make_shared<FloorRenderable>(flatShader, 5, 10, 0.3);
   wheel_fl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
-  std::shared_ptr<CylinderRenderable> wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+  wheel_fr = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+  wheel_bl = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
+  wheel_br = std::make_shared<CylinderRenderable>(flatShader, 20, 0.5, 1);
   
 
   //HOOD
@@ -246,7 +245,7 @@ struct sPerson
 
   // HierarchicalRenderable::addChild(master, root);
   
-  root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,0.0,1.0)));
+  // root->setParentTransform(glm::rotate(glm::mat4(1.0), (float)(M_PI/2.0), glm::vec3(0.0,1.0,0.0)));
 
 
 
@@ -271,14 +270,13 @@ void KartRenderable::do_draw() {
     const glm::vec3& pPosition = m_particle->getPosition();
     glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
     glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-    //float angle;
-    //if(m_force->getForce()[0] + m_force->getForce()[1] + m_force->getForce()[2] == 0) m_force->getForce()[0] = 0., m_force->getForce()[1] = 0., m_force->getForce()[2] = 0.;
     float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
     
     if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
       angle = acos(dot);
     glm::mat4 rotate;
+
     
     if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
     //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
@@ -286,8 +284,33 @@ void KartRenderable::do_draw() {
     //if((int)m_back) angle = angle + M_PI;
     //std::cout<<angle<<std::endl;
     rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
+    glm::mat4 rotate2 = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     
-    root->setParentTransform(translate*scale*rotate);
+    root->setParentTransform(translate*scale*rotate*rotate2);
+
+
+    /////////////////////////   TURNING    ///////////////////////////
+
+    int wheel_turn_right = (int)m_forceRend->m_status.turning_right;
+    int wheel_turn_left = (int)m_forceRend->m_status.turning_left;
+    if(wheel_turn_right)
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
+
+    
+    else if(wheel_turn_left)
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
+
+    else
+    {
+      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
+    }
 }
 
 
