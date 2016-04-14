@@ -182,7 +182,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
   ControlledForceFieldRenderablePtr forceRenderable = std::make_shared<ControlledForceFieldRenderable>( flatShader, force);
-  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable->getBack(), 0,0,200 );
+  KartRenderablePtr kart = std::make_shared<KartRenderable>(flatShader, mobile, force, forceRenderable, 0,0,200 );
 
   //Initialize a renderable for the force field applied on the mobile particle.
   //This renderable allows to modify the attribute of the force by key/mouse events
@@ -191,9 +191,9 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
   system->addForceField( dampingForceField );
   system->addParticle( mobile );
-  HierarchicalRenderable::addChild(systemRenderable, kart->master);
+  HierarchicalRenderable::addChild(systemRenderable, kart->root);
   HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
-  HierarchicalRenderable::addChild(forceRenderable, kart->master);
+  HierarchicalRenderable::addChild(forceRenderable, kart->root);
 
 }
 
