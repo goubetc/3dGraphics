@@ -11,6 +11,7 @@
 #include "../FloorRenderable.hpp"
 #include "./../../include/dynamics/ControlledForceFieldRenderable.hpp"
 #include <vector>
+#include "time.h"
 #include <glm/glm.hpp>
 #include "../Viewer.hpp"
 
@@ -63,6 +64,11 @@ std::vector< glm::vec3 > m_positions;
   Viewer& m_viewer;
   float angle;
   float wheelSpeed;
+  time_t time1;
+  time_t time2;
+  float prev;
+  int flag;
+
 };
 
 typedef std::shared_ptr<KartRenderable> KartRenderablePtr;

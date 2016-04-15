@@ -48,6 +48,9 @@ OpponentRenderable::OpponentRenderable(ShaderProgramPtr flatShader, Viewer& view
 
   wheelSpeed = 0;
 
+    time1 = time(0);
+  time2 = time(0);
+
   ////////////////// opponent parts //////////////////////////
 
   struct sSeat{
@@ -264,6 +267,8 @@ void OpponentRenderable::do_draw(){
   
 
 
+
+
     /////////////////////////   TURNING    ///////////////////////////
 
     glm::mat4 rot;
@@ -283,28 +288,34 @@ void OpponentRenderable::do_draw(){
     wheel_fr->setLocalTransform(wSpeedR);
     wheel_fl->setLocalTransform(wSpeedL);
 
+  //   time2 = time(0);
+  // while(time2 - time1 < 3) time2 = time(0);
+
 }
 
 void OpponentRenderable::do_animate(float time) {
 
     float z = 0.5;
+    float x = 3;
 
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 3.0*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI-0.5)))), 4.5*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 6*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-90.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 9*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2 - 0.5)))), 10*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 12*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2+0.5)))), 14*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{100.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 15*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-140.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 18*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI+0.5)))), 19*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 20*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 24*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-145.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2 - 0.5)))), 25*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 26*z );
-    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 29*z );
+
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,170.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0);
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,170.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 3.0*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI-0.5)))), 4.5*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 6*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-90.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 9*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2 - 0.5)))), 10*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 12*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2+0.5)))), 14*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{100.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 15*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-140.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 18*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI+0.5)))), 19*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 20*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 24*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-145.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2 - 0.5)))), 25*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 26*z + x );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 29*z + x );
 }
 
 OpponentRenderable::~OpponentRenderable()

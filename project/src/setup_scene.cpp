@@ -449,7 +449,7 @@ glm::mat4 parentTransformation;
 
 // texCube->setParentTransform(parentTransformation);
      texCube->setMaterial(pearl);
-     //texCube->setWrapOption(0);
+     // texCube->setWrapOption(0);
      viewer.addRenderable(texCube);
 
 

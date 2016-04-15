@@ -51,6 +51,11 @@ KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, 
   m_forceRend = forceRenderable;
   wheelSpeed = 0;
 
+  time1 = time(0);
+  time2 = time(0);
+  prev = 21;
+  flag = 0;
+
   ////////////////// kart parts //////////////////////////
 
   struct sSeat{
@@ -93,7 +98,6 @@ struct sPerson
     int faces = 15;
     float neck_length = 0.2;
   }; struct sPerson vPerson;
-
 
 ////////////////////////////// Creating Kart ////////////////////////////
 
@@ -266,12 +270,16 @@ void KartRenderable::do_draw(){
 
 
   //Update the parent and local transform matrix to position the geometric data according to the particle's data.
+    /*if(time2 - time1>3) */const glm::vec3& pPosition = m_particle->getPosition();
+    // else const glm::vec3& pPosition = glm::vec3(20.0,180.0,1.0);
+
     const float& pRadius = m_particle->getRadius();
-    const glm::vec3& pPosition = m_particle->getPosition();
     glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
     glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
     float dot = glm::dot(glm::normalize(m_forceRend->m_status.movement), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     glm::vec3 cross = glm::cross(m_forceRend->m_status.movement, glm::vec3(1.0,0.0,0.0));
+
+    if(time2 - time1<3) m_particle->setPosition(glm::vec3(20.0,180.0,1.0));
     
     if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
       angle = acos(dot);
@@ -285,8 +293,11 @@ void KartRenderable::do_draw(){
     //std::cout<<angle<<std::endl;
     rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
     glm::mat4 rotate2 = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0)));
-    
+    if(time2 - time1<3) translate = glm::translate(glm::mat4(1.0), glm::vec3(20.0,180.0,1.0));
     root->setParentTransform(translate*rotate*rotate2);
+    if(glm::vec3(pPosition)[0]>20 && prev < 20) displayTextInViewer("You won"), std::cout<<glm::vec3(pPosition)[0]<<" "<<prev<<"\n", flag = 1;
+
+
 
 
     /////////////////////////   TURNING    ///////////////////////////
@@ -327,12 +338,37 @@ void KartRenderable::do_draw(){
     wheel_fl->setLocalTransform(wSpeedL);
 
 
+//////////////////////////   WIN/LOSE   /////////////////////////////////////
+
+time2 = time(0);
+
+if(time2 - time1<1)
+  displayTextInViewer("Start in 3...");
+else if(time2 - time1<2)
+  displayTextInViewer("Start in 2...");
+
+else if(time2 - time1<3)
+  displayTextInViewer("Start in 1...");
+else displayTextInViewer("");
+    if(flag == 1 && time2 - time1 < 14) displayTextInViewer("You won");
+    if(flag == 1 && time2 - time1 > 14) displayTextInViewer("You lose");
+
+
+
+
+
+
+
     /////////////////////// CAMERA ///////////////////////////////////////////////////
     // Compute normalized mouse position between [-1,1]
     float x = 15 * cos((float)(angle));
     float y = 15  * sin((float)(angle));  
     glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-5);
     m_viewer.getCamera().setViewMatrix( glm::lookAt( cameraPos, pPosition, glm::vec3(0,0,1)));
+
+
+  prev = glm::vec3(pPosition)[0];
+
 }
 
 void KartRenderable::do_animate(float time) {
