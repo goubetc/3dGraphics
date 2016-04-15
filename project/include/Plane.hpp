@@ -28,7 +28,7 @@ public:
    * @param b The second point belonging to the plane.
    * @param c The third point belonging to the plane.
    */
-  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& begin, const glm::vec3& end);
+  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float min, float max, std::string direction);
 
   /**@brief Manually set the distance from this plane to the origin.
    *
@@ -55,8 +55,11 @@ public:
    * @return The plane's normal.
    */
   const glm::vec3& normal() const;
-  glm::vec3 m_begin;
-  glm::vec3 m_end;
+  // glm::vec3 m_begin;
+  // glm::vec3 m_end;
+  float m_min;
+  float m_max;
+  std::string m_dir;
 
   /**@brief Get the projection of a point on this plane.
    *
