@@ -27,12 +27,12 @@ void ControlledForceFieldStatus::clear()
     angle =  0;
     last_time =  0;
     intensity = 0;
-    acceleration = 20.0;
+    acceleration = 200.0;
     deacceleration = 10.0;
     angularSpeed = 2.0;
     dampingFactor = 0.9;
     min_intensity = -5;
-    max_intensity = 100;
+    max_intensity = 200;
 
     accelerating =  false;
     deaccelerating =  false;

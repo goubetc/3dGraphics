@@ -96,6 +96,16 @@ FloorRenderable::FloorRenderable(ShaderProgramPtr shaderProgram, float width, fl
   glcheck(glBufferData(GL_ARRAY_BUFFER, m_colors.size()*sizeof(glm::vec4), m_colors.data(), GL_STATIC_DRAW));
 }
 
+void FloorRenderable::addLocalTransformKeyframe( const GeometricTransformation& transformation, float time )
+{
+  m_localKeyframes.add( transformation, time );
+}
+
+void FloorRenderable::addParentTransformKeyframe( const GeometricTransformation& transformation, float time )
+{
+  m_parentKeyframes.add( transformation, time );
+}
+
 
 void FloorRenderable::do_draw()
 {
@@ -123,7 +133,17 @@ void FloorRenderable::do_draw()
   glcheck(glDisableVertexAttribArray(colorLocation));
 }
 
-void FloorRenderable::do_animate(float time) {}
+void FloorRenderable::do_animate(float time) {
+
+   if(!m_localKeyframes.empty())
+    {
+        setLocalTransform( m_localKeyframes.interpolateTransformation( time ) );
+    }
+    if(!m_parentKeyframes.empty())
+    {
+        setParentTransform( m_parentKeyframes.interpolateTransformation( time ) );
+    }
+}
 
 FloorRenderable::~FloorRenderable()
 {

@@ -1,4 +1,4 @@
-#include "./../../include/dynamics/KartRenderable.hpp"
+#include "./../../include/dynamics/OpponentRenderable.hpp"
 #include "./../../include/gl_helper.hpp"
 #include "./../../include/log.hpp"
 #include "./../../include/Utils.hpp"
@@ -26,7 +26,7 @@
 #include "../../include/dynamics/ControlledForceFieldRenderable.hpp"
 #include "../../include/dynamics/DynamicSystem.hpp"
 #include "../../include/dynamics/DynamicSystemRenderable.hpp"
-//#include "../include/setup_kart.hpp"
+//#include "../include/setup_opponent.hpp"
 #include "../../include/HierarchicalSphereRenderable.hpp"
 #include "../../include/Viewer.hpp"
 
@@ -37,21 +37,18 @@
 #include <GL/glew.h>
 
 
-KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, Viewer& viewer, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b) :
+OpponentRenderable::OpponentRenderable(ShaderProgramPtr flatShader, Viewer& viewer, float r, float g, float b) :
   
   HierarchicalRenderable(flatShader),
-  m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
   m_nBuffer(0),
   m_viewer(viewer)
   {
 
-  m_force = force;
-  m_forceRend = forceRenderable;
   wheelSpeed = 0;
 
-  ////////////////// kart parts //////////////////////////
+  ////////////////// opponent parts //////////////////////////
 
   struct sSeat{
     float width = 2;
@@ -95,7 +92,7 @@ struct sPerson
   }; struct sPerson vPerson;
 
 
-////////////////////////////// Creating Kart ////////////////////////////
+////////////////////////////// Creating Opponent ////////////////////////////
 
 // master = std::make_shared<ParticleRenderable>( flatShader, mobile, force, m_back );
 
@@ -235,9 +232,9 @@ struct sPerson
     
 
 
-  ////////////////////////////// Linking Driver and Kart /////////////
+  ////////////////////////////// Linking Driver and Opponent /////////////
 
-
+  root->setParentTransform(glm::translate(glm::mat4(1.0), glm::vec3(0.0,0.0,1)) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0))) * glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0))));
   HierarchicalRenderable::addChild(root, person);
         
   //  HierarchicalRenderable::addChild(forceRenderable, master);
@@ -262,93 +259,61 @@ struct sPerson
   glcheck(glBufferData(GL_ARRAY_BUFFER, m_normals.size()*sizeof(glm::vec3), m_normals.data(), GL_STATIC_DRAW));
 }
 
-void KartRenderable::do_draw(){
+void OpponentRenderable::do_draw(){
 
-
-  //Update the parent and local transform matrix to position the geometric data according to the particle's data.
-    const float& pRadius = m_particle->getRadius();
-    const glm::vec3& pPosition = m_particle->getPosition();
-    glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
-    glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-    float dot = glm::dot(glm::normalize(m_forceRend->m_status.movement), glm::normalize(glm::vec3(1.0,0.0,0.0)));
-    glm::vec3 cross = glm::cross(m_forceRend->m_status.movement, glm::vec3(1.0,0.0,0.0));
-    
-    if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
-      angle = acos(dot);
-    glm::mat4 rotate;
-
-    
-    if(glm::dot(cross, glm::vec3(0.0,0.0,1.0)) > 0) angle = -angle;
-    //std::cout<<m_force->getForce()[0]<<" "<<m_force->getForce()[1]<<" "<<m_force->getForce()[2]<<"\n";
-    //if(m_force->getForce()[0] + m_force->getForce()[0] + m_force->getForce()[0] == 0) angle = 0;
-    //if((int)m_back) angle = angle + M_PI;
-    //std::cout<<angle<<std::endl;
-    rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
-    glm::mat4 rotate2 = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0)));
-    
-    root->setParentTransform(translate*rotate*rotate2);
+  
 
 
     /////////////////////////   TURNING    ///////////////////////////
 
-    int wheel_turn_right = (int)m_forceRend->m_status.turning_right;
-    int wheel_turn_left = (int)m_forceRend->m_status.turning_left;
     glm::mat4 rot;
     glm::mat4 wSpeedL;
     glm::mat4 wSpeedR;
-    wheelSpeed += m_forceRend->m_status.intensity/2000;
+    wheelSpeed += 20/2000;
     wSpeedR = glm::rotate(glm::mat4(1.0), wheelSpeed, glm::normalize(glm::vec3(0.0,0.0,1.0)));
     wSpeedL = glm::rotate(glm::mat4(1.0), -wheelSpeed, glm::normalize(glm::vec3(0.0,0.0,1.0)));
 
 
 
-    if(wheel_turn_right)
-    {
-      rot = glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0)));
-      wheel_br->setLocalTransform(rot * wSpeedR);
-      wheel_bl->setLocalTransform(rot * (wSpeedL));
-    }
-
     
-    else if(wheel_turn_left)
-    {
-      rot = glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0)));
-      wheel_br->setLocalTransform(rot * wSpeedR);
-      wheel_bl->setLocalTransform(rot * (wSpeedL));
-    }
-
-    else
-    {
       wheel_br->setLocalTransform(wSpeedR);
       wheel_bl->setLocalTransform(wSpeedL);
-    }
+    
 
     wheel_fr->setLocalTransform(wSpeedR);
     wheel_fl->setLocalTransform(wSpeedL);
 
-
-    /////////////////////// CAMERA ///////////////////////////////////////////////////
-    // Compute normalized mouse position between [-1,1]
-    float x = 15 * cos((float)(angle));
-    float y = 15  * sin((float)(angle));  
-    glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-5);
-    m_viewer.getCamera().setViewMatrix( glm::lookAt( cameraPos, pPosition, glm::vec3(0,0,1)));
 }
 
-void KartRenderable::do_animate(float time) {
-  const glm::vec3& pPosition = m_particle->getPosition();
-  //Position the camera
-  //m_viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(0,0,0), glm::vec3(0,0,1)));
-  //m_viewer.getCamera();
+void OpponentRenderable::do_animate(float time) {
+
+    float z = 0.5;
+
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 3.0*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI-0.5)))), 4.5*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 6*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-90.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 9*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2 - 0.5)))), 10*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI)))), 12*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{125.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2+0.5)))), 14*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{100.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 15*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-140.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI/2)))), 18*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI+0.5)))), 19*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,-140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 20*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-180.0,140.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(2*M_PI)))), 24*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-145.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2 - 0.5)))), 25*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{-120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 26*z );
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 29*z );
 }
 
-KartRenderable::~KartRenderable()
+OpponentRenderable::~OpponentRenderable()
 {
   glcheck(glDeleteBuffers(1, &m_pBuffer));
   glcheck(glDeleteBuffers(1, &m_cBuffer));
   glcheck(glDeleteBuffers(1, &m_nBuffer));
 }
 
-/*glm::vec3 KartRenderable::getPosition() const{
+/*glm::vec3 OpponentRenderable::getPosition() const{
     return m_positions;
 }*/

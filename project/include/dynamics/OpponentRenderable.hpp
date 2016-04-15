@@ -1,8 +1,9 @@
-#ifndef KART_RENDERABLE_HPP
-#define KART_RENDERABLE_HPP
+#ifndef OPPONENT_RENDERABLE_HPP
+#define OPPONENT_RENDERABLE_HPP
 
 #include "../HierarchicalRenderable.hpp"
 #include "./ConstantForceField.hpp"
+#include "../KeyframeCollection.hpp"
 #include "Particle.hpp"
 #include "DynamicSystem.hpp"
 #include "./../../include/CylinderRenderable.hpp"
@@ -24,19 +25,19 @@
  * you have more than one renderable, have a look to ParticleListRenderable.
  */
 
-class KartRenderable : public HierarchicalRenderable
+class OpponentRenderable : public HierarchicalRenderable
 {
 public:
 std::shared_ptr<FloorRenderable> root; 
-  ~KartRenderable();
+  ~OpponentRenderable();
   /**@brief Build a particle renderable.
    *
    * Build a renderable to render a particle.
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, Viewer& viewer, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b );
-  //glm::vec3 KartRenderable::getPosition() const;
+  OpponentRenderable( ShaderProgramPtr program, Viewer& viewer, float r, float g, float b );
+  //glm::vec3 OpponentRenderable::getPosition() const;
 
 private:
   void do_draw();
@@ -65,6 +66,6 @@ std::vector< glm::vec3 > m_positions;
   float wheelSpeed;
 };
 
-typedef std::shared_ptr<KartRenderable> KartRenderablePtr;
+typedef std::shared_ptr<OpponentRenderable> OpponentRenderablePtr;
 
-#endif //KART_RENDERABLE_HPP
+#endif //OPPONENT_RENDERABLE_HPP
