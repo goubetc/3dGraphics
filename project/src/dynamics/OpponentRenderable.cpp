@@ -296,10 +296,10 @@ void OpponentRenderable::do_draw(){
 void OpponentRenderable::do_animate(float time) {
 
     float z = 0.5;
-    float x = 0;
+    float x = 3;
 
 
-    // root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,170.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0);
+    root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,170.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0);
     root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{20.0,170.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 0.0*z + x );
     root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{120.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(-M_PI/2)))), 3.0*z + x );
     root->addParentTransformKeyframe( GeometricTransformation( glm::vec3{170.0,180.0,1.0}, glm::quat(glm::vec3((float)(M_PI/2), 0, (float)(M_PI-0.5)))), 4.5*z + x );
