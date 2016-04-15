@@ -15,7 +15,7 @@ HierarchicalMeshRenderable::HierarchicalMeshRenderable( ShaderProgramPtr shaderP
     read_obj(filename, m_positions, m_indices, m_normals, texCoords);
     m_colors.resize( m_positions.size() );
     for(size_t i=0; i<m_colors.size(); ++i)
-        m_colors[i] = randomColor();
+      m_colors[i] = glm::vec4(0,0,0,1);
 
     //Create buffers
     glGenBuffers(1, &m_pBuffer); //vertices

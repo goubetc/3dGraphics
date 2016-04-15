@@ -17,6 +17,33 @@
 //If true, cmake will use relative paths in makefiles and projects.
 CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 
+//No help, variable specified on the command line.
+FREETYPE_INCLUDE_DIRS:UNINITIALIZED=./../extlib/freetype-2.6.2/include
+
+//No help, variable specified on the command line.
+FREETYPE_LIBRARIES:UNINITIALIZED=./../extlib/freetype-2.6.2/build/libfreetype.so
+
+//No help, variable specified on the command line.
+GLEW_INCLUDE_DIRS:UNINITIALIZED=./../extlib/glew-1.13.0/include
+
+//No help, variable specified on the command line.
+GLEW_LIBRARIES:UNINITIALIZED=./../extlib/glew-1.13.0/lib/libGLEW.so
+
+//No help, variable specified on the command line.
+GLM_INCLUDE_DIRS:UNINITIALIZED=./../extlib/glm-0.9.7.1
+
+//No help, variable specified on the command line.
+SFML_GRAPHICS_LIBRARIES:UNINITIALIZED=./../extlib/sfml-2.3.2/build/lib/libsfml-graphics.so
+
+//No help, variable specified on the command line.
+SFML_INCLUDE_DIRS:UNINITIALIZED=./../extlib/sfml-2.3.2/include/
+
+//No help, variable specified on the command line.
+SFML_SYSTEM_LIBRARIES:UNINITIALIZED=./../extlib/sfml-2.3.2/build/lib/libsfml-system.so
+
+//No help, variable specified on the command line.
+SFML_WINDOW_LIBRARIES:UNINITIALIZED=./../extlib/sfml-2.3.2/build/lib/libsfml-window.so
+
 
 ########################
 # INTERNAL cache entries

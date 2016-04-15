@@ -12,6 +12,7 @@
 #include "./../../include/dynamics/ControlledForceFieldRenderable.hpp"
 #include <vector>
 #include <glm/glm.hpp>
+#include "../Viewer.hpp"
 
 
 
@@ -34,7 +35,7 @@ std::shared_ptr<FloorRenderable> root;
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b );
+  KartRenderable( ShaderProgramPtr program, ParticlePtr mobile, Viewer& viewer, ConstantForceFieldPtr force, ControlledForceFieldRenderablePtr forceRenderable, float r, float g, float b );
   //glm::vec3 KartRenderable::getPosition() const;
 
 private:
@@ -59,6 +60,7 @@ std::vector< glm::vec3 > m_positions;
   unsigned int m_pBuffer;
   unsigned int m_cBuffer;
   unsigned int m_nBuffer;
+  Viewer& m_viewer;
   float angle;
   float wheelSpeed;
 };

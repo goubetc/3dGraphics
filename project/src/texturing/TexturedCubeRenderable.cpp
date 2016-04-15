@@ -22,9 +22,9 @@ TexturedCubeRenderable::TexturedCubeRenderable(ShaderProgramPtr shaderProgram, c
 {
     //Initialize geometry
     getUnitCube(m_positions, m_normals, m_texCoords);
-    m_colors.resize(m_positions.size(), glm::vec4(1.0,1.0,1.0,1.0));
+    m_colors.resize(m_positions.size(), glm::vec4(1.0,2.0,1.0,2.0));
 
-    //Create texture
+    //Create texturex
     glcheck(glGenTextures(1, &m_texId));
 
     //Bind the texture
