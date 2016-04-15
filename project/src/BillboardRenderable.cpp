@@ -40,20 +40,20 @@
 #include <GL/glew.h>
 
 
-BillboardRenderable::BillboardRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile) :
+BillboardRenderable::BillboardRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, std::string filename) :
   
   HierarchicalRenderable(flatShader),
   m_particle(mobile),
   m_pBuffer(0),
   m_cBuffer(0),
-  m_nBuffer(0)
+  m_nBuffer(0),
+  m_fileName(filename)
 {
 
 
   //Temporary variables
   glm::mat4 parentTransformation(1.0), localTransformation(1.0);
   MaterialPtr pearl = Material::Pearl();
-  std::string filename = "./../textures/mipmap1.png";
 
   texShader = std::make_shared<ShaderProgram>("../shaders/textureVertex.glsl","../shaders/textureFragment.glsl");
      
@@ -82,12 +82,12 @@ BillboardRenderable::BillboardRenderable(ShaderProgramPtr flatShader, ParticlePt
   HierarchicalRenderable::addChild(pole, billboard);
 
   //Textured plane
-  texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+  texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, m_fileName);
     
   texPlane->setParentTransform( GeometricTransformation( glm::vec3{billboardX+0.101,billboardY,0},
   							 glm::angleAxis( float(M_PI/2), glm::normalize(glm::vec3( 0,1,0)) ),
   							 glm::vec3{4,8,4}).toMatrix() );
-texPlane->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(3*M_PI/2), glm::vec3(0.0,0.0,1.0)));
+  texPlane->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(3*M_PI/2), glm::vec3(0.0,0.0,1.0)));
     
   
   texPlane->setMaterial(pearl);

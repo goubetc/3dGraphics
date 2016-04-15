@@ -34,7 +34,7 @@ public:
    * @param program The shader program used to render the particle.
    * @param particle The particle to render.
    */
-  BillboardRenderable( ShaderProgramPtr program, ParticlePtr mobile );
+  BillboardRenderable( ShaderProgramPtr program, ParticlePtr mobile, std::string filename );
   
 
 private:
@@ -51,6 +51,7 @@ private:
   unsigned int m_pBuffer;
   unsigned int m_cBuffer;
   unsigned int m_nBuffer;
+  std::string m_fileName;
 };
 
 typedef std::shared_ptr<BillboardRenderable> BillboardRenderablePtr;
