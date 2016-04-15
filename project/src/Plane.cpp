@@ -2,17 +2,22 @@
 #include <glm/gtc/matrix_access.hpp>
 
 
-Plane::Plane(
+/*Plane::Plane(
     const glm::vec3& normal,
-    const glm::vec3& point )
+    const glm::vec3& point, const glm::vec3& planeOrigin, const float& size )
   : m_n{ normal },
     m_d{ dot( normal, point ) }
-  {}
+    {
+    m_size = size;
+    m_origin = planeOrigin;
+  }*/
 
-Plane::Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c)
+Plane::Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& begin, const glm::vec3& end)
 {
     m_n = glm::normalize( glm::cross(b-a, c-a) );
     m_d = glm::dot(m_n, a);
+    m_begin = begin;
+    m_end = end;
 }
 
 glm::vec3 Plane::projectOnPlane(const glm::vec3& p)

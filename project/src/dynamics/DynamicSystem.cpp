@@ -95,12 +95,19 @@ void DynamicSystem::setSolver(SolverPtr solver)
 
 void DynamicSystem::detectCollisions()
 {
+    glm::vec3 prev_x;
+    glm::vec3 begin;
+    glm::vec3 end;
     //Detect particle plane collisions
     for(ParticlePtr p : m_particles)
     {
         for(PlanePtr o : m_planeObstacles)
         {
-            if(testParticlePlane(p, o))
+            //if(testParticleParticle(p1,p2))
+            prev_x = p->getPosition();
+            begin = o->m_begin;
+            end = o->m_end;
+            if((prev_x[0]>(-3)) && (prev_x[0]<3) && (prev_x[1]>(-0.5)) && (prev_x[1]<0.5))
             {
                 ParticlePlaneCollisionPtr c = std::make_shared<ParticlePlaneCollision>(p,o,m_restitution);
                 m_collisions.push_back(c);
