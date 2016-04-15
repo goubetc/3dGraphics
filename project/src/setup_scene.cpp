@@ -289,9 +289,9 @@ TexturedCubeRenderablePtr texCube3 = std::make_shared<TexturedCubeRenderable>(te
 
     TexturedCubeRenderablePtr texCube4 = std::make_shared<TexturedCubeRenderable>(texShader, filename);
     parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
-    texCube4->setParentTransform( GeometricTransformation( glm::vec3{-34,-205,0},
+    texCube4->setParentTransform( GeometricTransformation( glm::vec3{-30,-205,0},
                 glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
-                glm::vec3{355,3,3}).toMatrix() );
+                glm::vec3{365,3,3}).toMatrix() );
 
 // texCube->setParentTransform(parentTransformation);
      texCube->setMaterial(pearl);
@@ -339,9 +339,9 @@ TexturedCubeRenderablePtr texCube8 = std::make_shared<TexturedCubeRenderable>(te
 
 TexturedCubeRenderablePtr texCube9 = std::make_shared<TexturedCubeRenderable>(texShader, filename);
     parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
-    texCube9->setParentTransform( GeometricTransformation( glm::vec3{124,-110,0},
+    texCube9->setParentTransform( GeometricTransformation( glm::vec3{120,-110,0},
                 glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
-                glm::vec3{25,3,3}).toMatrix() );
+                glm::vec3{40,3,3}).toMatrix() );
 
 
       texCube->setMaterial(pearl);
@@ -354,23 +354,29 @@ TexturedCubeRenderablePtr texCube10 = std::make_shared<TexturedCubeRenderable>(t
                 glm::vec3{40,3,3}).toMatrix() );
 
 
-      texCube->setMaterial(pearl);
+      texCube10->setMaterial(pearl);
       viewer.addRenderable(texCube10);
 
+TexturedCubeRenderablePtr texCube11 = std::make_shared<TexturedCubeRenderable>(texShader, filename);
+    parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
+    texCube11->setParentTransform( GeometricTransformation( glm::vec3{154,-190,0},
+                glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+                glm::vec3{3,40,3}).toMatrix() );
 
 
-      TexturedCubeRenderablePtr texCube11 = std::make_shared<TexturedCubeRenderable>(texShader, filename);
-      parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
-      texCube11->setParentTransform( GeometricTransformation( glm::vec3{126,117.5,0},
-							      glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
-							      glm::vec3{3,58,3}).toMatrix() );
+      texCube11->setMaterial(pearl);
+      viewer.addRenderable(texCube11);
+
+TexturedCubeRenderablePtr texCube12 = std::make_shared<TexturedCubeRenderable>(texShader, filename);
+    parentTransformation = glm::translate(glm::mat4(1.0), glm::vec3(2,0.0,0.5));
+    texCube12->setParentTransform( GeometricTransformation( glm::vec3{100,-132,0},
+                glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
+                glm::vec3{3,50,3}).toMatrix() );
 
 
-
-
-texCube11->setParentTransform(parentTransformation);
-     texCube->setMaterial(pearl);
-     viewer.addRenderable(texCube11);
+      texCube12->setMaterial(pearl);
+      viewer.addRenderable(texCube12);
+ 
 
 
  HierarchicalRenderable::addChild(systemRenderable, texPlane);
