@@ -51,6 +51,9 @@ private:
   
   ControlledForceFieldRenderablePtr m_forceRend;
 
+    time_t time1;
+  time_t time2;
+
 
   ParticlePtr m_particle;
   ConstantForceFieldPtr m_force;
