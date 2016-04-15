@@ -178,7 +178,7 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   //px = glm::vec3(20.0,20.0,1.0);
 
   //Position the camera
-  viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), px, glm::vec3(0,0,1)));
+  viewer.getCamera().setViewMatrix( glm::lookAt( px-glm::vec3(15,0,-5), px, glm::vec3(0,0,1)));
 
   ParticlePtr mobile = std::make_shared<Particle>( px, pv, pm, pr);
 
@@ -205,13 +205,13 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
 }
 
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
-  glm::vec3 px(0.0,0.0,0.0),pv(0.0,0.0,0.0);
+  glm::vec3 px(10.0,10.0,0.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
   px = glm::vec3(0.0,0.0,1.0);
   ParticlePtr notMobile = std::make_shared<Particle>( px, pv, pm, pr);
-  BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile);
+  BillboardRenderable billboard = BillboardRenderable(flatShader, notMobile, "./../textures/adele.jpg");
   viewer.addShaderProgram( billboard.texShader );
-  billboard.master->setParentTransform( GeometricTransformation( glm::vec3{5,5,5.5},
+  billboard.master->setParentTransform( GeometricTransformation( glm::vec3{50,200,5.5},
                 glm::angleAxis( float(M_PI), glm::normalize(glm::vec3( 0,1,0)) ),
                 glm::vec3{1,1,1}).toMatrix() );
 
@@ -234,7 +234,7 @@ ShaderProgramPtr texShader = std::make_shared<ShaderProgram>("../shaders/texture
 
 glm::mat4 parentTransformation;
 
- //Textured plane
+ //GRASS
  std::string filename = "./../textures/grass_texture.png";
  TexturedPlaneRenderablePtr texPlane = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
  parentTransformation = glm::scale(glm::mat4(1.0), glm::vec3(600.0,600.0,600.0));
@@ -376,8 +376,21 @@ TexturedCubeRenderablePtr texCube12 = std::make_shared<TexturedCubeRenderable>(t
 
       texCube12->setMaterial(pearl);
       viewer.addRenderable(texCube12);
+  
+  //Finish line
+ filename = "./../textures/finish.jpg";
+ TexturedPlaneRenderablePtr finish = std::make_shared<TexturedPlaneRenderable>(texShader, filename);
+ glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(40.0,13.0,600.0));
+ glm::mat4 translatefinish = glm::translate(glm::mat4(1.0), glm::vec3(20,171,0.2));
+ glm::mat4 rotatefinish = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+ finish->setParentTransform(translatefinish*rotatefinish*scale);
+ //finish->setMaterial(pearl);
+ finish->setWrapOption(0);
+ finish->updateTextureOption();
+ //viewer.addRenderable(finish);
  
 
 
  HierarchicalRenderable::addChild(systemRenderable, texPlane);
+ HierarchicalRenderable::addChild(systemRenderable, finish);
 }

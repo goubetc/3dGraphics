@@ -315,7 +315,7 @@ void KartRenderable::do_draw(){
     //Compute normalized mouse position between [-1,1]
     float x = 15 * cos((float)(angle));
     float y = 15  * sin((float)(angle));  
-    glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-10);
+    glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-5);
     m_viewer.getCamera().setViewMatrix( glm::lookAt( cameraPos, pPosition, glm::vec3(0,0,1)));
 }
 
