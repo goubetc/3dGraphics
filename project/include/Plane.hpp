@@ -28,7 +28,7 @@ public:
    * @param b The second point belonging to the plane.
    * @param c The third point belonging to the plane.
    */
-  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float min, float max, std::string direction);
+  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float min, float max, float wall, std::string direction);
 
   /**@brief Manually set the distance from this plane to the origin.
    *
@@ -59,6 +59,7 @@ public:
   // glm::vec3 m_end;
   float m_min;
   float m_max;
+  float m_wall;
   std::string m_dir;
 
   /**@brief Get the projection of a point on this plane.

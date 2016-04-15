@@ -12,7 +12,7 @@
     m_origin = planeOrigin;
   }*/
 
-Plane::Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float min, float max, std::string direction)
+Plane::Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float min, float max, float wall, std::string direction)
 {
     m_n = glm::normalize( glm::cross(b-a, c-a) );
     m_d = glm::dot(m_n, a);
@@ -21,6 +21,7 @@ Plane::Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, float m
     m_min = min;
     m_max = max;
     m_dir = direction;
+    m_wall = wall;
 }
 
 glm::vec3 Plane::projectOnPlane(const glm::vec3& p)

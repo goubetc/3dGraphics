@@ -101,7 +101,7 @@ void DynamicSystem::detectCollisions()
     float min;
     float max;
     std::string dir;
-    float width = 1;
+    float width;
     //Detect particle plane collisions
     for(ParticlePtr p : m_particles)
     {
@@ -114,12 +114,16 @@ void DynamicSystem::detectCollisions()
             min = o->m_min;
             max = o->m_max;
             dir = o->m_dir;
-            if((dir == "x") && (prev_x[0]>min) && (prev_x[0]<max) && (prev_x[1]>(-width/2)) && (prev_x[1]<width/2))
+            width = o->m_wall;
+            std::cout << dir << std::endl;
+            std::cout << prev_x[0] << std::endl;
+            std::cout << prev_x[1] << std::endl;
+            if((dir == "x") && (prev_x[0]>min) && (prev_x[0]<max) && (prev_x[1]>(width-0.5)) && (prev_x[1]<width+0.5))
             {
                 ParticlePlaneCollisionPtr c = std::make_shared<ParticlePlaneCollision>(p,o,m_restitution);
                 m_collisions.push_back(c);
             }
-            else if((dir == "y") && (prev_x[1]>min) && (prev_x[1]<max) && (prev_x[0]>(-width/2)) && (prev_x[0]<width/2))
+            else if((dir == "y") && (prev_x[1]>min) && (prev_x[1]<max) && (prev_x[0]>(width-0.5)) && (prev_x[0]<width+0.5))
             {
                 ParticlePlaneCollisionPtr c = std::make_shared<ParticlePlaneCollision>(p,o,m_restitution);
                 m_collisions.push_back(c);

@@ -105,7 +105,8 @@ system->setRestitution(1.0f);
   viewer.addRenderable(road); 
   //Finally activate animation
 
-  
+  //setup walls for collision: DOES NOT WORK
+  //setup_collision_walls(viewer, system, systemRenderable, flatShader);
 
  viewer.startAnimation();
  viewer.setAnimationLoop(true, 29);
@@ -239,6 +240,156 @@ void setup_opponent_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystem
 
 }
 
+void setup_collision_walls(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    glm::mat4 translate = glm::translate( glm::mat4(1.0), glm::vec3( -11,195, 5.0 ) );
+    glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    glm::vec3 p5(-1.0,0.0,-1.0),p6(1.0,0.0,-1.0), p7(1.0,0.0,1.0), p8(-1.0,0.0,1.0);
+    PlanePtr plane = std::make_shared<Plane>(p5, p6, p7, -411, 389, 195, "x");
+    system->addPlaneObstacle(plane);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 188,18, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane2 = std::make_shared<Plane>(p5, p6, p7, -348, 384, 188, "y");
+    system->addPlaneObstacle(plane2);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable2 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable2->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable2 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( -210,-4, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane3 = std::make_shared<Plane>(p5, p6, p7, -402, 394, -210, "y");
+    system->addPlaneObstacle(plane3);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable3 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable3->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable3 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( -30,-205, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane4 = std::make_shared<Plane>(p5, p6, p7, -395, 335, -205, "x");
+    system->addPlaneObstacle(plane4);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable4 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable4->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable4 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 136,17.5, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane5 = std::make_shared<Plane>(p5, p6, p7, -240.5, 275.5, 136, "y");
+    system->addPlaneObstacle(plane5);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable5 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable5->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable5 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( -30.5,-156, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane6 = std::make_shared<Plane>(p5, p6, p7, -288.5, 227.5, -156, "x");
+    system->addPlaneObstacle(plane6);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable6 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable6->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable6 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( -12,143, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane7 = std::make_shared<Plane>(p5, p6, p7, -307, 283, 143, "x");
+    system->addPlaneObstacle(plane7);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable7 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable7->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable7 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( -160,-6, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane8 = std::make_shared<Plane>(p5, p6, p7, -160-300, -160+300, -160, "y");
+    system->addPlaneObstacle(plane8);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable8 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable8->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable8 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 120,-110, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane9 = std::make_shared<Plane>(p5, p6, p7, 120-40, 120+40, -110, "x");
+    system->addPlaneObstacle(plane9);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable9 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable9->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable9 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 174,-170, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane10 = std::make_shared<Plane>(p5, p6, p7, 174-40, 174+40, -170, "x");
+    system->addPlaneObstacle(plane10);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable10 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable10->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable10 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 154,-190, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane11 = std::make_shared<Plane>(p5, p6, p7, -190-40, 190+40, 154, "y");
+    system->addPlaneObstacle(plane11);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable11 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable11->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable11 );
+
+    //Initialize a plane from 3 points and add it to the system as an obstacle
+    translate = glm::translate( glm::mat4(1.0), glm::vec3( 100,-132, 5.0 ) );
+    rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    PlanePtr plane12 = std::make_shared<Plane>(p5, p6, p7, -132-50, 132+50, 100, "y");
+    system->addPlaneObstacle(plane12);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable12 = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable12->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable12 );
+
+
+
+}
+
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
   glm::vec3 px(10.0,10.0,0.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
@@ -298,7 +449,7 @@ glm::mat4 parentTransformation;
 
 // texCube->setParentTransform(parentTransformation);
      texCube->setMaterial(pearl);
-     texCube->setWrapOption(0);
+     //texCube->setWrapOption(0);
      viewer.addRenderable(texCube);
 
 
@@ -421,7 +572,7 @@ TexturedCubeRenderablePtr texCube12 = std::make_shared<TexturedCubeRenderable>(t
  glm::mat4 rotatefinish = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(0.0,0.0,1.0)));
  finish->setParentTransform(translatefinish*rotatefinish*scale);
  //finish->setMaterial(pearl);
- finish->setWrapOption(0);
+ //finish->setWrapOption(0);
  finish->updateTextureOption();
  //viewer.addRenderable(finish);
  

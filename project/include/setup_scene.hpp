@@ -17,4 +17,6 @@ void setup_opponent_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystem
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader);
 
 void setup_textures(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable);
+
+void setup_collision_walls(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader);
 #endif

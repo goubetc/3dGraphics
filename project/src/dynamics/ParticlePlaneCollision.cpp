@@ -25,14 +25,21 @@ void ParticlePlaneCollision::do_solveCollision()
 
     //Compute particle-plane distance
     glm::vec3 prev_x = m_particle->getPosition();
-    float distToPlane = glm::dot(prev_x, m_plane->normal())-m_plane->distanceToOrigin();
+    glm::vec3 norm = m_plane->normal();
+    float temp;
+    if (m_plane->m_dir == "y"){
+      temp = norm[0];
+      norm[0] = norm[1];
+      norm[1] = temp;
+    }
+    float distToPlane = glm::dot(prev_x, norm)-m_plane->distanceToOrigin();
     //Project the particle on the plane
-    glm::vec3 new_x = prev_x - (distToPlane-m_particle->getRadius())*m_plane->normal();
+    glm::vec3 new_x = prev_x - ((distToPlane-m_particle->getRadius())*norm)*0.1f;
     m_particle->setPosition(new_x);
 
     //Compute post-collision velocity
     glm::vec3 prev_v = m_particle->getVelocity();
-    glm::vec3 new_v = prev_v - (1.0f + m_restitution)*glm::dot(prev_v, m_plane->normal())*m_plane->normal();
+    glm::vec3 new_v = prev_v - (1.0f + m_restitution)*glm::dot(prev_v, norm)*norm;
     m_particle->setVelocity(new_v);
 }
 
