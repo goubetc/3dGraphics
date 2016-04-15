@@ -18,8 +18,8 @@ public:
    * @param normal The normal of the plane
    * @param point A point belonging to the plane.
    */
-  Plane( const glm::vec3& normal,
-         const glm::vec3& point );
+  /*Plane( const glm::vec3& normal,
+         const glm::vec3& point, const glm::vec3& planeOrigin, const float& size);*/
 
   /**@brief Build the plane passing through three points.
    *
@@ -28,7 +28,7 @@ public:
    * @param b The second point belonging to the plane.
    * @param c The third point belonging to the plane.
    */
-  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c);
+  Plane(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& begin, const glm::vec3& end);
 
   /**@brief Manually set the distance from this plane to the origin.
    *
@@ -55,6 +55,8 @@ public:
    * @return The plane's normal.
    */
   const glm::vec3& normal() const;
+  glm::vec3 m_begin;
+  glm::vec3 m_end;
 
   /**@brief Get the projection of a point on this plane.
    *
