@@ -25,9 +25,25 @@ SpecRenderable::SpecRenderable(ShaderProgramPtr shaderProgram ) :
       m_positions.push_back( glm::vec3(randomVal1,randomVal2,randomVal3) );
       m_positions.push_back( glm::vec3(randomVal1,randomVal2,randomVal3 + 0.7) );
       m_positions.push_back( glm::vec3(randomVal1+ 0.7,randomVal2 ,randomVal3) );
-      m_colors.push_back( glm::vec4(0,0,0,1) );
-      m_colors.push_back( glm::vec4(0,0,0,1) );
-      m_colors.push_back( glm::vec4(0,0,0,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+
+
+      m_positions.push_back( glm::vec3(randomVal1+ 0.7,randomVal2,randomVal3+ 0.7) );
+      m_positions.push_back( glm::vec3(randomVal1,randomVal2,randomVal3 + 0.7) );
+      m_positions.push_back( glm::vec3(randomVal1,randomVal2+ 0.7 ,randomVal3) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+
+
+      m_positions.push_back( glm::vec3(randomVal1,randomVal2+ 0.7,randomVal3) );
+      m_positions.push_back( glm::vec3(randomVal1+ 0.7,randomVal2,randomVal3 + 0.7) );
+      m_positions.push_back( glm::vec3(randomVal1,randomVal2 ,randomVal3+ 0.7) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
+      m_colors.push_back( glm::vec4(0.5,0.5,0.5,1) );
 
       // m_positions.push_back( glm::vec3(randomVal1+3,randomVal2-2,randomVal3) );
       // m_positions.push_back( glm::vec3(randomVal1-2,randomVal2,randomVal3 - 5) );

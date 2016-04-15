@@ -41,6 +41,7 @@
 #include "../include/texturing/TexturedLightedMeshRenderable.hpp"
 #include "../include/FrameRenderable.hpp"
 #include "../include/DustRenderable.hpp"
+#include "../include/dynamics/OpponentRenderable.hpp"
 
 
 #include "../include/BillboardRenderable.hpp"
@@ -77,7 +78,10 @@ std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
 setup_textures(viewer, system, systemRenderable);
 
 //Setup the kart in the scene²
- setup_kart(viewer, system, systemRenderable, flatShader);
+  std::vector<ParticlePtr> vParticle;
+
+ setup_kart(viewer, system, systemRenderable, flatShader, vParticle);
+ setup_opponent_kart(viewer, system, systemRenderable, flatShader, vParticle);
 viewer.addRenderable(systemRenderable);
 
 
@@ -104,6 +108,7 @@ system->setRestitution(1.0f);
   
 
  viewer.startAnimation();
+ viewer.setAnimationLoop(true, 29);
 }
 
 void setup_mountains(Viewer &viewer, ShaderProgramPtr &flatShader){
@@ -174,7 +179,7 @@ void setup_lights(Viewer& viewer, ShaderProgramPtr &flatShader){
   viewer.addRenderable(pointLightRenderable2);*/
 }
 
-void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr& systemRenderable, ShaderProgramPtr &flatShader){
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr& systemRenderable, ShaderProgramPtr &flatShader, std::vector<ParticlePtr> vParticle){
   //Initialize Kart with position, velocity, mass and radius and add it to the system
   glm::vec3 px(20.0,180.0,1.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
@@ -187,7 +192,6 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
 
   //Initialize a force field that apply only to the mobile particle
   glm::vec3 nullForce(0.0,0.0,0.0);
-  std::vector<ParticlePtr> vParticle;
   vParticle.push_back(mobile);
   ConstantForceFieldPtr force = std::make_shared<ConstantForceField>(vParticle, nullForce);
   system->addForceField( force );
@@ -211,6 +215,27 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
 
   HierarchicalRenderable::addChild(forceRenderable, kart->root);
   viewer.addRenderable(kart);
+
+}
+
+void setup_opponent_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr& systemRenderable, ShaderProgramPtr &flatShader, std::vector<ParticlePtr> vParticle){
+  //Initialize Kart with position, velocity, mass and radius and add it to the system
+  // glm::vec3 px(10.0,180.0,1.0),pv(0.0,0.0,0.0);
+  // float pm=1.0, pr=1.0;
+  
+
+  // ParticlePtr opp_mobile = std::make_shared<Particle>( px, pv, pm, pr);
+
+  // //Initialize a force field that apply only to the mobile particle
+  // vParticle.push_back(opp_mobile);
+  OpponentRenderablePtr opp_kart = std::make_shared<OpponentRenderable>(flatShader, viewer, 0,0,200 );
+
+  
+  // system->addParticle( opp_mobile );
+  
+
+  viewer.addRenderable(opp_kart->root);
+  viewer.addRenderable(opp_kart);
 
 }
 

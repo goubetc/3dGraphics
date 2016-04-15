@@ -11,7 +11,8 @@ void setup_mountains(Viewer &viewer, ShaderProgramPtr &flatShader);
 
 void setup_lights(Viewer& viewer, ShaderProgramPtr &flatShader);
 
-void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader);
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader, std::vector<ParticlePtr> vParticle);
+void setup_opponent_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader, std::vector<ParticlePtr> vParticle);
 
 void setup_billboard(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader);
 

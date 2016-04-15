@@ -49,6 +49,7 @@ KartRenderable::KartRenderable(ShaderProgramPtr flatShader, ParticlePtr mobile, 
 
   m_force = force;
   m_forceRend = forceRenderable;
+  wheelSpeed = 0;
 
   ////////////////// kart parts //////////////////////////
 
@@ -263,13 +264,14 @@ struct sPerson
 
 void KartRenderable::do_draw(){
 
+
   //Update the parent and local transform matrix to position the geometric data according to the particle's data.
     const float& pRadius = m_particle->getRadius();
     const glm::vec3& pPosition = m_particle->getPosition();
     glm::mat4 scale = glm::scale(glm::mat4(1.0), glm::vec3(pRadius));
     glm::mat4 translate = glm::translate(glm::mat4(1.0), glm::vec3(pPosition));
-    float dot = glm::dot(glm::normalize(m_force->getForce()), glm::normalize(glm::vec3(1.0,0.0,0.0)));
-    glm::vec3 cross = glm::cross(m_force->getForce(), glm::vec3(1.0,0.0,0.0));
+    float dot = glm::dot(glm::normalize(m_forceRend->m_status.movement), glm::normalize(glm::vec3(1.0,0.0,0.0)));
+    glm::vec3 cross = glm::cross(m_forceRend->m_status.movement, glm::vec3(1.0,0.0,0.0));
     
     if(!(dot != dot || acos(dot) != acos(dot)))  //check if dot is not NaN
       angle = acos(dot);
@@ -284,7 +286,7 @@ void KartRenderable::do_draw(){
     rotate = glm::rotate(glm::mat4(1.0), (float)(angle - M_PI/2), glm::vec3(0.0,0.0,1.0));
     glm::mat4 rotate2 = glm::rotate(glm::mat4(1.0), (float)(M_PI/2), glm::normalize(glm::vec3(1.0,0.0,0.0)));
     
-    root->setParentTransform(translate*scale*rotate*rotate2);
+    root->setParentTransform(translate*rotate*rotate2);
 
 
     /////////////////////////   TURNING    ///////////////////////////
@@ -292,30 +294,41 @@ void KartRenderable::do_draw(){
     int wheel_turn_right = (int)m_forceRend->m_status.turning_right;
     int wheel_turn_left = (int)m_forceRend->m_status.turning_left;
     glm::mat4 rot;
+    glm::mat4 wSpeedL;
+    glm::mat4 wSpeedR;
+    wheelSpeed += m_forceRend->m_status.intensity/2000;
+    wSpeedR = glm::rotate(glm::mat4(1.0), wheelSpeed, glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    wSpeedL = glm::rotate(glm::mat4(1.0), -wheelSpeed, glm::normalize(glm::vec3(0.0,0.0,1.0)));
+
+
 
     if(wheel_turn_right)
     {
       rot = glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0)));
-      wheel_br->setLocalTransform(rot);
-      wheel_bl->setLocalTransform(rot);
+      wheel_br->setLocalTransform(rot * wSpeedR);
+      wheel_bl->setLocalTransform(rot * (wSpeedL));
     }
 
     
     else if(wheel_turn_left)
     {
-      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
-      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      rot = glm::rotate(glm::mat4(1.0), (float)(wheel_turn_left * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0)));
+      wheel_br->setLocalTransform(rot * wSpeedR);
+      wheel_bl->setLocalTransform(rot * (wSpeedL));
     }
 
     else
     {
-      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
-      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)0.0, glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      wheel_br->setLocalTransform(wSpeedR);
+      wheel_bl->setLocalTransform(wSpeedL);
     }
+
+    wheel_fr->setLocalTransform(wSpeedR);
+    wheel_fl->setLocalTransform(wSpeedL);
 
 
     /////////////////////// CAMERA ///////////////////////////////////////////////////
-    //Compute normalized mouse position between [-1,1]
+    // Compute normalized mouse position between [-1,1]
     float x = 15 * cos((float)(angle));
     float y = 15  * sin((float)(angle));  
     glm::vec3 cameraPos = pPosition-glm::vec3(x,y,-10);
