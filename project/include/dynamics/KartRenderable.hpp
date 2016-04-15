@@ -60,6 +60,7 @@ std::vector< glm::vec3 > m_positions;
   unsigned int m_cBuffer;
   unsigned int m_nBuffer;
   float angle;
+  float wheelSpeed;
 };
 
 typedef std::shared_ptr<KartRenderable> KartRenderablePtr;

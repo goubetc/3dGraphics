@@ -38,6 +38,8 @@
 
 #include "../include/ShaderProgram.hpp"
 #include "../include/FrameRenderable.hpp"
+#include "../include/DustRenderable.hpp"
+
 
 #include "../include/BillboardRenderable.hpp"
 
@@ -68,7 +70,6 @@ system->setDt(0.01);
 //It is also responsible for some of the key/mouse events
 DynamicSystemRenderablePtr systemRenderable = std::make_shared<DynamicSystemRenderable>(system);
 std::cout << "address systemRenderable : " << &systemRenderable << std::endl;
-viewer.addRenderable(systemRenderable);
 
 //Position the camera
 viewer.getCamera().setViewMatrix( glm::lookAt( glm::vec3(5,20,10), glm::vec3(20,20,2), glm::vec3(0,0,1)));
@@ -78,6 +79,8 @@ setup_textures(viewer, system, systemRenderable);
 
 //Setup the kart in the scene²
  setup_kart(viewer, system, systemRenderable, flatShader);
+viewer.addRenderable(systemRenderable);
+
 
 // TODO init obstacles before
 
@@ -167,7 +170,7 @@ void setup_lights(Viewer& viewer, ShaderProgramPtr &flatShader){
   viewer.addRenderable(pointLightRenderable2);*/
 }
 
-void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr &systemRenderable, ShaderProgramPtr &flatShader){
+void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderablePtr& systemRenderable, ShaderProgramPtr &flatShader){
   //Initialize Kart with position, velocity, mass and radius and add it to the system
   glm::vec3 px(20.0,20.0,1.0),pv(0.0,0.0,0.0);
   float pm=1.0, pr=1.0;
@@ -191,9 +194,14 @@ void setup_kart(Viewer& viewer, DynamicSystemPtr& system, DynamicSystemRenderabl
   DampingForceFieldPtr dampingForceField = std::make_shared<DampingForceField>(vParticle, 0.9);
   system->addForceField( dampingForceField );
   system->addParticle( mobile );
+  // HierarchicalRenderable::addChild(kart, kart->root);
   HierarchicalRenderable::addChild(systemRenderable, kart->root);
   HierarchicalRenderable::addChild(systemRenderable, forceRenderable);
-  HierarchicalRenderable::addChild(forceRenderable, kart->root);
+  viewer.addRenderable(kart);
+
+  DustRenderablePtr dust = std::make_shared<DustRenderable>(flatShader, 100, kart->root, mobile, force);
+  viewer.addRenderable(dust);
+  // HierarchicalRenderable::addChild(forceRenderable, kart->root);
 
 }
 

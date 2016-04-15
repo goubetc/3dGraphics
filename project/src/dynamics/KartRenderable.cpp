@@ -288,10 +288,13 @@ void KartRenderable::do_draw(){
 
     int wheel_turn_right = (int)m_forceRend->m_status.turning_right;
     int wheel_turn_left = (int)m_forceRend->m_status.turning_left;
+    glm::mat4 rot;
+
     if(wheel_turn_right)
     {
-      wheel_br->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
-      wheel_bl->setLocalTransform(glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0))));
+      rot = glm::rotate(glm::mat4(1.0), (float)(-wheel_turn_right * M_PI/6), glm::normalize(glm::vec3(0.0,1.0,0.0)));
+      wheel_br->setLocalTransform(rot);
+      wheel_bl->setLocalTransform(rot);
     }
 
     
