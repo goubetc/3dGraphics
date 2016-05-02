@@ -107,6 +107,18 @@ system->setRestitution(1.0f);
 
   //setup walls for collision: DOES NOT WORK
   //setup_collision_walls(viewer, system, systemRenderable, flatShader);
+  //Initialize a plane from 3 points and add it to the system as an obstacle
+    glm::mat4 translate = glm::translate( glm::mat4(1.0), glm::vec3( -11,195, 5.0 ) );
+    glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(M_PI), glm::normalize(glm::vec3(0.0,0.0,1.0)));
+    glm::vec3 p5(-1.0,0.0,-1.0),p6(1.0,0.0,-1.0), p7(1.0,0.0,1.0), p8(-1.0,0.0,1.0);
+    PlanePtr plane = std::make_shared<Plane>(p5, p6, p7, -411, 389, 195, "x");
+    system->addPlaneObstacle(plane);
+
+    //Create a plane renderable to display the obstacle
+    PlaneRenderablePtr planeRenderable = std::make_shared<QuadRenderable>(flatShader, p5,p6,p7,p8);
+    //-11,195
+    planeRenderable->setParentTransform(translate*rotate);
+    HierarchicalRenderable::addChild( systemRenderable, planeRenderable );
 
  viewer.startAnimation();
  viewer.setAnimationLoop(true, 29);
